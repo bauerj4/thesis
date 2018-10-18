@@ -1,0 +1,1794 @@
+%!PS-Adobe-2.0
+%%Title: Selected_Density_Panels.eps
+%%Creator: gnuplot 5.0 patchlevel 3
+%%CreationDate: Wed Dec  6 15:14:24 2017
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 251 194
+%%Orientation: Portrait
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape false def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -13 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 251 50 lineto 251 194 lineto 50 194 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.1 (Oct 2015)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (Selected_Density_Panels.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.0 patchlevel 3)
+  /Author (hpc3344)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Wed Dec  6 15:14:24 2017)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt May 2005
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { Boxing
+    { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if } def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox 1 1 1 setrgbcolor fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+% redundant definitions for compatibility with prologue.ps older than 5.0.2
+/LTB {BL [] LCb DL} def
+/LTb {PL [] LCb DL} def
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.100 0.100 scale
+0 setgray
+newpath
+(Courier) findfont 40 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor true def
+/grayindex {/gidx 0 def
+  {GrayA gidx get grayv ge {exit} if /gidx gidx 1 add def} loop} def
+/dgdx {grayv GrayA gidx get sub GrayA gidx 1 sub get
+  GrayA gidx get sub div} def 
+/redvalue {RedA gidx get RedA gidx 1 sub get
+  RedA gidx get sub dgdxval mul add} def
+/greenvalue {GreenA gidx get GreenA gidx 1 sub get
+  GreenA gidx get sub dgdxval mul add} def
+/bluevalue {BlueA gidx get BlueA gidx 1 sub get
+  BlueA gidx get sub dgdxval mul add} def
+/interpolate {
+  grayindex grayv GrayA gidx get sub abs 1e-5 le
+    {RedA gidx get GreenA gidx get BlueA gidx get}
+    {/dgdxval dgdx def redvalue greenvalue bluevalue} ifelse} def
+/GrayA [0 .1429 .2857 .4286 .5714 .7143 .8571 1 ] def
+/RedA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/GreenA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/BlueA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 Gamma mul div def
+/ColorSpace (RGB) def
+Color InterpolatedColor or { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+% Begin plot #1
+1.000 UL
+LTb
+0.58 0.00 0.83 C %%%%BeginImage
+gsave 0 1439 N 0 720 L 671 720 L 671 1439 L Z clip
+InterpretLevel1 {
+  %% Construct a box instead of image
+  LTb
+  0 1439 M
+  671 0 V
+  0 -719 V
+  -671 0 V
+  0 1439 L
+  40 -110 R
+  (PS level 2 image) Lshow
+  % Read data but ignore it
+  /imagebuf 6224 string def
+  currentfile imagebuf readstring
+} {
+gsave
+0 1439 translate
+671 -719 scale
+%%%%BeginPalette
+[ /Indexed
+  /DeviceRGB 255
+  <
+   ffffff ffffff fefefe fefefe fdfdfd fdfdfd fdfdfd fcfcfc
+   fcfcfc fbfbfb fbfbfb fafafa fafafa fafafa f9f9f9 f9f9f9
+   f8f8f8 f8f8f8 f8f8f8 f7f7f7 f7f7f7 f6f6f6 f6f6f6 f6f6f6
+   f5f5f5 f5f5f5 f4f4f4 f4f4f4 f3f3f3 f3f3f3 f3f3f3 f2f2f2
+   f2f2f2 f1f1f1 f1f1f1 f1f1f1 f0f0f0 f0f0f0 efefef eeeeee
+   eeeeee ededed ececec ececec ebebeb ebebeb eaeaea e9e9e9
+   e9e9e9 e8e8e8 e7e7e7 e7e7e7 e6e6e6 e6e6e6 e5e5e5 e4e4e4
+   e4e4e4 e3e3e3 e2e2e2 e2e2e2 e1e1e1 e0e0e0 e0e0e0 dfdfdf
+   dfdfdf dedede dddddd dddddd dcdcdc dbdbdb dbdbdb dadada
+   dadada d9d9d9 d8d8d8 d7d7d7 d7d7d7 d6d6d6 d5d5d5 d4d4d4
+   d4d4d4 d3d3d3 d2d2d2 d1d1d1 d0d0d0 d0d0d0 cfcfcf cecece
+   cdcdcd cdcdcd cccccc cbcbcb cacaca cacaca c9c9c9 c8c8c8
+   c7c7c7 c6c6c6 c6c6c6 c5c5c5 c4c4c4 c3c3c3 c3c3c3 c2c2c2
+   c1c1c1 c0c0c0 c0c0c0 bfbfbf bebebe bdbdbd bcbcbc bbbbbb
+   bababa b9b9b9 b8b8b8 b7b7b7 b6b6b6 b5b5b5 b4b4b4 b3b3b3
+   b2b2b2 b0b0b0 afafaf aeaeae adadad acacac ababab aaaaaa
+   a9a9a9 a8a8a8 a7a7a7 a6a6a6 a5a5a5 a4a4a4 a3a3a3 a1a1a1
+   a0a0a0 9f9f9f 9e9e9e 9d9d9d 9c9c9c 9b9b9b 9a9a9a 999999
+   989898 979797 969696 959595 949494 939393 929292 919191
+   909090 8f8f8f 8e8e8e 8d8d8d 8c8c8c 8b8b8b 8a8a8a 898989
+   888888 878787 868686 858585 848484 838383 838383 828282
+   818181 808080 7f7f7f 7e7e7e 7d7d7d 7c7c7c 7b7b7b 7a7a7a
+   797979 787878 777777 767676 757575 747474 737373 727272
+   717171 707070 707070 6f6f6f 6e6e6e 6d6d6d 6c6c6c 6b6b6b
+   6a6a6a 696969 686868 676767 666666 666666 656565 646464
+   636363 626262 616161 606060 5f5f5f 5e5e5e 5d5d5d 5c5c5c
+   5c5c5c 5b5b5b 5a5a5a 595959 585858 575757 565656 555555
+   545454 535353 535353 515151 505050 4f4f4f 4e4e4e 4d4d4d
+   4b4b4b 4a4a4a 494949 484848 464646 454545 444444 434343
+   414141 404040 3f3f3f 3e3e3e 3c3c3c 3b3b3b 3a3a3a 393939
+   383838 363636 353535 343434 333333 313131 303030 2f2f2f
+   2e2e2e 2c2c2c 2b2b2b 2a2a2a 292929 272727 262626 252525
+  >
+] setcolorspace
+%%%%EndPalette
+<<
+  /ImageType 1
+  /Width 100
+  /Height 100
+  /BitsPerComponent 8
+  /ImageMatrix [ 100 0 0 100 0 0 ]
+  /Decode [ 0 255 ]
+  /DataSource currentfile /ASCII85Decode filter
+  /MultipleDataSources false
+  /Interpolate false
+>>
+image
+} ifelse
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz)uos=zzzzzzzzzzzzzzzzzzzz
+zz!#tt=z!!!u=zzzzzzzzzzzzzzzzzzzzzzz)uos=zzzzzzzzzzzzzzzzzzzzzz!#tt=!%e0N!!!u=
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz!!!!=zzzzzzzzzzzzzzzzzzzzzz!!!
+u=!!"SN)uos=zzz!!!u=z!!!u=zzzzzzzzzzzzzzz!!!!=!!"SN!'(#Zz/H?bNzz!'(#Z!#tt=!#us
+Yzzzzzzzzzzzzzzzz!%e0Nz)uprY!%fc&*#pO1*#nqYzzzzzzzzzzzzzzzzzzz!%e0Nz/K=a1/K=aB
+)ups1!#tt=/K=`j/H?b1zzzzzzzzzzzzzzzz!%e0N!#usYzz66#tF)uqu!!!"T&3<0$Zzzzzzzzzzz
+zzzzzzz!!!!=!#tu!/H?aj!!!uY3<0%!!#usu!!!u=/H?bBz!!"Sjzzzzzzzzzzzzzzz!!"Sj!!!!Z
+z)uos=3<2B+!%f0e3@uf_3C6%P/OCEW*#psY!#tt=zzzzzzzzzzzzzz!!##!)ups1!$!R1!($Zd/P8
+#i*(j%(3?1%G!#ttj/M0RH!!!!Nzzz!!!u=zzzzzzzzzzzz!')V_!#tu!)uotC!%gN(3D^\U/M0:L8
+hDVe*#nqu:`KHe/H>bNzzzzzzzzzzzz/H>bNzz!'*@G/H@e3*'uYX3B9)r/RM+[:f(@V/ODca/NGfk
+63%!*/K=`j!#tt=zzzzzzzzzzzz3<0$Z/H>bj!(%YW/K=aW6<6o&<_te\<_>to@qo4E>=).H!*1[D!
+!!!Zzzzzzzzzzzzzzz3<0$Z)uquN*'$VC/NFe2E*lWG!'*AM>A?c;:eG(e8m`Q78leP(!#ttY!#utF
+!#usYzzzzzzzzzz)uos=)uos=/M-r&!!#>*/M0:]3D*dgB/rRk6;U]t@od>@**-]V>A?c7>?a]l/P7
+T]3?0UN/H>bNzzzzzzzzzzz)uosY*#nqu!%f/j3A"&Z:g\?;:`Mf&B2E_l?Y<D?E-"i_8m>Lr3E@_4
+3?1%[6:)Xl*%_-jz!!!u=zzzzzzzzz!!!!N)uos=!!#VO3A!62>Bb9l/Po8\IVjC[E,'-/@shorHui
+LaD09Jq:dS2L/ODGt/M/s_zzzzzzzzzzz!!!u=/H>bj/H?bB!(&\<D.@'P8n3'fLP(&2IW0FYGAVJ^
+H>RkCE*I0l@o,c;3B8&Z/H?ajzzzzzzzzzzz!!!!N/H>bj*#pOj*(!J@B5g[O:hP<=K9h%?Jq],GMM
+c_8Hs^hb>A@en<b#?<3D`$^!'(#Z!!!u=zzzzzzzzzzz)ups16:q5S/T>?0B2Cp)F+]C.K9(/*KlrN
+1LOa>\E-d.RB4"8<?WKcc/NH-L*'"!!!#ttY/H>bNzzzzzzzz!!!u=!!!!N67k2X!%f/j:hOuZ8lec
+=E/9%0JrbeFMMHY<H?X=LHtmtRI!&Xi?WJa16:r4;*%a/N)uosY3<1$!zzzzzzzz!!!!Nz!$!R1!(n
+h8:iL8U8lg(`O.CueNL5loS!]\-NK9<[IXlr`D1[4D?V4?N**,m:*(ih-3@uf_!#tt=)uos=zzzzzz
+!!!!Nz/H>c2)uot*/ODd#H?WD&?ZUOBR?Ec)S=lFJU7e<QTq%@2Nf/%3F_?5;C-k7+<]M.(63%!G:b
+=7!!!!uYzzzzzzzz)uprY)upru!%f0_66'#uF*DA/B3U@QPb+_8Vl-Q!X0At4WhZVsP_FL=H>mM6H>
+Qkr<bF`Z!)NXq63%!*!!!!Nzzzzzzzzz!!!!Z!'(#Z>=pn[F_>3$D2<e-SXH+EVn'CT]=be_]=58RT
+q-t)LN%cRC2e#03D*+.!$"!N/K>`1z)uos=zzzzzzzz!$!Qj!')#Z6:tm0J::ugI!(LAX0A2!]XPbo
+]Zn4,bJD'-Yd($eK8"GT@paFi>=)@B:b;Ye!%fc_zzzzzzzz!!!!=z!!"!*!!!u=:cWK-F)#Z8D1IY
+DVkC6+`QQ!9aN;95`PK+"]V_U2SVql<C1hp,?XHE%!!##>!%g2_zzzzzzzzz)uos=!($Z;67k3)3Ep
+HHH>R_?F+Bm_TW,T7_o'L=b/q]?]>(ha['I9OZCRJ4H='KiJo*M?@fSMU!!"Sjzzzzzzzzz!#tt=/H
+@d_6<6*=@nL]oMf<u]:l)$KY-YOZc-FJ\dF6:ebKIf>[^3KN\uhQ^GCjI7HuiLr67j0/8cUFC*#nqY
+zzzzzzzz!!!u=!%fcS6:sR):g[s`MM$;4J=iaG[^<Zgb1P>*h:LH:f$hac\?rWGY-P7%Q$dF]B3&M&
+:b>!6/P8#'*%_-j/H>bNzzzzzzz!%e123B8'U6:sjH:hkAfKkH$gP*r,H\%KH&f%f6Bh;RAPj4i>;b
+I4RW['QR'R?V'"IW/q4>@U98!#tt=!!!u=zzzzzzzz)uqPj!#tt=/P7Tk<`"!hKn>,<P,Y4_[(sc5j
+5f4]kNhO+k2kLNc,?uqXK.VUP`gK1G@srC/OF2K/NEek!#tt=z)uos=zzzzzz!!!u=*#pP2:h*]L<c
+*/3IYs/GR@U[n_84UXki_3un+$#?m,d?`g<mC=X/`IrR$EPV<aT?@:f^e$3D_:Izzzzzzzzz!!!!=!
+%e1&/OE9+<a/CAJt/?nLmapB`PpNflL+'3q#(-am-<osg!@sU[&^C$QA^fJ8mc(/69/'u/H>c;!!!!
+=z!#tt=zzzzz!!!!=!#usY69.%+8i\J9:hOj%LQ7pcR?*o>]#)eRl0@a/qZ$TlpZUPpg"FQ^Yc+n.T
+p0qR@q0I^:g3p#/OBFtzzzzzzzzz!!!!=/H@dN3B9\`C/AP[K9W$gPDbg1]#i4Uki_O.qtg9hpup\r
+f%A'^^9FZ4P^\dEF'i9e@kC;W3D'8Oz!%e0jzzzzzzz)uqPj!'*&96;RYY@qTjiIYXGZP`CQeXi8H=
+jll(&q>L?fna58if[@jV_5aZASWAehD-Lje?WL2o!!"SNz!#tt=zzzzzzz/K=`j!$"!N/P7TqD/E*R
+D17Y5R\?:8X1Q-cgYV2]nF5o5md8lbcI'bJW1g2]SWSGO?Z94Z>=(>:66%QW!!"SN)uos=zzzzzzz!
+!"Sj!!!!Z8i]3i<aTKVE/fdRTrFcZW4KLVbh1n6ipH%!kiLLLb/D01VkBEGP`:!8>A?JV@q-Ju!$!Q
+jzzzzzzzzz!!!!c!#ttj6;U]TC0Q"'B7>Z,S#<KgZaRQbbL>))gZI\`iSN,4_7[LcY,.\5P)G*JE*G
+qA3C6q1*%_.1zzzzzzzz!#tt=)uosY!!!u=6=X@p?Xm_L>C_X!Vk0f][Ciu^_ogHWf\G?=h:pT.a25
+<iVk96=Kn,/%D-p+V6<7,,!!#VCzzzzzzzzzz*#pOM*%a0T:hjKf<cr/:S"ldbXhhE]`l-0@d*^+gd
+`]qN_S!.OTqIpCKmJ-,IUc2n8m>=J*#opuzzzzzzzzz!!!u=)uqQB)uquZ:h+6@?YY+HMO'R$YdCaW
+_8a[AbK8/RaiqZ8]!JB-P+&+oF'EKcC1CIP3A!6O3@ug&/M-r&zzzzzzzz!!!u=!!!!=/K@)D6<8/E
+<b$9)NI7"bVPpW(^rF7/`lZ$>b/qE.Xf7kZUmQsZFa%t@8m=nt/Po7`z/NEe2!#tt=zzzzzz!!!!=z
+)uqQN/K?c2/PpLhB5g1dJru:`RA6ORWN`qF\AQ2(`PSsZVk8iuSXYLZFaeI;F%T8*3@u4&3B8'!3<0
+$Zzzzzzzzz!!!!N!!!!=/H>bj3D*+"@r5S.GD_9=P+&/BSu8]s^:V;!\uVU$SVW2lNJ2h/F+ACG@mX
+3g8iZkO!#ut=8cShkzzzzzzz!%e0Nz!%e0N63%!**'#!>F&mL"FaAt$K9WL5VP0uuZamBMVOa9GPa[
+YsK6;QaF^noo8l/_a!%fcS!!!u=zzzzzzzzz!#tt=/H>c&*%ac&/M1"E?UALEI"R-'I$:4jSY)gXZD
+ssqR$NPhRu3>lJ9?!\>@VkL@oaQL!'*@c)uos=zzzzzzzzz!!!u=z*'$#G/K?cC?V4O,C4^Y[F,l$9
+P*qu3O-G]bNg5EULl-t?E.W:XF'EcI/Rpe$/K>`sz!#tt=zzzzzzzz!#tu!)uprY!%e1&67k1t>A&=
+fHt.b^Li%roJ<Z+ZLQ.I[Ko:>-Mj&sKD1H86>=qLa<_u+&6:(Yl!!#"Zzzzzzzzzz!!!u=!!!!N*#n
+qY)uqQB<`!F9?\!!'?[d'KKnXZ"K8YM=H@U-QNe;e'D.e!(<a.n-?U?b)/P8#C/H>bN)uos=z!#tt=
+zzzzzzz!!!u=/NEe_!(p'J69,$<@rl:"D0'3.H=MDXHujgc:igc#NK84$C1C:]<ZE)U?S)70/K=`j*
+#opuzzzzzzzzzz!#ttj!'(#Z3?1@*!#ut_:dRuZ<a0'H?Z9ss:h+-)IWoX_JoGI;IU>EK*'%%r3<0$
+Z!!#>*!!!u=zzzzzzzzzz!!"TC)upru!(&[t6:sj1@l[Ro?V50P@qnV??XmG^Fae1RHtR)7<`VOI8k
+M][3?/#=!%f/j!#tt=zzzzzzzzzz!$!Qj!!"SN*%`a7!)QKg3D'9J:dSAeE,'#d:i0rWE-$/3>=rX7
+@qT"U:b>!c/P7T763%!*zzzzzzzzzzz!!!!=*#nqY)uosY/Po%>3?1%G:f(A5:f^q-B4ksh>=r+,C2
+-R[@mWdS/M0:/!#ttY!!!!N!%e0Nzzzzzzzzzzz!!!uj!!!u=/HA*W3D`=7/Po&"/QQ@k>A?uA/S@[
+-?U@RL>:iGI!')V_/K=a1!!!!=!#tt=zzzzzzzzzzzz!!!!c**+%U3?1%O8i\Ii8i]LR:cV-.8lePN
+><+]?:cUNf!%e0N)uosj3<1$!zzzzzzzzzzzzz!!"!2/QNiO:g7.#>>S?sB2E4m/S[m0*'$Vf3A!6`
+3@ug&zzz!!!u=zzzzzzzzzzzz!!!!=!$!RN:f]RV8hD#L><+]E3D^\r69-Va8i\I`!%f/j63%u*)up
+rY)uprYzzzzzzzzzzzzz)uos=z!!"!!!%g3<:dP-^*%a/j/M.r&3<1$=*%`-1/K=a_/K=`jzzzzzzz
+zzzzzz!!!!=zz!')#Z/NGfk/M/P76:*[a/K?>B3@uf_!%gN(3B7'>zzzzzzzzzzzzzzzzz!!!!=!%f
+c&*'sWW8fRgt/HAB_!!"SN!#ttY)uos=zzzzzzzzzzzzzzzz!#usYz*#nqY/H?aj3?1X2z!$!Qj:]L
+J8)uos=!%fc&zzzzzzzzzzzzzzz!%f/j*#nqY*#nqY*#opu!%f/jz!#usu/H?b1z3<0$Zzzzzzzzzz
+zzzzzzz*(h1Nz!#tt=!#ttY!#tt=!!"SNzzzzzzzzzzzzzzzzzzzz!!!!=z!!!u=!')#!*#nqYz!!!
+!=zzzzzzzzzzzzzzzz)uos=zzz!!!uY*#nqY)uprYz)uprYzzzzzzzzzzzzzzzzzzzzz)uprY)uosY
+)uos=zzzzzzzzzzzzzzzzzzz!!!!=!!!!=)uos=)uprY)uprYzzzzzzzzzzzzzzzzzzz!!!!=!#tt=
+zzz)uos=zzzzzzzzzzzzzzzzzzzzzzzzz!#tt=zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz~>
+InterpretLevel1 not {
+  grestore
+} if
+grestore
+%%%%EndImage
+% End plot #1
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+grestore % colour palette end
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor true def
+/grayindex {/gidx 0 def
+  {GrayA gidx get grayv ge {exit} if /gidx gidx 1 add def} loop} def
+/dgdx {grayv GrayA gidx get sub GrayA gidx 1 sub get
+  GrayA gidx get sub div} def 
+/redvalue {RedA gidx get RedA gidx 1 sub get
+  RedA gidx get sub dgdxval mul add} def
+/greenvalue {GreenA gidx get GreenA gidx 1 sub get
+  GreenA gidx get sub dgdxval mul add} def
+/bluevalue {BlueA gidx get BlueA gidx 1 sub get
+  BlueA gidx get sub dgdxval mul add} def
+/interpolate {
+  grayindex grayv GrayA gidx get sub abs 1e-5 le
+    {RedA gidx get GreenA gidx get BlueA gidx get}
+    {/dgdxval dgdx def redvalue greenvalue bluevalue} ifelse} def
+/GrayA [0 .1429 .2857 .4286 .5714 .7143 .8571 1 ] def
+/RedA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/GreenA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/BlueA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 Gamma mul div def
+/ColorSpace (RGB) def
+Color InterpolatedColor or { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+838 1209 M
+337 0 V
+stroke
+LTb
+LCb setrgbcolor
+% Begin plot #1
+1.000 UL
+LTb
+0.58 0.00 0.83 C %%%%BeginImage
+gsave 671 1439 N 671 720 L 1342 720 L 1342 1439 L Z clip
+InterpretLevel1 {
+  %% Construct a box instead of image
+  LTb
+  671 1439 M
+  671 0 V
+  0 -719 V
+  -671 0 V
+  671 1439 L
+  40 -110 R
+  (PS level 2 image) Lshow
+  % Read data but ignore it
+  /imagebuf 2927 string def
+  currentfile imagebuf readstring
+} {
+gsave
+671 1439 translate
+671 -719 scale
+%%%%BeginPalette
+[ /Indexed
+  /DeviceRGB 255
+  <
+   ffffff ffffff fefefe fefefe fdfdfd fdfdfd fdfdfd fcfcfc
+   fcfcfc fbfbfb fbfbfb fafafa fafafa fafafa f9f9f9 f9f9f9
+   f8f8f8 f8f8f8 f8f8f8 f7f7f7 f7f7f7 f6f6f6 f6f6f6 f6f6f6
+   f5f5f5 f5f5f5 f4f4f4 f4f4f4 f3f3f3 f3f3f3 f3f3f3 f2f2f2
+   f2f2f2 f1f1f1 f1f1f1 f1f1f1 f0f0f0 f0f0f0 efefef eeeeee
+   eeeeee ededed ececec ececec ebebeb ebebeb eaeaea e9e9e9
+   e9e9e9 e8e8e8 e7e7e7 e7e7e7 e6e6e6 e6e6e6 e5e5e5 e4e4e4
+   e4e4e4 e3e3e3 e2e2e2 e2e2e2 e1e1e1 e0e0e0 e0e0e0 dfdfdf
+   dfdfdf dedede dddddd dddddd dcdcdc dbdbdb dbdbdb dadada
+   dadada d9d9d9 d8d8d8 d7d7d7 d7d7d7 d6d6d6 d5d5d5 d4d4d4
+   d4d4d4 d3d3d3 d2d2d2 d1d1d1 d0d0d0 d0d0d0 cfcfcf cecece
+   cdcdcd cdcdcd cccccc cbcbcb cacaca cacaca c9c9c9 c8c8c8
+   c7c7c7 c6c6c6 c6c6c6 c5c5c5 c4c4c4 c3c3c3 c3c3c3 c2c2c2
+   c1c1c1 c0c0c0 c0c0c0 bfbfbf bebebe bdbdbd bcbcbc bbbbbb
+   bababa b9b9b9 b8b8b8 b7b7b7 b6b6b6 b5b5b5 b4b4b4 b3b3b3
+   b2b2b2 b0b0b0 afafaf aeaeae adadad acacac ababab aaaaaa
+   a9a9a9 a8a8a8 a7a7a7 a6a6a6 a5a5a5 a4a4a4 a3a3a3 a1a1a1
+   a0a0a0 9f9f9f 9e9e9e 9d9d9d 9c9c9c 9b9b9b 9a9a9a 999999
+   989898 979797 969696 959595 949494 939393 929292 919191
+   909090 8f8f8f 8e8e8e 8d8d8d 8c8c8c 8b8b8b 8a8a8a 898989
+   888888 878787 868686 858585 848484 838383 838383 828282
+   818181 808080 7f7f7f 7e7e7e 7d7d7d 7c7c7c 7b7b7b 7a7a7a
+   797979 787878 777777 767676 757575 747474 737373 727272
+   717171 707070 707070 6f6f6f 6e6e6e 6d6d6d 6c6c6c 6b6b6b
+   6a6a6a 696969 686868 676767 666666 666666 656565 646464
+   636363 626262 616161 606060 5f5f5f 5e5e5e 5d5d5d 5c5c5c
+   5c5c5c 5b5b5b 5a5a5a 595959 585858 575757 565656 555555
+   545454 535353 535353 515151 505050 4f4f4f 4e4e4e 4d4d4d
+   4b4b4b 4a4a4a 494949 484848 464646 454545 444444 434343
+   414141 404040 3f3f3f 3e3e3e 3c3c3c 3b3b3b 3a3a3a 393939
+   383838 363636 353535 343434 333333 313131 303030 2f2f2f
+   2e2e2e 2c2c2c 2b2b2b 2a2a2a 292929 272727 262626 252525
+  >
+] setcolorspace
+%%%%EndPalette
+<<
+  /ImageType 1
+  /Width 100
+  /Height 100
+  /BitsPerComponent 8
+  /ImageMatrix [ 100 0 0 100 0 0 ]
+  /Decode [ 0 255 ]
+  /DataSource currentfile /ASCII85Decode filter
+  /MultipleDataSources false
+  /Interpolate false
+>>
+image
+} ifelse
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzz('"=7!!!c7,;V>24ul53/3YjM4ukVS4r+,Cz!!!!7!#>P7zzzzzzzzzz!!!c7!#?>
+$!!"Q:,8N:/:f:21H$+:PG]e1WM40d,Wi2r"YHtU=YH=[tU7@='JqS>qD/aK,?;r^34r,q!/1`"](*
+aRpzzzzz!!!!7!#?>+9fY"(;H-_!DeONNKSG2BQ^t.\[Cj;g_8aXEg#1rYnac>GqYU3fp[mtAkMk7H
+ccXGI]stJUW1TN>K7&9#Df]]6C/e828l.N!,;T<"zzzzz,:jU&9i>J,B5V@0Ll$b@Q^abFXL5RQ_op
+HZg>:oWo(DhWr;ZfqqtK[Ml/ps\g!n?h_76hSW2H,XQC<qnH$amJ?:%+F/3+pj('"=c!#>P7zzzzz!
+!!!7!$_ID/4)?`/3[N'=&`sRGCYX5O-uE.Up7;;\\#Ac\[&?;URe$KR$W\YF`DP5A6rYO?s-Gu66e#
+sz('"=7('"=7zzzzzzzzz!!!!7z/1`"j3Be37/4*00:d.rb3B9eY;Cj%;/0cAj!#>P7zzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zz~>
+InterpretLevel1 not {
+  grestore
+} if
+grestore
+%%%%EndImage
+% End plot #1
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+0.00 0.00 0.00 C 1141 1367 M
+[ [(Courier) 40.0 0.0 true true 0 (t = 1.25 Gy)]
+] -13.3 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+grestore % colour palette end
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor true def
+/grayindex {/gidx 0 def
+  {GrayA gidx get grayv ge {exit} if /gidx gidx 1 add def} loop} def
+/dgdx {grayv GrayA gidx get sub GrayA gidx 1 sub get
+  GrayA gidx get sub div} def 
+/redvalue {RedA gidx get RedA gidx 1 sub get
+  RedA gidx get sub dgdxval mul add} def
+/greenvalue {GreenA gidx get GreenA gidx 1 sub get
+  GreenA gidx get sub dgdxval mul add} def
+/bluevalue {BlueA gidx get BlueA gidx 1 sub get
+  BlueA gidx get sub dgdxval mul add} def
+/interpolate {
+  grayindex grayv GrayA gidx get sub abs 1e-5 le
+    {RedA gidx get GreenA gidx get BlueA gidx get}
+    {/dgdxval dgdx def redvalue greenvalue bluevalue} ifelse} def
+/GrayA [0 .1429 .2857 .4286 .5714 .7143 .8571 1 ] def
+/RedA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/GreenA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/BlueA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 Gamma mul div def
+/ColorSpace (RGB) def
+Color InterpolatedColor or { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+838 1209 M
+337 0 V
+stroke
+LTb
+LCb setrgbcolor
+% Begin plot #1
+1.000 UL
+LTb
+0.58 0.00 0.83 C %%%%BeginImage
+gsave 1343 1439 N 1343 720 L 2014 720 L 2014 1439 L Z clip
+InterpretLevel1 {
+  %% Construct a box instead of image
+  LTb
+  1343 1439 M
+  671 0 V
+  0 -719 V
+  -671 0 V
+  1343 1439 L
+  40 -110 R
+  (PS level 2 image) Lshow
+  % Read data but ignore it
+  /imagebuf 2902 string def
+  currentfile imagebuf readstring
+} {
+gsave
+1343 1439 translate
+671 -719 scale
+%%%%BeginPalette
+[ /Indexed
+  /DeviceRGB 255
+  <
+   ffffff ffffff fefefe fefefe fdfdfd fdfdfd fdfdfd fcfcfc
+   fcfcfc fbfbfb fbfbfb fafafa fafafa fafafa f9f9f9 f9f9f9
+   f8f8f8 f8f8f8 f8f8f8 f7f7f7 f7f7f7 f6f6f6 f6f6f6 f6f6f6
+   f5f5f5 f5f5f5 f4f4f4 f4f4f4 f3f3f3 f3f3f3 f3f3f3 f2f2f2
+   f2f2f2 f1f1f1 f1f1f1 f1f1f1 f0f0f0 f0f0f0 efefef eeeeee
+   eeeeee ededed ececec ececec ebebeb ebebeb eaeaea e9e9e9
+   e9e9e9 e8e8e8 e7e7e7 e7e7e7 e6e6e6 e6e6e6 e5e5e5 e4e4e4
+   e4e4e4 e3e3e3 e2e2e2 e2e2e2 e1e1e1 e0e0e0 e0e0e0 dfdfdf
+   dfdfdf dedede dddddd dddddd dcdcdc dbdbdb dbdbdb dadada
+   dadada d9d9d9 d8d8d8 d7d7d7 d7d7d7 d6d6d6 d5d5d5 d4d4d4
+   d4d4d4 d3d3d3 d2d2d2 d1d1d1 d0d0d0 d0d0d0 cfcfcf cecece
+   cdcdcd cdcdcd cccccc cbcbcb cacaca cacaca c9c9c9 c8c8c8
+   c7c7c7 c6c6c6 c6c6c6 c5c5c5 c4c4c4 c3c3c3 c3c3c3 c2c2c2
+   c1c1c1 c0c0c0 c0c0c0 bfbfbf bebebe bdbdbd bcbcbc bbbbbb
+   bababa b9b9b9 b8b8b8 b7b7b7 b6b6b6 b5b5b5 b4b4b4 b3b3b3
+   b2b2b2 b0b0b0 afafaf aeaeae adadad acacac ababab aaaaaa
+   a9a9a9 a8a8a8 a7a7a7 a6a6a6 a5a5a5 a4a4a4 a3a3a3 a1a1a1
+   a0a0a0 9f9f9f 9e9e9e 9d9d9d 9c9c9c 9b9b9b 9a9a9a 999999
+   989898 979797 969696 959595 949494 939393 929292 919191
+   909090 8f8f8f 8e8e8e 8d8d8d 8c8c8c 8b8b8b 8a8a8a 898989
+   888888 878787 868686 858585 848484 838383 838383 828282
+   818181 808080 7f7f7f 7e7e7e 7d7d7d 7c7c7c 7b7b7b 7a7a7a
+   797979 787878 777777 767676 757575 747474 737373 727272
+   717171 707070 707070 6f6f6f 6e6e6e 6d6d6d 6c6c6c 6b6b6b
+   6a6a6a 696969 686868 676767 666666 666666 656565 646464
+   636363 626262 616161 606060 5f5f5f 5e5e5e 5d5d5d 5c5c5c
+   5c5c5c 5b5b5b 5a5a5a 595959 585858 575757 565656 555555
+   545454 535353 535353 515151 505050 4f4f4f 4e4e4e 4d4d4d
+   4b4b4b 4a4a4a 494949 484848 464646 454545 444444 434343
+   414141 404040 3f3f3f 3e3e3e 3c3c3c 3b3b3b 3a3a3a 393939
+   383838 363636 353535 343434 333333 313131 303030 2f2f2f
+   2e2e2e 2c2c2c 2b2b2b 2a2a2a 292929 272727 262626 252525
+  >
+] setcolorspace
+%%%%EndPalette
+<<
+  /ImageType 1
+  /Width 100
+  /Height 100
+  /BitsPerComponent 8
+  /ImageMatrix [ 100 0 0 100 0 0 ]
+  /Decode [ 0 255 ]
+  /DataSource currentfile /ASCII85Decode filter
+  /MultipleDataSources false
+  /Interpolate false
+>>
+image
+} ifelse
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzz!#>P7zzz('$?G,8L7Z!$aK[,=4R\6:O:;69,fA()@Yczzzzzzzzzzz!!!c7!$a$G,61&&
+69[_"69[2$3E/d`?>t%:It3T@MN3aVN00BsS=uaX\%0#VYGe1hOctWNH"^tr7RgN^9g0d%z!#>P7zz
+zzzzz!#>Pc(.Lo%<+'3KG^b!kM3=BtSu8`qZG"&naNr>cf\YZOm-aH=rr<#tqXs=Bj4r;9beq3*Xf8
+:tUQgglCi<p'BOY7H9gUX"!!!!7('#*Mzzzzzz(*b%a6;Lp,E-[.gL5V:aQ(Fn[\\u_Agu@G\n+?>L
+rVlisrV6'TmH<Wmh:Krp_8!dqZ)O[oSX#4mLNR3AB5CsB(/I+F1F!Y[zzzzzzzz!%\*M/1`>41J0u.
+AoE3WPFJ5:X0&M0[CNiY\$W<>V50c_R@9:jI>*/jFDGi5H$*7o,8MLa3AWGkzzzzzzzzzzzzz!!!!D
+/0bo14ukqn9jLh"6:sR:3C5_i1B81+!!!c7!%\lc('#*Mzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz~>
+InterpretLevel1 not {
+  grestore
+} if
+grestore
+%%%%EndImage
+% End plot #1
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+0.00 0.00 0.00 C 1.000 UL
+LTb
+LCb setrgbcolor
+grestore % colour palette end
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor true def
+/grayindex {/gidx 0 def
+  {GrayA gidx get grayv ge {exit} if /gidx gidx 1 add def} loop} def
+/dgdx {grayv GrayA gidx get sub GrayA gidx 1 sub get
+  GrayA gidx get sub div} def 
+/redvalue {RedA gidx get RedA gidx 1 sub get
+  RedA gidx get sub dgdxval mul add} def
+/greenvalue {GreenA gidx get GreenA gidx 1 sub get
+  GreenA gidx get sub dgdxval mul add} def
+/bluevalue {BlueA gidx get BlueA gidx 1 sub get
+  BlueA gidx get sub dgdxval mul add} def
+/interpolate {
+  grayindex grayv GrayA gidx get sub abs 1e-5 le
+    {RedA gidx get GreenA gidx get BlueA gidx get}
+    {/dgdxval dgdx def redvalue greenvalue bluevalue} ifelse} def
+/GrayA [0 .1429 .2857 .4286 .5714 .7143 .8571 1 ] def
+/RedA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/GreenA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/BlueA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 Gamma mul div def
+/ColorSpace (RGB) def
+Color InterpolatedColor or { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+336 360 M
+stroke
+LTb
+LCb setrgbcolor
+% Begin plot #1
+1.000 UL
+LTb
+0.58 0.00 0.83 C %%%%BeginImage
+gsave 0 720 N 0 0 L 671 0 L 671 720 L Z clip
+InterpretLevel1 {
+  %% Construct a box instead of image
+  LTb
+  0 720 M
+  671 0 V
+  0 -720 V
+  -671 0 V
+  0 720 L
+  40 -110 R
+  (PS level 2 image) Lshow
+  % Read data but ignore it
+  /imagebuf 6354 string def
+  currentfile imagebuf readstring
+} {
+gsave
+0 720 translate
+671 -720 scale
+%%%%BeginPalette
+[ /Indexed
+  /DeviceRGB 255
+  <
+   ffffff ffffff fefefe fefefe fdfdfd fdfdfd fdfdfd fcfcfc
+   fcfcfc fbfbfb fbfbfb fafafa fafafa fafafa f9f9f9 f9f9f9
+   f8f8f8 f8f8f8 f8f8f8 f7f7f7 f7f7f7 f6f6f6 f6f6f6 f6f6f6
+   f5f5f5 f5f5f5 f4f4f4 f4f4f4 f3f3f3 f3f3f3 f3f3f3 f2f2f2
+   f2f2f2 f1f1f1 f1f1f1 f1f1f1 f0f0f0 f0f0f0 efefef eeeeee
+   eeeeee ededed ececec ececec ebebeb ebebeb eaeaea e9e9e9
+   e9e9e9 e8e8e8 e7e7e7 e7e7e7 e6e6e6 e6e6e6 e5e5e5 e4e4e4
+   e4e4e4 e3e3e3 e2e2e2 e2e2e2 e1e1e1 e0e0e0 e0e0e0 dfdfdf
+   dfdfdf dedede dddddd dddddd dcdcdc dbdbdb dbdbdb dadada
+   dadada d9d9d9 d8d8d8 d7d7d7 d7d7d7 d6d6d6 d5d5d5 d4d4d4
+   d4d4d4 d3d3d3 d2d2d2 d1d1d1 d0d0d0 d0d0d0 cfcfcf cecece
+   cdcdcd cdcdcd cccccc cbcbcb cacaca cacaca c9c9c9 c8c8c8
+   c7c7c7 c6c6c6 c6c6c6 c5c5c5 c4c4c4 c3c3c3 c3c3c3 c2c2c2
+   c1c1c1 c0c0c0 c0c0c0 bfbfbf bebebe bdbdbd bcbcbc bbbbbb
+   bababa b9b9b9 b8b8b8 b7b7b7 b6b6b6 b5b5b5 b4b4b4 b3b3b3
+   b2b2b2 b0b0b0 afafaf aeaeae adadad acacac ababab aaaaaa
+   a9a9a9 a8a8a8 a7a7a7 a6a6a6 a5a5a5 a4a4a4 a3a3a3 a1a1a1
+   a0a0a0 9f9f9f 9e9e9e 9d9d9d 9c9c9c 9b9b9b 9a9a9a 999999
+   989898 979797 969696 959595 949494 939393 929292 919191
+   909090 8f8f8f 8e8e8e 8d8d8d 8c8c8c 8b8b8b 8a8a8a 898989
+   888888 878787 868686 858585 848484 838383 838383 828282
+   818181 808080 7f7f7f 7e7e7e 7d7d7d 7c7c7c 7b7b7b 7a7a7a
+   797979 787878 777777 767676 757575 747474 737373 727272
+   717171 707070 707070 6f6f6f 6e6e6e 6d6d6d 6c6c6c 6b6b6b
+   6a6a6a 696969 686868 676767 666666 666666 656565 646464
+   636363 626262 616161 606060 5f5f5f 5e5e5e 5d5d5d 5c5c5c
+   5c5c5c 5b5b5b 5a5a5a 595959 585858 575757 565656 555555
+   545454 535353 535353 515151 505050 4f4f4f 4e4e4e 4d4d4d
+   4b4b4b 4a4a4a 494949 484848 464646 454545 444444 434343
+   414141 404040 3f3f3f 3e3e3e 3c3c3c 3b3b3b 3a3a3a 393939
+   383838 363636 353535 343434 333333 313131 303030 2f2f2f
+   2e2e2e 2c2c2c 2b2b2b 2a2a2a 292929 272727 262626 252525
+  >
+] setcolorspace
+%%%%EndPalette
+<<
+  /ImageType 1
+  /Width 100
+  /Height 100
+  /BitsPerComponent 8
+  /ImageMatrix [ 100 0 0 100 0 0 ]
+  /Decode [ 0 255 ]
+  /DataSource currentfile /ASCII85Decode filter
+  /MultipleDataSources false
+  /Interpolate false
+>>
+image
+} ifelse
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz)uos=zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+z!!!!=!#ttY/0"Wi)uos=zzzzzzzzzzzzzzz!!!!Mzz)uprYz!!!u=)uot))uosY!#tt=z)uos=zzz
+zzzzzzzzzzzzzzz!!!!=)uosY!%])i)upru/-#YM/-#YMzzzzzzzzzzzzzzzzzzz)ur8E)uqrL!!"P
+iz)uos=zzzzzzzzzzzzzzzzz*#nqYzzzzzz!!!!M!!!!=!#tt=zzzzzzzzzzzzzzzz!#tt=!!!!=z!
+%]*0!#tti8H;%9/1^c\*#nqY!$!s</-#YMzzzzzzzzzzzzzzz!!!u=*#oq<!%\*M)uos=)uqNc/0$q
+U/-%X\!'qS))uprY*#opuzzzzzzzzzzzzzz!#tt=!%]ZP!%]*0)upru!%\+9/1^d(=ZAB:5r^Cq2uk
+K\!&srY!!!uY)uos=zzzzzzzzzzzzz!#tt=!#tt=!!"tY3&j]55l`l13&gm<*#nr0!!!u=3&gmX!#t
+t=)uos=zzzzzzzzzzzzzz5o]k))uosi)uqN@<&d/D*#rNc/3#pk:Fn$s/1^c\/3!V0!#ttY)uos=zz
+zzzzzzzzzz!!!u=z)upru*%X&h!'!P0*#qa?8O6c\!)G-c*#qNM/0#W\!%\*M2uipuz)uos=zzzzzz
+zzzzz!!!u=!!!u=!#tt=!!!!j*&q4T3%R?u<%Lg:8O5<q3#jn//1_bl!!"PM!!"Q9)uos=!#usYzzz
+zzzzzzzzz/-#YM!%^D9!&trX!&uqt6"jh4<(SVl8P`J\8Q8Y?3(ZD-*(`*i3&iH/!%\*M/-#YM!%\*
+Mzzzzzzzzzzz!#usY!!!!M!!#e\!&uM\8O5XA>q@s@CLp:;CMR]sEEQFDBN\b':E1?M!%\*M!%\*Mz
+zzzzzzzz!#tt=z!!!!=2uipY!!!ui*(a9Q3'g>9CKXqB=]oNRDImBbIV<tDEGJ?L:K^Ih3'g+U*%V'
+i2uipYzzzzzzzzzz!!!!=)uos=!!!!M!!"Q$!$"9a/0$rT?!V#E=ZC(tF(K?4=]?qT@<c[$=]A0V3*
+B33/-#Z9)uosYz!#tt=zzzzzzzz!!!!M!!!u=z!!"Q9!(frd:H2L1@8Bj<8TR[P@8pf6:M=$>=_i>!
+8Qf"Y<(SV@5qE!U!%]*@z)uos=zzzzzzzzz!#tt=)uqN0/0$Vh!%]Zm5tQB?ARTh)@;]@V@9H`AAS?
+'lH<k;tEFBhY5tOjD3#jmt)uqquzzzzzzzzzzz!&ss0!'pT9:Fo';*(`Fl=]BBS<-WD&BLtd(CM7U=
+F,,Ek=_i.t?!UlE:I-r[5l^m)5r_.12uipYzzzzzzzzzz!!!!=!!!u=8LuDD5tP?X<,5WSI!C9]GY)
+%\F+epnMNMt0MLTM`@8CQSBLt0L5r\ia*#pL0*#nqYzzzzzzzzz!!!!=/1^c@!%])i5r]i(/6#b`IX
+Y(1H@LQeF`DeVR$O2%Od(WYKQr/i=]o$GIW8d^/4gg$!$"9)!$!O0!!!!Mzzzzzz)uos=zz5l_lE!%
+]ZP*%XBI3+[/EBP;dBKT:M=KQ3'HSsG\3JWZ1PQ%t?OL1k.$F'Wcg/1`>3*#pp<z!!!!=zzzzzzzzz
+!'r.9!!"!)<#dG\8RZUSIW^BuOcbcbOdMc7QCt(@Ngl5qR#dT'O+WTp?"e_->tH"U)uos=/-$Xizzz
+zzzzzz!!!!Y!'pSb!!"uE5qFQm<-WkCF,"prN0]`oO.2uI['?j2Xe)5WUmmL*NfJ[8BR!fk@8o2d*#
+nqu/-#Yi!#tt=zzzzzzzz/-#Z$!'sC#/3"VK3'f)eCP.(OK8GbVTot\3Q*%F+_8XU4_76\SWhGQ3Is
+ca)DJjTEDL>S_5qE!9*%V(@zzzzzzzz/-#YMz!&trL/0%5I*&po/BQJQ(N/sO$QDLIFXKfabbKn,@^
+9=WEVlQ;SMJdQkG\)#/EI*+13#in</1^cP)uprYzzzzzzz!#tt=!#tti/4fh-!(fI-3)<=YF*MqUIY
+XMbSXlRT\AH22cH!`7]XFr@R&$OLOc=jGIY;B+?"&;/5u.I\8P]=+/-#YMzzzzzzzz!!!!b!!"tu*&
+p5M!'t9iBQ\QLN1?E(Q(>"d^r=OAcFqH?cc!W)USkGsSWee`MLU(jAR/_I=ZAu(/0"Wi)uos=zzzzz
+zz)uos=!!!!=/3"V#*&ooL*&oK\CMSBPL7t0,TVK*:c-akcda6V$f@\Bk]r\'&R[0(hHujFO<(U4qC
+FiFE*#oq<z)uos=zzzzzz)uos=!!!!=!#ttY!'!P95r^E2@<64HR\,k=TrboLdF$Img"tTEh;$]5bJ
+13USXl1%IY<>nAPZ*$=\2C?)uqN0*#opu!#tt=zzzzzz!!!!=!!!uY!#utE/3#Ul6"*`A?"ekNQCXG
+DVmF@Xe(3+&i9&eIf\kK5aN1c`X/DGHKR\`-AS#:L<&d0H)uosY/-#YMzzzzzzzz/-#YM!%^)L*#nr
+E8P*fG@=O/kU7RRAWk#s[c-Y,-kMG"ThqZr;b/UWVTW=f\EIX+(CKYOS=\1S(3&gm<*&mouzzzzzzz
+!%\*M!!!!M/1`>')uqNU!'sn?IX$g.Q^=8D]"u;*bL5G=nau;:khk4He%iDXP*`&;K7f2IF(K6,<*:
+2#!%^D9zzzzzzzz!#tt=!!!!b!!#:b!$":#/3%NiH?5:5PGG"R[_9;qdG*^Kqt]jTo'>2d`PoKcNN0
+1QNJW:;IWK12BIk,S/1`a\!!!u=zzzzzzz!!!u=z!&uqh3%R?]5oa<AEIie/P+A5KZGFJucedaQpA4
+gdo'PMkaMYQkUnb,]S:cQBJT4h(<*;L,*&onX!!!!Mzzzzzzz!!!uiz!!"Q9@5q4X:I/E1BS;A+SYW
+3c^:h;1f\>HSp\XmfoBtktah5'eWMZ_oNg,KOEHlVUF\+,(/3!Vh!%])izzzzzzzz!#ut05l_lU5s[
+J0?"JS7Fb>@-TqSTf[(4$#e)03Inb)VJn`f5fa1e^ZVld+uP(\=?<+/pIHqt_5!&uqX!#ttYzzzzzz
+zz/-#YM!&uMh/7hCU:K_@>Fb,L/R%Lae\$s5tf%T-LlgaQ1kNUsP_7$A7Vm3G!P_Os78Qg@gLMJjL*
+%XZ42uipuzzzzzzz!!"Q0z!#usu<&d0L?"I;fEIik/S<gI^]>(hrb1#A6m.0]6iT&Y;_nW1HYGe@dR
+=gN@<%L=VF)EN[*%WW\zzzzzzzz!!!uY!!"PM/-$Xi8K994>u+UE=aYsQQCk.`ZbX2acI:J)jmM[&h
+VR#3_6'H)Um[:0TTkLQ@9I/hF_*ii)uqNq!!!u=zzzzzzz!!!!Mz/0"X@*'m@d8S)1@AT`imO-lKCZ
+adc`_TU<[jPA\KdG)sf]W70gVO!X7ML:.X5r`jt@:`"i3#hoo*#nquzzzzzzzzz)uosi/3$EV5tP3p
+=`n_=S<KVKV5q,D_o9[=dF?XhdEK_K[\8qURZ`;^L50YT@8po+?!0-<!%\+0/-#YMzzzzzzzz:B1@p
+!#usY*(`+q<*`(,BPr9SQC!f0YbnkH^qdk(a2Z!<cHEu0XIbuOP_5!_NIQ(H<+0'8CK+)$2ukK\2ui
+pYzzzzzzzz)uos=!$!O03%R?k?!1H/:K2ggR$F;A[Bd0G]uA+6_o'O5`PT<jWMGZDM0t;9LN-I43,V
+#A<&d0'*&onX*#opuzzzzzzzz)uosi!%]Z$!$"QMBN/bHDHUjjK9)FdT<GN*[D'Aj_S*_)\\GVYWhG
+f@Ockc^H<iL5/7i*H<&ak;/0$2@/4fgA)uos=zzzzzzzz)uosi)uqri@7aF$DI$O6DN9mCR[C4\XKo
+@H]=,&R]=PAIW/cafLQ$t@JRLNHDB'Wf:B2q3!#tt=)uprYzzzzzzzz!#ut<!!!!Y!!#;\<*<dJ8Qe
+W&FbXdnS<TS8XK8h@\?WEIY-"LsO-u2qIX$![:J!i\ECir*5r]iU!$!Ni2ujouzzzzzzzz!!!!=z/-
+#ZA6"+G<=[?V)F*2PWK9_jnVP'onZDOP$ZD3hFLQ6h4EH?eK8Q9+tBK.P=<'`K'!'!7a)uosYzzzzz
+zzz!!!u=!!!u=)ups<:M!gC=_N%c<*<@DDM*\&P+@`;Q_Bk:TS&DbL50btAU&8^=]n=!<&diC5o^jq
+!!!!b!#tt=zzzzzzzz!!"PM/-%4$!#tti)uqs(@9Hl=>u,$2BQ\ufF,l<BNg6)rL4k,(IWKCBDGOg`
+@;&G&!'!qD8Q5[0/-%sUzzzzzzzzz!#tt=!!"PM!%\*M3#jIh3#k4U@9H0-8S*O#Iqs@=NKSdDNH9T
+)G^+@1F)soU8N8[h*)om'!#tt=)uosizzzzzzzzzz!!"tu!!!u=5l`l96!7l0AT;jBDL?5.ItNN3JV
+K#-Is?`aIr8q*=_2#;=Y)*i/0$W@!#ttY!!!!=zzzzzzzzzz!!"u<!#tt=!%]Z\<)6:h=_i80I!'[[
+F+/FgNJra>G^+O?BOP=8@;AY)2ukK\/3tg_!#tt=zzzzzzzzzzzz/1`=P*&mpX<'a)]F&Z^aAS"hVC
+K,(bEJ/^lCNXW>6!\8;=^=T=*#pph!%]Z@!#ttY!!!!=zzzzzzzzzzz*%V(0/0#W\3&j]":H1pK>rZ
+M+AS>4[BPqs;AS=AFAQ3GN/3tg<!'pT)8N87@!!!!Mzzzzzzzzzzzz!&srY!%^)0/3tg,:JWqi3'fi
++8RXnn:LR49:K^Xg=[=Su<'_K`*&mpa:IuN+)uos=zzzzzzzzzzz/-$Xi!%\+$*#opu)uos=!%^];/
+1a(H3#jnW5s\Xe=\1n1/6uCS<(R&i*(`_58K98]!%\*Mzzzzzzzzzzz!!!!M)uqNL*#pL0!!!!=!!!
+!M*)lo(5s[J0*'m@d*#qO0=Y*N3!&sru/5uU/*#q`S/-#YM)uos=zzzzzzzzzzz)uos=!#tt=/1`b3
+*%W'L3'fh18N9L;*&oK#5u/Id3(Z[m!(e.r3&il;!%\+0!!!u=zzzzzzzzzzzzz*#opu*%W'L3&iH?
+3%QU?!(e^A3&ilK3'fMT3#hnu)ups03&il;)uprYzzzzzzzzzzzzz!!!u=!!!!=*#nqY/1^c@3#hoL
+8K7^1!!#;))uosi!&trL!&tr</-#Z0!!"PMzz!!!u=zzzzzzzzzzzz/-#Yi*#ppX)urPi!#ut<)upr
+Y!!!!=/0"Wi!!!!Y/-#Yi!$!ruzzzzzzzzzzzzzz)uos=!(e_$*%W'\3#hoL*#nqu!!!!=!!!uu!&s
+rY*&oJL!!!!=*%V'izzzzzzzzzzzzzzz/-%XL*)@P?/1_b@!&ss05l`G9!!!u=!!!uu)uosY!!"Pi)
+uos=z)uos=zzzzzzzzzzzzz!&sruz/0$2@!%]*L)upru3#hnu!%\*i/0"Wi!%^D9zzzzzzzzzzzzzz
+zzz!!!u=z!%\+$3&gm<!%]Z@/0"Wi!!"Q0zzzzzzzzzzzzzzzzzz!!!u=zzz)uprY!&uML)uosizzz
+zzzzzzzzzzzzzzzz!#ttY)uqMiz!!!u=zzzzzzzzzzzzzzzzzzzzzz!!"PMz!!!!=!%\*Mzzzzzzzz
+zzzzzzzzzzzzzzz*#nqYzzzzzzzzzzzzzzzzzzzzzz!!!u=zzzzzzzzzzzzzzzzzzzzzzzzz2uipYz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz)uos=!!!u=zzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz~>
+InterpretLevel1 not {
+  grestore
+} if
+grestore
+%%%%EndImage
+% End plot #1
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+0.00 0.00 0.00 C 1.000 UL
+LTb
+LCb setrgbcolor
+grestore % colour palette end
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor true def
+/grayindex {/gidx 0 def
+  {GrayA gidx get grayv ge {exit} if /gidx gidx 1 add def} loop} def
+/dgdx {grayv GrayA gidx get sub GrayA gidx 1 sub get
+  GrayA gidx get sub div} def 
+/redvalue {RedA gidx get RedA gidx 1 sub get
+  RedA gidx get sub dgdxval mul add} def
+/greenvalue {GreenA gidx get GreenA gidx 1 sub get
+  GreenA gidx get sub dgdxval mul add} def
+/bluevalue {BlueA gidx get BlueA gidx 1 sub get
+  BlueA gidx get sub dgdxval mul add} def
+/interpolate {
+  grayindex grayv GrayA gidx get sub abs 1e-5 le
+    {RedA gidx get GreenA gidx get BlueA gidx get}
+    {/dgdxval dgdx def redvalue greenvalue bluevalue} ifelse} def
+/GrayA [0 .1429 .2857 .4286 .5714 .7143 .8571 1 ] def
+/RedA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/GreenA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/BlueA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 Gamma mul div def
+/ColorSpace (RGB) def
+Color InterpolatedColor or { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+1007 360 M
+stroke
+LTb
+LCb setrgbcolor
+% Begin plot #1
+1.000 UL
+LTb
+0.58 0.00 0.83 C %%%%BeginImage
+gsave 671 720 N 671 0 L 1342 0 L 1342 720 L Z clip
+InterpretLevel1 {
+  %% Construct a box instead of image
+  LTb
+  671 720 M
+  671 0 V
+  0 -720 V
+  -671 0 V
+  671 720 L
+  40 -110 R
+  (PS level 2 image) Lshow
+  % Read data but ignore it
+  /imagebuf 2959 string def
+  currentfile imagebuf readstring
+} {
+gsave
+671 720 translate
+671 -720 scale
+%%%%BeginPalette
+[ /Indexed
+  /DeviceRGB 255
+  <
+   ffffff ffffff fefefe fefefe fdfdfd fdfdfd fdfdfd fcfcfc
+   fcfcfc fbfbfb fbfbfb fafafa fafafa fafafa f9f9f9 f9f9f9
+   f8f8f8 f8f8f8 f8f8f8 f7f7f7 f7f7f7 f6f6f6 f6f6f6 f6f6f6
+   f5f5f5 f5f5f5 f4f4f4 f4f4f4 f3f3f3 f3f3f3 f3f3f3 f2f2f2
+   f2f2f2 f1f1f1 f1f1f1 f1f1f1 f0f0f0 f0f0f0 efefef eeeeee
+   eeeeee ededed ececec ececec ebebeb ebebeb eaeaea e9e9e9
+   e9e9e9 e8e8e8 e7e7e7 e7e7e7 e6e6e6 e6e6e6 e5e5e5 e4e4e4
+   e4e4e4 e3e3e3 e2e2e2 e2e2e2 e1e1e1 e0e0e0 e0e0e0 dfdfdf
+   dfdfdf dedede dddddd dddddd dcdcdc dbdbdb dbdbdb dadada
+   dadada d9d9d9 d8d8d8 d7d7d7 d7d7d7 d6d6d6 d5d5d5 d4d4d4
+   d4d4d4 d3d3d3 d2d2d2 d1d1d1 d0d0d0 d0d0d0 cfcfcf cecece
+   cdcdcd cdcdcd cccccc cbcbcb cacaca cacaca c9c9c9 c8c8c8
+   c7c7c7 c6c6c6 c6c6c6 c5c5c5 c4c4c4 c3c3c3 c3c3c3 c2c2c2
+   c1c1c1 c0c0c0 c0c0c0 bfbfbf bebebe bdbdbd bcbcbc bbbbbb
+   bababa b9b9b9 b8b8b8 b7b7b7 b6b6b6 b5b5b5 b4b4b4 b3b3b3
+   b2b2b2 b0b0b0 afafaf aeaeae adadad acacac ababab aaaaaa
+   a9a9a9 a8a8a8 a7a7a7 a6a6a6 a5a5a5 a4a4a4 a3a3a3 a1a1a1
+   a0a0a0 9f9f9f 9e9e9e 9d9d9d 9c9c9c 9b9b9b 9a9a9a 999999
+   989898 979797 969696 959595 949494 939393 929292 919191
+   909090 8f8f8f 8e8e8e 8d8d8d 8c8c8c 8b8b8b 8a8a8a 898989
+   888888 878787 868686 858585 848484 838383 838383 828282
+   818181 808080 7f7f7f 7e7e7e 7d7d7d 7c7c7c 7b7b7b 7a7a7a
+   797979 787878 777777 767676 757575 747474 737373 727272
+   717171 707070 707070 6f6f6f 6e6e6e 6d6d6d 6c6c6c 6b6b6b
+   6a6a6a 696969 686868 676767 666666 666666 656565 646464
+   636363 626262 616161 606060 5f5f5f 5e5e5e 5d5d5d 5c5c5c
+   5c5c5c 5b5b5b 5a5a5a 595959 585858 575757 565656 555555
+   545454 535353 535353 515151 505050 4f4f4f 4e4e4e 4d4d4d
+   4b4b4b 4a4a4a 494949 484848 464646 454545 444444 434343
+   414141 404040 3f3f3f 3e3e3e 3c3c3c 3b3b3b 3a3a3a 393939
+   383838 363636 353535 343434 333333 313131 303030 2f2f2f
+   2e2e2e 2c2c2c 2b2b2b 2a2a2a 292929 272727 262626 252525
+  >
+] setcolorspace
+%%%%EndPalette
+<<
+  /ImageType 1
+  /Width 100
+  /Height 100
+  /BitsPerComponent 8
+  /ImageMatrix [ 100 0 0 100 0 0 ]
+  /Decode [ 0 255 ]
+  /DataSource currentfile /ASCII85Decode filter
+  /MultipleDataSources false
+  /Interpolate false
+>>
+image
+} ifelse
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz!!!!7('#
+*Mzzzzzzzzzzzzzzzzz!#>P7z!#>PM!&GBA4tK/`5"S4IBNAbH>WGSU>Wu7]8P)B33C5ni,9nEs/-#
+YMzzzzzzzzz!$_ID!!!!7!$`^>3B8<83B:>?@Ua(bG&DY`S!otHX08e=]tD.l]!SfGWhlVhW1p&_US
+4<CJ:D`hG%+?@1DVMAzzzzz!!!c7!!!c71DVc,9Kk7!7QF7L@9?iKCi=?DM3F9pT;]'"\A$,4f%T'D
+l0e0=rVuosqY9[JjP\_@eC2mi`P90sXf87uVjW9ZFa8.L?;*pd/1^c:,6.]Dzzzzz/3ZBl?;t*JC3t
+AYH\dcMR[BnTX1,dZbKnSdg"kWLlgXQBr;?Khq"=1Cin;Vr]tLt_VOj!;P`V,hO+_t3F`_SCDeE<N7
+Pbe[1B80jzzzzz!!"5Z3>NAj8Q]:p@:<h`C27U1ItN`AR\cXFR%'nHWiEA9\$W]RZ`pR/Tph%!DeNf
+j=BJI18NpK;/1_Q7//A4A(+]Fczzzzzzzzz!#?=M!!!!D('#QZ/4(mO8PD]_5#4@&6;LoiARAJH:Kh
+!Z1IaPgz('"=7zz('"=7zzzzzzzzzzzzzzzzz!!!c7zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz~>
+InterpretLevel1 not {
+  grestore
+} if
+grestore
+%%%%EndImage
+% End plot #1
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+0.00 0.00 0.00 C 0.00 0.00 0.00 C 1141 648 M
+[ [(Courier) 40.0 0.0 true true 0 (t = 1.75 Gy)]
+] -13.3 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+grestore % colour palette end
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor true def
+/grayindex {/gidx 0 def
+  {GrayA gidx get grayv ge {exit} if /gidx gidx 1 add def} loop} def
+/dgdx {grayv GrayA gidx get sub GrayA gidx 1 sub get
+  GrayA gidx get sub div} def 
+/redvalue {RedA gidx get RedA gidx 1 sub get
+  RedA gidx get sub dgdxval mul add} def
+/greenvalue {GreenA gidx get GreenA gidx 1 sub get
+  GreenA gidx get sub dgdxval mul add} def
+/bluevalue {BlueA gidx get BlueA gidx 1 sub get
+  BlueA gidx get sub dgdxval mul add} def
+/interpolate {
+  grayindex grayv GrayA gidx get sub abs 1e-5 le
+    {RedA gidx get GreenA gidx get BlueA gidx get}
+    {/dgdxval dgdx def redvalue greenvalue bluevalue} ifelse} def
+/GrayA [0 .1429 .2857 .4286 .5714 .7143 .8571 1 ] def
+/RedA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/GreenA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/BlueA [1 .9412 .851 .7412 .5882 .451 .3216 .1451 ] def
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 Gamma mul div def
+/ColorSpace (RGB) def
+Color InterpolatedColor or { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+1679 360 M
+stroke
+LTb
+LCb setrgbcolor
+% Begin plot #1
+1.000 UL
+LTb
+0.58 0.00 0.83 C %%%%BeginImage
+gsave 1343 720 N 1343 0 L 2014 0 L 2014 720 L Z clip
+InterpretLevel1 {
+  %% Construct a box instead of image
+  LTb
+  1343 720 M
+  671 0 V
+  0 -720 V
+  -671 0 V
+  1343 720 L
+  40 -110 R
+  (PS level 2 image) Lshow
+  % Read data but ignore it
+  /imagebuf 2943 string def
+  currentfile imagebuf readstring
+} {
+gsave
+1343 720 translate
+671 -720 scale
+%%%%BeginPalette
+[ /Indexed
+  /DeviceRGB 255
+  <
+   ffffff ffffff fefefe fefefe fdfdfd fdfdfd fdfdfd fcfcfc
+   fcfcfc fbfbfb fbfbfb fafafa fafafa fafafa f9f9f9 f9f9f9
+   f8f8f8 f8f8f8 f8f8f8 f7f7f7 f7f7f7 f6f6f6 f6f6f6 f6f6f6
+   f5f5f5 f5f5f5 f4f4f4 f4f4f4 f3f3f3 f3f3f3 f3f3f3 f2f2f2
+   f2f2f2 f1f1f1 f1f1f1 f1f1f1 f0f0f0 f0f0f0 efefef eeeeee
+   eeeeee ededed ececec ececec ebebeb ebebeb eaeaea e9e9e9
+   e9e9e9 e8e8e8 e7e7e7 e7e7e7 e6e6e6 e6e6e6 e5e5e5 e4e4e4
+   e4e4e4 e3e3e3 e2e2e2 e2e2e2 e1e1e1 e0e0e0 e0e0e0 dfdfdf
+   dfdfdf dedede dddddd dddddd dcdcdc dbdbdb dbdbdb dadada
+   dadada d9d9d9 d8d8d8 d7d7d7 d7d7d7 d6d6d6 d5d5d5 d4d4d4
+   d4d4d4 d3d3d3 d2d2d2 d1d1d1 d0d0d0 d0d0d0 cfcfcf cecece
+   cdcdcd cdcdcd cccccc cbcbcb cacaca cacaca c9c9c9 c8c8c8
+   c7c7c7 c6c6c6 c6c6c6 c5c5c5 c4c4c4 c3c3c3 c3c3c3 c2c2c2
+   c1c1c1 c0c0c0 c0c0c0 bfbfbf bebebe bdbdbd bcbcbc bbbbbb
+   bababa b9b9b9 b8b8b8 b7b7b7 b6b6b6 b5b5b5 b4b4b4 b3b3b3
+   b2b2b2 b0b0b0 afafaf aeaeae adadad acacac ababab aaaaaa
+   a9a9a9 a8a8a8 a7a7a7 a6a6a6 a5a5a5 a4a4a4 a3a3a3 a1a1a1
+   a0a0a0 9f9f9f 9e9e9e 9d9d9d 9c9c9c 9b9b9b 9a9a9a 999999
+   989898 979797 969696 959595 949494 939393 929292 919191
+   909090 8f8f8f 8e8e8e 8d8d8d 8c8c8c 8b8b8b 8a8a8a 898989
+   888888 878787 868686 858585 848484 838383 838383 828282
+   818181 808080 7f7f7f 7e7e7e 7d7d7d 7c7c7c 7b7b7b 7a7a7a
+   797979 787878 777777 767676 757575 747474 737373 727272
+   717171 707070 707070 6f6f6f 6e6e6e 6d6d6d 6c6c6c 6b6b6b
+   6a6a6a 696969 686868 676767 666666 666666 656565 646464
+   636363 626262 616161 606060 5f5f5f 5e5e5e 5d5d5d 5c5c5c
+   5c5c5c 5b5b5b 5a5a5a 595959 585858 575757 565656 555555
+   545454 535353 535353 515151 505050 4f4f4f 4e4e4e 4d4d4d
+   4b4b4b 4a4a4a 494949 484848 464646 454545 444444 434343
+   414141 404040 3f3f3f 3e3e3e 3c3c3c 3b3b3b 3a3a3a 393939
+   383838 363636 353535 343434 333333 313131 303030 2f2f2f
+   2e2e2e 2c2c2c 2b2b2b 2a2a2a 292929 272727 262626 252525
+  >
+] setcolorspace
+%%%%EndPalette
+<<
+  /ImageType 1
+  /Width 100
+  /Height 100
+  /BitsPerComponent 8
+  /ImageMatrix [ 100 0 0 100 0 0 ]
+  /Decode [ 0 255 ]
+  /DataSource currentfile /ASCII85Decode filter
+  /MultipleDataSources false
+  /Interpolate false
+>>
+image
+} ifelse
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz!#?=Mzz
+zzzzzzzzzzzzzzzzz!#?=M(*c1:5;Y2h<E3I-AQqu4?X6B):d7Z*1d`KX7o2#n//A4:z!#>P7zzzzz
+zz!!!!7zz!!!!7!!"QB8ki#aAT;F1JW6:tXKAJ(YdUpK\\#J_\[f,RY,J@qU7@^=SXGRsIXZZkD.6=
+?7o3>g(,Qd`!!!cZ,6.]Dzzzz()A,U1ccBs5=7q.=_2VZBQ/]bMMmt(Z*UX@^!5-_iT04fnb)_Squ?
+Wnq=O7KmcNNeh:'Zj_RZqPW2cnsSro(nJVJMo>A.)>:c(!/!%\*Mzzzz!!!!7!(T7G;d3C=Fa81RH]
+*i=S"?X\[CE]\aNi2_g#1fMm.C&JrVuoqq"++Gl/LOTg<IXJYG@n^S<0.lIX-3^B5h-X5>>9Q6N@)d
+zzzzzz!#>P7,8N+4:ea;cA6iP@?Y+(sI!g@&P`h8qS"-+HXKo7E]=kqj\?E!6T:q[>PDOI3BOYF[<C
+]jc!%\m$!%\*M!!!!7zzzzzzzzzzz!#?e1,:kYe/2T0`;b(%^8l/Gh@;0RY@TuZ':a8S"1_q;9z,6.
+]Dzzzzzzzzzzzzzzzzzzzz('"=7zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+zzzzzzzzzzzzzzzzzz~>
+InterpretLevel1 not {
+  grestore
+} if
+grestore
+%%%%EndImage
+% End plot #1
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UP
+0.00 0.00 0.00 C 0.00 0.00 0.00 C 1.000 UL
+LTb
+LCb setrgbcolor
+grestore % colour palette end
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Courier
+%%Pages: 1

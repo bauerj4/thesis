@@ -1,0 +1,104 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Thesis.aux
+A level-1 auxiliary file: Introduction.aux
+A level-1 auxiliary file: Background.aux
+A level-1 auxiliary file: Paper_I.aux
+The style file: apalike.bst
+A level-1 auxiliary file: Paper_II.aux
+Illegal, another \bibstyle command---line 176 of file Paper_II.aux
+ : \bibstyle
+ :          {apalike}
+I'm skipping whatever remains of this command
+Illegal, another \bibdata command---line 177 of file Paper_II.aux
+ : \bibdata
+ :         {bibliography_paper_ii.bib}
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Conclusion.aux
+A level-1 auxiliary file: Appendices.aux
+Database file #1: bibliography_paper_i.bib.bib
+Warning--I didn't find a database entry for "BRJ99"
+Warning--I didn't find a database entry for "sellwood1993"
+Warning--I didn't find a database entry for "simmons2014"
+Warning--I didn't find a database entry for "masters2010"
+Warning--I didn't find a database entry for "ToomreParameter"
+Warning--I didn't find a database entry for "GoldreichTremaine1978"
+Warning--I didn't find a database entry for "GoldreichTremaine1979"
+Warning--I didn't find a database entry for "PeeblesOstriker1973"
+Warning--I didn't find a database entry for "ZangHohlBars1978"
+Warning--I didn't find a database entry for "CombesSandersBars1981"
+Warning--I didn't find a database entry for "Sellwood1981"
+Warning--I didn't find a database entry for "EfstathiouShotNoise"
+Warning--I didn't find a database entry for "AthanassoulaSellwood1986"
+Warning--I didn't find a database entry for "ChristodoulouStability1995"
+Warning--I didn't find a database entry for "Klypin2009"
+Warning--I didn't find a database entry for "dbs2009"
+Warning--I didn't find a database entry for "dubinski1995"
+Warning--I didn't find a database entry for "binney1998"
+Warning--I didn't find a database entry for "dubinski2009"
+Warning--I didn't find a database entry for "Bauer2018a"
+Warning--I didn't find a database entry for "blumenthal1986"
+Warning--I didn't find a database entry for "ryden1987"
+Warning--I didn't find a database entry for "dubinski1994"
+Warning--I didn't find a database entry for "spitzer1942"
+Warning--I didn't find a database entry for "camm1950"
+Warning--I didn't find a database entry for "read2014"
+Warning--I didn't find a database entry for "GalactICS1995"
+Warning--I didn't find a database entry for "agama"
+Warning--I didn't find a database entry for "hartmann2014"
+Warning--I didn't find a database entry for "debattista1998"
+Warning--I didn't find a database entry for "debattista2000"
+Warning--I didn't find a database entry for "VP2004"
+Warning--I didn't find a database entry for "purcell2010"
+Warning--I didn't find a database entry for "mccarthy2012"
+Warning--I didn't find a database entry for "tissera2013"
+Warning--I didn't find a database entry for "dorman2013"
+Warning--I didn't find a database entry for "pricewhelan2015"
+Warning--I didn't find a database entry for "rochapinto2003"
+Warning--I didn't find a database entry for "martin2014"
+Warning--I didn't find a database entry for "sheffield2018"
+Warning--I didn't find a database entry for "yanny2000"
+Warning--I didn't find a database entry for "newberg_2002"
+Warning--I didn't find a database entry for "sharma2010"
+You've used 58 entries,
+            1935 wiz_defined-function locations,
+            872 strings with 16216 characters,
+and the built_in function-call counts, 27130 in all, are:
+= -- 2477
+> -- 1656
+< -- 21
++ -- 595
+- -- 594
+* -- 2520
+:= -- 4882
+add.period$ -- 174
+call.type$ -- 58
+change.case$ -- 584
+chr.to.int$ -- 57
+cite$ -- 58
+duplicate$ -- 819
+empty$ -- 1596
+format.name$ -- 676
+if$ -- 5155
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 59
+newline$ -- 293
+num.names$ -- 176
+pop$ -- 485
+preamble$ -- 1
+purify$ -- 586
+quote$ -- 0
+skip$ -- 606
+stack$ -- 0
+substring$ -- 1668
+swap$ -- 72
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 342
+warning$ -- 0
+while$ -- 166
+width$ -- 0
+write$ -- 749
+(There were 2 error messages)

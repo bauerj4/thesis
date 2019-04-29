@@ -1,0 +1,118 @@
+\begin{thebibliography}{}
+
+\bibitem[{Dodelson}, 2003]{dodelson}
+{Dodelson}, S. (2003).
+\newblock {\em {Modern cosmology}}.
+
+\bibitem[{Eisenstein} et~al., 1999]{transfer_fn}
+{Eisenstein}, D.~J., {Hu}, W., and {Tegmark}, M. (1999).
+\newblock {Cosmic Complementarity: Joint Parameter Estimation from Cosmic
+  Microwave Background Experiments and Redshift Surveys}.
+\newblock {\em \apj}, 518:2--23.
+
+\bibitem[{Erkal} et~al., 2018]{erkal_lmc}
+{Erkal}, D., {Belokurov}, V., {Laporte}, C.~F.~P., {Koposov}, S.~E., {Li},
+  T.~S., {Grillmair}, C.~J., {Kallivayalil}, N., {Price-Whelan}, A.~M.,
+  {Evans}, N.~W., {Hawkins}, K., {Hendel}, D., {Mateu}, C., {Navarro}, J.~F.,
+  {del Pino}, A., {Slater}, C.~T., and {Sohn}, S.~T. (2018).
+\newblock {The total mass of the Large Magellanic Cloud from its perturbation
+  on the Orphan stream}.
+\newblock {\em arXiv e-prints}.
+
+\bibitem[{Kolb} and {Turner}, 1990]{kolb_turner}
+{Kolb}, E.~W. and {Turner}, M.~S. (1990).
+\newblock {\em {The early universe.}}
+
+\bibitem[{Navarro} et~al., 1997]{nfw}
+{Navarro}, J.~F., {Frenk}, C.~S., and {White}, S.~D.~M. (1997).
+\newblock {A Universal Density Profile from Hierarchical Clustering}.
+\newblock {\em \apj}, 490:493--508.
+
+\bibitem[{Perlmutter} et~al., 1999]{perlmutter_1999}
+{Perlmutter}, S., {Aldering}, G., {Goldhaber}, G., {Knop}, R.~A., {Nugent}, P.,
+  {Castro}, P.~G., {Deustua}, S., {Fabbro}, S., {Goobar}, A., {Groom}, D.~E.,
+  {Hook}, I.~M., {Kim}, A.~G., {Kim}, M.~Y., {Lee}, J.~C., {Nunes}, N.~J.,
+  {Pain}, R., {Pennypacker}, C.~R., {Quimby}, R., {Lidman}, C., {Ellis}, R.~S.,
+  {Irwin}, M., {McMahon}, R.~G., {Ruiz-Lapuente}, P., {Walton}, N., {Schaefer},
+  B., {Boyle}, B.~J., {Filippenko}, A.~V., {Matheson}, T., {Fruchter}, A.~S.,
+  {Panagia}, N., {Newberg}, H.~J.~M., {Couch}, W.~J., and {Project}, T.~S.~C.
+  (1999).
+\newblock {Measurements of {$\Omega$} and {$\Lambda$} from 42 High-Redshift
+  Supernovae}.
+\newblock {\em \apj}, 517:565--586.
+
+\bibitem[{Planck Collaboration} et~al., 2018]{planck_2018}
+{Planck Collaboration}, {Aghanim}, N., {Akrami}, Y., {Ashdown}, M., {Aumont},
+  J., {Baccigalupi}, C., {Ballardini}, M., {Banday}, A.~J., {Barreiro}, R.~B.,
+  {Bartolo}, N., {Basak}, S., {Battye}, R., {Benabed}, K., {Bernard}, J.-P.,
+  {Bersanelli}, M., {Bielewicz}, P., {Bock}, J.~J., {Bond}, J.~R., {Borrill},
+  J., {Bouchet}, F.~R., {Boulanger}, F., {Bucher}, M., {Burigana}, C.,
+  {Butler}, R.~C., {Calabrese}, E., {Cardoso}, J.-F., {Carron}, J.,
+  {Challinor}, A., {Chiang}, H.~C., {Chluba}, J., {Colombo}, L.~P.~L.,
+  {Combet}, C., {Contreras}, D., {Crill}, B.~P., {Cuttaia}, F., {de Bernardis},
+  P., {de Zotti}, G., {Delabrouille}, J., {Delouis}, J.-M., {Di Valentino}, E.,
+  {Diego}, J.~M., {Dor{\'e}}, O., {Douspis}, M., {Ducout}, A., {Dupac}, X.,
+  {Dusini}, S., {Efstathiou}, G., {Elsner}, F., {En{\ss}lin}, T.~A., {Eriksen},
+  H.~K., {Fantaye}, Y., {Farhang}, M., {Fergusson}, J., {Fernandez-Cobos}, R.,
+  {Finelli}, F., {Forastieri}, F., {Frailis}, M., {Franceschi}, E., {Frolov},
+  A., {Galeotta}, S., {Galli}, S., {Ganga}, K., {G{\'e}nova-Santos}, R.~T.,
+  {Gerbino}, M., {Ghosh}, T., {Gonz{\'a}lez-Nuevo}, J., {G{\'o}rski}, K.~M.,
+  {Gratton}, S., {Gruppuso}, A., {Gudmundsson}, J.~E., {Hamann}, J., {Handley},
+  W., {Herranz}, D., {Hivon}, E., {Huang}, Z., {Jaffe}, A.~H., {Jones}, W.~C.,
+  {Karakci}, A., {Keih{\"a}nen}, E., {Keskitalo}, R., {Kiiveri}, K., {Kim}, J.,
+  {Kisner}, T.~S., {Knox}, L., {Krachmalnicoff}, N., {Kunz}, M.,
+  {Kurki-Suonio}, H., {Lagache}, G., {Lamarre}, J.-M., {Lasenby}, A.,
+  {Lattanzi}, M., {Lawrence}, C.~R., {Le Jeune}, M., {Lemos}, P.,
+  {Lesgourgues}, J., {Levrier}, F., {Lewis}, A., {Liguori}, M., {Lilje}, P.~B.,
+  {Lilley}, M., {Lindholm}, V., {L{\'o}pez-Caniego}, M., {Lubin}, P.~M., {Ma},
+  Y.-Z., {Mac{\'{\i}}as-P{\'e}rez}, J.~F., {Maggio}, G., {Maino}, D.,
+  {Mandolesi}, N., {Mangilli}, A., {Marcos-Caballero}, A., {Maris}, M.,
+  {Martin}, P.~G., {Martinelli}, M., {Mart{\'{\i}}nez-Gonz{\'a}lez}, E.,
+  {Matarrese}, S., {Mauri}, N., {McEwen}, J.~D., {Meinhold}, P.~R.,
+  {Melchiorri}, A., {Mennella}, A., {Migliaccio}, M., {Millea}, M., {Mitra},
+  S., {Miville-Desch{\^e}nes}, M.-A., {Molinari}, D., {Montier}, L.,
+  {Morgante}, G., {Moss}, A., {Natoli}, P., {N{\o}rgaard-Nielsen}, H.~U.,
+  {Pagano}, L., {Paoletti}, D., {Partridge}, B., {Patanchon}, G., {Peiris},
+  H.~V., {Perrotta}, F., {Pettorino}, V., {Piacentini}, F., {Polastri}, L.,
+  {Polenta}, G., {Puget}, J.-L., {Rachen}, J.~P., {Reinecke}, M.,
+  {Remazeilles}, M., {Renzi}, A., {Rocha}, G., {Rosset}, C., {Roudier}, G.,
+  {Rubi{\~n}o-Mart{\'{\i}}n}, J.~A., {Ruiz-Granados}, B., {Salvati}, L.,
+  {Sandri}, M., {Savelainen}, M., {Scott}, D., {Shellard}, E.~P.~S.,
+  {Sirignano}, C., {Sirri}, G., {Spencer}, L.~D., {Sunyaev}, R., {Suur-Uski},
+  A.-S., {Tauber}, J.~A., {Tavagnacco}, D., {Tenti}, M., {Toffolatti}, L.,
+  {Tomasi}, M., {Trombetti}, T., {Valenziano}, L., {Valiviita}, J., {Van Tent},
+  B., {Vibert}, L., {Vielva}, P., {Villa}, F., {Vittorio}, N., {Wandelt},
+  B.~D., {Wehus}, I.~K., {White}, M., {White}, S.~D.~M., {Zacchei}, A., and
+  {Zonca}, A. (2018).
+\newblock {Planck 2018 results. VI. Cosmological parameters}.
+\newblock {\em arXiv e-prints}.
+
+\bibitem[Powell, 2017]{local_group_map}
+Powell, R. (2017).
+\newblock {An Atlas of the Universe}.
+\newblock {Image obtained from
+  \url{https://en.wikipedia.org/wiki/File:Local_Group.svg}}.
+
+\bibitem[{Riess} et~al., 1998]{reiss_1998}
+{Riess}, A.~G., {Filippenko}, A.~V., {Challis}, P., {Clocchiatti}, A.,
+  {Diercks}, A., {Garnavich}, P.~M., {Gilliland}, R.~L., {Hogan}, C.~J., {Jha},
+  S., {Kirshner}, R.~P., {Leibundgut}, B., {Phillips}, M.~M., {Reiss}, D.,
+  {Schmidt}, B.~P., {Schommer}, R.~A., {Smith}, R.~C., {Spyromilio}, J.,
+  {Stubbs}, C., {Suntzeff}, N.~B., and {Tonry}, J. (1998).
+\newblock {Observational Evidence from Supernovae for an Accelerating Universe
+  and a Cosmological Constant}.
+\newblock {\em \aj}, 116:1009--1038.
+
+\bibitem[{U.S. Census Bureau}, 2010a]{manhattan_population_density}
+{U.S. Census Bureau} (2010a).
+\newblock {2010 Census Gazetteer Files: New York County Subdivisions}.
+
+\bibitem[{U.S. Census Bureau}, 2010b]{2010_us_census}
+{U.S. Census Bureau} (2010b).
+\newblock {Population Distribution in the United States and Puerto Rico}.
+
+\bibitem[{Wikipedia}, 2018]{history_of_nyc}
+{Wikipedia} (2018).
+\newblock {History of New York City}.
+
+\end{thebibliography}

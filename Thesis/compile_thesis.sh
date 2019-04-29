@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=("myPreamble" "Abstract" "Background" "Paper_I" "Paper_II" "Conclusion") 
+files=("myPreamble" "Abstract" "Introduction" "Background" "Paper_I" "Paper_II" "Conclusion") 
 #files[0]="myPreamble.tex" 
 #files[1]="Abstract.tex" 
 #files[2]="Background.tex" 

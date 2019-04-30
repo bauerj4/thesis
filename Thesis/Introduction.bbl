@@ -1,14 +1,99 @@
 \begin{thebibliography}{}
 
+\bibitem[{Belokurov} et~al., 2007]{belokurov_2007}
+{Belokurov}, V., {Evans}, N.~W., {Irwin}, M.~J., {Lynden-Bell}, D., {Yanny},
+  B., {Vidrih}, S., {Gilmore}, G., {Seabroke}, G., {Zucker}, D.~B.,
+  {Wilkinson}, M.~I., {Hewett}, P.~C., {Bramich}, D.~M., {Fellhauer}, M.,
+  {Newberg}, H.~J., {Wyse}, R.~F.~G., {Beers}, T.~C., {Bell}, E.~F.,
+  {Barentine}, J.~C., {Brinkmann}, J., {Cole}, N., {Pan}, K., and {York}, D.~G.
+  (2007).
+\newblock {An Orphan in the ``Field of Streams''}.
+\newblock {\em \apj}, 658(1):337--344.
+
+\bibitem[{Bennett} and {Bovy}, 2019]{bennet_2019_gaia}
+{Bennett}, M. and {Bovy}, J. (2019).
+\newblock {Vertical waves in the solar neighbourhood in Gaia DR2}.
+\newblock {\em \mnras}, 482:1417--1425.
+
+\bibitem[{Carlin} et~al., 2013]{carlin_2013_lamost}
+{Carlin}, J.~L., {DeLaunay}, J., {Newberg}, H.~J., {Deng}, L., {Gole}, D.,
+  {Grabowski}, K., {Jin}, G., {Liu}, C., {Liu}, X., {Luo}, A.-L., {Yuan}, H.,
+  {Zhang}, H., {Zhao}, G., and {Zhao}, Y. (2013).
+\newblock {Substructure in Bulk Velocities of Milky Way Disk Stars}.
+\newblock {\em \apjl}, 777:L5.
+
+\bibitem[{Carrillo} et~al., 2018]{carrillo_2018_rave}
+{Carrillo}, I., {Minchev}, I., {Kordopatis}, G., {Steinmetz}, M., {Binney}, J.,
+  {Anders}, F., {Bienaym{\'e}}, O., {Bland-Hawthorn}, J., {Famaey}, B.,
+  {Freeman}, K.~C., {Gilmore}, G., {Gibson}, B.~K., {Grebel}, E.~K., {Helmi},
+  A., {Just}, A., {Kunder}, A., {McMillan}, P., {Monari}, G., {Munari}, U.,
+  {Navarro}, J., {Parker}, Q.~A., {Reid}, W., {Seabroke}, G., {Sharma}, S.,
+  {Siebert}, A., {Watson}, F., {Wojno}, J., {Wyse}, R.~F.~G., and {Zwitter}, T.
+  (2018).
+\newblock {Is the Milky Way still breathing? RAVE-Gaia streaming motions}.
+\newblock {\em \mnras}, 475:2679--2696.
+
+\bibitem[{Cen} and {Ostriker}, 1992]{CenOstriker92}
+{Cen}, R. and {Ostriker}, J.~P. (1992).
+\newblock {Galaxy formation and physical bias}.
+\newblock {\em \apjl}, 399:L113--L116.
+
+\bibitem[{Chakrabarti} et~al., 2016]{gasWarp}
+{Chakrabarti}, S., {Angeloni}, R., {Freeman}, K., {Sargent}, B., {Simon},
+  J.~D., {Konorski}, P., {Gieren}, W., {Sesar}, B., {Lipnicky}, A., {Blitz},
+  L., {Basri}, G., {Marengo}, M., {Vacca}, W., {Guhathakurta}, P., {Quillen},
+  A., and {Chang}, P. (2016).
+\newblock {Galactoseismology: Discovery of a cluster of receding, variable halo
+  stars}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[{de Blok}, 2010]{de_blok_core_cusp}
+{de Blok}, W.~J.~G. (2010).
+\newblock {The Core-Cusp Problem}.
+\newblock {\em Advances in Astronomy}, 2010:789293.
+
+\bibitem[{de la Vega} et~al., 2015]{dlv_2015}
+{de la Vega}, A., {Quillen}, A.~C., {Carlin}, J.~L., {Chakrabarti}, S., and
+  {D'Onghia}, E. (2015).
+\newblock {Phase wrapping of epicyclic perturbations in the Wobbly Galaxy}.
+\newblock {\em \mnras}, 454:933--945.
+
 \bibitem[{Dodelson}, 2003]{dodelson}
 {Dodelson}, S. (2003).
 \newblock {\em {Modern cosmology}}.
+
+\bibitem[{D'Onghia} et~al., 2016]{donghia_2016}
+{D'Onghia}, E., {Madau}, P., {Vera-Ciro}, C., {Quillen}, A., and {Hernquist},
+  L. (2016).
+\newblock {Excitation of Coupled Stellar Motions in the Galactic Disk by
+  Orbiting Satellites}.
+\newblock {\em \apj}, 823:4.
+
+\bibitem[{Dorman} et~al., 2013]{dorman_2013_m31}
+{Dorman}, C.~E., {Widrow}, L.~M., {Guhathakurta}, P., {Seth}, A.~C.,
+  {Foreman-Mackey}, D., {Bell}, E.~F., {Dalcanton}, J.~J., {Gilbert}, K.~M.,
+  {Skillman}, E.~D., and {Williams}, B.~F. (2013).
+\newblock {A New Approach to Detailed Structural Decomposition from the SPLASH
+  and PHAT Surveys: Kicked-up Disk Stars in the Andromeda Galaxy?}
+\newblock {\em \apj}, 779:103.
+
+\bibitem[{Dubinski} et~al., 2008]{dubinski2008}
+{Dubinski}, J., {Gauthier}, J.-R., {Widrow}, L., and {Nickerson}, S. (2008).
+\newblock {Spiral and Bar Instabilities Provoked by Dark Matter Satellites}.
+\newblock In {Funes}, J.~G. and {Corsini}, E.~M., editors, {\em Formation and
+  Evolution of Galaxy Disks}, volume 396 of {\em Astronomical Society of the
+  Pacific Conference Series}, page 321.
 
 \bibitem[{Eisenstein} et~al., 1999]{transfer_fn}
 {Eisenstein}, D.~J., {Hu}, W., and {Tegmark}, M. (1999).
 \newblock {Cosmic Complementarity: Joint Parameter Estimation from Cosmic
   Microwave Background Experiments and Redshift Surveys}.
 \newblock {\em \apj}, 518:2--23.
+
+\bibitem[{Erkal} et~al., 2016]{erkal_2016_stream_gaps}
+{Erkal}, D., {Belokurov}, V., {Bovy}, J., and {Sand ers}, J.~L. (2016).
+\newblock {The number and size of subhalo-induced gaps in stellar streams}.
+\newblock {\em \mnras}, 463(1):102--119.
 
 \bibitem[{Erkal} et~al., 2018]{erkal_lmc}
 {Erkal}, D., {Belokurov}, V., {Laporte}, C.~F.~P., {Koposov}, S.~E., {Li},
@@ -19,14 +104,138 @@
   on the Orphan stream}.
 \newblock {\em arXiv e-prints}.
 
+\bibitem[{Font} et~al., 2001]{Font2001}
+{Font}, A.~S., {Navarro}, J.~F., {Stadel}, J., and {Quinn}, T. (2001).
+\newblock {Halo Substructure and Disk Heating in a {$\Lambda$} Cold Dark Matter
+  Universe}.
+\newblock {\em \apjl}, 563:L1--L4.
+
+\bibitem[{Gaia Collaboration} et~al., 2018]{gaia_collab}
+{Gaia Collaboration}, {Katz}, D., {Antoja}, T., {Romero-G{\'o}mez}, M.,
+  {Drimmel}, R., {Reyl{\'e}}, C., {Seabroke}, G.~M., {Soubiran}, C.,
+  {Babusiaux}, C., {Di Matteo}, P., and et~al. (2018).
+\newblock {Gaia Data Release 2. Mapping the Milky Way disc kinematics}.
+\newblock {\em \aap}, 616:A11.
+
+\bibitem[{Gao} et~al., 2004]{gao2004}
+{Gao}, L., {White}, S.~D.~M., {Jenkins}, A., {Stoehr}, F., and {Springel}, V.
+  (2004).
+\newblock {The subhalo populations of {$\Lambda$}CDM dark haloes}.
+\newblock {\em \mnras}, 355:819--834.
+
+\bibitem[{Gauthier} et~al., 2006]{gauthier2006}
+{Gauthier}, J.-R., {Dubinski}, J., and {Widrow}, L.~M. (2006).
+\newblock {Substructure around M31: Evolution and Effects}.
+\newblock {\em \apj}, 653:1180--1193.
+
+\bibitem[{G{\'o}mez} et~al., 2017]{gomez_2017}
+{G{\'o}mez}, F.~A., {White}, S.~D.~M., {Grand}, R.~J.~J., {Marinacci}, F.,
+  {Springel}, V., and {Pakmor}, R. (2017).
+\newblock {Warps and waves in the stellar discs of the Auriga cosmological
+  simulations}.
+\newblock {\em \mnras}, 465:3446--3460.
+
+\bibitem[{Grillmair}, 2006]{grillmair_2006}
+{Grillmair}, C.~J. (2006).
+\newblock {Substructure in Tidal Streams: Tributaries in the Anticenter
+  Stream}.
+\newblock {\em \apj}, 651(1):L29--L32.
+
+\bibitem[{Hahn} and {Abel}, 2013]{music}
+{Hahn}, O. and {Abel}, T. (2013).
+\newblock {MUSIC: MUlti-Scale Initial Conditions}.
+\newblock Astrophysics Source Code Library.
+
+\bibitem[{Ibata} et~al., 1994]{ibata_discovery}
+{Ibata}, R.~A., {Gilmore}, G., and {Irwin}, M.~J. (1994).
+\newblock {A dwarf satellite galaxy in Sagittarius}.
+\newblock {\em \nat}, 370:194--196.
+
+\bibitem[{Johnston} et~al., 2017]{johnston_kud_review}
+{Johnston}, K.~V., {Price-Whelan}, A.~M., {Bergemann}, M., {Laporte}, C., {Li},
+  T.~S., {Sheffield}, A.~A., {Majewski}, S.~R., {Beaton}, R.~S., {Sesar}, B.,
+  and {Sharma}, S. (2017).
+\newblock {Disk Heating, Galactoseismology, and the Formation of Stellar
+  Halos}.
+\newblock {\em Galaxies}, 5:44.
+
+\bibitem[{Katz} et~al., 1996]{KatzSPH96}
+{Katz}, N., {Weinberg}, D.~H., and {Hernquist}, L. (1996).
+\newblock {Cosmological Simulations with TreeSPH}.
+\newblock {\em \apjs}, 105:19.
+
+\bibitem[{Kazantzidis} et~al., 2008]{kazantzidis2008}
+{Kazantzidis}, S., {Bullock}, J.~S., {Zentner}, A.~R., {Kravtsov}, A.~V., and
+  {Moustakas}, L.~A. (2008).
+\newblock {Cold Dark Matter Substructure and Galactic Disks. I. Morphological
+  Signatures of Hierarchical Satellite Accretion}.
+\newblock {\em \apj}, 688:254--276.
+
+\bibitem[{Klypin} et~al., 1999]{Klypin1999}
+{Klypin}, A., {Kravtsov}, A.~V., {Valenzuela}, O., and {Prada}, F. (1999).
+\newblock {Where Are the Missing Galactic Satellites?}
+\newblock {\em \apj}, 522:82--92.
+
 \bibitem[{Kolb} and {Turner}, 1990]{kolb_turner}
 {Kolb}, E.~W. and {Turner}, M.~S. (1990).
 \newblock {\em {The early universe.}}
+
+\bibitem[{Laporte} et~al., 2016]{laporte_2016}
+{Laporte}, C.~F.~P., {G{\'o}mez}, F.~A., {Besla}, G., {Johnston}, K.~V., and
+  {Garavito-Camargo}, N. (2016).
+\newblock {Response of the Milky Way's disc to the Large Magellanic Cloud in a
+  first infall scenario}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[{Laporte} et~al., 2018]{laporte_2018}
+{Laporte}, C.~F.~P., {G{\'o}mez}, F.~A., {Besla}, G., {Johnston}, K.~V., and
+  {Garavito-Camargo}, N. (2018).
+\newblock {Response of the Milky Way's disc to the Large Magellanic Cloud in a
+  first infall scenario}.
+\newblock {\em \mnras}, 473:1218--1230.
+
+\bibitem[{Laporte} et~al., 2019]{laporte_2019_feathers}
+{Laporte}, C. F.~P., {Johnston}, K.~V., and {Tzanidakis}, A. (2019).
+\newblock {Stellar disc streams as probes of the Galactic potential and
+  satellite impacts}.
+\newblock {\em \mnras}, 483:1427--1436.
+
+\bibitem[{Lucy}, 1977]{LucySPH}
+{Lucy}, L.~B. (1977).
+\newblock {A numerical approach to the testing of the fission hypothesis}.
+\newblock {\em \aj}, 82:1013--1024.
+
+\bibitem[{Majewski} et~al., 2003]{majewski_2003}
+{Majewski}, S.~R., {Skrutskie}, M.~F., {Weinberg}, M.~D., and {Ostheimer},
+  J.~C. (2003).
+\newblock {A Two Micron All Sky Survey View of the Sagittarius Dwarf Galaxy. I.
+  Morphology of the Sagittarius Core and Tidal Arms}.
+\newblock {\em \apj}, 599(2):1082--1115.
+
+\bibitem[{Moore} et~al., 1999]{mooresubhalos}
+{Moore}, B., {Ghigna}, S., {Governato}, F., {Lake}, G., {Quinn}, T., {Stadel},
+  J., and {Tozzi}, P. (1999).
+\newblock {Dark Matter Substructure within Galactic Halos}.
+\newblock {\em \apjl}, 524:L19--L22.
 
 \bibitem[{Navarro} et~al., 1997]{nfw}
 {Navarro}, J.~F., {Frenk}, C.~S., and {White}, S.~D.~M. (1997).
 \newblock {A Universal Density Profile from Hierarchical Clustering}.
 \newblock {\em \apj}, 490:493--508.
+
+\bibitem[{Newberg} et~al., 2010]{newberg_2010}
+{Newberg}, H.~J., {Willett}, B.~A., {Yanny}, B., and {Xu}, Y. (2010).
+\newblock {The Orbit of the Orphan Stream}.
+\newblock {\em \apj}, 711(1):32--49.
+
+\bibitem[{Newberg} et~al., 2002]{newberg_2002}
+{Newberg}, H.~J., {Yanny}, B., {Rockosi}, C., {Grebel}, E.~K., {Rix}, H.-W.,
+  {Brinkmann}, J., {Csabai}, I., {Hennessy}, G., {Hindsley}, R.~B., {Ibata},
+  R., {Ivezi{\'c}}, Z., {Lamb}, D., {Nash}, E.~T., {Odenkirchen}, M., {Rave},
+  H.~A., {Schneider}, D.~P., {Smith}, J.~A., {Stolte}, A., and {York}, D.~G.
+  (2002).
+\newblock {The Ghost of Sagittarius and Lumps in the Halo of the Milky Way}.
+\newblock {\em \apj}, 569(1):245--274.
 
 \bibitem[{Perlmutter} et~al., 1999]{perlmutter_1999}
 {Perlmutter}, S., {Aldering}, G., {Goldhaber}, G., {Knop}, R.~A., {Nugent}, P.,
@@ -93,6 +302,13 @@ Powell, R. (2017).
 \newblock {Image obtained from
   \url{https://en.wikipedia.org/wiki/File:Local_Group.svg}}.
 
+\bibitem[{Purcell} et~al., 2011]{purcell2011}
+{Purcell}, C.~W., {Bullock}, J.~S., {Tollerud}, E.~J., {Rocha}, M., and
+  {Chakrabarti}, S. (2011).
+\newblock {The Sagittarius impact as an architect of spirality and outer rings
+  in the Milky Way}.
+\newblock {\em \nat}, 477:301--303.
+
 \bibitem[{Riess} et~al., 1998]{reiss_1998}
 {Riess}, A.~G., {Filippenko}, A.~V., {Challis}, P., {Clocchiatti}, A.,
   {Diercks}, A., {Garnavich}, P.~M., {Gilliland}, R.~L., {Hogan}, C.~J., {Jha},
@@ -103,6 +319,40 @@ Powell, R. (2017).
   and a Cosmological Constant}.
 \newblock {\em \aj}, 116:1009--1038.
 
+\bibitem[{Sanders} and {Binney}, 2013]{sanders_binney_2013_a}
+{Sanders}, J.~L. and {Binney}, J. (2013).
+\newblock {Stream-orbit misalignment - I. The dangers of orbit-fitting}.
+\newblock {\em \mnras}, 433(3):1813--1825.
+
+\bibitem[{Schaye} et~al., 2015]{Eagle}
+{Schaye}, J., {Crain}, R.~A., {Bower}, R.~G., {Furlong}, M., {Schaller}, M.,
+  {Theuns}, T., {Dalla Vecchia}, C., {Frenk}, C.~S., {McCarthy}, I.~G.,
+  {Helly}, J.~C., {Jenkins}, A., {Rosas-Guevara}, Y.~M., {White}, S.~D.~M.,
+  {Baes}, M., {Booth}, C.~M., {Camps}, P., {Navarro}, J.~F., {Qu}, Y.,
+  {Rahmati}, A., {Sawala}, T., {Thomas}, P.~A., and {Trayford}, J. (2015).
+\newblock {The EAGLE project: simulating the evolution and assembly of galaxies
+  and their environments}.
+\newblock {\em \mnras}, 446:521--554.
+
+\bibitem[{Springel} and {Hernquist}, 2003]{SpringelMultiphase03}
+{Springel}, V. and {Hernquist}, L. (2003).
+\newblock {Cosmological smoothed particle hydrodynamics simulations: a hybrid
+  multiphase model for star formation}.
+\newblock {\em \mnras}, 339:289--311.
+
+\bibitem[{Springel} et~al., 2008]{springel2008}
+{Springel}, V., {Wang}, J., {Vogelsberger}, M., {Ludlow}, A., {Jenkins}, A.,
+  {Helmi}, A., {Navarro}, J.~F., {Frenk}, C.~S., and {White}, S.~D.~M. (2008).
+\newblock {The Aquarius Project: the subhaloes of galactic haloes}.
+\newblock {\em \mnras}, 391:1685--1711.
+
+\bibitem[{Stinson} et~al., 2006]{Stinson2006}
+{Stinson}, G., {Seth}, A., {Katz}, N., {Wadsley}, J., {Governato}, F., and
+  {Quinn}, T. (2006).
+\newblock {Star formation and feedback in smoothed particle hydrodynamic
+  simulations - I. Isolated galaxies}.
+\newblock {\em \mnras}, 373:1074--1090.
+
 \bibitem[{U.S. Census Bureau}, 2010a]{manhattan_population_density}
 {U.S. Census Bureau} (2010a).
 \newblock {2010 Census Gazetteer Files: New York County Subdivisions}.
@@ -111,8 +361,45 @@ Powell, R. (2017).
 {U.S. Census Bureau} (2010b).
 \newblock {Population Distribution in the United States and Puerto Rico}.
 
+\bibitem[{Vogelsberger} et~al., 2014]{Illustris}
+{Vogelsberger}, M., {Genel}, S., {Springel}, V., {Torrey}, P., {Sijacki}, D.,
+  {Xu}, D., {Snyder}, G., {Nelson}, D., and {Hernquist}, L. (2014).
+\newblock {Introducing the Illustris Project: simulating the coevolution of
+  dark and visible matter in the Universe}.
+\newblock {\em \mnras}, 444:1518--1547.
+
+\bibitem[{Widrow} et~al., 2014]{widrow_2014}
+{Widrow}, L.~M., {Barber}, J., {Chequers}, M.~H., and {Cheng}, E. (2014).
+\newblock {Bending and breathing modes of the Galactic disc}.
+\newblock {\em \mnras}, 440:1971--1981.
+
+\bibitem[{Widrow} et~al., 2012]{widrow_2012_sdss}
+{Widrow}, L.~M., {Gardner}, S., {Yanny}, B., {Dodelson}, S., and {Chen}, H.-Y.
+  (2012).
+\newblock {Galactoseismology: Discovery of Vertical Waves in the Galactic
+  Disk}.
+\newblock {\em \apjl}, 750:L41.
+
 \bibitem[{Wikipedia}, 2018]{history_of_nyc}
 {Wikipedia} (2018).
 \newblock {History of New York City}.
+
+\bibitem[{Williams} et~al., 2013]{williams_2013_rave}
+{Williams}, M.~E.~K., {Steinmetz}, M., {Binney}, J., {Siebert}, A., {Enke}, H.,
+  {Famaey}, B., {Minchev}, I., {de Jong}, R.~S., {Boeche}, C., {Freeman},
+  K.~C., {Bienaym{\'e}}, O., {Bland-Hawthorn}, J., {Gibson}, B.~K., {Gilmore},
+  G.~F., {Grebel}, E.~K., {Helmi}, A., {Kordopatis}, G., {Munari}, U.,
+  {Navarro}, J.~F., {Parker}, Q.~A., {Reid}, W., {Seabroke}, G.~M., {Sharma},
+  S., {Siviero}, A., {Watson}, F.~G., {Wyse}, R.~F.~G., and {Zwitter}, T.
+  (2013).
+\newblock {The wobbly Galaxy: kinematics north and south with RAVE red-clump
+  giants}.
+\newblock {\em \mnras}, 436:101--121.
+
+\bibitem[{Xu} et~al., 2015]{xu_2015}
+{Xu}, Y., {Newberg}, H.~J., {Carlin}, J.~L., {Liu}, C., {Deng}, L., {Li}, J.,
+  {Sch{\"o}nrich}, R., and {Yanny}, B. (2015).
+\newblock {Rings and Radial Waves in the Disk of the Milky Way}.
+\newblock {\em \apj}, 801:105.
 
 \end{thebibliography}

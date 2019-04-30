@@ -3,53 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Introduction.aux
 The style file: apalike.bst
 Database file #1: bibliography_introduction.bib
-I was expecting a `,' or a `}'---line 42 of file bibliography_introduction.bib
+Repeated entry---line 1538 of file bibliography_introduction.bib
+ : @misc{music
+ :            ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1696 of file bibliography_introduction.bib
  : 
  : OPTkey = {•},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "de_block_core_cusp"
 Warning--empty publisher in dodelson
 Warning--empty publisher in kolb_turner
-You've used 12 entries,
+You've used 55 entries,
             1935 wiz_defined-function locations,
-            529 strings with 9939 characters,
-and the built_in function-call counts, 11184 in all, are:
-= -- 840
-> -- 1336
-< -- 6
-+ -- 523
-- -- 522
-* -- 1251
-:= -- 2138
-add.period$ -- 31
-call.type$ -- 12
-change.case$ -- 319
-chr.to.int$ -- 11
-cite$ -- 14
-duplicate$ -- 149
-empty$ -- 261
-format.name$ -- 536
-if$ -- 1911
+            771 strings with 19916 characters,
+and the built_in function-call counts, 34562 in all, are:
+= -- 2893
+> -- 3060
+< -- 16
++ -- 1161
+- -- 1160
+* -- 3571
+:= -- 6374
+add.period$ -- 160
+call.type$ -- 55
+change.case$ -- 852
+chr.to.int$ -- 54
+cite$ -- 57
+duplicate$ -- 757
+empty$ -- 1473
+format.name$ -- 1227
+if$ -- 6266
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 10
-newline$ -- 58
-num.names$ -- 36
-pop$ -- 309
+missing$ -- 52
+newline$ -- 273
+num.names$ -- 167
+pop$ -- 758
 preamble$ -- 1
-purify$ -- 321
+purify$ -- 854
 quote$ -- 0
-skip$ -- 116
+skip$ -- 560
 stack$ -- 0
-substring$ -- 225
-swap$ -- 8
-text.length$ -- 0
+substring$ -- 1518
+swap$ -- 59
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 326
 warning$ -- 2
-while$ -- 28
+while$ -- 155
 width$ -- 0
-write$ -- 140
-(There was 1 error message)
+write$ -- 697
+(There were 2 error messages)

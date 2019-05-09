@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[{Bauer} et~al., 2018]{bauer2018a}
+{Bauer}, J.~S., {Widrow}, L.~M., and {Erkal}, D. (2018).
+\newblock {Disc-halo interactions in {\ensuremath{\Lambda}}CDM}.
+\newblock {\em \mnras}, 476:198--209.
+
 \bibitem[{Belokurov} et~al., 2007]{belokurov_2007}
 {Belokurov}, V., {Evans}, N.~W., {Irwin}, M.~J., {Lynden-Bell}, D., {Yanny},
   B., {Vidrih}, S., {Gilmore}, G., {Seabroke}, G., {Zucker}, D.~B.,
@@ -57,6 +62,11 @@
   {D'Onghia}, E. (2015).
 \newblock {Phase wrapping of epicyclic perturbations in the Wobbly Galaxy}.
 \newblock {\em \mnras}, 454:933--945.
+
+\bibitem[{DeBuhr} et~al., 2012]{debuhr_2012}
+{DeBuhr}, J., {Ma}, C.-P., and {White}, S.~D.~M. (2012).
+\newblock {Stellar discs in Aquarius dark matter haloes}.
+\newblock {\em \mnras}, 426:983--999.
 
 \bibitem[{Dodelson}, 2003]{dodelson}
 {Dodelson}, S. (2003).
@@ -401,5 +411,16 @@ Powell, R. (2017).
   {Sch{\"o}nrich}, R., and {Yanny}, B. (2015).
 \newblock {Rings and Radial Waves in the Disk of the Milky Way}.
 \newblock {\em \apj}, 801:105.
+
+\bibitem[{Yurin} and {Springel}, 2014]{YurinSpringelGalic}
+{Yurin}, D. and {Springel}, V. (2014).
+\newblock {GALIC: Galaxy initial conditions construction}.
+\newblock Astrophysics Source Code Library.
+
+\bibitem[{Yurin} and {Springel}, 2015]{ys_2015}
+{Yurin}, D. and {Springel}, V. (2015).
+\newblock {The stability of stellar discs in Milky Way-sized dark matter
+  haloes}.
+\newblock {\em \mnras}, 452:2367--2387.
 
 \end{thebibliography}

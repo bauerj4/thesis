@@ -1,3 +1,6 @@
+\newcommand{\deriv}[3][]{% \deriv[<order>]{<func>}{<var>}
+  \ensuremath{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}
+
 \chapter{A Dynamical Recipe for Cosmological Disks}\label{ch:background}
 
 This chapter provides an overview of the background theory needed to understand subsequent chapters. In Chapter~\ref{ch:introduction}, we had a lot of discussion about simulations of galaxies being critical to having a theoretical understanding of cosmology and galaxy formation. The word ``simulation" was used without fully contextualizing its significance and meaning. We provide that context in \S\ref{sec:motivation}, where we describe what is actually being done when a simulation is run. In \S\ref{sec:galaxy_ics}, we talk about how to apply this theory to study the evolution of equilibrium galaxies. We also spoke at length about $\Lambda$CDM cosmology and how it is critical to explain the evolution of galaxies on a global scale. We talk about cosmology in detail in \S\ref{sec:cosmology}, and explain how this specifies an extended view of the discussion in \S\ref{sec:motivation}. Lastly, we talk about various techniques relied upon in the analysis of simulation in \S\ref{sec:analysis_of_sims}. This includes how we identify cosmic substructure and the techniques we use for analyzing the time-evolution of disk-derived quantities. This chapter summarizes the very basics of the models used in this thesis. It is by no means a comprehensive account of galactic dynamics. In the course of discussion, we will point the reader to more detailed accounts of the topics being discussed.
@@ -6,14 +9,130 @@ This chapter provides an overview of the background theory needed to understand 
 
 The goal of this section is to convey to the reader what we mean by a simulation of a galactic system. 
 
-\subsection{Characterizing of Self-Gravitating Systems}
+\subsection{Thermodynamics of Self-Gravitating Systems}
 
 The baryonic mass of the Milky Way is largely concentrated in its stars. To first order, the dynamical behavior of the Milky Way is determined by stellar material and dark matter \citep{BM}. While the evolution of gas is governed by the Euler equations with an equation of state, modelling in galactic dynamics requires that we understand how stars and dark matter behave. 
 
-Unlike gas, which can exhange thermodynamic energy with itself, stars and dark matter interact only through gravity. Unlike the electromagnetic force, gravity is a long range force. In fact, the majority of the contribution to the forces on stars in galaxies comes from far outside their immediate neighborhoods \citep{BT}. This has a number of interesting implications. In classical thermodynamics, we can derive the macroscopic 
+We begin by suggesting a model of a galaxy composed only of a very large number of stars and dark matter, where all stars have the same mass. We call the probability of a star being a specific position, $\textbf{r}$, and velocity $\textbf{v}$, at a time, $t$, the distribution function (DF), $f(\textbf{r},\textbf{v},t)$. The stars and dark matter sit in a combined gravitational potential, $\Phi(\textbf{r})$, in some near-equilibrium state. To fully describe this model, we need to understand how an ensemble of self-gravitating particles gives rise to an equilibrium distribution of stars and dark matter.
+
+Unlike gas, which can exhange thermodynamic energy with itself through a variety of mechanisms, stars and dark matter interact only through gravity. Gravity is a long range force. In fact, the majority of the contribution to the forces on stars in galaxies comes from far outside their immediate neighborhoods (that is to say gravitational energy in non-extensive) \citep{BT}. 
+
+This has a number of interesting implications. Classical equilibrium statistical mechanics tries to understand distributions of particles as ensembles with a given thermodynamic potential. Some commonly used ensembles are the microcanonical ensemble, where $f_0(\textbf{r},\textbf{v})$, the equilibrium state, is determined by holding energy fixed in a closed system, and the canonical ensemble which finds $f_0$ holding the temperature of the system fixed \citep{sethna}. These ensembles break down when non-extensive forces are involed (in the latter case, specifically because self-gravitating systems have no maximum entropy) \citep{self_gravitating_statistical_mechanics,lb_negative_specific_heat, BT}. Another peculiarity of self-gravitating systems is that they have a negative heat capacity \citep{lb_negative_specific_heat}.
+
+The implication is that self-gravitating systems of stars, which have no means to dissipate internal energy, can never be in thermodynamic equilibrium. A system which starts in dynamical equilibrium evolves to a state of higher entropy when perturbed, which is physically characterized as having a dense core and extended envelope of mass \citep{BT}. Since a thermodynamic resolution of why galaxies evolve the way the do is unattainable due to the extensive nature of gravity, we are forced to study non-equilibrium dynamical evolution of $f(\textbf{r},\textbf{v},t)$ to understand galactic systems, and this requires more theory\footnote{For more information on the thermodynamics of self-gravitating systems, Chapter~4.10 of \citet{BT} and Chapter~7.3 of \citet{BT} provide excellent summaries.}.
 
 \subsection{The Collisionless Boltzmann Equation}
-\subsection{Numerical Solutions}
+
+To provide a time-dependent dynamical prescription for our model of stars and dark matter particles, we will make a number of assumptions that hold for the entire thesis. These are:
+
+\begin{itemize}
+\item Galaxies are collisionless systems; one does not have to worry about energy exchanged in close encounters because close encounters of individual stars and dark matter particles seldom happen.
+\item All stars and dark matter particles are identical.
+\item Phase space probability is conserved.
+\item Phase space probability is incompressible.
+\end{itemize}
+We want to turn the assumptions listed above into a solvable equation for $f(\textbf{r},\textbf{v},t)$. This is done by recognizing that  for $\textbf{w} = (\textbf{p}, \textbf{q})$ \citep{BT},
+\begin{equation}
+\deriv{f}{t} + \deriv{}{\textbf{w}} \cdot \left( f \dot{\textbf{w}}\right) = 0
+\end{equation}
+is the continuity equation in 6D phase space that expresses conserved phase space probability. Here, $\textbf{p}$ and $\textbf{q}$ are any set of canonical coordinates. In general, this may be rewritten in what is commonly called the Collisionless Boltzmann equation (CBE),
+\begin{equation}
+\deriv{f}{t} + \dot{\textbf{q}} \cdot \deriv{f}{q} + \dot{\textbf{p}} \cdot \deriv{f}{p} = 0.
+\end{equation}
+The CBE is more commonly expressed in Cartesian coordinates as,
+\begin{equation}
+\deriv{f}{t} + \textbf{v} \cdot \deriv{f}{\textbf{x}} - \deriv{\Phi}{\textbf{x}} \cdot \deriv{f}{\textbf{v}} = 0, \label{eq:cbe_cartesian}
+\end{equation}
+where $\Phi$ is our total gravitational potential from stars and dark matter. The result is a quasilinear partial differential equation (PDE) for $f(\textbf{r},\textbf{v},t)$. The CBE is nothing more than an advection equation in phase space that expresses our view that particles are not self interacting, that they are identical, and that the phase space fluid is conserved and incompressible. In addition to the CBE which describes the evolution of the phase fluid, we have the Poisson equation, an elliptic equation describing the evolution of the potential \citep{BT},
+\begin{equation}
+\nabla^2 \Phi(\textbf{r},t) = -4 \pi G \rho(\textbf{r},t)
+\end{equation} 
+where $G$ is Newton's gravitational constant and,
+\begin{equation}
+\rho(\textbf{r},t) = \int_{\mathcal{D}} f(\textbf{r}, \textbf{v}, t) \text{d}^3 \textbf{v},
+\end{equation}
+where $\mathcal{D}$ is the phase space. We are left with a 6D space + 1D time solution domain on which to compute $f(\textbf{r},\textbf{v},t)$ as well as two PDEs and an integral.
+
+\subsection{Monte Carlo Solution of the Collisionless Boltzmann Equation}
+
+In terms of actually solving the CBE, we run into a number of technical challenges in applying traditional finite difference and finite volume schemes for advection equations. These techniques require that some mesh be constructed, and the flows between the cells in the mesh are calculated dependent on the type of equation being solved and the current states of the cells\footnote{Chapter~19 of \citet{numerical_recipes_fortran} discusses numerical methods for PDEs, although you could find detailed discussion of finite difference and finite volume methods in most numerical methods texts.}. The spatial domain is 6D, meaning a uniform mesh resolution scales in memory consuption as $O(N^6)$, where $N$ is the number of cells on an axis. For a sanity check, a modest $N = 2^5$ element grid would take up $2^{30} \times 2^4 \text{ bytes} \sim 17 \text{ GB}$. We obviously need more than 32 cells on an axis to represent the fine DF structure we want to study, and we are already at the limit of a single compute node to apply a finite difference scheme. 
+
+This is where Monte Carlo methods shine. The fundamental principle on which they operate is that I can evaluate the integral of any function, $f(\textbf{x})$, over a domain $\mathcal{D}$, as \citep{numerical_recipes_fortran},
+\begin{equation}
+\int_\mathcal{D} f(\textbf{x}) d^{n} \textbf{x} = \frac{V(\mathcal{D})}{\vert X_s \vert} \sum_{\textbf{x}_i \in X_s(\mathcal{D})} f(\textbf{x}_i)
+\end{equation}
+where $X_s$ is a uniform random sample of points on $\mathcal{D}$, $V(\mathcal{D})$ is the volume of the domain, $n$ is the dimensionality of $\textbf{x}$, and $\vert X_s \vert$ is the cardinality, or number of points in the sample. The benefit of Monte Carlo integration is that although our result is not deterministic, the error in the integral is reduced as $1/\sqrt{N}$ \textit{regardless of the integral's dimension}! 
+
+The point of introducing this powerful concept is simply in recognition of the fact that we need to integrate over phase space to solve Eq. \eqref{eq:cbe_cartesian}. As we stated, computing these integrals on a mesh is intractible, so we represent $f(\textbf{r},\textbf{v},t)$ in another way:
+\begin{equation}
+f(\textbf{r},\textbf{v},t) \approx \sum_i m_i \delta^3(\textbf{r} - \textbf{r}_i) \delta^3(\textbf{v} - \textbf{v}_i)
+\end{equation}
+where $\delta^3$ is the 3D Dirac delta function, and we take the DF to be normalized to $M = \sum_i m_i$ instead of 1. We call this the N-body realization of the DF. As an extension of this idea, to find $f(\textbf{r},\textbf{v},t)$ at some point in the future, it is sufficient to find the state of our \textit{approximation}\footnote{The author believes that this is one of the most beautiful results ever to be applied in studying the dynamics of galaxies.} at some time in the future. This requires a more detailed exploration of how we step through time with N-body realizations.
+
+\subsection{Time Integration in N-Body Simulations}
+
+We have shown how to map solving the CBE, the master equation for our system of stars and dark matter, to the evolution of a finite sample of particles. The system of equations we need to solve now is,
+\begin{eqnarray}
+\dot{\textbf{r}}_i(t) &=& \textbf{v}_i(t)\\
+\dot{\textbf{v}}_i(t) &=& -\left.\deriv{\Phi}{\textbf{r}}\right\vert_{\textbf{r} = \textbf{r}_i}.
+\end{eqnarray}
+Our integro-differential equation system is now approximated as $6\,N$, where $N$ is the number of particles sampled to represent the stars and dark matter, ordinary differential equations (ODEs). These may be solved by any ODE system solver. There are two competing objectives when deciding on the best way to handle time stepping numerically; the first is that we want to maximize the accuracy of our integration scheme and the second is that we want to minimize the number of evaluations of $-\nabla \Phi$, the force. The latter consideration is a severe constraint because naively, the complexity of evaluating each pairwise force is $O(N^2)$.  Although, as we will see, approximations reduce this complexity to $O(N\,\log \, N)$. 
+
+Nonetheless, the force calculation will be the most time consuming aspect of the integration, and we want to minimize the number of evaluations we need. This rules out some commonly used schemes in the Runge-Kutta class of integrators, since they would require four or five calculations of the force on millions of particles \citep{numerical_recipes_fortran}. The open question is how to construct a low-order integration scheme that preserves the Hamiltonian\footnote{In a collisionless system, the Hamiltonian should be conserved \citep{BT}.}.
+
+Define the following drift and kick operators for a forward timestep of $\Delta t$ as \citep{quinn_1997},
+\begin{eqnarray}
+D_t(\Delta t) : \begin{cases} 
+	  \textbf{r}_i & \longrightarrow  \textbf{r}_i + \textbf{v}_i \Delta t\\
+      \textbf{v}_i & \longrightarrow  \textbf{v}_i 
+   \end{cases},
+\end{eqnarray}
+and,
+\begin{eqnarray}
+K_t(\Delta t) : \begin{cases} 
+	  \textbf{r}_i & \longrightarrow  \textbf{r}_i\\
+      \textbf{v}_i & \longrightarrow  \textbf{v}_i  - \nabla \Phi(\textbf{r}_i) \Delta T
+   \end{cases}.
+\end{eqnarray}
+If the Hamiltonian is separable as $\mathcal{H} = T(v) + V(r)$ for $T$, the kinetic energy, and  $V$, the potential energy, and we are in a Cartesian coordinate system, combinations of these operators approximately preserve the Hamiltonian. This is a property of a class of integrators known as symplectic integrators, whose derivation starts with an assumption of Hamiltonian mechanics. We use the second order scheme implemented in \textsc{Gadget-3}, based on the code in \citet{GadgetCodePaper}. This integration scheme is specified as,
+\begin{equation}
+U(\Delta T) = K(\frac{\Delta t}{2}) D(\Delta t) K(\frac{\Delta t}{2}).
+\end{equation}
+This integration scheme is reasonably accurate with only two force evaluations, and is colloquially referred to as Leapfrog. It is also symplectic, meaning that the Hamiltonian of the system will not drift. Chapter~3 of \citet{BT} has an excellent comparison of numerical integrators, including the Leapfrog scheme given here.
+
+The final remaining complication for the timestepping portion of solving the CBE is determining the timesteps themselves. This is slightly more complicated to do properly than choosing a fixed timestep for all particles. This is because accelerations and velocities in astrophysical systems vary by orders of magnitude, and the timestep needs to be small compared to the timescales defined by the relevant accelerations. The way that this is commonly implemented, including in \citet{GadgetCodePaper}, is to have a base timestep for all particles that gets bisected at each level of refinement. That is to say, particles at level 4 are updated four more times than particles at level 2. Suppose the highest level of refinement is $k$. The simulation proceeds in $\Delta t_{base} / 2^{k}$ intervals, with particles at $k - 1$ being updated at half of the timesteps, dividing the number of updates by two up to the coarsest level of temporal refinement.
+
+The level of temporal refinement assigned to a given particle is determined primarily by the acceleration it experiences. That is, for \textsc{Gadget-3} \citep{GadgetCodePaper},
+\begin{equation}
+\Delta t_i = \min\left(\Delta t_{base}, \left(\frac{2 \eta \epsilon}{\vert \nabla \Phi(\textbf{r}_i) \vert} \right)^{1/2}\right).
+\end{equation}
+Here, $\eta$ is a free accuracy parameter and $\epsilon$ is the gravitational softening. The gravitational softening is used to prevent numerical overflow when particles rarely have close encounters. It arises from having the acceleration induced from a particle at position $\textbf{r}_i$  be,
+\begin{equation}
+\textbf{a}_i(\textbf{r}) = -\frac{G m_i}{\left(\vert\textbf{r} - \textbf{r}_i\vert^2 + \epsilon^2\right)^{3/2}}(\textbf{r} - \textbf{r}_i) \label{eq:point_mass}
+\end{equation}
+Higher choices of $\epsilon$ reduce large errors accumulating due to unsustainably large forces, but also make the force calculation less accurate.
+
+\subsection{Efficient Force Calculation}
+
+The Leapfrog scheme requires us to compute the force two times. Naively, we would compute a sum over Eq. \eqref{eq:point_mass} for each of the $N(N-1)/2$ unique pairs of positions in $O(N^2)$ time to compute the forces on all particles. This is also intractible, or rather is the limiting factor on how large of a simulation we can run. Methods were developed early on in the history of running N-body simulations to cope with this by approximating the potential.
+
+The first method worth noting for this thesis is the particle mesh technique \citep{hockney_pm, white_pm, klypin_pm}. This technique considers the calculation of forces on a 3D mesh by reducing the calculation to a Fast Fourier Transform (FFT) \citep{numerical_recipes_fortran}. One of the crowning achievements of scientific computing in the 20th century was the rediscovery of an algorithm by J. W. Cooley and John Tukey, originally discovered by Gauss, to compute the discrete fourier transform (DFT) in $O(N\,\log\,N)$ complexity\footnote{What Gauss was doing with recursive DFT algorithms is beyond the author, but in the author's humble opinion, it is expected from the greatest mathematician to ever live.}\citep{fft}. Particle mesh's cloud-in-cell (CIC) algorithm was a part of a flurry of algorithms that subsequently exploited the FFT. It has a difficult time accounting for forces from particles separated by small scales on the mesh, though \citep{GadgetCodePaper}.
+
+Compensating for some of the shortcomings of the particle mesh approach, \citet{barnes_hut} introduced a new algorithm for approximating forces in $O(N \,\log\, N)$ complexity. Their algorithm took a divide an conquer approach by subdividing the simulation space into octants recursively until each particle was in its own cell. Forces would be computed pairwise for particles close together, but for distant particles, the mass distrubtion would be approximated as a multipole. To compute the forces, one simply does a depth-first-search (DFS) of the particle tree, going deeper if,
+\begin{equation}
+\frac{l}{d} \geq \theta
+\end{equation}
+where $l$ is the side length of the node whose force is being computed, $d$ is the distance from this node to the current node in the DFS, and $\theta$ is a threshold called the opening angle. In the simplest case, a cell not meeting this condition would be approximated as a point mass with the position at the  center of mass of all particles deeper in its subtree. Higher order multipole expansions are typically used (4 and 8 are common choices).
+
+In addition, the somewhat simplistic opening angle scheme is expounded upon by some codes to include a ``relative opening criterion". The main idea is to use the last acceleration of the particle to determine whether or not a cell needs to be opened. \textsc{Gadget-3} uses the criterion,
+\begin{equation}
+\frac{G M}{d^2} \left(\frac{l}{d}\right)^2 \geq \alpha \vert\textbf{a}_{i,t-1} \vert
+\end{equation}
+where $M$ is the mass in the current DFS subtree, $\vert\textbf{a}_{i,t-1} \vert$ is the magnitude of the acceleration of the current particle at the last time step, and $\alpha$ is a relative opening criterion, a free parameter. Conceptually, this means that if the point mass acceleration in the current subtree is greater than a specified fraction of this particle's acceleration, the current DFS level is too coarse and we need to go deeper.
+
+The scheme proposed by \citet{barnes_hut} is widely used in astrophysics because of its efficiency and computability.
+
+\subsection{Complications on Distributed Systems}
 
 \section{Phase Space, Equilibrium, and Initial Conditions} \label{sec:galaxy_ics}
 \subsection{Jeans Modeling}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.2.23)  9 MAY 2019 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.2.23)  10 MAY 2019 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -616,7 +616,7 @@ Chapter 1.
 
 
 
-] <../figures/2010_census.jpg, id=670, 366.61969pt x 305.64188pt>
+] <../figures/2010_census.jpg, id=680, 366.61969pt x 305.64188pt>
 File: ../figures/2010_census.jpg Graphic file (type jpg)
 
 <use ../figures/2010_census.jpg>
@@ -637,7 +637,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./local_group-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<./local_group-eps-converted-to.pdf, id=702, 548.0475pt x 411.5375pt>
+<./local_group-eps-converted-to.pdf, id=712, 548.0475pt x 411.5375pt>
 File: ./local_group-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./local_group-eps-converted-to.pdf>
@@ -691,26 +691,27 @@ Chapter 2.
 
 
 
-] (./Background.bbl [29] [30])) [31
+] [29] [30] [31] [32] [33] [34] [35] [36] [37] (./Background.bbl [38]
+[39] [40
 
-]
+])) [41]
 \openout2 = `Paper_I.aux'.
 
  (./Paper_I.tex
 Chapter 3.
-[32
+[42
 
 
 
 
-] [33] [34] [35] [36] [37] [38]
+] [43] [44] [45] [46] [47] [48]
 
 Package Fancyhdr Warning: \headheight is too small (15.0pt): 
  Make it at least 27.08337pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39]
+[49]
 Overfull \hbox (6.20044pt too wide) in paragraph at lines 267--270
 []\OT1/cmr/m/n/12 In the first of our disc-halo sim-u-la-tions, dubbed MN, we i
 n-tro-duce a rigid Miyamoto-
@@ -722,49 +723,49 @@ Package Fancyhdr Warning: \headheight is too small (15.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40]
+[50]
 
 Package Fancyhdr Warning: \headheight is too small (15.0pt): 
  Make it at least 27.08337pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41]
+[51]
 
 Package Fancyhdr Warning: \headheight is too small (15.0pt): 
  Make it at least 27.08337pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42]
+[52]
 
 Package Fancyhdr Warning: \headheight is too small (15.0pt): 
  Make it at least 27.08337pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
+[53]
 
 Package Fancyhdr Warning: \headheight is too small (15.0pt): 
  Make it at least 27.08337pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44]
+[54]
 
 Package Fancyhdr Warning: \headheight is too small (15.0pt): 
  Make it at least 27.08337pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
+[55]
 
 Package Fancyhdr Warning: \headheight is too small (15.0pt): 
  Make it at least 27.08337pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46]
+[56]
 Package epstopdf Info: Source file: <../figures/flattened_halo_regressions.eps>
 
 (epstopdf)                    date: 2018-01-05 19:59:03
@@ -778,7 +779,7 @@ ns-eps-converted-to.pdf ../figures/flattened_halo_regressions.eps>
 (epstopdf)             \includegraphics on input line 498.
 Package epstopdf Info: Output file is already uptodate.
 
-<./flattened_halo_regressions-eps-converted-to.pdf, id=1295, 722.7pt x 873.2625
+<./flattened_halo_regressions-eps-converted-to.pdf, id=1444, 722.7pt x 873.2625
 pt>
 File: ./flattened_halo_regressions-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -800,7 +801,7 @@ ty_Panels-eps-converted-to.pdf ../figures/Flattened_Selected_Density_Panels.eps
 (epstopdf)             \includegraphics on input line 530.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Flattened_Selected_Density_Panels-eps-converted-to.pdf, id=1297, 201.75375pt
+<./Flattened_Selected_Density_Panels-eps-converted-to.pdf, id=1446, 201.75375pt
  x 144.54pt>
 File: ./Flattened_Selected_Density_Panels-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -822,7 +823,7 @@ ies_fixed-eps-converted-to.pdf ../figures/flattened_surface_densities_fixed.eps
 (epstopdf)             \includegraphics on input line 539.
 Package epstopdf Info: Output file is already uptodate.
 
-<./flattened_surface_densities_fixed-eps-converted-to.pdf, id=1298, 686.565pt x
+<./flattened_surface_densities_fixed-eps-converted-to.pdf, id=1447, 686.565pt x
  650.43pt>
 File: ./flattened_surface_densities_fixed-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -837,14 +838,14 @@ Package Fancyhdr Warning: \headheight is too small (15.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47]
+[57]
 
 Package Fancyhdr Warning: \headheight is too small (15.0pt): 
  Make it at least 27.08337pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48 <./flattened_halo_regressions-eps-converted-to.pdf>]
+[58 <./flattened_halo_regressions-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../figures/cosmo_halo_regressions.eps>
 (epstopdf)                    date: 2018-01-05 19:59:03
 (epstopdf)                    size: 116802 bytes
@@ -857,15 +858,15 @@ ps-converted-to.pdf ../figures/cosmo_halo_regressions.eps>
 (epstopdf)             \includegraphics on input line 575.
 Package epstopdf Info: Output file is already uptodate.
 
-<./cosmo_halo_regressions-eps-converted-to.pdf, id=1360, 722.7pt x 873.2625pt>
+<./cosmo_halo_regressions-eps-converted-to.pdf, id=1510, 722.7pt x 873.2625pt>
 File: ./cosmo_halo_regressions-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./cosmo_halo_regressions-eps-converted-to.pdf>
 Package pdftex.def Info: ./cosmo_halo_regressions-eps-converted-to.pdf used on 
 input line 575.
 (pdftex.def)             Requested size: 390.25534pt x 471.55472pt.
- [49 <./Flattened_Selected_Density_Panels-eps-converted-to.pdf>] [50 <./flatten
-ed_surface_densities_fixed-eps-converted-to.pdf>] [51 <./cosmo_halo_regressions
+ [59 <./Flattened_Selected_Density_Panels-eps-converted-to.pdf>] [60 <./flatten
+ed_surface_densities_fixed-eps-converted-to.pdf>] [61 <./cosmo_halo_regressions
 -eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../figures/all_rotation_curves_five_sims.e
 ps>
@@ -880,7 +881,7 @@ _sims-eps-converted-to.pdf ../figures/all_rotation_curves_five_sims.eps>
 (epstopdf)             \includegraphics on input line 598.
 Package epstopdf Info: Output file is already uptodate.
 
-<./all_rotation_curves_five_sims-eps-converted-to.pdf, id=1485, 1445.4pt x 722.
+<./all_rotation_curves_five_sims-eps-converted-to.pdf, id=1635, 1445.4pt x 722.
 7pt>
 File: ./all_rotation_curves_five_sims-eps-converted-to.pdf Graphic file (type p
 df)
@@ -888,7 +889,7 @@ df)
 Package pdftex.def Info: ./all_rotation_curves_five_sims-eps-converted-to.pdf u
 sed on input line 598.
 (pdftex.def)             Requested size: 433.62pt x 216.81166pt.
- [52 <./all_rotation_curves_five_sims-eps-converted-to.pdf>]
+ [62 <./all_rotation_curves_five_sims-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../figures/Selected_Density_Panels.eps>
 (epstopdf)                    date: 2018-01-05 19:59:03
 (epstopdf)                    size: 235063 bytes
@@ -901,7 +902,7 @@ eps-converted-to.pdf ../figures/Selected_Density_Panels.eps>
 (epstopdf)             \includegraphics on input line 657.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Selected_Density_Panels-eps-converted-to.pdf, id=1551, 505.89pt x 722.7pt>
+<./Selected_Density_Panels-eps-converted-to.pdf, id=1701, 505.89pt x 722.7pt>
 File: ./Selected_Density_Panels-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Selected_Density_Panels-eps-converted-to.pdf>
@@ -912,7 +913,7 @@ Package pdftex.def Info: ./Selected_Density_Panels-eps-converted-to.pdf used on
 
 LaTeX Warning: Float too large for page by 40.12985pt on input line 663.
 
-[53] [54 <./Selected_Density_Panels-eps-converted-to.pdf>] [55]
+[63] [64 <./Selected_Density_Panels-eps-converted-to.pdf>] [65]
 Package epstopdf Info: Source file: <../figures/surface_densities.eps>
 (epstopdf)                    date: 2018-01-05 19:59:03
 (epstopdf)                    size: 194611 bytes
@@ -924,14 +925,14 @@ nverted-to.pdf ../figures/surface_densities.eps>
 (epstopdf)             \includegraphics on input line 721.
 Package epstopdf Info: Output file is already uptodate.
 
-<./surface_densities-eps-converted-to.pdf, id=1590, 686.565pt x 650.43pt>
+<./surface_densities-eps-converted-to.pdf, id=1740, 686.565pt x 650.43pt>
 File: ./surface_densities-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./surface_densities-eps-converted-to.pdf>
 Package pdftex.def Info: ./surface_densities-eps-converted-to.pdf used on input
  line 721.
 (pdftex.def)             Requested size: 390.25534pt x 369.70685pt.
- [56] [57 <./surface_densities-eps-converted-to.pdf>]
+ [66] [67 <./surface_densities-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../figures/halo_density_ratios_five_sims.e
 ps>
 (epstopdf)                    date: 2018-01-05 19:59:03
@@ -945,7 +946,7 @@ _sims-eps-converted-to.pdf ../figures/halo_density_ratios_five_sims.eps>
 (epstopdf)             \includegraphics on input line 793.
 Package epstopdf Info: Output file is already uptodate.
 
-<./halo_density_ratios_five_sims-eps-converted-to.pdf, id=1680, 626.34pt x 469.
+<./halo_density_ratios_five_sims-eps-converted-to.pdf, id=1830, 626.34pt x 469.
 755pt>
 File: ./halo_density_ratios_five_sims-eps-converted-to.pdf Graphic file (type p
 df)
@@ -953,7 +954,7 @@ df)
 Package pdftex.def Info: ./halo_density_ratios_five_sims-eps-converted-to.pdf u
 sed on input line 793.
 (pdftex.def)             Requested size: 390.25534pt x 292.70016pt.
- [58] [59 <./halo_density_ratios_five_sims-eps-converted-to.pdf>]
+ [68] [69 <./halo_density_ratios_five_sims-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../figures/eigenratios_vs_radius.eps>
 (epstopdf)                    date: 2018-01-05 19:59:03
 (epstopdf)                    size: 38059 bytes
@@ -966,14 +967,14 @@ s-converted-to.pdf ../figures/eigenratios_vs_radius.eps>
 (epstopdf)             \includegraphics on input line 823.
 Package epstopdf Info: Output file is already uptodate.
 
-<./eigenratios_vs_radius-eps-converted-to.pdf, id=1731, 578.16pt x 578.16pt>
+<./eigenratios_vs_radius-eps-converted-to.pdf, id=1881, 578.16pt x 578.16pt>
 File: ./eigenratios_vs_radius-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./eigenratios_vs_radius-eps-converted-to.pdf>
 Package pdftex.def Info: ./eigenratios_vs_radius-eps-converted-to.pdf used on i
 nput line 823.
 (pdftex.def)             Requested size: 390.25534pt x 390.24998pt.
- [60] [61 <./eigenratios_vs_radius-eps-converted-to.pdf>]
+ [70] [71 <./eigenratios_vs_radius-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../figures/cumulative_radial_distribution_
 five_sims.eps>
 (epstopdf)                    date: 2018-01-05 19:59:03
@@ -988,7 +989,7 @@ _five_sims.eps>
 (epstopdf)             \includegraphics on input line 868.
 Package epstopdf Info: Output file is already uptodate.
 
-<./cumulative_radial_distribution_five_sims-eps-converted-to.pdf, id=1784, 578.
+<./cumulative_radial_distribution_five_sims-eps-converted-to.pdf, id=1935, 578.
 16pt x 490.83376pt>
 File: ./cumulative_radial_distribution_five_sims-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1011,7 +1012,7 @@ n_five_sims-eps-converted-to.pdf ../figures/differential_halo_mass_fn_five_sims
 (epstopdf)             \includegraphics on input line 879.
 Package epstopdf Info: Output file is already uptodate.
 
-<./differential_halo_mass_fn_five_sims-eps-converted-to.pdf, id=1785, 578.16pt 
+<./differential_halo_mass_fn_five_sims-eps-converted-to.pdf, id=1936, 578.16pt 
 x 490.83376pt>
 File: ./differential_halo_mass_fn_five_sims-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1020,7 +1021,7 @@ type pdf)
 Package pdftex.def Info: ./differential_halo_mass_fn_five_sims-eps-converted-to
 .pdf used on input line 879.
 (pdftex.def)             Requested size: 390.25534pt x 331.30597pt.
- [62 <./cumulative_radial_distribution_five_sims-eps-converted-to.pdf>] [63 <./
+ [72 <./cumulative_radial_distribution_five_sims-eps-converted-to.pdf>] [73 <./
 differential_halo_mass_fn_five_sims-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <../figures/streams_side_by_side_five_sims.
 eps>
@@ -1035,7 +1036,7 @@ e_sims-eps-converted-to.pdf ../figures/streams_side_by_side_five_sims.eps>
 (epstopdf)             \includegraphics on input line 917.
 Package epstopdf Info: Output file is already uptodate.
 
-<./streams_side_by_side_five_sims-eps-converted-to.pdf, id=1880, 578.16pt x 433
+<./streams_side_by_side_five_sims-eps-converted-to.pdf, id=2030, 578.16pt x 433
 .62pt>
 File: ./streams_side_by_side_five_sims-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -1043,21 +1044,21 @@ pdf)
 Package pdftex.def Info: ./streams_side_by_side_five_sims-eps-converted-to.pdf 
 used on input line 917.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
- [64]
-[65 <./streams_side_by_side_five_sims-eps-converted-to.pdf>] [66]
-(./Paper_I.bbl [67] [68
+ [74]
+[75 <./streams_side_by_side_five_sims-eps-converted-to.pdf>] [76]
+(./Paper_I.bbl [77] [78
 
-] [69] [70] [71] [72] [73] [74])) [75]
+] [79] [80] [81] [82] [83] [84])) [85]
 \openout2 = `Paper_II.aux'.
 
  (./Paper_II.tex
 Chapter 4.
-[76
+[86
 
 
 
 
-] [77] [78] [79] [80] [81] [82]
+] [87] [88] [89] [90] [91] [92]
 Package epstopdf Info: Source file: <../figures/rotation_curves_two_panel.eps>
 (epstopdf)                    date: 2018-10-18 13:40:06
 (epstopdf)                    size: 33697 bytes
@@ -1070,7 +1071,7 @@ l-eps-converted-to.pdf ../figures/rotation_curves_two_panel.eps>
 (epstopdf)             \includegraphics on input line 234.
 Package epstopdf Info: Output file is already uptodate.
 
-<./rotation_curves_two_panel-eps-converted-to.pdf, id=2162, 505.89pt x 686.565p
+<./rotation_curves_two_panel-eps-converted-to.pdf, id=2312, 505.89pt x 686.565p
 t>
 File: ./rotation_curves_two_panel-eps-converted-to.pdf Graphic file (type pdf)
  <use ./rotation_curves_two_panel-eps-converted-to.pdf>
@@ -1091,7 +1092,7 @@ Package epstopdf Info: Source file: <../figures/falpha.eps>
 pdf ../figures/falpha.eps>
 (epstopdf)             \includegraphics on input line 308.
 Package epstopdf Info: Output file is already uptodate.
-<./falpha-eps-converted-to.pdf, id=2171, 576.1525pt x 576.1525pt>
+<./falpha-eps-converted-to.pdf, id=2321, 576.1525pt x 576.1525pt>
 File: ./falpha-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./falpha-eps-converted-to.pdf>
@@ -1108,7 +1109,7 @@ Package epstopdf Info: Source file: <../figures/qxr.eps>
 (epstopdf)             \includegraphics on input line 320.
 Package epstopdf Info: Output file is already uptodate.
 
-<./qxr-eps-converted-to.pdf, id=2180, 576.1525pt x 576.1525pt>
+<./qxr-eps-converted-to.pdf, id=2330, 576.1525pt x 576.1525pt>
 File: ./qxr-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./qxr-eps-converted-to.pdf>
@@ -1125,7 +1126,7 @@ Package epstopdf Info: Source file: <../figures/wpd.eps>
 (epstopdf)             \includegraphics on input line 334.
 Package epstopdf Info: Output file is already uptodate.
 
-<./wpd-eps-converted-to.pdf, id=2193, 433.62pt x 722.7pt>
+<./wpd-eps-converted-to.pdf, id=2343, 433.62pt x 722.7pt>
 File: ./wpd-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./wpd-eps-converted-to.pdf>
@@ -1149,7 +1150,7 @@ ith_circles-eps-converted-to.pdf ../figures/isolated_xy_with_agama_with_circles
 (epstopdf)             \includegraphics on input line 347.
 Package epstopdf Info: Output file is already uptodate.
 
-<./isolated_xy_with_agama_with_circles-eps-converted-to.pdf, id=2198, 867.24pt 
+<./isolated_xy_with_agama_with_circles-eps-converted-to.pdf, id=2348, 867.24pt 
 x 867.24pt>
 File: ./isolated_xy_with_agama_with_circles-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1170,7 +1171,7 @@ ghted-eps-converted-to.pdf ../figures/isolated_a2_vs_t_2rd_weighted.eps>
 (epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
-<./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf, id=2201, 462.72874pt x 3
+<./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf, id=2351, 462.72874pt x 3
 46.29375pt>
 File: ./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf Graphic file (type p
 df)
@@ -1191,7 +1192,7 @@ ma-eps-converted-to.pdf ../figures/isolated_r_t_a2_with_agama.eps>
 (epstopdf)             \includegraphics on input line 373.
 Package epstopdf Info: Output file is already uptodate.
 
-<./isolated_r_t_a2_with_agama-eps-converted-to.pdf, id=2202, 1228.59pt x 794.97
+<./isolated_r_t_a2_with_agama-eps-converted-to.pdf, id=2352, 1228.59pt x 794.97
 pt>
 File: ./isolated_r_t_a2_with_agama-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1216,7 +1217,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 381.
 Package epstopdf Info: Output file is already uptodate.
 
-<./isolated_four_panel_zrms-eps-converted-to.pdf, id=2203, 794.97pt x 794.97pt>
+<./isolated_four_panel_zrms-eps-converted-to.pdf, id=2353, 794.97pt x 794.97pt>
 File: ./isolated_four_panel_zrms-eps-converted-to.pdf Graphic file (type pdf)
 <use ./isolated_four_panel_zrms-eps-converted-to.pdf>
 Package pdftex.def Info: ./isolated_four_panel_zrms-eps-converted-to.pdf used o
@@ -1236,7 +1237,7 @@ tion_with_agama_zrms.eps>
 (epstopdf)             \includegraphics on input line 391.
 Package epstopdf Info: Output file is already uptodate.
 
-<./isolated_dispersion_evolution_with_agama_zrms-eps-converted-to.pdf, id=2204,
+<./isolated_dispersion_evolution_with_agama_zrms-eps-converted-to.pdf, id=2354,
  1156.32pt x 722.7pt>
 File: ./isolated_dispersion_evolution_with_agama_zrms-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -1268,13 +1269,13 @@ Overfull \hbox (4.61575pt too wide) in paragraph at lines 408--410
 er ([]Gol-dre-ich and Tremaine[],
  []
 
-[83] [84 <./rotation_curves_two_panel-eps-converted-to.pdf>] [85] [86 <./falpha
--eps-converted-to.pdf>] [87 <./qxr-eps-converted-to.pdf>] [88 <./wpd-eps-conver
-ted-to.pdf>] [89 <./isolated_xy_with_agama_with_circles-eps-converted-to.pdf>]
-[90 <./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf>] [91 <./isolated_r_t
-_a2_with_agama-eps-converted-to.pdf>] [92 <./isolated_four_panel_zrms-eps-conve
-rted-to.pdf>] [93 <./isolated_dispersion_evolution_with_agama_zrms-eps-converte
-d-to.pdf>] [94] [95] [96] [97] [98] [99] [100]
+[93] [94 <./rotation_curves_two_panel-eps-converted-to.pdf>] [95] [96 <./falpha
+-eps-converted-to.pdf>] [97 <./qxr-eps-converted-to.pdf>] [98 <./wpd-eps-conver
+ted-to.pdf>] [99 <./isolated_xy_with_agama_with_circles-eps-converted-to.pdf>]
+[100 <./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf>] [101 <./isolated_r
+_t_a2_with_agama-eps-converted-to.pdf>] [102 <./isolated_four_panel_zrms-eps-co
+nverted-to.pdf>] [103 <./isolated_dispersion_evolution_with_agama_zrms-eps-conv
+erted-to.pdf>] [104] [105] [106] [107] [108] [109] [110]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 720.
@@ -1287,7 +1288,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 720.
 
-[101] [102] [103] [104] [105]
+[111] [112] [113] [114] [115]
 Package epstopdf Info: Source file: <../figures/isolated_a2_vs_t_2rd_no_bucklin
 g_weighted.eps>
 (epstopdf)                    date: 2018-10-18 13:40:06
@@ -1302,7 +1303,7 @@ ing_weighted.eps>
 (epstopdf)             \includegraphics on input line 908.
 Package epstopdf Info: Output file is already uptodate.
 
-<./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf, id=2670, 462
+<./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf, id=2820, 462
 .72874pt x 346.29375pt>
 File: ./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -1323,7 +1324,7 @@ s-converted-to.pdf ../figures/cosmo_three_by_threes.eps>
 (epstopdf)             \includegraphics on input line 920.
 Package epstopdf Info: Output file is already uptodate.
 
-<./cosmo_three_by_threes-eps-converted-to.pdf, id=2673, 1011.78pt x 722.7pt>
+<./cosmo_three_by_threes-eps-converted-to.pdf, id=2823, 1011.78pt x 722.7pt>
 File: ./cosmo_three_by_threes-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./cosmo_three_by_threes-eps-converted-to.pdf>
@@ -1343,7 +1344,7 @@ ed-eps-converted-to.pdf ../figures/cosmo_a2_vs_t_2rd_weighted.eps>
 (epstopdf)             \includegraphics on input line 931.
 Package epstopdf Info: Output file is already uptodate.
 
-<./cosmo_a2_vs_t_2rd_weighted-eps-converted-to.pdf, id=2674, 578.16pt x 433.62p
+<./cosmo_a2_vs_t_2rd_weighted-eps-converted-to.pdf, id=2824, 578.16pt x 433.62p
 t>
 File: ./cosmo_a2_vs_t_2rd_weighted-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1362,30 +1363,30 @@ rted-to.pdf ../figures/kicked_up_disk.eps>
 (epstopdf)             \includegraphics on input line 940.
 Package epstopdf Info: Output file is already uptodate.
 
-<./kicked_up_disk-eps-converted-to.pdf, id=2675, 576.1525pt x 576.1525pt>
+<./kicked_up_disk-eps-converted-to.pdf, id=2825, 576.1525pt x 576.1525pt>
 File: ./kicked_up_disk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./kicked_up_disk-eps-converted-to.pdf>
 Package pdftex.def Info: ./kicked_up_disk-eps-converted-to.pdf used on input li
 ne 940.
 (pdftex.def)             Requested size: 390.25534pt x 390.26639pt.
- [106] [107 <./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf>]
- [108 <./cosmo_three_by_threes-eps-converted-to.pdf>] [109 <./cosmo_a2_vs_t_2rd
+ [116] [117 <./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf>]
+ [118 <./cosmo_three_by_threes-eps-converted-to.pdf>] [119 <./cosmo_a2_vs_t_2rd
 _weighted-eps-converted-to.pdf>]
-[110 <./kicked_up_disk-eps-converted-to.pdf>] [111] [112] [113] [114] [115]
-(./Paper_II.bbl [116] [117
+[120 <./kicked_up_disk-eps-converted-to.pdf>] [121] [122] [123] [124] [125]
+(./Paper_II.bbl [126] [127
 
-] [118]
+] [128]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no ¢ in font cmr8!
- [119] [120] [121] [122] [123] [124]))
-[125]
+ [129] [130] [131] [132] [133] [134]))
+[135]
 \openout2 = `Conclusion.aux'.
 
  (./Conclusion.tex
 Chapter 5.
-) [126
+) [136
 
 
 
@@ -1396,15 +1397,15 @@ Chapter 5.
  (./Appendices.tex
 Appendix A.
 
-Package natbib Warning: Citation `QuinnIntegrators' on page 127 undefined on in
+Package natbib Warning: Citation `QuinnIntegrators' on page 137 undefined on in
 put line 18.
 
-[127
+[137
 
 
 
 
-]) [128]
+]) [138]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1415,39 +1416,55 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7D0CF8DED2E168D3353122FF10502018;5890.
+(rerunfilecheck)             Checksum: 194485100CCFAFA311A03E4FD4B8F791;6104.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 10134 strings out of 493029
- 156871 string characters out of 6136234
- 281358 words of memory out of 5000000
- 12973 multiletter control sequences out of 15000+600000
+ 10227 strings out of 493029
+ 158551 string characters out of 6136234
+ 280942 words of memory out of 5000000
+ 13023 multiletter control sequences out of 15000+600000
  13509 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,47p,1508b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+ 40i,16n,47p,1508b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
 st, replaced by a fixed one
 
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (143 pages, 2338744 bytes).
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Thesis.pdf (153 pages, 2386012 bytes).
 PDF statistics:
- 3154 PDF objects out of 3580 (max. 8388607)
- 2261 compressed objects within 23 object streams
- 461 named destinations out of 1000 (max. 500000)
- 752 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3317 PDF objects out of 3580 (max. 8388607)
+ 2411 compressed objects within 25 object streams
+ 504 named destinations out of 1000 (max. 500000)
+ 768 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[{Barnes} and {Hut}, 1986]{barnes_hut}
+{Barnes}, J. and {Hut}, P. (1986).
+\newblock {A hierarchical O(N log N) force-calculation algorithm}.
+\newblock {\em \nat}, 324:446--449.
+
 \bibitem[{Binney} and {Merrifield}, 1998]{BM}
 {Binney}, J. and {Merrifield}, M. (1998).
 \newblock {\em {Galactic Astronomy}}.
@@ -8,5 +13,59 @@
 {Binney}, J. and {Tremaine}, S. (2008).
 \newblock {\em {Galactic Dynamics: Second Edition}}.
 \newblock Princeton University Press.
+
+\bibitem[Cooley and Tukey, 1965]{fft}
+Cooley, J.~W. and Tukey, J.~W. (1965).
+\newblock An algorithm for the machine calculation of complex fourier series.
+\newblock {\em Mathematics of Computation}, 19(90):297--301.
+
+\bibitem[{Frenk} et~al., 1983]{white_pm}
+{Frenk}, C.~S., {White}, S.~D.~M., and {Davis}, M. (1983).
+\newblock {Nonlinear evolution of large-scale structure in the universe}.
+\newblock {\em \apj}, 271:417--430.
+
+\bibitem[{H{\'e}non}, 1970]{hockney_pm}
+{H{\'e}non}, M. (1970).
+\newblock {Le probl{\`e}me des N-corps en astronomie et en physique des plasmas
+  plus Experiments with a cylindrical galaxy (film de R. Hockney)}.
+\newblock In {\em Physique Fondamentale et Astrophysique}, pages C3--27.
+
+\bibitem[{Klypin} and {Shandarin}, 1983]{klypin_pm}
+{Klypin}, A.~A. and {Shandarin}, S.~F. (1983).
+\newblock {Three-dimensional numerical model of the formation of large-scale
+  structure in the Universe}.
+\newblock {\em \mnras}, 204:891--907.
+
+\bibitem[{Lynden-Bell}, 1999]{lb_negative_specific_heat}
+{Lynden-Bell}, D. (1999).
+\newblock {Negative Specific Heat in Astronomy, Physics and Chemistry}.
+\newblock {\em Physica A Statistical Mechanics and its Applications},
+  263:293--304.
+
+\bibitem[{Padmanabhan}, 1990]{self_gravitating_statistical_mechanics}
+{Padmanabhan}, T. (1990).
+\newblock {Statistical mechanics of gravitating systems}.
+\newblock {\em \physrep}, 188:285--362.
+
+\bibitem[{Press} et~al., 1992]{numerical_recipes_fortran}
+{Press}, W.~H., {Teukolsky}, S.~A., {Vetterling}, W.~T., and {Flannery}, B.~P.
+  (1992).
+\newblock {\em {Numerical recipes in FORTRAN. The art of scientific
+  computing}}.
+
+\bibitem[{Quinn} et~al., 1997]{quinn_1997}
+{Quinn}, T., {Katz}, N., {Stadel}, J., and {Lake}, G. (1997).
+\newblock {Time stepping N-body simulations}.
+\newblock {\em arXiv Astrophysics e-prints}.
+
+\bibitem[Sethna, 2006]{sethna}
+Sethna, J.~P. (2006).
+\newblock Statistical mechanics: Entropy, order parameters, and complexity.
+\newblock In {\em Oxford Master Series in Physic}. Univ. Press.
+
+\bibitem[{Springel}, 2005]{GadgetCodePaper}
+{Springel}, V. (2005).
+\newblock {The cosmological simulation code GADGET-2}.
+\newblock {\em \mnras}, 364:1105--1134.
 
 \end{thebibliography}

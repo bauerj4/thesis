@@ -21,11 +21,13 @@
 \newlabel{eq:cbe_cartesian}{{2.3}{31}{The Collisionless Boltzmann Equation}{equation.2.1.3}{}}
 \citation{numerical_recipes_fortran}
 \citation{numerical_recipes_fortran}
+\newlabel{eq:poisson}{{2.4}{32}{The Collisionless Boltzmann Equation}{equation.2.1.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Monte Carlo Solution of the Collisionless Boltzmann Equation}{32}{subsection.2.1.3}}
 \citation{numerical_recipes_fortran}
 \citation{BT}
-\citation{quinn_1997}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}Time Integration in N-Body Simulations}{34}{subsection.2.1.4}}
+\newlabel{eq:nbody_system}{{2.8}{34}{Time Integration in N-Body Simulations}{equation.2.1.8}{}}
+\citation{quinn_1997}
 \citation{GadgetCodePaper}
 \citation{BT}
 \citation{GadgetCodePaper}
@@ -38,47 +40,87 @@
 \citation{barnes_hut}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.5}Efficient Force Calculation}{37}{subsection.2.1.5}}
 \citation{barnes_hut}
+\citation{GadgetCodePaper}
+\citation{xu_treepm}
+\citation{BT}
+\citation{lilley_2018_a,lilley_2018_b}
+\citation{peano}
+\citation{peano}
+\citation{openmp}
+\citation{mpi3_shared}
+\citation{mpi_standard}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Several examples of the Peano space filling curve in 2D. The level of refinement increases left-to-right. Obtained from \citet  {peano}.\relax }}{40}{figure.caption.7}}
+\newlabel{fig:peano}{{2.1}{40}{Several examples of the Peano space filling curve in 2D. The level of refinement increases left-to-right. Obtained from \citet {peano}.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.6}Complications on Distributed Systems}{40}{subsection.2.1.6}}
+\citation{GadgetCodePaper}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Phase Space, Equilibrium, and Initial Conditions}{41}{section.2.2}}
+\newlabel{sec:galaxy_ics}{{2.2}{41}{Phase Space, Equilibrium, and Initial Conditions}{section.2.2}{}}
+\citation{BT}
+\citation{jeans_1915}
+\citation{curtis_shapley}
+\citation{BT}
+\citation{BT}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Jeans Modeling and the Epicyclic Approximation}{42}{subsection.2.2.1}}
+\newlabel{eq:jeans}{{2.18}{42}{Jeans Modeling and the Epicyclic Approximation}{equation.2.2.17}{}}
+\citation{BT}
+\citation{BT}
+\citation{jeans_1915}
+\citation{BT}
+\citation{hernquist_1993}
+\citation{hernquist_1993}
+\citation{nfw}
+\citation{hernquist_1993}
+\citation{freeman_1970}
 \bibstyle{apalike}
 \bibdata{bibliography_background}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Phase Space, Equilibrium, and Initial Conditions}{39}{section.2.2}}
-\newlabel{sec:galaxy_ics}{{2.2}{39}{Phase Space, Equilibrium, and Initial Conditions}{section.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Jeans Modeling}{39}{subsection.2.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}DF-based Models and the Strong Jeans Theorem}{39}{subsection.2.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Action-Angle Variables}{39}{subsection.2.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}DFs as Functions of Actions}{39}{subsection.2.2.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Cosmology and Implications for Galaxy Studies}{39}{section.2.3}}
-\newlabel{sec:cosmology}{{2.3}{39}{Cosmology and Implications for Galaxy Studies}{section.2.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Basic FRW Cosmology}{39}{subsection.2.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Extension of Numerical Methods}{39}{subsection.2.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Sampling Initial Conditions for Cosmological Simulations}{39}{subsection.2.3.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Simulation Analysis: Paradigms and Tools}{39}{section.2.4}}
-\newlabel{sec:analysis_of_sims}{{2.4}{39}{Simulation Analysis: Paradigms and Tools}{section.2.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Cosmological Substructure and Halo Triaxiality}{39}{subsection.2.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Identifying Substructure in Simulations}{39}{subsection.2.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}WKB Wave Analysis}{39}{subsection.2.4.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Time Series Filtering}{39}{subsection.2.4.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.5}MCMC}{39}{subsection.2.4.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}DF-based Models and the Strong Jeans Theorem}{45}{subsection.2.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Action-Angle Variables}{45}{subsection.2.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}DFs as Functions of Actions}{45}{subsection.2.2.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Cosmology and Implications for Galaxy Studies}{45}{section.2.3}}
+\newlabel{sec:cosmology}{{2.3}{45}{Cosmology and Implications for Galaxy Studies}{section.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Basic FRW Cosmology}{45}{subsection.2.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Extension of Numerical Methods}{45}{subsection.2.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Sampling Initial Conditions for Cosmological Simulations}{45}{subsection.2.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Simulation Analysis: Paradigms and Tools}{45}{section.2.4}}
+\newlabel{sec:analysis_of_sims}{{2.4}{45}{Simulation Analysis: Paradigms and Tools}{section.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Cosmological Substructure and Halo Triaxiality}{45}{subsection.2.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Identifying Substructure in Simulations}{45}{subsection.2.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}WKB Wave Analysis}{45}{subsection.2.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Time Series Filtering}{45}{subsection.2.4.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.5}MCMC}{45}{subsection.2.4.5}}
 \bibcite{barnes_hut}{{1}{1986}{{{Barnes} and {Hut}}}{{}}}
-\bibcite{BM}{{2}{1998}{{{Binney} and {Merrifield}}}{{}}}
-\bibcite{BT}{{3}{2008}{{{Binney} and {Tremaine}}}{{}}}
-\bibcite{fft}{{4}{1965}{{Cooley and Tukey}}{{}}}
-\bibcite{white_pm}{{5}{1983}{{{Frenk} et~al.}}{{}}}
-\bibcite{hockney_pm}{{6}{1970}{{H{\'e}non}}{{}}}
-\bibcite{klypin_pm}{{7}{1983}{{{Klypin} and {Shandarin}}}{{}}}
-\bibcite{lb_negative_specific_heat}{{8}{1999}{{Lynden-Bell}}{{}}}
-\bibcite{self_gravitating_statistical_mechanics}{{9}{1990}{{Padmanabhan}}{{}}}
-\bibcite{numerical_recipes_fortran}{{10}{1992}{{{Press} et~al.}}{{}}}
-\bibcite{quinn_1997}{{11}{1997}{{{Quinn} et~al.}}{{}}}
-\bibcite{sethna}{{12}{2006}{{Sethna}}{{}}}
-\bibcite{GadgetCodePaper}{{13}{2005}{{Springel}}{{}}}
+\bibcite{openmp}{{2}{2007}{{Basumallik et~al.}}{{}}}
+\bibcite{BM}{{3}{1998}{{{Binney} and {Merrifield}}}{{}}}
+\bibcite{BT}{{4}{2008}{{{Binney} and {Tremaine}}}{{}}}
+\bibcite{fft}{{5}{1965}{{Cooley and Tukey}}{{}}}
+\bibcite{peano}{{6}{2019}{{de~Campos}}{{}}}
+\bibcite{freeman_1970}{{7}{1970}{{Freeman}}{{}}}
+\bibcite{white_pm}{{8}{1983}{{{Frenk} et~al.}}{{}}}
+\bibcite{hockney_pm}{{9}{1970}{{H{\'e}non}}{{}}}
+\bibcite{hernquist_1993}{{10}{1993}{{Hernquist}}{{}}}
+\bibcite{jeans_1915}{{11}{1915}{{Jeans}}{{}}}
+\bibcite{klypin_pm}{{12}{1983}{{{Klypin} and {Shandarin}}}{{}}}
+\bibcite{lilley_2018_a}{{13}{2018a}{{{Lilley} et~al.}}{{}}}
+\bibcite{lilley_2018_b}{{14}{2018b}{{{Lilley} et~al.}}{{}}}
+\bibcite{mpi_standard}{{15}{1996}{{Lusk et~al.}}{{}}}
+\bibcite{lb_negative_specific_heat}{{16}{1999}{{Lynden-Bell}}{{}}}
+\bibcite{mpi3_shared}{{17}{2015}{{MPI Forum}}{{}}}
+\bibcite{nfw}{{18}{1997}{{{Navarro} et~al.}}{{}}}
+\bibcite{self_gravitating_statistical_mechanics}{{19}{1990}{{Padmanabhan}}{{}}}
+\bibcite{numerical_recipes_fortran}{{20}{1992}{{{Press} et~al.}}{{}}}
+\bibcite{quinn_1997}{{21}{1997}{{{Quinn} et~al.}}{{}}}
+\bibcite{sethna}{{22}{2006}{{Sethna}}{{}}}
+\bibcite{GadgetCodePaper}{{23}{2005}{{Springel}}{{}}}
+\bibcite{curtis_shapley}{{24}{1995}{{Trimble}}{{}}}
+\bibcite{xu_treepm}{{25}{1995}{{Xu}}{{}}}
 \@setckpt{Background}{
-\setcounter{page}{42}
-\setcounter{equation}{16}
+\setcounter{page}{49}
+\setcounter{equation}{25}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{5}
+\setcounter{footnote}{8}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{2}
@@ -87,11 +129,11 @@
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{1}
 \setcounter{table}{0}
 \setcounter{Item}{0}
-\setcounter{Hfootnote}{6}
-\setcounter{bookmark@seq@number}{36}
+\setcounter{Hfootnote}{9}
+\setcounter{bookmark@seq@number}{37}
 \setcounter{parentequation}{0}
 \setcounter{subfigure}{0}
 \setcounter{lofdepth}{1}
@@ -102,6 +144,6 @@
 \setcounter{ContinuedFloat}{0}
 \setcounter{changebargrey}{65}
 \setcounter{vrcnt}{0}
-\setcounter{NAT@ctr}{13}
+\setcounter{NAT@ctr}{25}
 \setcounter{section@level}{2}
 }

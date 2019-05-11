@@ -5,6 +5,12 @@
 \newblock {A hierarchical O(N log N) force-calculation algorithm}.
 \newblock {\em \nat}, 324:446--449.
 
+\bibitem[Basumallik et~al., 2007]{openmp}
+Basumallik, A., jai Min, S., and Eigenmann, R. (2007).
+\newblock Programming distributed memory sytems using openmp.
+\newblock In {\em Parallel and Distributed Processing Symposium, International
+  0}, page 207.
+
 \bibitem[{Binney} and {Merrifield}, 1998]{BM}
 {Binney}, J. and {Merrifield}, M. (1998).
 \newblock {\em {Galactic Astronomy}}.
@@ -19,6 +25,16 @@ Cooley, J.~W. and Tukey, J.~W. (1965).
 \newblock An algorithm for the machine calculation of complex fourier series.
 \newblock {\em Mathematics of Computation}, 19(90):297--301.
 
+\bibitem[de~Campos, 2019]{peano}
+de~Campos, A.~M. (2019).
+\newblock {Image of Peano Space-Filling Curve}.
+\newblock \url{https://commons.wikimedia.org/wiki/File:Peanocurve.svg}.
+
+\bibitem[{Freeman}, 1970]{freeman_1970}
+{Freeman}, K.~C. (1970).
+\newblock {On the Disks of Spiral and S0 Galaxies}.
+\newblock {\em \apj}, 160:811.
+
 \bibitem[{Frenk} et~al., 1983]{white_pm}
 {Frenk}, C.~S., {White}, S.~D.~M., and {Davis}, M. (1983).
 \newblock {Nonlinear evolution of large-scale structure in the universe}.
@@ -30,17 +46,55 @@ Cooley, J.~W. and Tukey, J.~W. (1965).
   plus Experiments with a cylindrical galaxy (film de R. Hockney)}.
 \newblock In {\em Physique Fondamentale et Astrophysique}, pages C3--27.
 
+\bibitem[{Hernquist}, 1993]{hernquist_1993}
+{Hernquist}, L. (1993).
+\newblock {N-body realizations of compound galaxies}.
+\newblock {\em \apjs}, 86:389--400.
+
+\bibitem[{Jeans}, 1915]{jeans_1915}
+{Jeans}, J.~H. (1915).
+\newblock {On the theory of star-streaming and the structure of the universe}.
+\newblock {\em \mnras}, 76:70--84.
+
 \bibitem[{Klypin} and {Shandarin}, 1983]{klypin_pm}
 {Klypin}, A.~A. and {Shandarin}, S.~F. (1983).
 \newblock {Three-dimensional numerical model of the formation of large-scale
   structure in the Universe}.
 \newblock {\em \mnras}, 204:891--907.
 
+\bibitem[{Lilley} et~al., 2018a]{lilley_2018_a}
+{Lilley}, E.~J., {Sanders}, J.~L., and {Evans}, N.~W. (2018a).
+\newblock {A two-parameter family of double-power-law biorthonormal
+  potential-density expansions}.
+\newblock {\em \mnras}, 478:1281--1291.
+
+\bibitem[{Lilley} et~al., 2018b]{lilley_2018_b}
+{Lilley}, E.~J., {Sanders}, J.~L., {Evans}, N.~W., and {Erkal}, D. (2018b).
+\newblock {Galaxy halo expansions: a new biorthogonal family of
+  potential-density pairs}.
+\newblock {\em \mnras}, 476:2092--2109.
+
+\bibitem[Lusk et~al., 1996]{mpi_standard}
+Lusk, E., Doss, N., and Skjellum, A. (1996).
+\newblock A high-performance, portable implementation of the mpi message
+  passing interface standard.
+\newblock {\em Parallel Computing}, 22:789--828.
+
 \bibitem[{Lynden-Bell}, 1999]{lb_negative_specific_heat}
 {Lynden-Bell}, D. (1999).
 \newblock {Negative Specific Heat in Astronomy, Physics and Chemistry}.
 \newblock {\em Physica A Statistical Mechanics and its Applications},
   263:293--304.
+
+\bibitem[{MPI Forum}, 2015]{mpi3_shared}
+{MPI Forum} (2015).
+\newblock {MPI: A Message-Passing Interface Standard Version 3.1}.
+\newblock In {\em Message Passing Interface Forum}.
+
+\bibitem[{Navarro} et~al., 1997]{nfw}
+{Navarro}, J.~F., {Frenk}, C.~S., and {White}, S.~D.~M. (1997).
+\newblock {A Universal Density Profile from Hierarchical Clustering}.
+\newblock {\em \apj}, 490:493--508.
 
 \bibitem[{Padmanabhan}, 1990]{self_gravitating_statistical_mechanics}
 {Padmanabhan}, T. (1990).
@@ -67,5 +121,16 @@ Sethna, J.~P. (2006).
 {Springel}, V. (2005).
 \newblock {The cosmological simulation code GADGET-2}.
 \newblock {\em \mnras}, 364:1105--1134.
+
+\bibitem[{Trimble}, 1995]{curtis_shapley}
+{Trimble}, V. (1995).
+\newblock {The 1920 Shapley-Curtis Discussion: Background, Issues, and
+  Aftermath}.
+\newblock {\em \pasp}, 107:1133.
+
+\bibitem[{Xu}, 1995]{xu_treepm}
+{Xu}, G. (1995).
+\newblock {A New Parallel N-Body Gravity Solver: TPM}.
+\newblock {\em \apjs}, 98:355.
 
 \end{thebibliography}

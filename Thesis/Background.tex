@@ -45,7 +45,7 @@ The CBE is more commonly expressed in Cartesian coordinates as,
 \end{equation}
 where $\Phi$ is our total gravitational potential from stars and dark matter. The result is a quasilinear partial differential equation (PDE) for $f(\textbf{r},\textbf{v},t)$. The CBE is nothing more than an advection equation in phase space that expresses our view that particles are not self interacting, that they are identical, and that the phase space fluid is conserved and incompressible. In addition to the CBE which describes the evolution of the phase fluid, we have the Poisson equation, an elliptic equation describing the evolution of the potential \citep{BT},
 \begin{equation}
-\nabla^2 \Phi(\textbf{r},t) = -4 \pi G \rho(\textbf{r},t)
+\nabla^2 \Phi(\textbf{r},t) = -4 \pi G \rho(\textbf{r},t) \label{eq:poisson}
 \end{equation} 
 where $G$ is Newton's gravitational constant and,
 \begin{equation}
@@ -72,11 +72,11 @@ where $\delta^3$ is the 3D Dirac delta function, and we take the DF to be normal
 \subsection{Time Integration in N-Body Simulations}
 
 We have shown how to map solving the CBE, the master equation for our system of stars and dark matter, to the evolution of a finite sample of particles. The system of equations we need to solve now is,
-\begin{eqnarray}
+\begin{eqnarray} \label{eq:nbody_system}
 \dot{\textbf{r}}_i(t) &=& \textbf{v}_i(t)\\
 \dot{\textbf{v}}_i(t) &=& -\left.\deriv{\Phi}{\textbf{r}}\right\vert_{\textbf{r} = \textbf{r}_i}.
 \end{eqnarray}
-Our integro-differential equation system is now approximated as $6\,N$, where $N$ is the number of particles sampled to represent the stars and dark matter, ordinary differential equations (ODEs). These may be solved by any ODE system solver. There are two competing objectives when deciding on the best way to handle time stepping numerically; the first is that we want to maximize the accuracy of our integration scheme and the second is that we want to minimize the number of evaluations of $-\nabla \Phi$, the force. The latter consideration is a severe constraint because naively, the complexity of evaluating each pairwise force is $O(N^2)$.  Although, as we will see, approximations reduce this complexity to $O(N\,\log \, N)$. 
+Our integro-differential equation system is now approximated as $6\,N$, where $N$ is the number of particles sampled to represent the stars and dark matter, ordinary differential equations (ODEs). These may be solved by any ODE system solver. There are two competing objectives when deciding on the best way to handle time stepping numerically; the first is that we want to maximize the accuracy of our integration scheme and the second is that we want to minimize the number of evaluations of $-\nabla \Phi$, the force. The latter consideration is a severe constraint because naively, the complexity of evaluating each pairwise force is $O(N^2)$.  Although, as we will see, approximations reduce this complexity to $O(N\,\log \, N)$. We note that finding the forces amounts to solving \eqref{eq:poisson}.
 
 Nonetheless, the force calculation will be the most time consuming aspect of the integration, and we want to minimize the number of evaluations we need. This rules out some commonly used schemes in the Runge-Kutta class of integrators, since they would require four or five calculations of the force on millions of particles \citep{numerical_recipes_fortran}. The open question is how to construct a low-order integration scheme that preserves the Hamiltonian\footnote{In a collisionless system, the Hamiltonian should be conserved \citep{BT}.}.
 
@@ -100,7 +100,7 @@ U(\Delta T) = K(\frac{\Delta t}{2}) D(\Delta t) K(\frac{\Delta t}{2}).
 \end{equation}
 This integration scheme is reasonably accurate with only two force evaluations, and is colloquially referred to as Leapfrog. It is also symplectic, meaning that the Hamiltonian of the system will not drift. Chapter~3 of \citet{BT} has an excellent comparison of numerical integrators, including the Leapfrog scheme given here.
 
-The final remaining complication for the timestepping portion of solving the CBE is determining the timesteps themselves. This is slightly more complicated to do properly than choosing a fixed timestep for all particles. This is because accelerations and velocities in astrophysical systems vary by orders of magnitude, and the timestep needs to be small compared to the timescales defined by the relevant accelerations. The way that this is commonly implemented, including in \citet{GadgetCodePaper}, is to have a base timestep for all particles that gets bisected at each level of refinement. That is to say, particles at level 4 are updated four more times than particles at level 2. Suppose the highest level of refinement is $k$. The simulation proceeds in $\Delta t_{base} / 2^{k}$ intervals, with particles at $k - 1$ being updated at half of the timesteps, dividing the number of updates by two up to the coarsest level of temporal refinement.
+The final remaining complication for the timestepping portion of solving the CBE is determining the timesteps themselves. This is slightly more complicated to do properly than choosing a fixed timestep for all particles. This is because accelerations and velocities in astrophysical systems vary by orders of magnitude, and the timestep needs to be small compared to the timescales defined by the relevant accelerations. The way that this is commonly implemented, including in \citet{GadgetCodePaper}, is to have a base timestep for all particles that gets bisected at each level of refinement. That is to say, particles at level 4 are updated four more times than particles at level 2. Suppose the highest level of refinement is $k$. The simulation proceeds in $\Delta t_{base} / 2^{k}$ intervals, with particles at $k - 1$ being updated at half of the timesteps, dividing the number of updates by two up to the coarsest level of temporal refinement. Where multiple levels need updates, particles at the lower levels are updated first.
 
 The level of temporal refinement assigned to a given particle is determined primarily by the acceleration it experiences. That is, for \textsc{Gadget-3} \citep{GadgetCodePaper},
 \begin{equation}
@@ -130,12 +130,71 @@ In addition, the somewhat simplistic opening angle scheme is expounded upon by s
 \end{equation}
 where $M$ is the mass in the current DFS subtree, $\vert\textbf{a}_{i,t-1} \vert$ is the magnitude of the acceleration of the current particle at the last time step, and $\alpha$ is a relative opening criterion, a free parameter. Conceptually, this means that if the point mass acceleration in the current subtree is greater than a specified fraction of this particle's acceleration, the current DFS level is too coarse and we need to go deeper.
 
-The scheme proposed by \citet{barnes_hut} is widely used in astrophysics because of its efficiency and computability.
+The scheme proposed by \citet{barnes_hut} is widely used in astrophysics because of its efficiency and computability. While both algorithms are $O(N\,\log\, N)$ complexity, tree-based methods tend to perform more slowly in practice \citep{GadgetCodePaper}. \citet{xu_treepm} introduced a scheme to combine both the short-range accuracy of tree methods with the efficiency of FFT-based methods. This TreePM method has been widely successful at handling short range forces with a tree method and long range forces with particle mesh techniques. The trick is forcing consistency between the two methods at intermediate distances. \textsc{Gadget-3} combines a high degree of optimization with the TreePM algorithm to produce a highly efficient algorithm.
+
+Before proceeding to talk about the complications of executing TreePM on distributed systems like the Linux clusters worked with in this thesis, we would be remiss in not mentioning field expansion methods. Typically these take the form of an expansion of the potential in spherical harmonics using a set of radial basis functions. A brief discussion of these methods is presented in Chapter~2.9.4 of \citet{BT}. These methdos have great historical significance, and have even seen a recent resurgence in helping understand the structure of dark matter halos \citep{lilley_2018_a, lilley_2018_b}.
+
+To summarize, there are a number of ways to find gravitational forces in a simulation that all amount to solving Poisson's Equation, \eqref{eq:poisson}. The most accurate way is to compute all pairwise forces, but efficient algorithms have been developed to accurately estimate forces from gravity. The force calculation together with a timestepping scheme for N-body realizations forms the main components of an N-body simulation, and solving Eq. \eqref{eq:nbody_system} to estimate $f(\textbf{r},\textbf{v},t)$ is what we mean when we say we ran a simulation.
 
 \subsection{Complications on Distributed Systems}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{../figures/Peanocurve.eps}
+	\caption{Several examples of the Peano space filling curve in 2D. The level of refinement increases left-to-right. Obtained from \citet{peano}.}\label{fig:peano}
+\end{figure}
+
+Modern high performance computing is largely done on compute clusters which are groups of smaller computers (nodes) connected with some high speed connection (Gigabit Ethernet, InfiniBand). The nodes form a distributed system in the sense that they do not share memory addresses. Each node may have multiple processes running (typically up to the number of logical cores on the node's CPU). Processes do not share data\footnote{Processes do not share data in a fully distributed model of parallel computing. Shared memory models like OpenMP \citep{openmp} share data between processes on a single node. MPI 3 even has similar shared memory support \citep{mpi3_shared}. \textsc{Gadget-3} was initially designed to not use these paradigms, and our intention is not to give a complete overview of all of parallel computing, so we relegate clarification to this footnote and references.}, and must communicate through a protocol like the Message Passing Interface (MPI) \citep{mpi_standard}.
+
+Specifically, in an N-body simulation,  will have a subset of all of the particles, and a subset of the total tree structure. A naive DFS of an Octree simply cannot be done since no process will have all of the particles. When a process requires particles from another process, this reduces the efficiency gained from increasing the number of processors, and one might even get an overall slowdown. Another potential problem is that an individual process may get a higher work load than other processes, causing the other processes to wait for it to finish. We talk about how both of these problems are solved here.
+
+To reduce the need to explicitly transfer particles between processes, \textsc{Gadget-3} notes that pairwise forces will only be needed for nearby poarticles. These represent the bulk of the tree force calculation. Any scheme which puts nearby particles on the same processor will reduce the overall communication time in the force calculation phase. One way to accomplish efficient load balancing is to partition the simulation space using a space filling curve. Fig. \ref{fig:peano} shows the Peano space-filling curve at several levels of refinement in 2D. This is the curve \textsc{Gadget-3} uses. A level of refinement is selected, and estimates of the computational cost in each cube are added up along the space filling curve to equally distribute the computational load. This results in nearby particles being on the same process, and in the processes having roughly equal work loads. \citet{GadgetCodePaper} shows that this is highly effective at reducing communication cost in the simulation, and it goes into more detail about how TreePM is carried out on distributed systems.
+
+
 \section{Phase Space, Equilibrium, and Initial Conditions} \label{sec:galaxy_ics}
-\subsection{Jeans Modeling}
+In \S\ref{sec:motivation} we outlined the underlying theory behind representing stars and dark matter in an N-body simulation. The focus of this thesis is studying the behavior of stellar disks in cosmological environments, and the first step towards that understanding is the construction of a pristine, equilibrium N-body model. Ultimately, in the course of running an N-body simulation, these pristine systems will diverge to higher entropy states, initially due to random errors in the N-body representation. Nonetheless, these models give us an understanding of how perfectly unperturbed galaxies will evolve due to the fact that real galaxies are also made of a finite number of particles.
+
+\subsection{Jeans Modeling and the Epicyclic Approximation}
+
+The DF represents the 6D phase space information and completely describes an N-body system. In a simple disk-halo system, there is a flattened axisymmetric component (the disk), and a spheroidal component (the dark matter halo) each with their own DF. These are made self-consistent by the separate DFs' incorporation of their combined gravitational potential. 
+
+However, the DF is not the quantity that is observed in external galaxies. Astronomers are not typically working with a 6D phase space description of the structures they observe. Luminosity (density) profiles are one observable , as well as circular velocities (rotation curves) for disks, and also the spread of line of sight (LOS) velocties of disk stars. A modelling approach that takes our understanding of these observables as input is conceptually easier to understand than a DF which may or may not be unique \citep{BT}.
+
+In this spirit, \citet{jeans_1915}\footnote{Notably before the infamous 1920 Curtis-Shapley debate \citep{curtis_shapley} establishing that so-called ``spiral nebulae" were actually external galaxies.} laid out a framework to describe galaxy evolution in terms of the \textit{moments} of the distribution function. Specifically, the idea is to multiply the CBE (Eq. \eqref{eq:cbe_cartesian}) by $\textbf{v}_i$ or $\textbf{v}_i \textbf{v}_j$ and integrate over the velocity part of phase space. These together yield the second-order Jeans equations \citep{BT},
+\begin{eqnarray}
+\deriv{\nu}{t} + \deriv{\nu \langle v_i \rangle}{x_i} &=& 0 \\
+\nu \deriv{\langle v_j \rangle}{t} + \nu \langle v_i \rangle \deriv{\langle v_j \rangle}{x_i} &=& -\nu \deriv{\Phi}{x_j} - \deriv{\nu \sigma^2_{ij}}{x_i}\label{eq:jeans}
+\end{eqnarray}
+where $i,j \in (1,2,3)$, $\langle\cdot\rangle$ denotes expectation over $f$, $\mathbb{E}_f[\cdot]$, $\nu$ is the number density of particles, and $\sigma^2_{ij} = \langle v_i v_j \rangle - \langle v_i \rangle \langle v_j \rangle$ is the velocity dispersion tensor. In equilibrium for spherical systems, the second equation is often written as \citep{BT},
+\begin{equation}
+\deriv{\nu \langle v_r^2 \rangle}{r} + \nu \left(\deriv{\Phi}{r} + \frac{2 \langle v_r^2 \rangle - \langle v_\theta^2\rangle - \langle v_\phi^2 \rangle}{r} \right)
+\end{equation}
+where $\theta$ is the polar angle, $\phi$ is the azimuthal angle, and $r$ is the spherical radius\footnote{Note a slight abuse of notation. We said that $v_i$ has $i \in (1,2,3)$, but here we use symbols to represent specific coordinate systems. The point is that the indices have three unique values.}. Note that there is only one scalar equation. Symmetries in the velocity dispersion tensor for spherical systems require that the cross moments are zero \citep{BT}. For axisymmetric systems, the equilibrium Jeans equations are often written \citep{BT},
+\begin{eqnarray}
+\deriv{\nu \langle v_R^2 \rangle}{R} + \deriv{\nu \langle v_R v_z \rangle}{z} + \nu \left(\frac{\langle v_R^2 \rangle - \langle v_\phi^2 \rangle}{R} + \deriv{\Phi}{R} \right) &=& 0\\
+\frac{1}{R} \deriv{R \nu \langle v_R v_z \rangle}{R} + \deriv{\nu \langle v_z^2 \rangle}{z}+ \nu \deriv{\Phi}{z} &=& 0\\
+\frac{1}{R^2} \deriv{R^2 \nu \langle v_R v_\phi \rangle}{R} + \deriv{\nu \langle v_z v_\phi\rangle}{z} &=& 0
+\end{eqnarray}
+where $z$ is the Cartesian $z$, $R$ is the cylindrical radius, and $\phi$ is the polar angle. These equations look suspiciously like Euler's equations for fluid dynamics with a missing energy equation. \citet{jeans_1915} did not magically solve the statistical mechanical issues mentioned in \S\ref{sec:motivation}; given a number density and potential, we still have an unknown velocity dispersion tensor with six elements, and only 4 independent equations. In the simplified spherical case, we have three unknown elements and two independent equations.
+
+We have also thrown out information about the DF by using moments and stopping at second order. Higher order Jeans equations can be appended to this system by multiplying the CBE by $v_i v_j v_k$ to obtain the third order equations, and so on. These get progressively more complicated, and we would require more additional equations to evaluate the equilibrium Jeans equations \citep{BT}.
+
+Despite these shortcomings, more information can be imposed on the system to make these equations applicable. \citet{hernquist_1993} was one of the first successful applications of Jeans modelling to creating equilibrium galaxies with bulges, disks, and dark matter halos. In the case of the dark matter halo for a disk-halo system, one only has to specify the function,
+\begin{equation}
+\beta(r) = 1 - \frac{\langle v_\theta^2\rangle + \langle v_\phi^2 \rangle}{2 \langle v_R^2 \rangle}.
+\end{equation}
+This parameter measures anisotropy in the velocity ellipsoid defined by $\sigma_{ij}$ at each radius; $\beta = -\infty$ if all orbits are circular, $\beta=0$ if the system is isotropic, and $\beta = 1$ if orbits are purely radial. Together with an assumed density-potential pair, continuity equation, and the spherical second-order Jeans equation, the spherical halo's velocity structure is specified. At the time of writing, \citet{hernquist_1993} did not have much information about the dark matter distribution in galaxies (recall \citep{nfw} proceeded this work in establishing a common density profile for dark matter halos). As such, we will not talk about their uninformed choice of halo, and it really is not important.
+
+In the case of the axisymmetric disk, \citet{hernquist_1993} based their model on the observations at the time which suggested that stellar disks had an exponential radial density profile \citep{freeman_1970}. This motivated a density profile commonly used today,
+\begin{equation}
+\rho_d(r) = \frac{M_d}{4 \pi R_d^2 h_d} e^{-R/R_d} \text{sech }^2\left(\frac{z}{z_d} \right). 
+\end{equation}
+
+
+% one has to specify a radial dispersion profile, which \citet{hernquist_1993} took to be,
+\begin{equation}
+\langle v_R^2 \rangle(R) = 
+\end{equation}
 \subsection{DF-based Models and the Strong Jeans Theorem}
 \subsection{Action-Angle Variables}
 \subsection{DFs as Functions of Actions}

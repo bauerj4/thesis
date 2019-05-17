@@ -32,12 +32,7 @@
 \contentsline {subsection}{\numberline {2.3.1}Basic FRW Cosmology}{45}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Extension of Numerical Methods}{45}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Sampling Initial Conditions for Cosmological Simulations}{45}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Simulation Analysis: Paradigms and Tools}{45}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Cosmological Substructure and Halo Triaxiality}{45}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Identifying Substructure in Simulations}{45}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}WKB Wave Analysis}{45}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Time Series Filtering}{45}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}MCMC}{45}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.3.4}Identifying Substructure in Simulations}{45}{subsection.2.3.4}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-3}
 \contentsline {chapter}{\numberline {3}A Method for Studying Discs in Cosmological Haloes}{49}{chapter.3}

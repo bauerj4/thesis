@@ -62,6 +62,16 @@ de~Campos, A.~M. (2019).
   structure in the Universe}.
 \newblock {\em \mnras}, 204:891--907.
 
+\bibitem[{Kuijken} and {Dubinski}, 1995]{kd95galactics}
+{Kuijken}, K. and {Dubinski}, J. (1995).
+\newblock {Nearly Self-Consistent Disc / Bulge / Halo Models for Galaxies}.
+\newblock {\em \mnras}, 277:1341.
+
+\bibitem[{Lewis} and {Freeman}, 1989]{lewis_freeman_1989}
+{Lewis}, J.~R. and {Freeman}, K.~C. (1989).
+\newblock {Kinematics and chemical properties of the old disk of the Galaxy}.
+\newblock {\em \aj}, 97:139--162.
+
 \bibitem[{Lilley} et~al., 2018a]{lilley_2018_a}
 {Lilley}, E.~J., {Sanders}, J.~L., and {Evans}, N.~W. (2018a).
 \newblock {A two-parameter family of double-power-law biorthonormal
@@ -127,6 +137,12 @@ Sethna, J.~P. (2006).
 \newblock {The 1920 Shapley-Curtis Discussion: Background, Issues, and
   Aftermath}.
 \newblock {\em \pasp}, 107:1133.
+
+\bibitem[{van der Kruit} and {Searle}, 1981]{van_der_kruit_searle_1981}
+{van der Kruit}, P.~C. and {Searle}, L. (1981).
+\newblock {Surface photometry of edge-on spiral galaxies. I - A model for the
+  three-dimensional distribution of light in galactic disks.}
+\newblock {\em \aap}, 95:105--115.
 
 \bibitem[{Xu}, 1995]{xu_treepm}
 {Xu}, G. (1995).

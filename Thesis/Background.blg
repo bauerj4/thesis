@@ -3,52 +3,52 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Background.aux
 The style file: apalike.bst
 Database file #1: bibliography_background.bib
-I was expecting a `,' or a `}'---line 1998 of file bibliography_background.bib
+I was expecting a `,' or a `}'---line 2041 of file bibliography_background.bib
  : 
  : OPTkey = {•},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty publisher in BM
 Warning--empty publisher in numerical_recipes_fortran
-You've used 25 entries,
+You've used 28 entries,
             1935 wiz_defined-function locations,
-            625 strings with 7369 characters,
-and the built_in function-call counts, 9129 in all, are:
-= -- 885
-> -- 308
-< -- 19
-+ -- 103
-- -- 98
-* -- 725
-:= -- 1606
-add.period$ -- 74
-call.type$ -- 25
-change.case$ -- 171
-chr.to.int$ -- 24
-cite$ -- 27
-duplicate$ -- 374
-empty$ -- 692
-format.name$ -- 133
-if$ -- 1809
+            644 strings with 7828 characters,
+and the built_in function-call counts, 10266 in all, are:
+= -- 998
+> -- 347
+< -- 22
++ -- 115
+- -- 110
+* -- 821
+:= -- 1804
+add.period$ -- 83
+call.type$ -- 28
+change.case$ -- 192
+chr.to.int$ -- 27
+cite$ -- 30
+duplicate$ -- 416
+empty$ -- 776
+format.name$ -- 154
+if$ -- 2035
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 27
-newline$ -- 126
-num.names$ -- 75
-pop$ -- 151
+missing$ -- 30
+newline$ -- 141
+num.names$ -- 84
+pop$ -- 163
 preamble$ -- 1
-purify$ -- 174
+purify$ -- 195
 quote$ -- 0
-skip$ -- 273
+skip$ -- 306
 stack$ -- 0
-substring$ -- 653
-swap$ -- 38
+substring$ -- 743
+swap$ -- 41
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 144
+type$ -- 162
 warning$ -- 2
-while$ -- 71
+while$ -- 80
 width$ -- 0
-write$ -- 317
+write$ -- 356
 (There was 1 error message)

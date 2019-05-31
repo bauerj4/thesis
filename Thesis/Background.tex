@@ -1,5 +1,6 @@
 \newcommand{\deriv}[3][]{% \deriv[<order>]{<func>}{<var>}
   \ensuremath{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}
+\newtheorem{theorem}{Theorem}[section]
 
 \chapter{A Dynamical Recipe for Cosmological Disks}\label{ch:background}
 
@@ -187,17 +188,100 @@ This parameter measures anisotropy in the velocity ellipsoid defined by $\sigma_
 
 In the case of the axisymmetric disk, \citet{hernquist_1993} based their model on the observations at the time which suggested that stellar disks had an exponential radial density profile \citep{freeman_1970}. This motivated a density profile commonly used today,
 \begin{equation}
-\rho_d(r) = \frac{M_d}{4 \pi R_d^2 h_d} e^{-R/R_d} \text{sech}^2\left(\frac{z}{z_d} \right). 
+\rho_d(r) = \frac{M_d}{4 \pi R_d^2 z_d} e^{-R/R_d} \text{sech}^2\left(\frac{z}{z_d} \right). 
 \end{equation}
-
-
-% one has to specify a radial dispersion profile, which \citet{hernquist_1993} took to be,
+Here, $M_d$ is the mass of the disk, $R_d$ is the radial scale length, and $z_d$ is the vertical scale length.
+Observations support the idea that the second radial velocity moment also has an exponential profile \citep{van_der_kruit_searle_1981, lewis_freeman_1989},
 \begin{equation}
-\langle v_R^2 \rangle(R) = 
+\langle v_R^2  = \sigma_{R,0} e^{-R/R_\sigma}.
 \end{equation}
-\subsection{DF-based Models and the Strong Jeans Theorem}
-\subsection{Action-Angle Variables}
-\subsection{DFs as Functions of Actions}
+Here, $R_\sigma$ is the radial dispersion scale length, and $\sigma_{R,0}$ is a free velocity scale (on the order of 100 km/s for the Milky Way). In  priciple, any radial scale length can be used for $\langle v_R^2 \rangle$, but it is generally accepted to be a longer scale length than $R_d$. The vertical dispersion and second velocity moment are determined from the assumption of the disc being isothermal,
+\begin{equation}
+\langle v_z^2 \rangle = \pi G \Sigma z_d
+\end{equation}
+where $\Sigma_d$ is the surface density as a function of radius. Finally, a relation between $\langle v_\phi^2 \rangle$ and the other second moments is needed to fully solve the second order system. Jeans modelling for discs injects the intuition behind a theoretical development known as the \textit{epicycle approximation}. 
+
+The main idea is that stars in discs are on roughly circular and planar orbits, so a reasonably accurate description of their orbits can be obtained by taking the equations of motion in a truncated series expansion about a circular orbit at the guiding radius, $R_g$. This is better understood in terms of the effective potential in the rotating reference frame in which a star rotating at $R_g$ is stationary. For a star on the $x$-axis, the $\hat{x}$ direction represents the radial direction, the $\hat{y}$ direction is the same as $\hat{\phi}$ in the original frame, and $\hat{z}$ is unchanged. The equations of motion are \citep{BT},
+\begin{eqnarray}
+\frac{\text{d}^2x}{\text{d} t^2} &=& \deriv{\Phi_{eff}}{R}\\
+\frac{\text{d}^2y}{\text{d} t^2} &=& 0\\
+\frac{\text{d}^2z}{\text{d} t^2} &=& \deriv{\Phi_{eff}}{z}
+\end{eqnarray}
+where $\Phi_{eff} = \Phi(R,z) + L_z^2/2 R^2$ is the efffective potential in the accelerating (rotating) reference frame, and $L_z$ is the $z$-component of the angular momentum. These equations can be written in a first order expansion as,
+\begin{eqnarray}
+\frac{\text{d}^2x}{\text{d} t^2} &=& \kappa^2 x\\
+\frac{\text{d}^2y}{\text{d} t^2} &=& 0\\
+\frac{\text{d}^2z}{\text{d} t^2} &=& \nu^2 z
+\end{eqnarray}
+where,
+\begin{equation}
+\kappa^2(R_g) = \left(R \deriv{\Omega^2}{R} + 4 \Omega^2\right)_{R=R_g,z=0},
+\end{equation}
+with the circular frequency $\Omega$,
+\begin{equation}
+\Omega^2(R_g) = \frac{1}{R_g} \left(\deriv{\Phi}{R}\right)_{R=R_g,z=0} = \frac{L_z^2}{R_g^4},
+\end{equation}
+and,
+\begin{equation}
+\nu^2(R_g) = \left(\deriv{\Phi}{z}\right)_{R=R_g,z=0}.
+\end{equation}
+That is, a star's orbit is decribed by three frequencies: its rotational frequency $\Omega$, a radial oscillation frequency, $\kappa$, and a vertical oscillation frequency, $\nu$. This view is accurate so long as the vertical motion does not deviate far from the disc midplane. The actual values of these constants in Galactic astonomy are related to a problem known as the \textit{Oort Problem}, and we believe that for the Sun \citep{BT},
+\begin{eqnarray}
+\frac{\kappa}{\Omega} &\approx& 1.35 \\
+\frac{\nu}{\kappa} &\approx& 2
+\end{eqnarray} 
+The fact that the orbit is described by three distinct frequencies that are unequal for the Sun means that the Sun's orbit does not close. If the Milky Way potential never changed, the path of the Sun would fill an annulus centered around $R_g$ \citep{BT}. That is to say, the orbit looks like it forms a rosette pattern.
+
+By assuming the epicycle approximation, we are able to form a complete solution to the Jeans equations for the disc. This is done by looking at a dynamical property of disc star orbits called \textit{asymmetric drift}, which is the velocity defined by \citep{BT},
+\begin{equation}
+v_a = v_c -  \langle v_\phi \rangle
+\end{equation}
+where $v_c = R \Omega$. We have yet to discuss how we find $\langle v_\phi^2 \rangle$, whose non-zero nature explains why we have asymmetric drift in the first place. By evaluating the asymmetric drift with the assumptions of the epicycle approximation, we get \citep{hernquist_1993},
+\begin{equation}
+\sigma_\phi^2 = \langle v_\phi^2 \rangle = \langle v_R^2 \rangle \frac{\kappa^2}{4 \Omega^2},
+\end{equation}
+where the fraction in the product contains quantities solely determined from the potential, and the coefficient is determined from the assumed radial dispersion profile. This fully solves a disc-halo system. In practice, the system is realized by sampling the spatial density profile (by rejection sampling, for instance) and assigning velocities assuming Gaussians with means $\langle v_i \rangle$ and variances $\langle v_i^2 \rangle$. 
+
+\subsection{DF-based Models and the Jeans Theorem}
+
+Although Jeans modeling is used to set up initial conditions for galaxies because it does not require a DF to be known ahead of time, the best initial conditions are generated from DFs \footnote{That is not to say that no one uses Jeans modelling to set up ICs. Approaches like the one presented in \citet{hernquist_1993} were enormously successful and still used today.}. In general, the equilibrium DF is a function of six variables. However, there are some quantities, called \textit{integrals of motion}, which do not change along a star's orbit in a potential. For an axisymmetric potential, these are the total energy, $\mathcal{E}$, $L_z$ and a third quantity, $I_3$.  
+For spherical systems, up to five integrals of motion are admitted by the system, but the simplest \textit{ergodic} models simply have $f_{h}(\mathcal{E})$ for the DF. 
+
+
+If we assume the epicycle approximation, then $I_3 \approx E_z = \Phi(R,0) - \Phi(R,z) + \frac{1}{2} v^2$, where $v$ is the velocity of an orbit \citep{kd95galactics}. The vertical energy, $E_z$, is conserved so long as the disc is razor thin. Jeans showed that a DF that is a function of the integrals of motion describes an equilibrium distribution. More specifically, quoting from \citet{BT},
+\begin{theorem}[The Jeans Theorem]
+Any steady-state solution of the collisionless Boltzmann equation depends on the phase-space coordinates only through integrals of motion in a givcen potential, and any function of the integrals yields a steady-state solution of the collisionless Boltzmann equation.
+\end{theorem}
+Proof of this theorem can be obtained in \citet{jeans_1915} and in Chapter~4.2 of \citet{BT}, although it essentially amounts to observing that the time derivative of a function of time-independent quantities is zero by the chain rule. Now that we know that any DF of the intergrals of motion gives a steady state solution, and that using the epicyclic approximation gives us three known integrals of motion, we can ask ourselves what kinds of DFs describe the NFW haloes and exponential disks that are easily obtained from Jeans modelling.
+
+We talk about the case of an ergodic halo and DF yielding an exponential disc at length here. For the remainder of the thesis, we primarily generate our initial conditions in this way. For any ergodic DF, a chosen density profile may be inverted by the Eddington inversion formula \citep{BT},
+\begin{equation}
+f(\mathcal{E}) = \int_0^{\mathcal{E}} \frac{\text{d} \Psi}{\sqrt{\mathcal{E} - \Psi}} \frac{\text{d} \nu}{\text{d} \Psi} \label{eq:eddington}
+\end{equation}
+where $\Psi = - \Phi$. Note that the combined potential need not be spherical, only the overall density of the spheroidal halo. We choose a truncated NFW profile \citep{nfw},
+\begin{equation}
+\nu_h(r) \sim \rho_{h}(r) = \frac{\rho_0 R_s^3}{r (R_s + r)^2}
+\end{equation}
+where $\rho_0$ is a scale density and $R_s$ is the halo scale length as our target halo denity. By obtaining the 1D DF from Eq. \eqref{eq:eddington}, we can sample halo orbits given the combined disc-halo potential.
+
+For the disc DF, we use a DF that yields exponential discs presented in \citet{kd95galactics}. Noting that if $E_z$ is an integral of motion that $E_p = \mathcal{E} - E_z$ is also an integral of motion, we use,
+\begin{equation}
+f_d(E_p,L_z,E_z) = \frac{\Omega(R_c)}{(2 \pi^3)^{1/2} \kappa(R_c)} \frac{\tilde{\rho_d}}{\tilde{\sigma_R}^2(R_c) \tilde{\sigma_z}(R_c)} \exp\left[-\frac{E_p - E_c(R_c)}{\tilde{\sigma_R}^2(R_c)}  - \frac{E_z}{\tilde{\sigma_z}^2(R_c)}\right].
+\end{equation}
+Note that the quantities $\Omega$ and $\kappa$ have their usual definitions, the tilde functions are free choices to tune the disc properties (although they are qualitaively understood as velocity dispersions), and $E_c$ is the energy of a circular orbit. Note that the $R_c$-dependent quantities do not violate the sole dependence on integrals of motion, since $R_c$ is uniquely obtained in a one-to-one fashion from $L_z$.
+
+In terms of the choices for the tilde functions, we choose them to yield the closest thing to an exponential-sech$^2$ density profile with and exponential radial velocity dispersion as possible. Assuming an exponential radial dispersion profile, a disc density is obtained by iteratively adjusting $\tilde{\sigma_z}$ and $\tilde{\rho}$ such that \citep{kd95galactics},
+\begin{equation}
+\rho_d(R,z) = \frac{M_d}{8 \pi R_d^2 z_d} e^{-R/R_d} \text{erfc }\left(\frac{R - R_{out}}{\sqrt{2} \delta R_{out}}\right) \exp \left[ -0.8676 \frac{\Psi_z(R,z)}{\Psi_z(R,z_d)}\right]
+\end{equation}
+Here, $M_d$ is a parameter that is approximately equal to the mass of the disk, $R_{out}$ is a truncation radius, $\delta R_{out}$ is a parameter determining the sharpness of the truncation, and $\Psi_z$ is the negative vertical potential, $\Phi(R,0) - \Phi(R,z)$. The motivation behind the last term in the product is to yield a dropoff of vertical density close to $\text{sech}^2(z/z_d)$.
+
+Similar to the  Jeans models, we actualize these systems by sampling their combined spatial densities. At every sampled point, we draw a velocity from the DF that is constructed in the combiend potential. This does not require us to, for example, use a Gaussian distribution for the velocity dispersions as in Jeans models. This kind of model is as accurate as the assumption that $E_z$ is an integral of motion is (as accurate as the epicycle approximation is). A more detailed discussion about how self-consistent systems are realized from DFs can be found in \citet{kd95galactics}, and this work forms the basis for the \textsc{GalactICS} code used in this thesis.
+
+\subsection{Action-Angle Variables and the Strong Jeans Theorem}
+
+Of course, $E_z$ is only approximately an integral of motion for axisymmetric, nearly planar systems.
+
 
 \section{Cosmology and Implications for Galaxy Studies} \label{sec:cosmology}
 \subsection{Basic FRW Cosmology}

@@ -3,52 +3,58 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Background.aux
 The style file: apalike.bst
 Database file #1: bibliography_background.bib
-I was expecting a `,' or a `}'---line 2041 of file bibliography_background.bib
+Repeated entry---line 1912 of file bibliography_background.bib
+ : @misc{music
+ :            ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2070 of file bibliography_background.bib
  : 
  : OPTkey = {•},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty publisher in BM
+Warning--empty publisher in dodelson
+Warning--empty publisher in kolb_turner
 Warning--empty publisher in numerical_recipes_fortran
-You've used 28 entries,
+You've used 34 entries,
             1935 wiz_defined-function locations,
-            644 strings with 7828 characters,
-and the built_in function-call counts, 10266 in all, are:
-= -- 998
-> -- 347
-< -- 22
-+ -- 115
-- -- 110
-* -- 821
-:= -- 1804
-add.period$ -- 83
-call.type$ -- 28
-change.case$ -- 192
-chr.to.int$ -- 27
-cite$ -- 30
-duplicate$ -- 416
-empty$ -- 776
-format.name$ -- 154
-if$ -- 2035
+            673 strings with 8482 characters,
+and the built_in function-call counts, 12427 in all, are:
+= -- 1220
+> -- 407
+< -- 29
++ -- 133
+- -- 128
+* -- 960
+:= -- 2155
+add.period$ -- 99
+call.type$ -- 34
+change.case$ -- 229
+chr.to.int$ -- 33
+cite$ -- 38
+duplicate$ -- 528
+empty$ -- 927
+format.name$ -- 184
+if$ -- 2488
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 30
-newline$ -- 141
-num.names$ -- 84
-pop$ -- 163
+missing$ -- 37
+newline$ -- 169
+num.names$ -- 102
+pop$ -- 201
 preamble$ -- 1
-purify$ -- 195
+purify$ -- 234
 quote$ -- 0
-skip$ -- 306
+skip$ -- 415
 stack$ -- 0
-substring$ -- 743
-swap$ -- 41
-text.length$ -- 2
+substring$ -- 874
+swap$ -- 79
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 162
-warning$ -- 2
-while$ -- 80
+type$ -- 194
+warning$ -- 4
+while$ -- 94
 width$ -- 0
-write$ -- 356
-(There was 1 error message)
+write$ -- 426
+(There were 2 error messages)

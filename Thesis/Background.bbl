@@ -11,6 +11,17 @@ Basumallik, A., jai Min, S., and Eigenmann, R. (2007).
 \newblock In {\em Parallel and Distributed Processing Symposium, International
   0}, page 207.
 
+\bibitem[{Bauer} and {Widrow}, 2018]{bauer2018b}
+{Bauer}, J.~S. and {Widrow}, L.~M. (2018).
+\newblock {Can Stellar Discs in a Cosmological Setting Avoid Forming Strong
+  Bars?}
+\newblock {\em ArXiv e-prints}, page arXiv:1809.00090.
+
+\bibitem[{Binney}, 2012]{binney_2012}
+{Binney}, J. (2012).
+\newblock {Actions for axisymmetric potentials}.
+\newblock {\em \mnras}, 426:1324--1327.
+
 \bibitem[{Binney} and {Merrifield}, 1998]{BM}
 {Binney}, J. and {Merrifield}, M. (1998).
 \newblock {\em {Galactic Astronomy}}.
@@ -30,6 +41,10 @@ de~Campos, A.~M. (2019).
 \newblock {Image of Peano Space-Filling Curve}.
 \newblock \url{https://commons.wikimedia.org/wiki/File:Peanocurve.svg}.
 
+\bibitem[{Dodelson}, 2003]{dodelson}
+{Dodelson}, S. (2003).
+\newblock {\em {Modern cosmology}}.
+
 \bibitem[{Freeman}, 1970]{freeman_1970}
 {Freeman}, K.~C. (1970).
 \newblock {On the Disks of Spiral and S0 Galaxies}.
@@ -39,6 +54,11 @@ de~Campos, A.~M. (2019).
 {Frenk}, C.~S., {White}, S.~D.~M., and {Davis}, M. (1983).
 \newblock {Nonlinear evolution of large-scale structure in the universe}.
 \newblock {\em \apj}, 271:417--430.
+
+\bibitem[{Hahn} and {Abel}, 2013]{music}
+{Hahn}, O. and {Abel}, T. (2013).
+\newblock {MUSIC: MUlti-Scale Initial Conditions}.
+\newblock Astrophysics Source Code Library.
 
 \bibitem[{H{\'e}non}, 1970]{hockney_pm}
 {H{\'e}non}, M. (1970).
@@ -61,6 +81,10 @@ de~Campos, A.~M. (2019).
 \newblock {Three-dimensional numerical model of the formation of large-scale
   structure in the Universe}.
 \newblock {\em \mnras}, 204:891--907.
+
+\bibitem[{Kolb} and {Turner}, 1990]{kolb_turner}
+{Kolb}, E.~W. and {Turner}, M.~S. (1990).
+\newblock {\em {The early universe.}}
 
 \bibitem[{Kuijken} and {Dubinski}, 1995]{kd95galactics}
 {Kuijken}, K. and {Dubinski}, J. (1995).
@@ -143,6 +167,11 @@ Sethna, J.~P. (2006).
 \newblock {Surface photometry of edge-on spiral galaxies. I - A model for the
   three-dimensional distribution of light in galactic disks.}
 \newblock {\em \aap}, 95:105--115.
+
+\bibitem[{Vasiliev}, 2018]{vasiliev_2018}
+{Vasiliev}, E. (2018).
+\newblock {Agama reference documentation}.
+\newblock {\em arXiv e-prints}.
 
 \bibitem[{Xu}, 1995]{xu_treepm}
 {Xu}, G. (1995).

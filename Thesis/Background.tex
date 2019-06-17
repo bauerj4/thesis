@@ -280,13 +280,61 @@ Similar to the  Jeans models, we actualize these systems by sampling their combi
 
 \subsection{Action-Angle Variables and the Strong Jeans Theorem}
 
-Of course, $E_z$ is only approximately an integral of motion for axisymmetric, nearly planar systems.
+Of course, $E_z$ is only approximately an integral of motion for axisymmetric, nearly planar systems. Although not a substantial element of this thesis, it is worth mentioning a different approach to approximating integrals of motion. Instead of explicitly assuming we are working with an axisymmetric, static system and deducing the conserved quantities, let's ask more generally, \textit{for any system}, what are the conserved quantities? Integrals of motion have the property that orbits may be viewed as single points in a space with dimension of the number of integrals. The only thing unique about them is where they are in the phase of the orbit.
+
+With this in mind, we introduce the actions \citep{BT},
+\begin{equation}
+\textbf{J} = \oint \textbf{p} \cdot \text{d}^n \textbf{q}
+\end{equation}
+where $\textbf{J}$ are the actions, and $textbf{p}$ and $\textbf{q}$ are canonical coordinates. The closed path over which this integral is evaluated yields a unique set of actions. If the system is axisymmetric and the path we have chosen is a circle of radius $R$, it is straightforward to see that the radial component of the action is just $L_z = R v_c$, which depends on the potential. 
+
+Turning the definition of the actions into a transformation from a physically motivated conjugate coordinate system is difficult in general. Closed form solutions for axisymmetric systems exist if the potential if of the St\"ackel form\footnote{For more detail, see Chapter~3.5.3 of \citet{BT}.}, but in general, these transformations do not exist. A commonly used technique is to locally approximate the potential as being of the St\"ackel form \citet{binney_2012}. In practice, one is reduced to approximating the potential instead of the third integral of motion as in the case of \textsc{GalactICS}. For nearly planar disc systems, the differences are insignificant, but become more relevant as one wants to initialize a thicker disc \citep{vasiliev_2018,bauer2018b}.
 
 
 \section{Cosmology and Implications for Galaxy Studies} \label{sec:cosmology}
-\subsection{Basic FRW Cosmology}
-\subsection{Extension of Numerical Methods}
-\subsection{Sampling Initial Conditions for Cosmological Simulations}
+Our discussion up to this point has focused on simulating isolated systems. Complications arise when we move to a fully cosmological environment. The purpose of this section is to briefly review relevant cosmology, and to explain what numerical methods must be modified and used to simulate cosmological systems. We conclude this section with a brief commentary on identifying substructure in simulations.
+
+\subsection{Simulations of FRW Cosmology: Large Scale Properties}
+
+In words, the $\Lambda$CDM paradigm described in Chapter~\ref{ch:introduction} prescribes a Universe comprised of four fundamental substances: baryond, radiation, dark matter, and dark energy. On large scales, the Universe is also believed to be isotropic and homogeneous, meaning the patch we occupy is the exact same as any other patch. General Relativity provides a mechanism for us to meaningfully compute distances between patches is this scenario. The so-called Friedmann-Robertson-Walker metric tells us that the \textit{proper distance} between two points at different positions in space and at different times is \citep{kolb_turner, dodelson},
+\begin{equation}
+\text{d}\,s^2 = c^2 \text{d}\,t^2 + a^2(t) \left(\frac{\text{d}\,r^2}{1 - k r^2} + r^2\text{d}\,\Omega^2 \right).
+\end{equation}
+Here, $c$ is the speed of light, $t$ is the time coordinate, $a$ is the scale factor of the Universe which is equal to 1 at present day and 0 at the Big Bang, $k$ describes the spatial curvature, and $r$ and $\Omega$ have their standard spherical coordinate definitions. The case used for the whole thesis is where $k=0$, a flat Universe. Assuming this metric, and that all substances in the Universe behave like perfect fluids, it can be shown with General Relativity that the large scale evolution of the Universe is described by the following, the Friedmann Equations \citep{kolb_turner,dodelson},
+\begin{eqnarray}
+\left( \frac{\dot{a}}{a} \right)^2 &=& \frac{8 \pi G}{3} \rho\\
+\frac{\ddot{a}}{a} &=& -\frac{4 \pi G}{3}\left(\rho + \frac{3 p}{c^2}\right).
+\end{eqnarray}
+Here $\rho$ is the density of the Universe, $p$ is the pressure of the Universe, and we introduce the defintion $H(t) = \dot{a} / a$, the Hubble parameter. With the definition of the Hubble parameter, the first of the Friedmann equations is commonly expressed,
+\begin{equation}
+\left(\frac{H(t)}{H_0}\right)^2 = a^{-4} \Omega_{R,0} + a^{-3} \Omega_{M,0} + \Omega_{\Lambda,0}
+\end{equation}
+where $\Omega_{R,0}$, $\Omega_{M,0}$, and $\Omega_{\Lambda,0}$ are the relative contributions of radiation, dark and baryonic matter, and dark energy at present day, respectively. Also, $H_0$ is the present-day Hubble parameter. Every flat $\Lambda$CDM universe has these as free parameters, and we can choose them to be anything we like. The different powers of $a$ reflect how radiation, matter, and dark energy contribute differently to the energy as the Universe expands, and can be deduced under relatively few assumptions \citep{kolb_turner,dodelson}.
+
+When simulating a $\Lambda$CDM universe, we can choose to work in a frame where relative distances between fixed points remain fixed.
+
+% Comoving coordinates
+
+
+\subsection{Simulations of FRW Cosmology: Cosmological Initial Conditions}
+
+Of course, the Universe is not actually homogeneous on small scales. As we suggested in Chapter~\ref{ch:introduction}, small scale fluctuations are present in the early Universe which collapse to form galaxies. Initially, these fluctuations evolve independently of each other in the so-called \textit{linear regime}. Initial conditions for $\Lambda$CDM simulations rely on this fact to generate the initial perturbations for the simulation.
+
+The prevailing view in cosmology is that the Big Bang was followed by the development of a primordial perturbation field. As the Universe expanded, interactions with baryons and radiation modified the initial distribution of perturbation scales. Mathematically, we take the the perturbation field $\delta(\textbf{r}, t)$, which describes the deviation from the Universe's mean density at some position and time, and find its Fourier transform. The result is a statistical distribution, called the \textit{power spectrum}, that describes the scale of perturbations \citep{music},
+\begin{equation}
+P(k) = \alpha k^{n_s} \mathcal{T}^2(k)
+\end{equation}
+where $\alpha$ is a normalization constant, $n_s$ is a spectral index describing the original inflationary produced perturbations, and $\mathcal{T}$ is a scale-dependent \textit{transfer function} that describes deviations from a power law at different scales. For reference, low $k$ corresponds to larger perturbations in the same way that low frequency corresponds to larger time gaps. The smallest structures occur at high $k$.  
+
+While a detailed discussion of how the transfer function is computed can be found in \citet{music}, we will simply say that it is a reflection of the idea that perturbations only grow when matter becomes dominant. It reflects how we believe that perturbations of different scales grew at different rates in the early Universe. However, once it is known at some desired time (redshift), we can sample a Gaussian density field with the right statistical characteristics. This spatial sample with corresponding velocities obtained via something called 2nd Order Lagrangian Perturbation Theory\footnote{See \citet{music} for a detailed description of this technique.} form the initial conditions for our $\Lambda$CDM simulation.
+
+% Maybe say something about zoom-ins?
+\subsection{Extension of Numerical Methods: Time Integration}
+
+Two big problems are present for applying N-body techniques as described. The first, and maybe most obvious of these, is in how we 
+
+\subsection{Extension of Numerical Methods: Gravity Calculation}
+
 \subsection{Identifying Substructure in Simulations}
 
 

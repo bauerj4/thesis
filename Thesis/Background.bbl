@@ -17,6 +17,12 @@ Basumallik, A., jai Min, S., and Eigenmann, R. (2007).
   Bars?}
 \newblock {\em ArXiv e-prints}, page arXiv:1809.00090.
 
+\bibitem[{Behroozi} et~al., 2013]{rockstar}
+{Behroozi}, P.~S., {Wechsler}, R.~H., and {Wu}, H.-Y. (2013).
+\newblock {The ROCKSTAR Phase-space Temporal Halo Finder and the Velocity
+  Offsets of Cluster Cores}.
+\newblock {\em \apj}, 762:109.
+
 \bibitem[{Binney}, 2012]{binney_2012}
 {Binney}, J. (2012).
 \newblock {Actions for axisymmetric potentials}.
@@ -70,6 +76,23 @@ de~Campos, A.~M. (2019).
 {Hernquist}, L. (1993).
 \newblock {N-body realizations of compound galaxies}.
 \newblock {\em \apjs}, 86:389--400.
+
+\bibitem[{Hernquist} et~al., 1991]{hernquist_1991}
+{Hernquist}, L., {Bouchet}, F.~R., and {Suto}, Y. (1991).
+\newblock {Application of the Ewald method to cosmological N-body simulations}.
+\newblock {\em \apjs}, 75:231--240.
+
+\bibitem[{Hubble}, 1929]{hubble_1929}
+{Hubble}, E. (1929).
+\newblock {A Relation between Distance and Radial Velocity among Extra-Galactic
+  Nebulae}.
+\newblock {\em Proceedings of the National Academy of Science}, 15:168--173.
+
+\bibitem[James et~al., 2014]{statistical_learning_r}
+James, G., Witten, D., Hastie, T., and Tibshirani, R. (2014).
+\newblock {\em An Introduction to Statistical Learning: With Applications in
+  R}.
+\newblock Springer Publishing Company, Incorporated.
 
 \bibitem[{Jeans}, 1915]{jeans_1915}
 {Jeans}, J.~H. (1915).
@@ -146,6 +169,16 @@ Lusk, E., Doss, N., and Skjellum, A. (1996).
 \newblock {Time stepping N-body simulations}.
 \newblock {\em arXiv Astrophysics e-prints}.
 
+\bibitem[{Schaye} et~al., 2015]{Eagle}
+{Schaye}, J., {Crain}, R.~A., {Bower}, R.~G., {Furlong}, M., {Schaller}, M.,
+  {Theuns}, T., {Dalla Vecchia}, C., {Frenk}, C.~S., {McCarthy}, I.~G.,
+  {Helly}, J.~C., {Jenkins}, A., {Rosas-Guevara}, Y.~M., {White}, S.~D.~M.,
+  {Baes}, M., {Booth}, C.~M., {Camps}, P., {Navarro}, J.~F., {Qu}, Y.,
+  {Rahmati}, A., {Sawala}, T., {Thomas}, P.~A., and {Trayford}, J. (2015).
+\newblock {The EAGLE project: simulating the evolution and assembly of galaxies
+  and their environments}.
+\newblock {\em \mnras}, 446:521--554.
+
 \bibitem[Sethna, 2006]{sethna}
 Sethna, J.~P. (2006).
 \newblock Statistical mechanics: Entropy, order parameters, and complexity.
@@ -155,6 +188,10 @@ Sethna, J.~P. (2006).
 {Springel}, V. (2005).
 \newblock {The cosmological simulation code GADGET-2}.
 \newblock {\em \mnras}, 364:1105--1134.
+
+\bibitem[{The Virgo Consortium}, 2019]{merger_tree}
+{The Virgo Consortium} (2019).
+\newblock {Eagle merger tree}.
 
 \bibitem[{Trimble}, 1995]{curtis_shapley}
 {Trimble}, V. (1995).

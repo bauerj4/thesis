@@ -3,11 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Background.aux
 The style file: apalike.bst
 Database file #1: bibliography_background.bib
-Repeated entry---line 1912 of file bibliography_background.bib
+Repeated entry---line 1972 of file bibliography_background.bib
  : @misc{music
  :            ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2070 of file bibliography_background.bib
+I was expecting a `,' or a `}'---line 2130 of file bibliography_background.bib
  : 
  : OPTkey = {•},
 (Error may have been on previous line)
@@ -16,45 +16,45 @@ Warning--empty publisher in BM
 Warning--empty publisher in dodelson
 Warning--empty publisher in kolb_turner
 Warning--empty publisher in numerical_recipes_fortran
-You've used 34 entries,
+You've used 40 entries,
             1935 wiz_defined-function locations,
-            673 strings with 8482 characters,
-and the built_in function-call counts, 12427 in all, are:
-= -- 1220
-> -- 407
-< -- 29
-+ -- 133
-- -- 128
-* -- 960
-:= -- 2155
-add.period$ -- 99
-call.type$ -- 34
-change.case$ -- 229
-chr.to.int$ -- 33
-cite$ -- 38
-duplicate$ -- 528
-empty$ -- 927
-format.name$ -- 184
-if$ -- 2488
+            705 strings with 9729 characters,
+and the built_in function-call counts, 15179 in all, are:
+= -- 1464
+> -- 593
+< -- 31
++ -- 203
+- -- 196
+* -- 1216
+:= -- 2661
+add.period$ -- 116
+call.type$ -- 40
+change.case$ -- 292
+chr.to.int$ -- 39
+cite$ -- 44
+duplicate$ -- 608
+empty$ -- 1077
+format.name$ -- 258
+if$ -- 2999
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 37
-newline$ -- 169
-num.names$ -- 102
-pop$ -- 201
+missing$ -- 43
+newline$ -- 198
+num.names$ -- 120
+pop$ -- 257
 preamble$ -- 1
-purify$ -- 234
+purify$ -- 298
 quote$ -- 0
-skip$ -- 415
+skip$ -- 474
 stack$ -- 0
-substring$ -- 874
-swap$ -- 79
+substring$ -- 1020
+swap$ -- 84
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 194
+type$ -- 228
 warning$ -- 4
-while$ -- 94
+while$ -- 110
 width$ -- 0
-write$ -- 426
+write$ -- 500
 (There were 2 error messages)

@@ -70,7 +70,7 @@ f(\textbf{r},\textbf{v},t) \approx \sum_i m_i \delta^3(\textbf{r} - \textbf{r}_i
 \end{equation}
 where $\delta^3$ is the 3D Dirac delta function, and we take the DF to be normalized to $M = \sum_i m_i$ instead of 1. We call this the N-body realization of the DF. As an extension of this idea, to find $f(\textbf{r},\textbf{v},t)$ at some point in the future, it is sufficient to find the state of our \textit{approximation}\footnote{The author believes that this is one of the most beautiful results ever to be applied in studying the dynamics of galaxies.} at some time in the future. This requires a more detailed exploration of how we step through time with N-body realizations.
 
-\subsection{Time Integration in N-Body Simulations}
+\subsection{Time Integration in N-Body Simulations} \label{ssec:time_int}
 
 We have shown how to map solving the CBE, the master equation for our system of stars and dark matter, to the evolution of a finite sample of particles. The system of equations we need to solve now is,
 \begin{eqnarray} \label{eq:nbody_system}
@@ -92,7 +92,7 @@ and,
 \begin{eqnarray}
 K_t(\Delta t) : \begin{cases} 
 	  \textbf{r}_i & \longrightarrow  \textbf{r}_i\\
-      \textbf{v}_i & \longrightarrow  \textbf{v}_i  - \nabla \Phi(\textbf{r}_i) \Delta T
+      \textbf{v}_i & \longrightarrow  \textbf{v}_i  - \nabla \Phi(\textbf{r}_i) \Delta t
    \end{cases}.
 \end{eqnarray}
 If the Hamiltonian is separable as $\mathcal{H} = T(v) + V(r)$ for $T$, the kinetic energy, and  $V$, the potential energy, and we are in a Cartesian coordinate system, combinations of these operators approximately preserve the Hamiltonian. This is a property of a class of integrators known as symplectic integrators, whose derivation starts with an assumption of Hamiltonian mechanics. We use the second order scheme implemented in \textsc{Gadget-3}, based on the code in \citet{GadgetCodePaper}. This integration scheme is specified as,
@@ -311,11 +311,31 @@ Here $\rho$ is the density of the Universe, $p$ is the pressure of the Universe,
 \end{equation}
 where $\Omega_{R,0}$, $\Omega_{M,0}$, and $\Omega_{\Lambda,0}$ are the relative contributions of radiation, dark and baryonic matter, and dark energy at present day, respectively. Also, $H_0$ is the present-day Hubble parameter. Every flat $\Lambda$CDM universe has these as free parameters, and we can choose them to be anything we like. The different powers of $a$ reflect how radiation, matter, and dark energy contribute differently to the energy as the Universe expands, and can be deduced under relatively few assumptions \citep{kolb_turner,dodelson}.
 
-When simulating a $\Lambda$CDM universe, we can choose to work in a frame where relative distances between fixed points remain fixed.
+When simulating a $\Lambda$CDM universe, we can choose to work in a frame where relative distances between fixed points remain fixed. This is the proper coordinate system. The distance between two objects in a proper coordinate system, $d$, for a flat Universe is simply,
+\begin{equation}
+d(t) = a(t) r \label{eq:comoving_dist}
+\end{equation}
+where $r$ is the proper distance. An interesting notable consequence of this is,
+\begin{eqnarray}
+\dot{d} &=& \dot{a} r + a \dot{r} \\
+\frac{\dot{d}}{a} &=&  \frac{\dot{a}}{a} r + \dot{r} \\
+&=& H(t) r + \dot{r}.
+\end{eqnarray}
+If two objects are at rest with respect to the proper coordinate system at present day ($\dot{r} = 0$), we measure a non-zero proper velocity,
+\begin{equation}
+\dot{d} = H_0 r.
+\end{equation}
+This effect was first described by \citet{hubble_1929}, and explains why distant galaxies appear to be moving away from us. More generally, we call this term in the proper velocitiy the \textit{Hubble flow}.
 
-% Comoving coordinates
+
+% Comoving coordinates and redshift
 
 
+Following up on this concept, we introduce the notion of \textit{redshift}. The term derives from the fact that as objects become more distant, we expect the hubble flow to cause the emitters to move away from the observer. Photons emitted by a stationary object with a wavelength, $\lambda$, are observed with wavelength $a(t_{emit}) \lambda$, and we define the redshift, $z$,
+\begin{equation}
+1 + z = \frac{1}{a}
+\end{equation}
+in analogy to this phenomenon. This is a descending unit of time that is often used interchangably with the scale factor, $a$.
 \subsection{Simulations of FRW Cosmology: Cosmological Initial Conditions}
 
 Of course, the Universe is not actually homogeneous on small scales. As we suggested in Chapter~\ref{ch:introduction}, small scale fluctuations are present in the early Universe which collapse to form galaxies. Initially, these fluctuations evolve independently of each other in the so-called \textit{linear regime}. Initial conditions for $\Lambda$CDM simulations rely on this fact to generate the initial perturbations for the simulation.
@@ -331,11 +351,75 @@ While a detailed discussion of how the transfer function is computed can be foun
 % Maybe say something about zoom-ins?
 \subsection{Extension of Numerical Methods: Time Integration}
 
-Two big problems are present for applying N-body techniques as described. The first, and maybe most obvious of these, is in how we 
+Two big problems are present for applying N-body techniques as described. The first, and maybe most obvious of these, is in how we step through time. The time integration scheme worked out in \S\ref{ssec:time_int} makes a critical assumption: the Hamiltonian and its separable components are time independent! Eq. \eqref{eq:comoving_dist} forces us to re-express the leapfrog scheme. For primed quantities as proper (comoving), we have  our new system\citep{quinn_1997},
+\begin{eqnarray}
+\dot{\textbf{v}^\prime} + 2 H(t) \textbf{v}^\prime &=& -\frac{\nabla^\prime \phi^\prime}{a^3}\\
+\dot{\textbf{r}^\prime} &=& \textbf{v}^\prime\\
+\nabla^{\prime 2} \phi^\prime &=& 4 \pi G \left(\rho^\prime - \rho_b^\prime \right)
+\end{eqnarray}
+where $\textbf{r}^\prime$ is the comoving position, $\textbf{v}^\prime$ is the comoving velocity, $\phi^\prime$ is the comoving potential, $\rho^\prime$ is the comoving mass density, and $\rho_b^\prime$ is the mean comoving background mass density. The new drift/kick operators are then defined implicitly \citep{quinn_1997},
+\begin{eqnarray}
+D_t(\Delta t) : \begin{cases} 
+	  \textbf{r}^\prime_i & \longrightarrow  \textbf{r}^\prime_i + \textbf{v}^\prime_i \Delta t\\
+      \textbf{v}^\prime_i & \longrightarrow  \textbf{v}^\prime_i 
+   \end{cases},
+\end{eqnarray}
+and,
+\begin{eqnarray}
+K_t(\Delta t) : \begin{cases} 
+	  \textbf{r}^\prime_i & \longrightarrow  \textbf{r}^\prime_i\\
+      \textbf{v}^\prime_i & \longrightarrow  \textbf{v}^\prime_i \frac{1 - H(t) \Delta t}{1 + H(t) \Delta t} + \frac{\nabla^\prime \phi^\prime(\textbf{r}^\prime_i) \Delta t}{a^3(t) \left(1 + H(t) \Delta t \right)}
+   \end{cases}.
+\end{eqnarray}
+The problem is that there does not appear to be a way to work forward from a separable Hamiltonian to these operators. Thus, any integration scheme constructed from these operators will not be free of energy drift. To get around this, we ask if there is some canonical transformation that can give us a symplectic integrator. Via a derivation in \citet{quinn_1997}, we find that for a choice of $\textbf{r}^\prime$ as our coordinate system, the canonical momentum is $\textbf{p}^\prime = a^2 \textbf{v}^\prime$. The Hamiltonian is,
+\begin{equation}
+H = \frac{\textbf{p}^\prime}{2 a^2} + \frac{\phi^\prime}{a},
+\end{equation}
+for $\phi^\prime = a \phi + \frac{1}{2} \ddot{a} a \textbf{r}^{\prime 2}$. This is a separable Hamiltonian with drift and kick operators,
+\begin{eqnarray}
+D_t(\Delta t) : \begin{cases} 
+	  \textbf{r}^\prime_i & \longrightarrow  \textbf{r}^\prime_i + \textbf{p}^\prime_i \int_{t}^{t + \Delta t} \frac{\text{d}\,t}{a^2(t)}\\
+      \textbf{p}^\prime_i & \longrightarrow  \textbf{v}^\prime_i 
+   \end{cases},
+\end{eqnarray}
+and,
+\begin{eqnarray}
+K_t(\Delta t) : \begin{cases} 
+	  \textbf{r}^\prime_i & \longrightarrow  \textbf{r}^\prime_i\\
+      \textbf{p}^\prime_i & \longrightarrow  \textbf{p}^\prime_i - \nabla^\prime\phi^\prime \int_{t}^{t + \Delta t} \frac{\text{d}\,t}{a(t)}
+      \end{cases}
+\end{eqnarray}
+Since these operators derive directly from a separatable Hamiltonian, this integrator is symplectic. Even though the energy of our cosmological system is not conserved, there will be no drift about the continuum system's actual energy. This is the integration scheme used in \textsc{Gadget-3} for cosmological simulations.
 
 \subsection{Extension of Numerical Methods: Gravity Calculation}
 
+Beyond the coordinate systems and time stepping scheme used in cosmological simulations, there is also the issue that the actual Universe, the system we are trying to simulate, extends over vast distances. Typically, only a box, a few tens to hundreds of Mpc per side is simulated. Gravity is a long range force, and there will be a contribution at any point in the simulation box from distant, massive objects. The way that this handled in modern cosmological simulations is to impose periodic boundary conditions when we solve Poisson's equation. This is essentially like viewing our simulation box cloned infinitely many times along each axis, shifted by its length along each axis.
+
+For forces computed using an FFT-based technique like particle mesh, periodic boundary conditions are assumed. The DFT by its nature implies the density signal in the box repeats forever. For non-grid based techniques, this is not so trivial. Normally, \textsc{Gadget-3} will use a DFT to compute long range forces. However, it does implement a way to use its tree code for long range calculations \citep{GadgetCodePaper}. While for this thesis, the particle mesh grid functionality is used for long range forces, a description of how \textsc{Gadget-3} implements its tree code with periodic boundary conditions can be found in \citet{hernquist_1991}.
+
 \subsection{Identifying Substructure in Simulations}
+
+
+The picture of a simulated $\Lambda$CDM universe has been conceptually and quantitatively described up to this point. The key concept tying simulations of $\Lambda$CDM to isolated galaxy simulations is the presence of substructure. Here, we describe how we identify substructure in these complicated simulations. 
+
+First and foremost, the question of finding substructure in data is not unique to astrophysics. More generally, we are solving an unsupervised machine learning problem called \textit{clustering}. Solutions to clustering problems take unlabeled data, such as particle masses, positions, and velocities, and identify significant groups within the data \citep{statistical_learning_r}. 
+
+Although there are many techniques that one can use to find clusters in data, we focus on \textit{hierarchical clustering} methods, which as the name suggests, are meant to build hierarchies of clusters. Since $\Lambda$CDM simulations produce hierarchies of subhalos within halos, we expect a hierarchical structure of clusters.
+
+There are two general approaches to hierarchical clustering \citep{statistical_learning_r}. Agglomerative methods initially place each particle in their own cluster, and will merge two clusters if they meet some kind of \textit{linkage criterium}. For example, given clusters $C_1$ and $C_2$, the complete-linkage approach will merge the two clusters if $\max\left\{ d(c_1, c_2) : c_1 \in C_1 \wedge c_2 \in C_2\right\} < l$, for some distance metric\footnote{Common distance metrics are the Euclidean metric or the Mahalanobis distance \citep{statistical_learning_r}.}, $d$,  and a linking length, $l$ that is a free parameter. Other common metrics include the single-linkage criterion, $\min\left\{ d(c_1, c_2) : c_1 \in C_1 \wedge c_2 \in C_2\right\} < l$, and the average linkage criteria $\langle d(c_1,c_2) \rangle \left (c_1 \in C_1 \wedge c_2 \in C_2\right) < l$.
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{../figures/eagle_tree}
+	\caption{A merger tree obtained from \citet{merger_tree}. It represents the merging history of a halo in a simulation presented in \citet{Eagle}.} \label{fig:merger_tree}
+\end{figure}
+
+The other approach to hierarchical clustering is divisive clustering, which starts with all of the particles in the same cluster \citep{statistical_learning_r}. Divisive clustering splits the top cluster into objects of maximum dissimilarity until each object is its own cluster. Here, dissimilarity is defined by some metric chosen ahead of time. 
+
+Regardless of which approach to hierarchical clustering one uses, the end result is a tree-like structure called a \textit{dendrogram}, with large clusters at the top and individual particles at the bottom. In simulations of cosmology, we construct these at every timestep to determine which halos merged with other halos. There is a long literature on this subject described in \citet{rockstar}, although we use their implementation, the \textsc{rockstar} code, in this thesis.
+
+The main idea behind the algorithm implemented in \textsc{rockstar} is to first apply a divisive scheme to the 3D data to create more manageable subclusters that get piped to an agglomerative 6D scheme. A big issue in the literature has been finding distance metrics which work with 6D phase space information in an acceptable manner \citep{rockstar}. In addition to the naive hierarchical clustering algorithm, \textsc{rockstar} also removes unbound particles from clusters and implements a clever scheme to tell when halos have merged in a snapshot. 
+
+The resultant data structure after applying this algorithm sequentially to all snapshots is  a dendrogram of dendrograms at all later times. A node in the last snapshot represents the merging history of a single galaxy, like the dendrogram in Fig. \ref{fig:merger_tree}. We see smaller halos coming together to form a Milky Way mass object at redshift $z=0$. By applying this technique to the raw particle data, we can pick out dark matter halos in our simulations.
 
 
 %\section{Simulation Analysis: Paradigms and Tools} \label{sec:analysis_of_sims}

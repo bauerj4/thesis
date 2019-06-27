@@ -1,5 +1,9 @@
 \appendix
 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \chapter{Euler's Equations in Comoving Coordinates} \label{sec:derivation}
 
 The time-evolution of the angular momentum vector ${\bf L}$ of a rigid
@@ -38,3 +42,40 @@ and
 \end{equation}
 
 \noindent We have omitted the equations for $\psi$ (rotations in the body frame about the symmetry axis) and $\varpi_z$ since these are determined directly from Eq.\,\ref{eq:omega3}.   
+
+\chapter{Referenced Code: kicks.c} \label{ch:kicks.c}
+\lstinputlisting[language=C,basicstyle=\footnotesize,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},]{kicks.c}]
+
+\chapter{Referenced Code: predict.c} \label{ch:predict.c}
+\lstinputlisting[language=C,basicstyle=\footnotesize,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple}]{predict.c}]
+
+
+\chapter{Referenced Code: extract\_halo\_ascii.py} \label{ch:extract_halo_ascii.py}
+\lstinputlisting[language=Python,basicstyle=\footnotesize,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},]{extract_halo_ascii.py}]
+    
+    
+\chapter{Referenced Code: merge\_ics.cpp} \label{ch:merge_ics.cpp}
+\lstinputlisting[language=C++,basicstyle=\footnotesize,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},]{merge_ics.cpp}]
+    
+\chapter{Referenced Code: timestep.c} \label{ch:timestep.c}
+\lstinputlisting[language=C,basicstyle=\footnotesize,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},]{timestep.c}]

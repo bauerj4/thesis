@@ -1,0 +1,54 @@
+
+
+\chapter{Implementing Disc Insertion Schemes in \textsc{Gadget-3}}\label{ch:implementation}
+
+This chapter is meant to provide more details on exactly how to implement the method described in Chapter~\ref{ch:paper_i}. Example code is included where relevant, but the author believes it is a useful exercise for a new graduate student to implement this themselves, as it tests their understanding of the material in Chapter~\ref{ch:background}. For the purposes of this guide, we are going to assume that the reader has the copy of \textsc{Gadget-3} used for this thesis and has a working understanding of how to use a compiler, MPI, and \textsc{GalactICS}.
+
+\section{Representing a Rigid Disk}
+
+A good deal of time was spent in the early development of the disc insertion scheme thinking about the best way to represent the rigid disc during the growth phase. There were two main approaches we considered. 
+
+The first was to not represent the disc as a physical object in the simulation, but simply as a smooth potential.  In order to compute forces on such an object, one has to rely on Newton's third law. The force (torque) on the disc is equal and opposite to the force (torque) it exerts on every other particle in the simulation. The primary issue with this is that in a tree code or particle mesh code, Newton's third law is violated \citep{barnes_hut, hernquist_1991, GadgetCodePaper}. Furthermore, there is straightforward way to impose periodicity. Since this object exists outside of the tree or particle mesh calculations, it is not accounted for when \textsc{Gadget-3} imposes periodic boundaries.
+
+The second approach, and the one that we used, was to represent the disc as a series of massive particles. We wanted to avoid this initially, since this opens up a wide range of potential problems. The first of these is that you need to explicitly turn off the drift and kick operations for the rigid particles. The segments of code portrayed in Appendix~\ref{ch:predict.c} from \texttt{predict.c} and Appendix~\ref{ch:kicks.c} from \texttt{kicks.c} handle the drift and kick shutoff for collisionless particles respectively. 
+
+In order to initially position the disc, you have to set the initial \texttt{DISK\_X0}, \texttt{DISK\_Y0}, \texttt{DISK\_Z0} variables. The velocity is set by \texttt{DISK\_VX0}, \texttt{DISK\_VY0}, and \texttt{DISK\_VZ0} in units of physical velocity divided by the scale factor (internal simulation units). The initial Euler angles are given as \texttt{DISK\_PHI0}, \texttt{DISK\_THETA0}, and \texttt{DISK\_PSI0}. 
+
+\subsection{Rigid Disk Initial Conditions}
+
+To generate the initial conditions, you need to have the zoom-in snapshot with the halo you want to extract. To set up the rigid disc, we have been using the last snapshot of the zoom-in to create the disc. Using the \textsc{rockstar} positions (converted to kpc) and velocities, run the code provided in Appendix~\ref{ch:extract_halo_ascii.py}. Name the output file to be the path listed in the first line of \texttt{extpot.params}. \textbf{Make sure that the orientation for the rigid disk on the last line of this file is set to be toward the z-axis, or you will rotate the disk twice causing all sorts of bad things!}
+
+Once the disk is finished generating, you need to merge it with the zoom-in particles. Place the unrotated disk at the origin, and the code will place the rigid disk upon initialization. You may use the C++ script I have provided in Appendix~\ref{ch:merge_ics.cpp}. This file will reassign all of the particle IDs and types, so make sure if you use this script that you do not need to preserve the old ones. Make sure \texttt{\#define append} and \texttt{\#define GADGET\_COSMOLOGY} are uncommented.
+
+The disk position, velocity, angular position, and rate of Euler angle change are recorded in \texttt{disk\_vars.txt}. The differences in these quantities from the last timstep are recorded in \texttt{disk\_dvars.txt}. A variety of other quantities are written out into other log files that are pretty self explanatory. Appply \texttt{grep} to the code if you are unsure what a particular log file is. There should be comments.
+
+%\textsc{Gadget-3} should now be run as described. You may occasionally run into an issue where \textsc{Gadget-3} cannot construct a tree and it keeps trying to increase the tree allocation factor.
+
+
+\section{Integrating the Rigid Body Equations}
+
+
+
+
+\subsection{Initial Parameters and Timestep Selection}
+To integrate the disc, you need to set \texttt{RIGID\_PARTICLE\_DISK}, \texttt{ANALYTIC\_LZ}, and a value for \texttt{TULLY\_FISHER\_A}. You will also need a timestep reduction factor, \\\texttt{TIMESTEP\_REDUCTION\_FACTOR}, which reduces the timestep size for the rigid disc integration. We have found that accurately capturing the nutation behavior for the disk generally requires a lower timestep than what \textsc{Gadget-3} assigns from the acceleration.
+
+On the topic of timesteps, you will need to force all of the disk particles into the same timestep bin. Recall how the time integration scheme was described; there is nothing preventing particles in the force tree that are all rigid disk particles from being assigned different timesteps. This is handled by the segment of code from \texttt{timestep.c} in Appendix~\ref{ch:timestep.c}.
+
+
+\subsection{Integration}
+
+The actual integration scheme is handled in \texttt{rigiddisk.c}. The functions are self-explanatory and implement routines for generating the Euler rotataion matrix. At runtime, the particles in the rigid disk have their relevant quantities (acceleration, torque, etc.) rotated into the frame where the disk axis is the $z$-axis. We solve the angular part of the disk dynamics in this frame using the implicit Euler method. For the actual timestep used in the integration method, make sure you use the time calculated in \texttt{update\_halo\_positions.c}. This is the actual time elapsed as formulated\footnote{You can check that you're using the right timestep by ensuring the total time elapsed corresponds to the time elapsed in that cosmology.}, not the drift or kick steps given for the conjugate positions and velocities. We apologize for the horrible mess that this section of code has become. Perhaps it would be instructive to write your own halo tracker.
+
+\section{Live Disk Setup and Initial Conditions}
+
+\subsection{Code Setup}
+\subsection{Creating Live Initial Conditions}
+
+\section{Known Issues and Pet Peeves}
+
+\subsection{Choosing a Timestep}
+\subsection{Integration Scheme}
+
+\bibliographystyle{apalike}
+\bibliography{bibliography_implementation.bib}

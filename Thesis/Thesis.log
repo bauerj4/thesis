@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.6.25)  26 JUN 2019 18:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.6.25)  27 JUN 2019 15:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -43,6 +43,54 @@ Document Style Option `quthesisDJ' <24-Aug-2003>.
 \c@inputfile=\count88
 Package: chapterbib 2010/09/18  v 1.17
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\lst@mode=\count89
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count90
+\lst@currlwidth=\dimen103
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen104
+\lst@width=\dimen105
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen106
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 143.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count97
+))
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -53,8 +101,8 @@ Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
@@ -91,10 +139,6 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
-)
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
@@ -104,14 +148,14 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen103
-\Hy@linkcounter=\count89
-\Hy@pagecounter=\count90
+\@linkdim=\dimen107
+\Hy@linkcounter=\count98
+\Hy@pagecounter=\count99
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count91
+\Hy@SavedSpaceFactor=\count100
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -123,17 +167,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count92
+\c@Hy@tempcnt=\count101
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen104
-\Fld@menulength=\count93
-\Field@Width=\dimen105
-\Fld@charsize=\dimen106
+\XeTeXLinkMargin=\dimen108
+\Fld@menulength=\count102
+\Field@Width=\dimen109
+\Fld@charsize=\dimen110
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -143,17 +187,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count94
-\c@Item=\count95
-\c@Hfootnote=\count96
+\Hy@abspage=\count103
+\c@Item=\count104
+\c@Hfootnote=\count105
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count97
-\c@bookmark@seq@number=\count98
+\Fld@listcount=\count106
+\c@bookmark@seq@number=\count107
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -218,13 +262,13 @@ Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks15
-\verbatim@line=\toks16
+\every@verbatim=\toks16
+\verbatim@line=\toks17
 \verbatim@in@stream=\read1
 )
-\tab@position=\count99
-\tab@size=\count100
-\listing@line=\count101
+\tab@position=\count108
+\tab@size=\count109
+\listing@line=\count110
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/03 v2.15a AMS math features
@@ -236,51 +280,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
-\ex@=\dimen107
+\@emptytoks=\toks18
+\ex@=\dimen111
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen108
+\pmbraise@=\dimen112
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count102
+\inf@bad=\count111
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count103
-\leftroot@=\count104
+\uproot@=\count112
+\leftroot@=\count113
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count105
-\DOTSCASE@=\count106
+\classnum@=\count114
+\DOTSCASE@=\count115
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen109
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen113
 LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
-\macc@depth=\count107
-\c@MaxMatrixCols=\count108
+\macc@depth=\count116
+\c@MaxMatrixCols=\count117
 \dotsspace@=\muskip11
-\c@parentequation=\count109
-\dspbrk@lvl=\count110
-\tag@help=\toks18
-\row@=\count111
-\column@=\count112
-\maxfields@=\count113
-\andhelp@=\toks19
-\eqnshift@=\dimen110
-\alignsep@=\dimen111
-\tagshift@=\dimen112
-\tagwidth@=\dimen113
-\totwidth@=\dimen114
-\lineht@=\dimen115
-\@envbody=\toks20
+\c@parentequation=\count118
+\dspbrk@lvl=\count119
+\tag@help=\toks19
+\row@=\count120
+\column@=\count121
+\maxfields@=\count122
+\andhelp@=\toks20
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks21
 \multlinegap=\skip94
 \multlinetaggap=\skip95
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2735.
 LaTeX Info: Redefining \] on input line 2736.
 )
@@ -296,30 +340,30 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks22
-\thm@bodyfont=\toks23
-\thm@headfont=\toks24
-\thm@notefont=\toks25
-\thm@headpunct=\toks26
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
 \thm@preskip=\skip96
 \thm@postskip=\skip97
 \thm@headsep=\skip98
-\dth@everypar=\toks27
+\dth@everypar=\toks28
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cases/cases.sty
 Package: cases 2002/05/02 ver 2.5 
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count114
-\calc@Bcount=\count115
-\calc@Adimen=\dimen116
-\calc@Bdimen=\dimen117
+\calc@Acount=\count123
+\calc@Bcount=\count124
+\calc@Adimen=\dimen120
+\calc@Bdimen=\dimen121
 \calc@Askip=\skip99
 \calc@Bskip=\skip100
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count116
+\calc@Ccount=\count125
 \calc@Cskip=\skip101
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -335,26 +379,22 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 95.
-
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count117
-))
-\Gin@req@height=\dimen118
-\Gin@req@width=\dimen119
+)
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip102
 \subfigcapskip=\skip103
-\subfigcaptopadj=\dimen120
+\subfigcaptopadj=\dimen124
 \subfigbottomskip=\skip104
-\subfigcapmargin=\dimen121
+\subfigcapmargin=\dimen125
 \subfiglabelskip=\skip105
-\c@subfigure=\count118
-\c@lofdepth=\count119
-\c@subtable=\count120
-\c@lotdepth=\count121
+\c@subfigure=\count126
+\c@lofdepth=\count127
+\c@subtable=\count128
+\c@lotdepth=\count129
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -365,42 +405,42 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/boxedminipage/boxedminipage.sty)
 (/usr/share/texlive/texmf-dist/tex/generic/dvips/rotate.sty
-\@rotdimen=\dimen122
-\@rotbox=\box28
+\@rotdimen=\dimen126
+\@rotbox=\box30
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count122
-\float@exts=\toks28
-\float@box=\box29
-\@float@everytoks=\toks29
-\@floatcapt=\box30
+\c@float@type=\count130
+\float@exts=\toks29
+\float@box=\box31
+\@float@everytoks=\toks30
+\@floatcapt=\box32
 )
-\@float@every@Listing=\toks30
-\c@Listing=\count123
+\@float@every@Listing=\toks31
+\c@Listing=\count131
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen123
-\extrarowheight=\dimen124
-\NC@list=\toks31
+\col@sep=\dimen127
+\extrarowheight=\dimen128
+\NC@list=\toks32
 \extratabsurround=\skip108
 \backup@length=\skip109
 )
-\TX@col@width=\dimen125
-\TX@old@table=\dimen126
-\TX@old@col=\dimen127
-\TX@target=\dimen128
-\TX@delta=\dimen129
-\TX@cols=\count124
-\TX@ftn=\toks32
+\TX@col@width=\dimen129
+\TX@old@table=\dimen130
+\TX@old@col=\dimen131
+\TX@target=\dimen132
+\TX@delta=\dimen133
+\TX@cols=\count132
+\TX@ftn=\toks33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box31
+\@tempboxb=\box33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -408,71 +448,72 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen130
-\captionmargin@=\dimen131
-\captionwidth=\dimen132
-\caption@tempdima=\dimen133
-\caption@indent=\dimen134
-\caption@parindent=\dimen135
-\caption@hangindent=\dimen136
+\captionmargin=\dimen134
+\captionmargin@=\dimen135
+\captionwidth=\dimen136
+\caption@tempdima=\dimen137
+\caption@indent=\dimen138
+\caption@parindent=\dimen139
+\caption@hangindent=\dimen140
 )
-\c@ContinuedFloat=\count125
+\c@ContinuedFloat=\count133
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: threeparttable package is loaded.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
 Package: layout 2014/10/28 v1.2c Show layout parameters
-\oneinch=\count126
-\cnt@paperwidth=\count127
-\cnt@paperheight=\count128
-\cnt@hoffset=\count129
-\cnt@voffset=\count130
-\cnt@textheight=\count131
-\cnt@textwidth=\count132
-\cnt@topmargin=\count133
-\cnt@oddsidemargin=\count134
-\cnt@evensidemargin=\count135
-\cnt@headheight=\count136
-\cnt@headsep=\count137
-\cnt@marginparsep=\count138
-\cnt@marginparwidth=\count139
-\cnt@marginparpush=\count140
-\cnt@footskip=\count141
-\fheight=\count142
-\ref@top=\count143
-\ref@hoffset=\count144
-\ref@voffset=\count145
-\ref@head=\count146
-\ref@body=\count147
-\ref@foot=\count148
-\ref@margin=\count149
-\ref@marginwidth=\count150
-\ref@marginpar=\count151
-\Interval=\count152
-\ExtraYPos=\count153
-\PositionX=\count154
-\PositionY=\count155
-\ArrowLength=\count156
+\oneinch=\count134
+\cnt@paperwidth=\count135
+\cnt@paperheight=\count136
+\cnt@hoffset=\count137
+\cnt@voffset=\count138
+\cnt@textheight=\count139
+\cnt@textwidth=\count140
+\cnt@topmargin=\count141
+\cnt@oddsidemargin=\count142
+\cnt@evensidemargin=\count143
+\cnt@headheight=\count144
+\cnt@headsep=\count145
+\cnt@marginparsep=\count146
+\cnt@marginparwidth=\count147
+\cnt@marginparpush=\count148
+\cnt@footskip=\count149
+\fheight=\count150
+\ref@top=\count151
+\ref@hoffset=\count152
+\ref@voffset=\count153
+\ref@head=\count154
+\ref@body=\count155
+\ref@foot=\count156
+\ref@margin=\count157
+\ref@marginwidth=\count158
+\ref@marginpar=\count159
+\Interval=\count160
+\ExtraYPos=\count161
+\PositionX=\count162
+\PositionY=\count163
+\ArrowLength=\count164
 )
 (/usr/share/texlive/texmf-dist/tex/latex/changebar/changebar.sty
 Package: changebar 2005/09/18 v3.5c Indicate changes with marginal bars
-\cb@nextpoint=\count157
-\cb@topleft=\count158
-\cb@topright=\count159
-\cb@botleft=\count160
-\cb@botright=\count161
-\cb@cnta=\count162
-\cb@cntb=\count163
-\cb@dima=\dimen137
-\cb@curbarwd=\dimen138
-\cb@page=\count164
-\cb@pagecount=\count165
-\cb@odd@left=\dimen139
-\cb@odd@right=\dimen140
-\cb@even@left=\dimen141
-\cb@even@right=\dimen142
+\cb@nextpoint=\count165
+\cb@topleft=\count166
+\cb@topright=\count167
+\cb@botleft=\count168
+\cb@botright=\count169
+\cb@cnta=\count170
+\cb@cntb=\count171
+\cb@dima=\dimen141
+\cb@curbarwd=\dimen142
+\cb@page=\count172
+\cb@pagecount=\count173
+\cb@odd@left=\dimen143
+\cb@odd@right=\dimen144
+\cb@even@left=\dimen145
+\cb@even@right=\dimen146
 \cb@writexy=\write3
 \cb@readxy=\read2
 \openout3 = `Thesis.cb2'.
@@ -480,7 +521,7 @@ Package: changebar 2005/09/18 v3.5c Indicate changes with marginal bars
 \changebarwidth=\skip110
 \deletebarwidth=\skip111
 \changebarsep=\skip112
-\c@changebargrey=\count166
+\c@changebargrey=\count174
 \cb@write=\write4
 \cb@read=\read3
 \openout4 = `Thesis.cb'.
@@ -488,14 +529,14 @@ Package: changebar 2005/09/18 v3.5c Indicate changes with marginal bars
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/varioref.sty
 Package: varioref 2015/09/22 v1.5b package for extended references (FMi)
-\c@vrcnt=\count167
+\c@vrcnt=\count175
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip113
 \bibsep=\skip114
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count168
+\c@NAT@ctr=\count176
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
@@ -516,7 +557,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )))
 (./Thesis.aux (./Introduction.aux) (./Background.aux) (./Paper_I.aux)
-(./Paper_II.aux) (./Conclusion.aux) (./Appendices.aux))
+(./Implementation.aux) (./Paper_II.aux) (./Conclusion.aux) (./Appendices.aux))
 \openout1 = `Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -533,16 +574,31 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
-\AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 24.
+\c@lstlisting=\count177
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count178
+\scratchdimen=\dimen147
+\scratchbox=\box34
+\nofMPsegments=\count179
+\nofMParguments=\count180
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count181
+\MPscratchDim=\dimen148
+\MPnumerator=\count182
+\makeMPintoPDFobject=\count183
+\everyMPtoPDFconversion=\toks35
+)
+\AtBeginShipoutBox=\box35
+Package hyperref Info: Link coloring OFF on input line 24.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count169
+\c@section@level=\count184
 LaTeX Info: Redefining \Ref on input line 513.
 )
 LaTeX Info: Redefining \ref on input line 24.
@@ -554,25 +610,11 @@ LaTeX Info: Redefining \nameref on input line 24.
 \openout5 = `Thesis.out'.
 
 LaTeX Info: Redefining \Ref on input line 24.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count170
-\scratchdimen=\dimen143
-\scratchbox=\box33
-\nofMPsegments=\count171
-\nofMParguments=\count172
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count173
-\MPscratchDim=\dimen144
-\MPnumerator=\count174
-\makeMPintoPDFobject=\count175
-\everyMPtoPDFconversion=\toks34
-)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -603,12 +645,16 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [4
 
-] [5])
+]
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 58.
+
+[5])
 \tf@toc=\write6
 \openout6 = `Thesis.toc'.
 
- [6]
-(./Thesis.lot)
+ [6] (./Thesis.lot)
 \tf@lot=\write7
 \openout7 = `Thesis.lot'.
 
@@ -617,7 +663,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [8] (./Thesis.lof [9
 
 ] [10] [11] [12] [13]
-Overfull \hbox (12.10342pt too wide) in paragraph at lines 38--38
+Overfull \hbox (12.10342pt too wide) in paragraph at lines 41--41
  [][] [][]\OT1/cmr/m/n/12 Projections for the D.I (left three columns) and E.II
  (right three columns). 
  []
@@ -636,7 +682,7 @@ Chapter 1.
 
 
 
-] <../figures/2010_census.jpg, id=677, 366.61969pt x 305.64188pt>
+] <../figures/2010_census.jpg, id=763, 366.61969pt x 305.64188pt>
 File: ../figures/2010_census.jpg Graphic file (type jpg)
 
 <use ../figures/2010_census.jpg>
@@ -657,7 +703,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./local_group-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<./local_group-eps-converted-to.pdf, id=709, 548.0475pt x 411.5375pt>
+<./local_group-eps-converted-to.pdf, id=795, 548.0475pt x 411.5375pt>
 File: ./local_group-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./local_group-eps-converted-to.pdf>
@@ -705,7 +751,7 @@ Package Fancyhdr Warning: \headheight is too small (15.0pt):
 \openout2 = `Background.aux'.
 
  (./Background.tex
-\c@theorem=\count176
+\c@theorem=\count185
 
 Chapter 2.
 
@@ -732,7 +778,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./Peanocurve-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<./Peanocurve-eps-converted-to.pdf, id=1186, 747.79375pt x 227.85126pt>
+<./Peanocurve-eps-converted-to.pdf, id=1272, 747.79375pt x 227.85126pt>
 File: ./Peanocurve-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Peanocurve-eps-converted-to.pdf>
@@ -742,7 +788,7 @@ Package pdftex.def Info: ./Peanocurve-eps-converted-to.pdf used on input line 1
  [39] [40 <./Peanocurve-eps-converted-to.pdf>] [41] [42] [43] [44] [45] [46] [4
 7] [48] [49] [50] [51] [52] [53]
 [54] [55] [56] [57] [58] [59]
-<../figures/eagle_tree.png, id=1491, 845.0772pt x 626.34pt>
+<../figures/eagle_tree.png, id=1577, 845.0772pt x 626.34pt>
 File: ../figures/eagle_tree.png Graphic file (type png)
 
 <use ../figures/eagle_tree.png>
@@ -844,7 +890,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./flattened_halo_regressions-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<./flattened_halo_regressions-eps-converted-to.pdf, id=1800, 722.7pt x 873.2625
+<./flattened_halo_regressions-eps-converted-to.pdf, id=1885, 722.7pt x 873.2625
 pt>
 File: ./flattened_halo_regressions-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -866,7 +912,7 @@ ty_Panels-eps-converted-to.pdf ../figures/Flattened_Selected_Density_Panels.eps
 (epstopdf)             \includegraphics on input line 530.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Flattened_Selected_Density_Panels-eps-converted-to.pdf, id=1802, 201.75375pt
+<./Flattened_Selected_Density_Panels-eps-converted-to.pdf, id=1887, 201.75375pt
  x 144.54pt>
 File: ./Flattened_Selected_Density_Panels-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -893,7 +939,7 @@ pdfTeX warning: pdflatex (file ./flattened_surface_densities_fixed-eps-converte
 d-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> al
 lowed
 
-<./flattened_surface_densities_fixed-eps-converted-to.pdf, id=1803, 686.565pt x
+<./flattened_surface_densities_fixed-eps-converted-to.pdf, id=1888, 686.565pt x
  650.43pt>
 File: ./flattened_surface_densities_fixed-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -932,7 +978,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./cosmo_halo_regressions-eps-converted-to.pdf): 
 PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<./cosmo_halo_regressions-eps-converted-to.pdf, id=1865, 722.7pt x 873.2625pt>
+<./cosmo_halo_regressions-eps-converted-to.pdf, id=1951, 722.7pt x 873.2625pt>
 File: ./cosmo_halo_regressions-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./cosmo_halo_regressions-eps-converted-to.pdf>
@@ -960,7 +1006,7 @@ pdfTeX warning: pdflatex (file ./all_rotation_curves_five_sims-eps-converted-to
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
 
-<./all_rotation_curves_five_sims-eps-converted-to.pdf, id=1992, 1445.4pt x 722.
+<./all_rotation_curves_five_sims-eps-converted-to.pdf, id=2078, 1445.4pt x 722.
 7pt>
 File: ./all_rotation_curves_five_sims-eps-converted-to.pdf Graphic file (type p
 df)
@@ -981,7 +1027,7 @@ eps-converted-to.pdf ../figures/Selected_Density_Panels.eps>
 (epstopdf)             \includegraphics on input line 657.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Selected_Density_Panels-eps-converted-to.pdf, id=2059, 505.89pt x 722.7pt>
+<./Selected_Density_Panels-eps-converted-to.pdf, id=2144, 505.89pt x 722.7pt>
 File: ./Selected_Density_Panels-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Selected_Density_Panels-eps-converted-to.pdf>
@@ -1007,7 +1053,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./surface_densities-eps-converted-to.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./surface_densities-eps-converted-to.pdf, id=2097, 686.565pt x 650.43pt>
+<./surface_densities-eps-converted-to.pdf, id=2182, 686.565pt x 650.43pt>
 File: ./surface_densities-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./surface_densities-eps-converted-to.pdf>
@@ -1033,7 +1079,7 @@ pdfTeX warning: pdflatex (file ./halo_density_ratios_five_sims-eps-converted-to
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
 
-<./halo_density_ratios_five_sims-eps-converted-to.pdf, id=2189, 626.34pt x 469.
+<./halo_density_ratios_five_sims-eps-converted-to.pdf, id=2275, 626.34pt x 469.
 755pt>
 File: ./halo_density_ratios_five_sims-eps-converted-to.pdf Graphic file (type p
 df)
@@ -1057,7 +1103,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./eigenratios_vs_radius-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./eigenratios_vs_radius-eps-converted-to.pdf, id=2241, 578.16pt x 578.16pt>
+<./eigenratios_vs_radius-eps-converted-to.pdf, id=2326, 578.16pt x 578.16pt>
 File: ./eigenratios_vs_radius-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./eigenratios_vs_radius-eps-converted-to.pdf>
@@ -1084,7 +1130,7 @@ pdfTeX warning: pdflatex (file ./cumulative_radial_distribution_five_sims-eps-c
 onverted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
 
-<./cumulative_radial_distribution_five_sims-eps-converted-to.pdf, id=2294, 578.
+<./cumulative_radial_distribution_five_sims-eps-converted-to.pdf, id=2379, 578.
 16pt x 490.83376pt>
 File: ./cumulative_radial_distribution_five_sims-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1112,7 +1158,7 @@ pdfTeX warning: pdflatex (file ./differential_halo_mass_fn_five_sims-eps-conver
 ted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> 
 allowed
 
-<./differential_halo_mass_fn_five_sims-eps-converted-to.pdf, id=2295, 578.16pt 
+<./differential_halo_mass_fn_five_sims-eps-converted-to.pdf, id=2380, 578.16pt 
 x 490.83376pt>
 File: ./differential_halo_mass_fn_five_sims-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1141,7 +1187,7 @@ pdfTeX warning: pdflatex (file ./streams_side_by_side_five_sims-eps-converted-t
 o.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allow
 ed
 
-<./streams_side_by_side_five_sims-eps-converted-to.pdf, id=2388, 578.16pt x 433
+<./streams_side_by_side_five_sims-eps-converted-to.pdf, id=2474, 578.16pt x 433
 .62pt>
 File: ./streams_side_by_side_five_sims-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -1154,17 +1200,29 @@ used on input line 917.
 (./Paper_I.bbl [103] [104
 
 ] [105] [106] [107] [108] [109] [110])) [111]
-\openout2 = `Paper_II.aux'.
+\openout2 = `Implementation.aux'.
 
 
-(./Paper_II.tex
+(./Implementation.tex
 Chapter 4.
 [112
 
 
 
 
-] [113] [114] [115] [116] [117] [118]
+] [113] [114] (./Implementation.bbl [115])) [116
+
+]
+\openout2 = `Paper_II.aux'.
+
+ (./Paper_II.tex
+Chapter 5.
+[117
+
+
+
+
+] [118] [119] [120] [121] [122] [123]
 Package epstopdf Info: Source file: <../figures/rotation_curves_two_panel.eps>
 (epstopdf)                    date: 2019-05-18 12:37:11
 (epstopdf)                    size: 33697 bytes
@@ -1181,7 +1239,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./rotation_curves_two_panel-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<./rotation_curves_two_panel-eps-converted-to.pdf, id=2671, 505.89pt x 686.565p
+<./rotation_curves_two_panel-eps-converted-to.pdf, id=2796, 505.89pt x 686.565p
 t>
 File: ./rotation_curves_two_panel-eps-converted-to.pdf Graphic file (type pdf)
  <use ./rotation_curves_two_panel-eps-converted-to.pdf>
@@ -1206,7 +1264,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./falpha-eps-converted-to.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<./falpha-eps-converted-to.pdf, id=2680, 576.1525pt x 576.1525pt>
+<./falpha-eps-converted-to.pdf, id=2805, 576.1525pt x 576.1525pt>
 File: ./falpha-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./falpha-eps-converted-to.pdf>
@@ -1226,7 +1284,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./qxr-eps-converted-to.pdf): PDF inclusion: foun
 d PDF version <1.7>, but at most version <1.5> allowed
-<./qxr-eps-converted-to.pdf, id=2689, 576.1525pt x 576.1525pt>
+<./qxr-eps-converted-to.pdf, id=2814, 576.1525pt x 576.1525pt>
 File: ./qxr-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./qxr-eps-converted-to.pdf>
@@ -1246,7 +1304,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./wpd-eps-converted-to.pdf): PDF inclusion: foun
 d PDF version <1.7>, but at most version <1.5> allowed
-<./wpd-eps-converted-to.pdf, id=2702, 433.62pt x 722.7pt>
+<./wpd-eps-converted-to.pdf, id=2827, 433.62pt x 722.7pt>
 File: ./wpd-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./wpd-eps-converted-to.pdf>
@@ -1275,7 +1333,7 @@ pdfTeX warning: pdflatex (file ./isolated_xy_with_agama_with_circles-eps-conver
 ted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> 
 allowed
 
-<./isolated_xy_with_agama_with_circles-eps-converted-to.pdf, id=2707, 867.24pt 
+<./isolated_xy_with_agama_with_circles-eps-converted-to.pdf, id=2832, 867.24pt 
 x 867.24pt>
 File: ./isolated_xy_with_agama_with_circles-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1301,7 +1359,7 @@ pdfTeX warning: pdflatex (file ./isolated_a2_vs_t_2rd_weighted-eps-converted-to
 .pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
 d
 
-<./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf, id=2710, 462.72874pt x 3
+<./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf, id=2835, 462.72874pt x 3
 46.29375pt>
 File: ./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf Graphic file (type p
 df)
@@ -1326,7 +1384,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./isolated_r_t_a2_with_agama-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<./isolated_r_t_a2_with_agama-eps-converted-to.pdf, id=2711, 1228.59pt x 794.97
+<./isolated_r_t_a2_with_agama-eps-converted-to.pdf, id=2836, 1228.59pt x 794.97
 pt>
 File: ./isolated_r_t_a2_with_agama-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1355,7 +1413,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./isolated_four_panel_zrms-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<./isolated_four_panel_zrms-eps-converted-to.pdf, id=2712, 794.97pt x 794.97pt>
+<./isolated_four_panel_zrms-eps-converted-to.pdf, id=2837, 794.97pt x 794.97pt>
 File: ./isolated_four_panel_zrms-eps-converted-to.pdf Graphic file (type pdf)
 <use ./isolated_four_panel_zrms-eps-converted-to.pdf>
 Package pdftex.def Info: ./isolated_four_panel_zrms-eps-converted-to.pdf used o
@@ -1380,7 +1438,7 @@ pdfTeX warning: pdflatex (file ./isolated_dispersion_evolution_with_agama_zrms-
 eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most vers
 ion <1.5> allowed
 
-<./isolated_dispersion_evolution_with_agama_zrms-eps-converted-to.pdf, id=2713,
+<./isolated_dispersion_evolution_with_agama_zrms-eps-converted-to.pdf, id=2838,
  1156.32pt x 722.7pt>
 File: ./isolated_dispersion_evolution_with_agama_zrms-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -1412,13 +1470,13 @@ Overfull \hbox (4.61575pt too wide) in paragraph at lines 408--410
 er ([]Gol-dre-ich and Tremaine[],
  []
 
-[119] [120 <./rotation_curves_two_panel-eps-converted-to.pdf>] [121] [122 <./fa
-lpha-eps-converted-to.pdf>] [123 <./qxr-eps-converted-to.pdf>] [124 <./wpd-eps-
-converted-to.pdf>] [125 <./isolated_xy_with_agama_with_circles-eps-converted-to
-.pdf>] [126 <./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf>] [127 <./iso
-lated_r_t_a2_with_agama-eps-converted-to.pdf>] [128 <./isolated_four_panel_zrms
--eps-converted-to.pdf>] [129 <./isolated_dispersion_evolution_with_agama_zrms-e
-ps-converted-to.pdf>] [130] [131] [132] [133] [134] [135] [136]
+[124] [125 <./rotation_curves_two_panel-eps-converted-to.pdf>] [126] [127 <./fa
+lpha-eps-converted-to.pdf>] [128 <./qxr-eps-converted-to.pdf>] [129 <./wpd-eps-
+converted-to.pdf>] [130 <./isolated_xy_with_agama_with_circles-eps-converted-to
+.pdf>] [131 <./isolated_a2_vs_t_2rd_weighted-eps-converted-to.pdf>] [132 <./iso
+lated_r_t_a2_with_agama-eps-converted-to.pdf>] [133 <./isolated_four_panel_zrms
+-eps-converted-to.pdf>] [134 <./isolated_dispersion_evolution_with_agama_zrms-e
+ps-converted-to.pdf>] [135] [136] [137] [138] [139] [140] [141]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 720.
@@ -1431,7 +1489,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 720.
 
-[137] [138] [139] [140] [141]
+[142] [143] [144] [145] [146]
 Package epstopdf Info: Source file: <../figures/isolated_a2_vs_t_2rd_no_bucklin
 g_weighted.eps>
 (epstopdf)                    date: 2019-05-18 12:37:10
@@ -1451,7 +1509,7 @@ pdfTeX warning: pdflatex (file ./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-
 converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version 
 <1.5> allowed
 
-<./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf, id=3178, 462
+<./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf, id=3304, 462
 .72874pt x 346.29375pt>
 File: ./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -1475,7 +1533,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./cosmo_three_by_threes-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./cosmo_three_by_threes-eps-converted-to.pdf, id=3181, 1011.78pt x 722.7pt>
+<./cosmo_three_by_threes-eps-converted-to.pdf, id=3307, 1011.78pt x 722.7pt>
 File: ./cosmo_three_by_threes-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./cosmo_three_by_threes-eps-converted-to.pdf>
@@ -1499,7 +1557,7 @@ Package epstopdf Info: Output file is already uptodate.
 pdfTeX warning: pdflatex (file ./cosmo_a2_vs_t_2rd_weighted-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<./cosmo_a2_vs_t_2rd_weighted-eps-converted-to.pdf, id=3182, 578.16pt x 433.62p
+<./cosmo_a2_vs_t_2rd_weighted-eps-converted-to.pdf, id=3308, 578.16pt x 433.62p
 t>
 File: ./cosmo_a2_vs_t_2rd_weighted-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1521,30 +1579,30 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./kicked_up_disk-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<./kicked_up_disk-eps-converted-to.pdf, id=3183, 576.1525pt x 576.1525pt>
+<./kicked_up_disk-eps-converted-to.pdf, id=3309, 576.1525pt x 576.1525pt>
 File: ./kicked_up_disk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./kicked_up_disk-eps-converted-to.pdf>
 Package pdftex.def Info: ./kicked_up_disk-eps-converted-to.pdf used on input li
 ne 940.
 (pdftex.def)             Requested size: 390.25534pt x 390.26639pt.
- [142] [143 <./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf>]
- [144 <./cosmo_three_by_threes-eps-converted-to.pdf>] [145 <./cosmo_a2_vs_t_2rd
+ [147] [148 <./isolated_a2_vs_t_2rd_no_buckling_weighted-eps-converted-to.pdf>]
+ [149 <./cosmo_three_by_threes-eps-converted-to.pdf>] [150 <./cosmo_a2_vs_t_2rd
 _weighted-eps-converted-to.pdf>]
-[146 <./kicked_up_disk-eps-converted-to.pdf>] [147] [148] [149] [150] [151]
-(./Paper_II.bbl [152] [153
+[151 <./kicked_up_disk-eps-converted-to.pdf>] [152] [153] [154] [155] [156]
+(./Paper_II.bbl [157] [158
 
-] [154]
+] [159]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no ¢ in font cmr8!
- [155] [156] [157] [158] [159] [160]))
-[161]
+ [160] [161] [162] [163] [164] [165]))
+[166]
 \openout2 = `Conclusion.aux'.
 
  (./Conclusion.tex
-Chapter 5.
-) [162
+Chapter 6.
+) [167
 
 
 
@@ -1555,42 +1613,137 @@ Chapter 5.
  (./Appendices.tex
 Appendix A.
 
-Package natbib Warning: Citation `QuinnIntegrators' on page 163 undefined on in
-put line 18.
+Package natbib Warning: Citation `QuinnIntegrators' on page 168 undefined on in
+put line 22.
 
-[163
-
-
+[168
 
 
-]) [164]
+
+
+] [169]
+Appendix B.
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+) (./kicks.c
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 6.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 6.
+ [170
+
+]) [171]
+Appendix C.
+(./predict.c [172
+
+]) [173]
+Appendix D.
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(./extract_halo_ascii.py [174
+
+] [175]) [176] [177]
+Appendix E.
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(./merge_ics.cpp [178
+
+] [179] [180] [181] [182]
+Overfull \hbox (118.38562pt too wide) in paragraph at lines 155--156
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (22.38464pt too wide) in paragraph at lines 159--162
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194]
+[195] [196] [197]
+Overfull \hbox (4.38446pt too wide) in paragraph at lines 577--579
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.38452pt too wide) in paragraph at lines 590--592
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[198]
+Overfull \hbox (16.38458pt too wide) in paragraph at lines 608--610
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[199]
+Overfull \hbox (10.38452pt too wide) in paragraph at lines 637--640
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (52.38495pt too wide) in paragraph at lines 643--645
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (58.38501pt too wide) in paragraph at lines 648--649
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[200] [201] [202] [203]) [204]
+Appendix F.
+(./timestep.c [205
+
+])) [206]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 162.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 162.
 (./Thesis.aux (./Introduction.aux) (./Background.aux) (./Paper_I.aux)
-(./Paper_II.aux) (./Conclusion.aux) (./Appendices.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
+(./Implementation.aux) (./Paper_II.aux) (./Conclusion.aux) (./Appendices.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 162.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 162.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F5C5BE8C26EEA8314EC3CEEBD178BC4B;5937.
+(rerunfilecheck)             Checksum: CA7264B5D3DC8D854B91BA2C2F09AB69;7211.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 162.
  ) 
 Here is how much of TeX's memory you used:
- 10728 strings out of 493029
- 165397 string characters out of 6136234
- 284748 words of memory out of 5000000
- 13410 multiletter control sequences out of 15000+600000
- 16290 words of font info for 61 fonts, out of 8000000 for 9000
+ 13753 strings out of 493029
+ 208692 string characters out of 6136234
+ 328772 words of memory out of 5000000
+ 15386 multiletter control sequences out of 15000+600000
+ 17217 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,16n,47p,1508b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
+ 40i,16n,55p,1508b,1864s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1648,10 +1801,10 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb>
-Output written on Thesis.pdf (179 pages, 2746716 bytes).
+Output written on Thesis.pdf (221 pages, 2849444 bytes).
 PDF statistics:
- 3706 PDF objects out of 4296 (max. 8388607)
- 2757 compressed objects within 28 object streams
- 597 named destinations out of 1000 (max. 500000)
- 746 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5121 PDF objects out of 5155 (max. 8388607)
+ 4116 compressed objects within 42 object streams
+ 1581 named destinations out of 1728 (max. 500000)
+ 882 words of extra memory for PDF output out of 10000 (max. 10000000)
 

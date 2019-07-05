@@ -2,7 +2,7 @@
 
 \chapter{Implementing Disc Insertion Schemes in \textsc{Gadget-3}}\label{ch:implementation}
 
-This chapter is meant to provide more details on exactly how to implement the method described in Chapter~\ref{ch:paper_i}. Example code is included where relevant, but the author believes it is a useful exercise for a new graduate student to implement this themselves, as it tests their understanding of the material in Chapter~\ref{ch:background}. For the purposes of this guide, we are going to assume that the reader has the copy of \textsc{Gadget-3} used for this thesis and has a working understanding of how to use a compiler, MPI, and \textsc{GalactICS}.
+This chapter is meant to provide more details on exactly how to implement the method described in Chapter~\ref{ch:paper_i}. Example code is included where relevant, but the author believes it is a useful exercise for a new graduate student to implement this themselves, as it tests their understanding of the material in Chapter~\ref{ch:background}. For the purposes of this guide, we are going to assume that the reader has the copy of \textsc{Gadget-3} used for this thesis and has a working understanding of how to use a compiler, MPI, and \textsc{GalactICS}\footnote{You can reach the author at \url{jake.bauer.2.71828@gmail.com}. If a question is not answered well here, please reach out. The author is also happy to give direction on learning the prerequisite material.}.
 
 \section{Representing a Rigid Disk}
 
@@ -18,7 +18,7 @@ In order to initially position the disc, you have to set the initial \texttt{DIS
 
 To generate the initial conditions, you need to have the zoom-in snapshot with the halo you want to extract. To set up the rigid disc, we have been using the last snapshot of the zoom-in to create the disc. Using the \textsc{rockstar} positions (converted to kpc) and velocities, run the code provided in Appendix~\ref{ch:extract_halo_ascii.py}. Name the output file to be the path listed in the first line of \texttt{extpot.params}. \textbf{Make sure that the orientation for the rigid disk on the last line of this file is set to be toward the z-axis, or you will rotate the disk twice causing all sorts of bad things!}
 
-Once the disk is finished generating, you need to merge it with the zoom-in particles. Place the unrotated disk at the origin, and the code will place the rigid disk upon initialization. You may use the C++ script I have provided in Appendix~\ref{ch:merge_ics.cpp}. This file will reassign all of the particle IDs and types, so make sure if you use this script that you do not need to preserve the old ones. Make sure \texttt{\#define append} and \texttt{\#define GADGET\_COSMOLOGY} are uncommented.
+Once the disk is finished generating, you need to merge it with the zoom-in particles. Place the unrotated disk at the origin, and the code will place the rigid disk upon initialization. You may use the C++ script we have provided in Appendix~\ref{ch:merge_ics.cpp}. This file will reassign all of the particle IDs and types, so make sure if you use this script that you do not need to preserve the old ones. Make sure \texttt{\#define append} and \texttt{\#define GADGET\_COSMOLOGY} are uncommented.
 
 The disk position, velocity, angular position, and rate of Euler angle change are recorded in \texttt{disk\_vars.txt}. The differences in these quantities from the last timstep are recorded in \texttt{disk\_dvars.txt}. A variety of other quantities are written out into other log files that are pretty self explanatory. Appply \texttt{grep} to the code if you are unsure what a particular log file is. There should be comments.
 
@@ -42,13 +42,53 @@ The actual integration scheme is handled in \texttt{rigiddisk.c}. The functions 
 
 \section{Live Disk Setup and Initial Conditions}
 
-\subsection{Code Setup}
+Here, we discuss the initialization of the live disk.
+
 \subsection{Creating Live Initial Conditions}
+
+The first thing needed for creating live disk ICs is the new halo at the insertion time. This can be extracted using the script provided in Appendix~\ref{ch:extract_halo_ascii.py}, or something similar. This will be the halo to be passed to GalactICS. Make sure all units are physical, and not comoving quantities. Instead of setting the axis line in \texttt{extpot.params} to be the $z$-axis, set it to be the value in \texttt{disk\_axis.txt} corresponding to the live disk insertion time. 
+
+Next, run GalactICS normally and tune the parameters in \texttt{in.diskdf} to get the particle coordinates in \texttt{Rdisk}. This disk is in the frame of the box. Comment out the \texttt{APPEND} option in the code provided in Appendix~\ref{ch:merge_ics.cpp} and uncomment the \texttt{REASSIGN} option, and recompile. Note that if you plan to use the scripts provided here, this disk must have the same number of particles as the rigid disk. You may want to relax this assumption, and there is nothing technical with \textsc{Gadget-3} which prevents this. 
+
+\subsection{Code Setup}
+
+To run the live disk, turn off the parameters you set for the rigid disk. Instead, set \texttt{LIVE\_DISK}. You need to set an initial comoving position for the live disk, its comoving velocity\footnote{Note the difference from the rigid disk setup. You can change the code to take a physical velocity if you wish. You can use the value in \texttt{disk\_vars.txt} for the velocity if you wish}. These values are set with the same parameters used for the rigid disk. You will not need to set an initial rotation angle, as the disk is already rotated into the box frame in \texttt{Rdisk}. 
+
+You will, however, need to set the values of the initial angular velocities. These are set using the \texttt{DISK\_OMEGA*} variables, which are the box frame values. For these, consider using a moving average the values in \texttt{disk\_vars.txt}. Remember that a large portion of a rigid disk's angular velocity comes from nutations. You want to choose a window size that approximately averages over a nutation period. In practice, we have found that by initialization, there is very little net angular velocity. This step is probably not necessary, although the method paper describes it as an improvement.
+
 
 \section{Known Issues and Pet Peeves}
 
-\subsection{Choosing a Timestep}
-\subsection{Integration Scheme}
+As with most code developed in academia, individual researchers are largely responsible for the development, application, and maintenance of their codes. Balancing these priorties often means sacrificing on certain optimizations. Here, we list some potential improvements to the existing algorithm that might be explored.
+
+\subsection{Choosing a Timestep and Integration Scheme}
+
+In the paper, we use a fixed timestep for the rigid disk that is based on the center-of-mass acceleration timescale. Often, this timescale is too long for the implicit Euler scheme that we use to integrate the rigid body equations. This is why we introduced a fixed \texttt{TIMESTEP\_REDUCTION\_FACTOR}. In reality, the timestep should be determined from the current magnitude of the torque and angular velocity. We would recommnend experimenting with an adaptive timestep. One form that might be tried is,
+\begin{equation}
+\Delta t = \frac{2 \pi \alpha}{\vert \boldsymbol \omega \vert}
+\end{equation}
+where $\alpha$ is a constant for which lower values yield more accurate integation, and $\boldsymbol \omega$ is the angular velocity in the disk's body frame. There were a number of halos where we found the fixed timestep to be inadequate for capturing the angular evolution of the disk. This is especially an issue when the disk begins to settle in the host halo and sheds some of its angular velocity. An adaptive timestep would give us the low error required to resolve these scenarios as well as giving us efficiency when angular velocities are low.
+
+We are also able to improve on the integration schemne. We use, Implicit Euler, a first order integration scheme. By modifying the code to make use of the fact that \textsc{Gadget-3} is already using a higher order leapfrog scheme, we may be able to improve the integration accuracy.
+
+\subsection{Damping}
+
+Another thing we looked at was the introduction of a damping factor in the equations of motion to cause the disk to return to a steady orientation (much like an air resistance term). The physical motivation behind this was that restoring forces in the disk would resist differential torquing. We never found a satisfactory way to do this, but we would submit that limiting the magnitude of the angular velocity might accomplish this. For example, one could apply a sigmoid function element-wise to the angular velocity of the disk to simulate this effect. This should have a positive effect on the stability of the angular integration.
+
+
+\subsection{Those Compile-Time Options}
+On the whole, the organization of the modified code is not the best. We highly suggest you implement the algorithm yourself because of this.   One of the worst design decisions we made was to make the rigid disk variables compile time options. Frankly, this is confusing since we could simply load these values from a file. 
+
+Instead, we should create a parameter file with all of the initial entries for the disk coordinates, and load it in \texttt{init.c} and \texttt{begrun.c}. This way, you will not have to recompile the code every time you want to change the initial disk variables. Although this is a simple patch, we focused our immediate efforts on producing results from applying the code. 
+
+Another argument for rewriting the code stems from the compile-time options and the private nature of \textsc{Gadget-3}. To be honest, there are many options which stem from projects undertaken by other groups. This confuses our additions to the code, and we run the risk of messing with fundamental compile time logic required for the proper functioning of \textsc{Gadget-3}. Many N-body/SPH codes use similar algorithms, and it may be worthwhile implementing the algorithm in a more public code (like Gasoline). 
+
+\subsection{Watch out for Single-Precision Floats}
+
+The last issue you may run into is in the fact that both \textsc{GalactICS} and \textsc{Gadget-3} snapshots use single-precision floating point numbers by default. During one experiment where we extracted a cosmological halo and ran it as an isolated galaxy simulation, loss of precision errors actually resulted in some particles being placed in the same place. This is an issue because Barnes-Hut cannot possibly separate coincident particles into separate cells.
+
+If this happens, \textsc{Gadget-3} will continue increasing the tree allocation factor until you exceed available memory. The only ways around this are to either enforce double precision in the output or to resample the coincident particles. We have not found a functional issue with either approach in the experiment that we ran with the extracted halo.
+
 
 \bibliographystyle{apalike}
 \bibliography{bibliography_implementation.bib}

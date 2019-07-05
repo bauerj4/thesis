@@ -55,38 +55,44 @@
 \BOOKMARK [2][-]{subsection.4.2.1}{Initial Parameters and Timestep Selection}{section.4.2}% 55
 \BOOKMARK [2][-]{subsection.4.2.2}{Integration}{section.4.2}% 56
 \BOOKMARK [1][-]{section.4.3}{Live Disk Setup and Initial Conditions}{chapter.4}% 57
-\BOOKMARK [2][-]{subsection.4.3.1}{Code Setup}{section.4.3}% 58
-\BOOKMARK [2][-]{subsection.4.3.2}{Creating Live Initial Conditions}{section.4.3}% 59
+\BOOKMARK [2][-]{subsection.4.3.1}{Creating Live Initial Conditions}{section.4.3}% 58
+\BOOKMARK [2][-]{subsection.4.3.2}{Code Setup}{section.4.3}% 59
 \BOOKMARK [1][-]{section.4.4}{Known Issues and Pet Peeves}{chapter.4}% 60
-\BOOKMARK [2][-]{subsection.4.4.1}{Choosing a Timestep}{section.4.4}% 61
-\BOOKMARK [2][-]{subsection.4.4.2}{Integration Scheme}{section.4.4}% 62
-\BOOKMARK [0][-]{chapter.5}{Cosmological Bar Formation: Nature vs Nurture}{}% 63
-\BOOKMARK [1][-]{section.5.1}{Abstract}{chapter.5}% 64
-\BOOKMARK [1][-]{section.5.2}{Introduction}{chapter.5}% 65
-\BOOKMARK [1][-]{section.5.3}{Theoretical Considerations}{chapter.5}% 66
-\BOOKMARK [2][-]{subsection.5.3.1}{Q and X}{section.5.3}% 67
-\BOOKMARK [2][-]{subsection.5.3.2}{Vertical Structure of Stellar Discs}{section.5.3}% 68
-\BOOKMARK [2][-]{subsection.5.3.3}{Effect of Gravitational Softening}{section.5.3}% 69
-\BOOKMARK [1][-]{section.5.4}{Models and Simulations}{chapter.5}% 70
-\BOOKMARK [2][-]{subsection.5.4.1}{Initial Conditions for Isolated Galaxy Simulations}{section.5.4}% 71
-\BOOKMARK [2][-]{subsection.5.4.2}{Description of simulations}{section.5.4}% 72
-\BOOKMARK [2][-]{subsection.5.4.3}{Comparison with Previous Work}{section.5.4}% 73
-\BOOKMARK [1][-]{section.5.5}{Isolated Galaxy Simulations}{chapter.5}% 74
-\BOOKMARK [2][-]{subsection.5.5.1}{Morphology of Bar Forming Galaxies}{section.5.5}% 75
-\BOOKMARK [2][-]{subsection.5.5.2}{Bar Strength Parameter A2}{section.5.5}% 76
-\BOOKMARK [2][-]{subsection.5.5.3}{Vertical Structure and Velocity Dispersion}{section.5.5}% 77
-\BOOKMARK [2][-]{subsection.5.5.4}{Simulations Where Buckling is Suppressed}{section.5.5}% 78
-\BOOKMARK [1][-]{section.5.6}{Cosmological Simulations}{chapter.5}% 79
-\BOOKMARK [2][-]{subsection.5.6.1}{Simulation Setup; Inserting Discs into Cosmological Haloes}{section.5.6}% 80
-\BOOKMARK [2][-]{subsection.5.6.2}{Results}{section.5.6}% 81
-\BOOKMARK [1][-]{section.5.7}{Conclusions}{chapter.5}% 82
-\BOOKMARK [0][-]{chapter.6}{Summary and Conclusions}{}% 83
-\BOOKMARK [1][-]{section.6.1}{Summary}{chapter.6}% 84
-\BOOKMARK [1][-]{section.6.2}{Future Work}{chapter.6}% 85
-\BOOKMARK [1][-]{section.6.3}{Conclusion}{chapter.6}% 86
-\BOOKMARK [0][-]{appendix.A}{Euler's Equations in Comoving Coordinates}{}% 87
-\BOOKMARK [0][-]{appendix.B}{Referenced Code: kicks.c}{}% 88
-\BOOKMARK [0][-]{appendix.C}{Referenced Code: predict.c}{}% 89
-\BOOKMARK [0][-]{appendix.D}{Referenced Code: extract\137halo\137ascii.py}{}% 90
-\BOOKMARK [0][-]{appendix.E}{Referenced Code: merge\137ics.cpp}{}% 91
-\BOOKMARK [0][-]{appendix.F}{Referenced Code: timestep.c}{}% 92
+\BOOKMARK [2][-]{subsection.4.4.1}{Choosing a Timestep and Integration Scheme}{section.4.4}% 61
+\BOOKMARK [2][-]{subsection.4.4.2}{Damping}{section.4.4}% 62
+\BOOKMARK [2][-]{subsection.4.4.3}{Those Compile-Time Options}{section.4.4}% 63
+\BOOKMARK [2][-]{subsection.4.4.4}{Watch out for Single-Precision Floats}{section.4.4}% 64
+\BOOKMARK [0][-]{chapter.5}{Cosmological Bar Formation: Nature vs Nurture}{}% 65
+\BOOKMARK [1][-]{section.5.1}{Abstract}{chapter.5}% 66
+\BOOKMARK [1][-]{section.5.2}{Introduction}{chapter.5}% 67
+\BOOKMARK [1][-]{section.5.3}{Theoretical Considerations}{chapter.5}% 68
+\BOOKMARK [2][-]{subsection.5.3.1}{Q and X}{section.5.3}% 69
+\BOOKMARK [2][-]{subsection.5.3.2}{Vertical Structure of Stellar Discs}{section.5.3}% 70
+\BOOKMARK [2][-]{subsection.5.3.3}{Effect of Gravitational Softening}{section.5.3}% 71
+\BOOKMARK [1][-]{section.5.4}{Models and Simulations}{chapter.5}% 72
+\BOOKMARK [2][-]{subsection.5.4.1}{Initial Conditions for Isolated Galaxy Simulations}{section.5.4}% 73
+\BOOKMARK [2][-]{subsection.5.4.2}{Description of simulations}{section.5.4}% 74
+\BOOKMARK [2][-]{subsection.5.4.3}{Comparison with Previous Work}{section.5.4}% 75
+\BOOKMARK [1][-]{section.5.5}{Isolated Galaxy Simulations}{chapter.5}% 76
+\BOOKMARK [2][-]{subsection.5.5.1}{Morphology of Bar Forming Galaxies}{section.5.5}% 77
+\BOOKMARK [2][-]{subsection.5.5.2}{Bar Strength Parameter A2}{section.5.5}% 78
+\BOOKMARK [2][-]{subsection.5.5.3}{Vertical Structure and Velocity Dispersion}{section.5.5}% 79
+\BOOKMARK [2][-]{subsection.5.5.4}{Simulations Where Buckling is Suppressed}{section.5.5}% 80
+\BOOKMARK [1][-]{section.5.6}{Cosmological Simulations}{chapter.5}% 81
+\BOOKMARK [2][-]{subsection.5.6.1}{Simulation Setup; Inserting Discs into Cosmological Haloes}{section.5.6}% 82
+\BOOKMARK [2][-]{subsection.5.6.2}{Results}{section.5.6}% 83
+\BOOKMARK [1][-]{section.5.7}{Conclusions}{chapter.5}% 84
+\BOOKMARK [0][-]{chapter.6}{Summary and Conclusions}{}% 85
+\BOOKMARK [1][-]{section.6.1}{Interactions Between Stellar Disks and Dark Matter Halos}{chapter.6}% 86
+\BOOKMARK [2][-]{subsection.6.1.1}{Summary}{section.6.1}% 87
+\BOOKMARK [2][-]{subsection.6.1.2}{Future Work}{section.6.1}% 88
+\BOOKMARK [1][-]{section.6.2}{Bar Formation in Cosmological Stellar Disks}{chapter.6}% 89
+\BOOKMARK [2][-]{subsection.6.2.1}{Summary}{section.6.2}% 90
+\BOOKMARK [2][-]{subsection.6.2.2}{Future Work}{section.6.2}% 91
+\BOOKMARK [1][-]{section.6.3}{Vetical Structure in Cosmological Stellar Disks}{chapter.6}% 92
+\BOOKMARK [0][-]{appendix.A}{Euler's Equations in Comoving Coordinates}{}% 93
+\BOOKMARK [0][-]{appendix.B}{Referenced Code: kicks.c}{}% 94
+\BOOKMARK [0][-]{appendix.C}{Referenced Code: predict.c}{}% 95
+\BOOKMARK [0][-]{appendix.D}{Referenced Code: extract\137halo\137ascii.py}{}% 96
+\BOOKMARK [0][-]{appendix.E}{Referenced Code: merge\137ics.cpp}{}% 97
+\BOOKMARK [0][-]{appendix.F}{Referenced Code: timestep.c}{}% 98

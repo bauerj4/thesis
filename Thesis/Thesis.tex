@@ -49,7 +49,18 @@
 
 % Adding single spacing so abstract and table of contents is single spaced.
 
-%*************************************************************************************************************
+\begin{center}
+\vspace*{\stretch{1}}
+\noindent To Mom and Dad. Thank you for supporting me when I have been hard to support.
+
+-- Your Loving Son
+\vspace*{\stretch{1}}
+\end{center}
+
+\clearpage 
+
+%{
+%\noindent }%*************************************************************************************************************
 % ABSTRACT
 %*************************************************************************************************************
 
@@ -63,13 +74,7 @@
 
 %\prefacesection{Co-Authorship}
 
-%*************************************************************************************************************
-% ACKNOWLEDGEMENTS
-%*************************************************************************************************************
 
-\prefacesection{Acknowledgments}
-
-Blah blah blah.
 
 %*************************************************************************************************************
 % STATEMENT OF ORIGINALITY (required CHEM, CISC, GEOL, MATH, PHYS (Ph.D. only))
@@ -77,11 +82,80 @@ Blah blah blah.
 
 \prefacesection{Statement of Originality}
 
-Only required by CHEM, COMPUTING, GEOL, MATH and Physics (Ph.D. ONLY!).
+The research presented in this thesis was completed under the supervision of Prof.
+Lawrence M. Widrow at Queen’s University. All of the work presented here was done
+by the author (Jacob S. Bauer) except where explicitly stated otherwise.
+
+Chapter~\ref{ch:paper_i} contains a reproduction of a paper published in  Monthly Notices of the
+Royal Astronomical Society as: Jacob S. Bauer, Lawrence M. Widrow, and Denis Erkal. Disc-halo interactions in $\Lambda$CDM. \textit{Monthly Notices of the Royal Astronomical Society}, 476:198-209,
+2018. For this paper, I ran all of the simulations. The writing is mine with direct input from Lawrence M. Widrow and Denis Erkal. I performed all of the calculations. The analysis was handled primarily by me under the direction of Lawrence M. Widrow, with substantial input from Denis Erkal.
+
+Chapter~\ref{ch:paper_ii} contains a reproduction of a paper published in  Monthly Notices of the
+Royal Astronomical Society as: Jacob S. Bauer and Lawrence M. Widrow. Can stellar discs in a cosmological setting avoid forming strong bars?. \textit{Monthly Notices of the Royal Astronomical Society}, 476:523-537,
+2019. For this paper, I ran all of the simulations. The writing is mine with direct input from Lawrence M. Widrow. I performed all of the calculations, except the one in \S2.3 which was performed by Lawrence M. Widrow. Figures 2-4 were also the work of Lawrence M. Widrow. The analysis was handled primarily by me under the direction of Lawrence M. Widrow.
+
+Chapter~\ref{ch:paper_iii} contains a draft of a paper in preparation to be submitted to Monthly Notices of the Royal Astronomical Society. The working title for the paper is ``Vertical Structure and Kicked-Up Stars in $\Lambda$CDM Galaxies". For this work, I performed all of the simulations and writing. The analysis was handled primarily by me under the direction of Lawrence M. Widrow.
+
+%*************************************************************************************************************
+% ACKNOWLEDGEMENTS
+%*************************************************************************************************************
+
+
+\prefacesection{Acknowledgments}
+
+As I reach the end of this chapter of my life, I know that I did not reach this milestone unassisted. Here, I recognize those who have helped me in this accomplishment.
+
+I want to acknowledge, first and foremost, the amazing supervision I received from Larry Widrow. His careful, unyielding approach to scientific research has not only shown me how to be a better scientist, but a more conscientious communicator. I am immensely grateful for the opportunity to work with him, and for the years of guidance that will serve me well for the rest of my life.
+
+In addition to Larry, I want to acknowledge my other mentors, Heidi Newberg and Denis Erkal. Through my work with each of them, I learned how to evaluate myself more honestly, both professionally and personally. I am grateful that through my work with my mentors, I learned to be simultaneously self-critical and able to forgive myself for mistakes. Without Heidi's and Denis' guidance, I would not have been able to finish this work.
+
+To all of the other faculty members and Department staff, I am tremendously grateful for your contributions to me personally, and to the program as a whole. I am proud of my friends and colleagues at Queen's, and it is through your hard work that this positive academic environment exists. I wish you all the best.
+
+I am grateful for the years of friendship with my fellow astronomy graduate students. In their own ways, they have all kept me mostly sane for 4 years. I would not have been able to perservere without their support. Although they did not succeed in turning me into a Canadian, they did manage to make me grow a beard. I look forward to many more years of friendship.
+
+I want to acknowledge my wonderful family for their support. Mom and Dad have been my biggest supporters through the ups and downs, and this thesis is as much their accomplishment as it is mine. 
+
+I am grateful to Rachel Peckman, Chris Weir, and Taylor Weir for our lasting friendships. In high school, Chris showed me that I was capable of pursuing science. Our adventures in Tech Club (RIP), our shenanigans at RPI (RIP), and subsequent friendship (not RIP) made me strive to be a better technologist and person.
+
+Lastly, I want to acknowledge my partner, Alexis Hill. I can't wait to see what adventures life hold for us in Austin. I wouldn't want to be on this roller coaster called life with anyone else.
+
 
 
 \singlespacing \afterpreface \doublespacing
 
+\chapter*{List of Abreviations}
+\begin{longtable}{ll} 
+\hline
+Abbreviation & Expansion \\ \hline
+\textsc{AGAMA} & Action-based Galaxy Modelling Architecture \\
+DF & Distribution Function \\
+F(L)RW & Friedmann (Lema\^itre) Robertson Walker\\
+LAMOST & Large Sky Area Multi-Object Fiber Spectroscopic Telescope \\
+M31 & Messier object 31 (Andromeda) \\
+M33 & Messier object 33\\
+NFW & Navarro-Frenk-White\\
+RAVE & Radial Velocity Experiment \\
+SDSS & Sloan Digital Sky Survey\\
+Sgr dSph & Sagittarius Dwarf Spheroidal [Galaxy]\\
+Sgr  & [The] Sagittarius [Stream]\\ \hline
+\end{longtable}
+
+\chapter*{List of Symbols}
+\begin{longtable}{ll} 
+\hline
+Symbol/Unit & Meaning\\ \hline
+Gyr & Gigayear; $10^9$ years\\
+kg  & Kilogram; standard SI unit of mass\\
+kpc & Kiloparsec; $10^3$ parsecs\\
+m   & meter; standard SI unit of length\\
+$M_\odot$ & Solar mass; approximately $2 \times 10^{30}$ kilograms\\
+Mpc & Megaparsec; $10^6$ parsecs\\
+Myr & Megayear; $10^6$ years\\
+$O(f)$ & Big O notation; on the order of $f$ \\
+pc  & parsec; approximately $3.1 \times 10^{16}$ meters\\
+s   & second; standard SI unit of time\\
+yr  & year; approximately $3.2 \times 10^7$ seconds\\ \hline
+\end{longtable}
 %*************************************************************************************************************
 % MEATY CHAPTERS
 %*************************************************************************************************************
@@ -107,6 +181,8 @@ Only required by CHEM, COMPUTING, GEOL, MATH and Physics (Ph.D. ONLY!).
 \include{Paper_I}
 \include{Implementation}
 \include{Paper_II}
+\include{Paper_III}
+
 %\include{Alloy}
 
 %\include{Embee_UserPerspective}

@@ -1,6 +1,6 @@
 \BOOKMARK [0][-]{Doc-Start}{Abstract}{}% 1
-\BOOKMARK [0][-]{chapter*.1}{Acknowledgments}{}% 2
-\BOOKMARK [0][-]{chapter*.2}{Statement of Originality}{}% 3
+\BOOKMARK [0][-]{chapter*.1}{Statement of Originality}{}% 2
+\BOOKMARK [0][-]{chapter*.2}{Acknowledgments}{}% 3
 \BOOKMARK [0][-]{chapter*.3}{Contents}{}% 4
 \BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 5
 \BOOKMARK [0][-]{chapter*.3}{List of Figures}{}% 6
@@ -82,17 +82,21 @@
 \BOOKMARK [2][-]{subsection.5.6.1}{Simulation Setup; Inserting Discs into Cosmological Haloes}{section.5.6}% 82
 \BOOKMARK [2][-]{subsection.5.6.2}{Results}{section.5.6}% 83
 \BOOKMARK [1][-]{section.5.7}{Conclusions}{chapter.5}% 84
-\BOOKMARK [0][-]{chapter.6}{Summary and Conclusions}{}% 85
-\BOOKMARK [1][-]{section.6.1}{Interactions Between Stellar Disks and Dark Matter Halos}{chapter.6}% 86
-\BOOKMARK [2][-]{subsection.6.1.1}{Summary}{section.6.1}% 87
-\BOOKMARK [2][-]{subsection.6.1.2}{Future Work}{section.6.1}% 88
-\BOOKMARK [1][-]{section.6.2}{Bar Formation in Cosmological Stellar Disks}{chapter.6}% 89
-\BOOKMARK [2][-]{subsection.6.2.1}{Summary}{section.6.2}% 90
-\BOOKMARK [2][-]{subsection.6.2.2}{Future Work}{section.6.2}% 91
-\BOOKMARK [1][-]{section.6.3}{Vetical Structure in Cosmological Stellar Disks}{chapter.6}% 92
-\BOOKMARK [0][-]{appendix.A}{Euler's Equations in Comoving Coordinates}{}% 93
-\BOOKMARK [0][-]{appendix.B}{Referenced Code: kicks.c}{}% 94
-\BOOKMARK [0][-]{appendix.C}{Referenced Code: predict.c}{}% 95
-\BOOKMARK [0][-]{appendix.D}{Referenced Code: extract\137halo\137ascii.py}{}% 96
-\BOOKMARK [0][-]{appendix.E}{Referenced Code: merge\137ics.cpp}{}% 97
-\BOOKMARK [0][-]{appendix.F}{Referenced Code: timestep.c}{}% 98
+\BOOKMARK [0][-]{chapter.6}{Forming Vertical Structure in CDM Discs}{}% 85
+\BOOKMARK [0][-]{chapter.7}{Summary and Conclusions}{}% 86
+\BOOKMARK [1][-]{section.7.1}{Interactions Between Stellar Disks and Dark Matter Halos}{chapter.7}% 87
+\BOOKMARK [2][-]{subsection.7.1.1}{Summary}{section.7.1}% 88
+\BOOKMARK [2][-]{subsection.7.1.2}{Future Work}{section.7.1}% 89
+\BOOKMARK [1][-]{section.7.2}{Bar Formation in Cosmological Stellar Disks}{chapter.7}% 90
+\BOOKMARK [2][-]{subsection.7.2.1}{Summary}{section.7.2}% 91
+\BOOKMARK [2][-]{subsection.7.2.2}{Future Work}{section.7.2}% 92
+\BOOKMARK [1][-]{section.7.3}{Vetical Structure in Cosmological Stellar Disks}{chapter.7}% 93
+\BOOKMARK [2][-]{subsection.7.3.1}{Summary}{section.7.3}% 94
+\BOOKMARK [2][-]{subsection.7.3.2}{Future Work}{section.7.3}% 95
+\BOOKMARK [1][-]{section.7.4}{Closing Remarks}{chapter.7}% 96
+\BOOKMARK [0][-]{appendix.A}{Euler's Equations in Comoving Coordinates}{}% 97
+\BOOKMARK [0][-]{appendix.B}{Referenced Code: kicks.c}{}% 98
+\BOOKMARK [0][-]{appendix.C}{Referenced Code: predict.c}{}% 99
+\BOOKMARK [0][-]{appendix.D}{Referenced Code: extract\137halo\137ascii.py}{}% 100
+\BOOKMARK [0][-]{appendix.E}{Referenced Code: merge\137ics.cpp}{}% 101
+\BOOKMARK [0][-]{appendix.F}{Referenced Code: timestep.c}{}% 102

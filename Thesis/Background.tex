@@ -3,10 +3,10 @@
 \newtheorem{theorem}{Theorem}[section]
 
 \chapter{A Dynamical Recipe for Cosmological Disks}\label{ch:background}
+\newpage
 
-This chapter provides an overview of the background theory needed to understand subsequent chapters. In Chapter~\ref{ch:introduction}, we had a lot of discussion about simulations of galaxies being critical to having a theoretical understanding of cosmology and galaxy formation. The word ``simulation" was used without fully contextualizing its significance and meaning. We provide that context in \S\ref{sec:motivation}, where we describe what is actually being done when a simulation is run. In \S\ref{sec:galaxy_ics}, we talk about how to apply this theory to study the evolution of equilibrium galaxies. We also spoke at length about $\Lambda$CDM cosmology and how it is critical to explain the evolution of galaxies on a global scale. We talk about cosmology in detail in \S\ref{sec:cosmology}, and explain how this specifies an extended view of the discussion in \S\ref{sec:motivation}. Lastly, we talk about various techniques relied upon in the analysis of simulation in \S\ref{sec:analysis_of_sims}. This includes how we identify cosmic substructure and the techniques we use for analyzing the time-evolution of disk-derived quantities. This chapter summarizes the very basics of the models used in this thesis. It is by no means a comprehensive account of galactic dynamics. In the course of discussion, we will point the reader to more detailed accounts of the topics being discussed.
-
-\section{Physical Motivation of Modeling} \label{sec:motivation}
+This chapter provides an overview of the background theory needed to understand subsequent chapters. In Chapter~\ref{ch:introduction}, we discussed simulations of galaxies being critical to having a theoretical understanding of cosmology and galaxy formation. The word ``simulation" was used without fully contextualizing its significance and meaning. We provide that context in \S\ref{sec:motivation}, where we describe what is actually being done when a simulation is run. In \S\ref{sec:galaxy_ics}, we talk about how to apply this theory to study the evolution of equilibrium galaxies.  We talk about  the implications of cosmology in detail in \S\ref{sec:cosmology}, and explain how this specifies an extended view of the discussion in \S\ref{sec:motivation}. This includes how we identify cosmic substructure and the techniques we use for analyzing the time-evolution of disk-derived quantities. 
+\section{Physical Motivation of Modelling} \label{sec:motivation}
 
 The goal of this section is to convey to the reader what we mean by a simulation of a galactic system. 
 
@@ -16,11 +16,11 @@ The baryonic mass of the Milky Way is largely concentrated in its stars. To firs
 
 We begin by suggesting a model of a galaxy composed only of a very large number of stars and dark matter, where all stars have the same mass. We call the probability of a star being a specific position, $\textbf{r}$, and velocity $\textbf{v}$, at a time, $t$, the distribution function (DF), $f(\textbf{r},\textbf{v},t)$. The stars and dark matter sit in a combined gravitational potential, $\Phi(\textbf{r})$, in some near-equilibrium state. To fully describe this model, we need to understand how an ensemble of self-gravitating particles gives rise to an equilibrium distribution of stars and dark matter.
 
-Unlike gas, which can exhange thermodynamic energy with itself through a variety of mechanisms, stars and dark matter interact only through gravity. Gravity is a long range force. In fact, the majority of the contribution to the forces on stars in galaxies comes from far outside their immediate neighborhoods (that is to say gravitational energy in non-extensive) \citep{BT}. 
+Unlike gas, which can exchange thermodynamic energy with itself through a variety of mechanisms, stars and dark matter interact only through gravity. Gravity is a long range force. In fact, the majority of the contribution to the forces on stars in galaxies comes from far outside their immediate neighborhoods (that is to say gravitational energy in non-extensive) \citep{BT}. 
 
-This has a number of interesting implications. Classical equilibrium statistical mechanics tries to understand distributions of particles as ensembles with a given thermodynamic potential. Some commonly used ensembles are the microcanonical ensemble, where $f_0(\textbf{r},\textbf{v})$, the equilibrium state, is determined by holding energy fixed in a closed system, and the canonical ensemble which finds $f_0$ holding the temperature of the system fixed \citep{sethna}. These ensembles break down when non-extensive forces are involed (in the latter case, specifically because self-gravitating systems have no maximum entropy) \citep{self_gravitating_statistical_mechanics,lb_negative_specific_heat, BT}. Another peculiarity of self-gravitating systems is that they have a negative heat capacity \citep{lb_negative_specific_heat}.
+This has a number of interesting implications. Classical equilibrium statistical mechanics tries to understand distributions of particles as ensembles with a given thermodynamic potential. Some commonly used ensembles are the microcanonical ensemble, where $f_0(\textbf{r},\textbf{v})$, the equilibrium state, is determined by holding energy fixed in a closed system, and the canonical ensemble which finds $f_0$ holding the temperature of the system fixed \citep{sethna}. These ensembles break down when non-extensive forces are involved (in the latter case, specifically because self-gravitating systems have no maximum entropy) \citep{self_gravitating_statistical_mechanics,lb_negative_specific_heat, BT}. Another peculiarity of self-gravitating systems is that they have a negative heat capacity \citep{lb_negative_specific_heat}.
 
-The implication is that self-gravitating systems of stars, which have no means to dissipate internal energy, can never be in thermodynamic equilibrium. A system which starts in dynamical equilibrium evolves to a state of higher entropy when perturbed, which is physically characterized as having a dense core and extended envelope of mass \citep{BT}. Since a thermodynamic resolution of why galaxies evolve the way the do is unattainable due to the extensive nature of gravity, we are forced to study non-equilibrium dynamical evolution of $f(\textbf{r},\textbf{v},t)$ to understand galactic systems, and this requires more theory\footnote{For more information on the thermodynamics of self-gravitating systems, Chapter~4.10 of \citet{BT} and Chapter~7.3 of \citet{BT} provide excellent summaries.}.
+The implication is that self-gravitating systems of stars, which have no means to dissipate internal energy, can never be in thermodynamic equilibrium. A system which starts in dynamical equilibrium evolves to a state of higher entropy when perturbed, which is physically characterized as having a dense core and extended envelope of mass \citep{BT}. Since a thermodynamic resolution of galactic dynamics is unattainable, a dynamical theory of galaxy evolution must be developed\footnote{For more information on the thermodynamics of self-gravitating systems, Chapter~4.10 of \citet{BT} and Chapter~7.3 of \citet{BT} provide excellent summaries.}.
 
 \subsection{The Collisionless Boltzmann Equation}
 
@@ -56,7 +56,7 @@ where $\mathcal{D}$ is the phase space. We are left with a 6D space + 1D time so
 
 \subsection{Monte Carlo Solution of the Collisionless Boltzmann Equation}
 
-In terms of actually solving the CBE, we run into a number of technical challenges in applying traditional finite difference and finite volume schemes for advection equations. These techniques require that some mesh be constructed, and the flows between the cells in the mesh are calculated dependent on the type of equation being solved and the current states of the cells\footnote{Chapter~19 of \citet{numerical_recipes_fortran} discusses numerical methods for PDEs, although you could find detailed discussion of finite difference and finite volume methods in most numerical methods texts.}. The spatial domain is 6D, meaning a uniform mesh resolution scales in memory consuption as $O(N^6)$, where $N$ is the number of cells on an axis. For a sanity check, a modest $N = 2^5$ element grid would take up $2^{30} \times 2^4 \text{ bytes} \sim 17 \text{ GB}$. We obviously need more than 32 cells on an axis to represent the fine DF structure we want to study, and we are already at the limit of a single compute node to apply a finite difference scheme. 
+In terms of actually solving the CBE, we run into a number of technical challenges in applying traditional finite difference and finite volume schemes for advection equations. These techniques require that some mesh be constructed, and the flows between the cells in the mesh are calculated dependent on the type of equation being solved and the current states of the cells\footnote{Chapter~19 of \citet{numerical_recipes_fortran} discusses numerical methods for PDEs, although you could find detailed discussion of finite difference and finite volume methods in most numerical methods texts.}. The spatial domain is 6D, meaning a uniform mesh resolution scales in memory consumption as $O(N^6)$, where $N$ is the number of cells on an axis. For a sanity check, a modest $N = 2^5$ element grid would take up $2^{30} \times 2^4 \text{ bytes} \sim 17 \text{ GB}$. We obviously need more than 32 cells on an axis to represent the fine DF structure we want to study, and we are already at the limit of a single compute node to apply a finite difference scheme. 
 
 This is where Monte Carlo methods shine. The fundamental principle on which they operate is that I can evaluate the integral of any function, $f(\textbf{x})$, over a domain $\mathcal{D}$, as \citep{numerical_recipes_fortran},
 \begin{equation}
@@ -64,7 +64,7 @@ This is where Monte Carlo methods shine. The fundamental principle on which they
 \end{equation}
 where $X_s$ is a uniform random sample of points on $\mathcal{D}$, $V(\mathcal{D})$ is the volume of the domain, $n$ is the dimensionality of $\textbf{x}$, and $\vert X_s \vert$ is the cardinality, or number of points in the sample. The benefit of Monte Carlo integration is that although our result is not deterministic, the error in the integral is reduced as $1/\sqrt{N}$ \textit{regardless of the integral's dimension}! 
 
-The point of introducing this powerful concept is simply in recognition of the fact that we need to integrate over phase space to solve Eq. \eqref{eq:cbe_cartesian}. As we stated, computing these integrals on a mesh is intractible, so we represent $f(\textbf{r},\textbf{v},t)$ in another way:
+The point of introducing this powerful concept is simply in recognition of the fact that we need to integrate over phase space to solve Eq. \eqref{eq:cbe_cartesian}. As we stated, computing these integrals on a mesh is intractable, so we represent $f(\textbf{r},\textbf{v},t)$ in another way:
 \begin{equation}
 f(\textbf{r},\textbf{v},t) \approx \sum_i m_i \delta^3(\textbf{r} - \textbf{r}_i) \delta^3(\textbf{v} - \textbf{v}_i)
 \end{equation}
@@ -101,7 +101,7 @@ U(\Delta T) = K(\frac{\Delta t}{2}) D(\Delta t) K(\frac{\Delta t}{2}).
 \end{equation}
 This integration scheme is reasonably accurate with only two force evaluations, and is colloquially referred to as Leapfrog. It is also symplectic, meaning that the Hamiltonian of the system will not drift. Chapter~3 of \citet{BT} has an excellent comparison of numerical integrators, including the Leapfrog scheme given here.
 
-The final remaining complication for the timestepping portion of solving the CBE is determining the timesteps themselves. This is slightly more complicated to do properly than choosing a fixed timestep for all particles. This is because accelerations and velocities in astrophysical systems vary by orders of magnitude, and the timestep needs to be small compared to the timescales defined by the relevant accelerations. The way that this is commonly implemented, including in \citet{GadgetCodePaper}, is to have a base timestep for all particles that gets bisected at each level of refinement. That is to say, particles at level 4 are updated four more times than particles at level 2. Suppose the highest level of refinement is $k$. The simulation proceeds in $\Delta t_{base} / 2^{k}$ intervals, with particles at $k - 1$ being updated at half of the timesteps, dividing the number of updates by two up to the coarsest level of temporal refinement. Where multiple levels need updates, particles at the lower levels are updated first.
+The final remaining complication for the time stepping portion of solving the CBE is determining the timesteps themselves. This is slightly more complicated to do properly than choosing a fixed timestep for all particles. This is because accelerations and velocities in astrophysical systems vary by orders of magnitude, and the timestep needs to be small compared to the timescales defined by the relevant accelerations. The way that this is commonly implemented, including in \citet{GadgetCodePaper}, is to have a base timestep for all particles that gets bisected at each level of refinement. That is to say, particles at level 4 are updated four more times than particles at level 2. Suppose the highest level of refinement is $k$. The simulation proceeds in $\Delta t_{base} / 2^{k}$ intervals, with particles at $k - 1$ being updated at half of the timesteps, dividing the number of updates by two up to the coarsest level of temporal refinement. Where multiple levels need updates, particles at the lower levels are updated first.
 
 The level of temporal refinement assigned to a given particle is determined primarily by the acceleration it experiences. That is, for \textsc{Gadget-3} \citep{GadgetCodePaper},
 \begin{equation}
@@ -111,15 +111,15 @@ Here, $\eta$ is a free accuracy parameter and $\epsilon$ is the gravitational so
 \begin{equation}
 \textbf{a}_i(\textbf{r}) = -\frac{G m_i}{\left(\vert\textbf{r} - \textbf{r}_i\vert^2 + \epsilon^2\right)^{3/2}}(\textbf{r} - \textbf{r}_i) \label{eq:point_mass}
 \end{equation}
-Higher choices of $\epsilon$ reduce large errors accumulating due to unsustainably large forces, but also make the force calculation less accurate.
+Higher choices of $\epsilon$ reduce large errors accumulating due to large forces, but also make the force calculation less accurate.
 
 \subsection{Efficient Force Calculation}
 
-The Leapfrog scheme requires us to compute the force two times. Naively, we would compute a sum over Eq. \eqref{eq:point_mass} for each of the $N(N-1)/2$ unique pairs of positions in $O(N^2)$ time to compute the forces on all particles. This is also intractible, or rather is the limiting factor on how large of a simulation we can run. Methods were developed early on in the history of running N-body simulations to cope with this by approximating the potential.
+The Leapfrog scheme requires us to compute the force two times. Naively, we would compute a sum over Eq. \eqref{eq:point_mass} for each of the $N(N-1)/2$ unique pairs of positions in $O(N^2)$ time to compute the forces on all particles. This is also intractable, or rather is the limiting factor on how large of a simulation we can run. Methods were developed early on in the history of running N-body simulations to cope with this by approximating the potential.
 
-The first method worth noting for this thesis is the particle mesh technique \citep{hockney_pm, white_pm, klypin_pm}. This technique considers the calculation of forces on a 3D mesh by reducing the calculation to a Fast Fourier Transform (FFT) \citep{numerical_recipes_fortran}. One of the crowning achievements of scientific computing in the 20th century was the rediscovery of an algorithm by J. W. Cooley and John Tukey, originally discovered by Gauss, to compute the discrete fourier transform (DFT) in $O(N\,\log\,N)$ complexity\footnote{What Gauss was doing with recursive DFT algorithms is beyond the author, but in the author's humble opinion, it is expected from the greatest mathematician to ever live.}\citep{fft}. Particle mesh's cloud-in-cell (CIC) algorithm was a part of a flurry of algorithms that subsequently exploited the FFT. It has a difficult time accounting for forces from particles separated by small scales on the mesh, though \citep{GadgetCodePaper}.
+The first method worth noting for this thesis is the particle mesh technique \citep{hockney_pm, white_pm, klypin_pm}. This technique considers the calculation of forces on a 3D mesh by reducing the calculation to a Fast Fourier Transform (FFT) \citep{numerical_recipes_fortran}. One of the crowning achievements of scientific computing in the 20th century was the rediscovery of an algorithm by J. W. Cooley and John Tukey, originally discovered by Gauss, to compute the Discrete Fourier Transform (DFT) in $O(N\,\log\,N)$ complexity\footnote{What Gauss was doing with recursive DFT algorithms is beyond the author, but in the author's humble opinion, it is expected from the greatest mathematician to ever live.}\citep{fft}. Particle mesh's cloud-in-cell (CIC) algorithm was a part of a flurry of algorithms that subsequently exploited the FFT. It has a difficult time accounting for forces from particles separated by small scales on the mesh, though \citep{GadgetCodePaper}.
 
-Compensating for some of the shortcomings of the particle mesh approach, \citet{barnes_hut} introduced a new algorithm for approximating forces in $O(N \,\log\, N)$ complexity. Their algorithm took a divide an conquer approach by subdividing the simulation space into octants recursively until each particle was in its own cell. Forces would be computed pairwise for particles close together, but for distant particles, the mass distrubtion would be approximated as a multipole. To compute the forces, one simply does a depth-first-search (DFS) of the particle tree, going deeper if,
+Compensating for some of the shortcomings of the particle mesh approach, \citet{barnes_hut} introduced a new algorithm for approximating forces in $O(N \,\log\, N)$ complexity. Their algorithm took a divide an conquer approach by subdividing the simulation space into octants recursively until each particle was in its own cell. Forces would be computed pairwise for particles close together, but for distant particles, the mass distribution would be approximated as a multipole. To compute the forces, one simply does a depth-first-search (DFS) of the particle tree, going deeper if,
 \begin{equation}
 \frac{l}{d} \geq \theta
 \end{equation}
@@ -133,9 +133,9 @@ where $M$ is the mass in the current DFS subtree, $\vert\textbf{a}_{i,t-1} \vert
 
 The scheme proposed by \citet{barnes_hut} is widely used in astrophysics because of its efficiency and computability. While both algorithms are $O(N\,\log\, N)$ complexity, tree-based methods tend to perform more slowly in practice \citep{GadgetCodePaper}. \citet{xu_treepm} introduced a scheme to combine both the short-range accuracy of tree methods with the efficiency of FFT-based methods. This TreePM method has been widely successful at handling short range forces with a tree method and long range forces with particle mesh techniques. The trick is forcing consistency between the two methods at intermediate distances. \textsc{Gadget-3} combines a high degree of optimization with the TreePM algorithm to produce a highly efficient algorithm.
 
-Before proceeding to talk about the complications of executing TreePM on distributed systems like the Linux clusters worked with in this thesis, we would be remiss in not mentioning field expansion methods. Typically these take the form of an expansion of the potential in spherical harmonics using a set of radial basis functions. A brief discussion of these methods is presented in Chapter~2.9.4 of \citet{BT}. These methdos have great historical significance, and have even seen a recent resurgence in helping understand the structure of dark matter halos \citep{lilley_2018_a, lilley_2018_b}.
+Before proceeding to talk about the complications of executing TreePM on distributed systems like the Linux clusters worked with in this thesis, we would be remiss in not mentioning field expansion methods. Typically these take the form of an expansion of the potential in spherical harmonics using a set of radial basis functions. A brief discussion of these methods is presented in Chapter~2.9.4 of \citet{BT}. These methods have great historical significance, and have even seen a recent resurgence in helping understand the structure of dark matter halos \citep{lilley_2018_a, lilley_2018_b}.
 
-To summarize, there are a number of ways to find gravitational forces in a simulation that all amount to solving Poisson's Equation, \eqref{eq:poisson}. The most accurate way is to compute all pairwise forces, but efficient algorithms have been developed to accurately estimate forces from gravity. The force calculation together with a timestepping scheme for N-body realizations forms the main components of an N-body simulation, and solving Eq. \eqref{eq:nbody_system} to estimate $f(\textbf{r},\textbf{v},t)$ is what we mean when we say we ran a simulation.
+To summarize, there are a number of ways to find gravitational forces in a simulation that all amount to solving Poisson's Equation, \eqref{eq:poisson}. The most accurate way is to compute all pairwise forces, but efficient algorithms have been developed to accurately estimate forces from gravity. The force calculation together with a time stepping scheme for N-body realizations forms the main components of an N-body simulation, and solving Eq. \eqref{eq:nbody_system} to estimate $f(\textbf{r},\textbf{v},t)$ is what we mean when we say we ran a simulation.
 
 \subsection{Complications on Distributed Systems}
 
@@ -149,17 +149,17 @@ Modern high performance computing is largely done on compute clusters which are 
 
 Specifically, in an N-body simulation,  will have a subset of all of the particles, and a subset of the total tree structure. A naive DFS of an Octree simply cannot be done since no process will have all of the particles. When a process requires particles from another process, this reduces the efficiency gained from increasing the number of processors, and one might even get an overall slowdown. Another potential problem is that an individual process may get a higher work load than other processes, causing the other processes to wait for it to finish. We talk about how both of these problems are solved here.
 
-To reduce the need to explicitly transfer particles between processes, \textsc{Gadget-3} notes that pairwise forces will only be needed for nearby poarticles. These represent the bulk of the tree force calculation. Any scheme which puts nearby particles on the same processor will reduce the overall communication time in the force calculation phase. One way to accomplish efficient load balancing is to partition the simulation space using a space filling curve. Fig. \ref{fig:peano} shows the Peano space-filling curve at several levels of refinement in 2D. This is the curve \textsc{Gadget-3} uses. A level of refinement is selected, and estimates of the computational cost in each cube are added up along the space filling curve to equally distribute the computational load. This results in nearby particles being on the same process, and in the processes having roughly equal work loads. \citet{GadgetCodePaper} shows that this is highly effective at reducing communication cost in the simulation, and it goes into more detail about how TreePM is carried out on distributed systems.
+To reduce the need to explicitly transfer particles between processes, \textsc{Gadget-3} notes that pairwise forces will only be needed for nearby particles. These represent the bulk of the tree force calculation. Any scheme which puts nearby particles on the same processor will reduce the overall communication time in the force calculation phase. One way to accomplish efficient load balancing is to partition the simulation space using a space filling curve. Fig. \ref{fig:peano} shows the Peano space-filling curve at several levels of refinement in 2D. This is the curve \textsc{Gadget-3} uses. A level of refinement is selected, and estimates of the computational cost in each cube are added up along the space filling curve to equally distribute the computational load. This results in nearby particles being on the same process, and in the processes having roughly equal work loads. \citet{GadgetCodePaper} shows that this is highly effective at reducing communication cost in the simulation, and it goes into more detail about how TreePM is carried out on distributed systems.
 
 
 \section{Phase Space, Equilibrium, and Initial Conditions} \label{sec:galaxy_ics}
 In \S\ref{sec:motivation} we outlined the underlying theory behind representing stars and dark matter in an N-body simulation. The focus of this thesis is studying the behavior of stellar disks in cosmological environments, and the first step towards that understanding is the construction of a pristine, equilibrium N-body model. Ultimately, in the course of running an N-body simulation, these pristine systems will diverge to higher entropy states, initially due to random errors in the N-body representation. Nonetheless, these models give us an understanding of how perfectly unperturbed galaxies will evolve due to the fact that real galaxies are also made of a finite number of particles.
 
-\subsection{Jeans Modeling and the Epicyclic Approximation}
+\subsection{Jeans Modelling and the Epicyclic Approximation}
 
 The DF represents the 6D phase space information and completely describes an N-body system. In a simple disk-halo system, there is a flattened axisymmetric component (the disk), and a spheroidal component (the dark matter halo) each with their own DF. These are made self-consistent by the separate DFs' incorporation of their combined gravitational potential. 
 
-However, the DF is not the quantity that is observed in external galaxies. Astronomers are not typically working with a 6D phase space description of the structures they observe. Luminosity (density) profiles are one observable , as well as circular velocities (rotation curves) for disks, and also the spread of line of sight (LOS) velocties of disk stars. A modelling approach that takes our understanding of these observables as input is conceptually easier to understand than a DF which may or may not be unique \citep{BT}.
+However, the DF is not the quantity that is observed in external galaxies. Astronomers are not typically working with a 6D phase space description of the structures they observe. Luminosity (density) profiles are one observable , as well as circular velocities (rotation curves) for disks, and also the spread of line of sight (LOS) velocities of disk stars. A modelling approach that takes our understanding of these observables as input is conceptually easier to understand than a DF which may or may not be unique \citep{BT}.
 
 In this spirit, \citet{jeans_1915}\footnote{Notably before the infamous 1920 Curtis-Shapley debate \citep{curtis_shapley} establishing that so-called ``spiral nebulae" were actually external galaxies.} laid out a framework to describe galaxy evolution in terms of the \textit{moments} of the distribution function. Specifically, the idea is to multiply the CBE (Eq. \eqref{eq:cbe_cartesian}) by $\textbf{v}_i$ or $\textbf{v}_i \textbf{v}_j$ and integrate over the velocity part of phase space. These together yield the second-order Jeans equations \citep{BT},
 \begin{eqnarray}
@@ -180,7 +180,7 @@ where $z$ is the Cartesian $z$, $R$ is the cylindrical radius, and $\phi$ is the
 
 We have also thrown out information about the DF by using moments and stopping at second order. Higher order Jeans equations can be appended to this system by multiplying the CBE by $v_i v_j v_k$ to obtain the third order equations, and so on. These get progressively more complicated, and we would require more additional equations to evaluate the equilibrium Jeans equations \citep{BT}.
 
-Despite these shortcomings, more information can be imposed on the system to make these equations applicable. \citet{hernquist_1993} was one of the first successful applications of Jeans modelling to creating equilibrium galaxies with bulges, disks, and dark matter halos. In the case of the dark matter halo for a disk-halo system, one only has to specify the function,
+Despite these shortcomings, more information can be imposed on the system to make these equations applicable. \citet{hernquist_1993} presented one of the first successful applications of Jeans modelling to creating equilibrium galaxies with bulges, disks, and dark matter halos. In the case of the dark matter halo for a disk-halo system, one only has to specify the function,
 \begin{equation}
 \beta(r) = 1 - \frac{\langle v_\theta^2\rangle + \langle v_\phi^2 \rangle}{2 \langle v_R^2 \rangle}.
 \end{equation}
@@ -193,9 +193,9 @@ In the case of the axisymmetric disk, \citet{hernquist_1993} based their model o
 Here, $M_d$ is the mass of the disk, $R_d$ is the radial scale length, and $z_d$ is the vertical scale length.
 Observations support the idea that the second radial velocity moment also has an exponential profile \citep{van_der_kruit_searle_1981, lewis_freeman_1989},
 \begin{equation}
-\langle v_R^2  = \sigma_{R,0} e^{-R/R_\sigma}.
+\langle v_R^2 \rangle = \sigma_{R,0} e^{-R/R_\sigma}.
 \end{equation}
-Here, $R_\sigma$ is the radial dispersion scale length, and $\sigma_{R,0}$ is a free velocity scale (on the order of 100 km/s for the Milky Way). In  priciple, any radial scale length can be used for $\langle v_R^2 \rangle$, but it is generally accepted to be a longer scale length than $R_d$. The vertical dispersion and second velocity moment are determined from the assumption of the disc being isothermal,
+Here, $R_\sigma$ is the radial dispersion scale length, and $\sigma_{R,0}$ is a free velocity scale (on the order of 100 km/s for the Milky Way). In  principle, any radial scale length can be used for $\langle v_R^2 \rangle$, but it is generally accepted to be a longer scale length than $R_d$. The vertical dispersion and second velocity moment are determined from the assumption of the disc being isothermal,
 \begin{equation}
 \langle v_z^2 \rangle = \pi G \Sigma z_d
 \end{equation}
@@ -207,7 +207,7 @@ The main idea is that stars in discs are on roughly circular and planar orbits, 
 \frac{\text{d}^2y}{\text{d} t^2} &=& 0\\
 \frac{\text{d}^2z}{\text{d} t^2} &=& \deriv{\Phi_{eff}}{z}
 \end{eqnarray}
-where $\Phi_{eff} = \Phi(R,z) + L_z^2/2 R^2$ is the efffective potential in the accelerating (rotating) reference frame, and $L_z$ is the $z$-component of the angular momentum. These equations can be written in a first order expansion as,
+where $\Phi_{eff} = \Phi(R,z) + L_z^2/2 R^2$ is the effective potential in the accelerating (rotating) reference frame, and $L_z$ is the $z$-component of the angular momentum. These equations can be written in a first order expansion as,
 \begin{eqnarray}
 \frac{\text{d}^2x}{\text{d} t^2} &=& \kappa^2 x\\
 \frac{\text{d}^2y}{\text{d} t^2} &=& 0\\
@@ -225,7 +225,7 @@ and,
 \begin{equation}
 \nu^2(R_g) = \left(\deriv{\Phi}{z}\right)_{R=R_g,z=0}.
 \end{equation}
-That is, a star's orbit is decribed by three frequencies: its rotational frequency $\Omega$, a radial oscillation frequency, $\kappa$, and a vertical oscillation frequency, $\nu$. This view is accurate so long as the vertical motion does not deviate far from the disc midplane. The actual values of these constants in Galactic astonomy are related to a problem known as the \textit{Oort Problem}, and we believe that for the Sun \citep{BT},
+That is, a star's orbit is described by three frequencies: its rotational frequency $\Omega$, a radial oscillation frequency, $\kappa$, and a vertical oscillation frequency, $\nu$. This view is accurate so long as the vertical motion does not deviate far from the disc midplane. The actual values of these constants in Galactic astronomy are related to a problem known as the \textit{Oort Problem}, and we believe that for the Sun \citep{BT},
 \begin{eqnarray}
 \frac{\kappa}{\Omega} &\approx& 1.35 \\
 \frac{\nu}{\kappa} &\approx& 2
@@ -244,15 +244,15 @@ where the fraction in the product contains quantities solely determined from the
 
 \subsection{DF-based Models and the Jeans Theorem}
 
-Although Jeans modeling is used to set up initial conditions for galaxies because it does not require a DF to be known ahead of time, the best initial conditions are generated from DFs \footnote{That is not to say that no one uses Jeans modelling to set up ICs. Approaches like the one presented in \citet{hernquist_1993} were enormously successful and still used today.}. In general, the equilibrium DF is a function of six variables. However, there are some quantities, called \textit{integrals of motion}, which do not change along a star's orbit in a potential. For an axisymmetric potential, these are the total energy, $\mathcal{E}$, $L_z$ and a third quantity, $I_3$.  
+Although Jeans modelling is used to set up initial conditions for galaxies because it does not require a DF to be known ahead of time, the best initial conditions are generated from DFs \footnote{That is not to say that no one uses Jeans modelling to set up ICs. Approaches like the one presented in \citet{hernquist_1993} were enormously successful and still used today.}. In general, the equilibrium DF is a function of six variables. However, there are some quantities, called \textit{integrals of motion}, which do not change along a star's orbit in a potential. For an axisymmetric potential, these are the total energy, $\mathcal{E}$, $L_z$ and a third quantity, $I_3$.  
 For spherical systems, up to five integrals of motion are admitted by the system, but the simplest \textit{ergodic} models simply have $f_{h}(\mathcal{E})$ for the DF. 
 
 
 If we assume the epicycle approximation, then $I_3 \approx E_z = \Phi(R,0) - \Phi(R,z) + \frac{1}{2} v^2$, where $v$ is the velocity of an orbit \citep{kd95galactics}. The vertical energy, $E_z$, is conserved so long as the disc is razor thin. Jeans showed that a DF that is a function of the integrals of motion describes an equilibrium distribution. More specifically, quoting from \citet{BT},
 \begin{theorem}[The Jeans Theorem]
-Any steady-state solution of the collisionless Boltzmann equation depends on the phase-space coordinates only through integrals of motion in a givcen potential, and any function of the integrals yields a steady-state solution of the collisionless Boltzmann equation.
+Any steady-state solution of the collisionless Boltzmann equation depends on the phase-space coordinates only through integrals of motion in a given potential, and any function of the integrals yields a steady-state solution of the collisionless Boltzmann equation.
 \end{theorem}
-Proof of this theorem can be obtained in \citet{jeans_1915} and in Chapter~4.2 of \citet{BT}, although it essentially amounts to observing that the time derivative of a function of time-independent quantities is zero by the chain rule. Now that we know that any DF of the intergrals of motion gives a steady state solution, and that using the epicyclic approximation gives us three known integrals of motion, we can ask ourselves what kinds of DFs describe the NFW haloes and exponential disks that are easily obtained from Jeans modelling.
+Proof of this theorem can be obtained in \citet{jeans_1915} and in Chapter~4.2 of \citet{BT}, although it essentially amounts to observing that the time derivative of a function of time-independent quantities is zero by the chain rule. Now that we know that any DF of the integrals of motion gives a steady state solution, and that using the epicyclic approximation gives us three known integrals of motion, we can ask ourselves what kinds of DFs describe the NFW haloes and exponential disks that are easily obtained from Jeans modelling.
 
 We talk about the case of an ergodic halo and DF yielding an exponential disc at length here. For the remainder of the thesis, we primarily generate our initial conditions in this way. For any ergodic DF, a chosen density profile may be inverted by the Eddington inversion formula \citep{BT},
 \begin{equation}
@@ -262,13 +262,13 @@ where $\Psi = - \Phi$. Note that the combined potential need not be spherical, o
 \begin{equation}
 \nu_h(r) \sim \rho_{h}(r) = \frac{\rho_0 R_s^3}{r (R_s + r)^2}
 \end{equation}
-where $\rho_0$ is a scale density and $R_s$ is the halo scale length as our target halo denity. By obtaining the 1D DF from Eq. \eqref{eq:eddington}, we can sample halo orbits given the combined disc-halo potential.
+where $\rho_0$ is a scale density and $R_s$ is the halo scale length as our target halo density. By obtaining the 1D DF from Eq. \eqref{eq:eddington}, we can sample halo orbits given the combined disc-halo potential.
 
 For the disc DF, we use a DF that yields exponential discs presented in \citet{kd95galactics}. Noting that if $E_z$ is an integral of motion that $E_p = \mathcal{E} - E_z$ is also an integral of motion, we use,
 \begin{equation}
 f_d(E_p,L_z,E_z) = \frac{\Omega(R_c)}{(2 \pi^3)^{1/2} \kappa(R_c)} \frac{\tilde{\rho_d}}{\tilde{\sigma_R}^2(R_c) \tilde{\sigma_z}(R_c)} \exp\left[-\frac{E_p - E_c(R_c)}{\tilde{\sigma_R}^2(R_c)}  - \frac{E_z}{\tilde{\sigma_z}^2(R_c)}\right].
 \end{equation}
-Note that the quantities $\Omega$ and $\kappa$ have their usual definitions, the tilde functions are free choices to tune the disc properties (although they are qualitaively understood as velocity dispersions), and $E_c$ is the energy of a circular orbit. Note that the $R_c$-dependent quantities do not violate the sole dependence on integrals of motion, since $R_c$ is uniquely obtained in a one-to-one fashion from $L_z$.
+Note that the quantities $\Omega$ and $\kappa$ have their usual definitions, the tilde functions are free choices to tune the disc properties (although they are qualitatively understood as velocity dispersions), and $E_c$ is the energy of a circular orbit. Note that the $R_c$-dependent quantities do not violate the sole dependence on integrals of motion, since $R_c$ is uniquely obtained in a one-to-one fashion from $L_z$.
 
 In terms of the choices for the tilde functions, we choose them to yield the closest thing to an exponential-sech$^2$ density profile with and exponential radial velocity dispersion as possible. Assuming an exponential radial dispersion profile, a disc density is obtained by iteratively adjusting $\tilde{\sigma_z}$ and $\tilde{\rho}$ such that \citep{kd95galactics},
 \begin{equation}
@@ -276,7 +276,7 @@ In terms of the choices for the tilde functions, we choose them to yield the clo
 \end{equation}
 Here, $M_d$ is a parameter that is approximately equal to the mass of the disk, $R_{out}$ is a truncation radius, $\delta R_{out}$ is a parameter determining the sharpness of the truncation, and $\Psi_z$ is the negative vertical potential, $\Phi(R,0) - \Phi(R,z)$. The motivation behind the last term in the product is to yield a dropoff of vertical density close to $\text{sech}^2(z/z_d)$.
 
-Similar to the  Jeans models, we actualize these systems by sampling their combined spatial densities. At every sampled point, we draw a velocity from the DF that is constructed in the combiend potential. This does not require us to, for example, use a Gaussian distribution for the velocity dispersions as in Jeans models. This kind of model is as accurate as the assumption that $E_z$ is an integral of motion is (as accurate as the epicycle approximation is). A more detailed discussion about how self-consistent systems are realized from DFs can be found in \citet{kd95galactics}, and this work forms the basis for the \textsc{GalactICS} code used in this thesis.
+Similar to the  Jeans models, we actualize these systems by sampling their combined spatial densities. At every sampled point, we draw a velocity from the DF that is constructed in the combined potential. This does not require us to, for example, use a Gaussian distribution for the velocity dispersions as in Jeans models. This kind of model is as accurate as the assumption that $E_z$ is an integral of motion is (as accurate as the epicycle approximation is). A more detailed discussion about how self-consistent systems are realized from DFs can be found in \citet{kd95galactics}, and this work forms the basis for the \textsc{GalactICS} code used in this thesis.
 
 \subsection{Action-Angle Variables and the Strong Jeans Theorem}
 
@@ -296,7 +296,7 @@ Our discussion up to this point has focused on simulating isolated systems. Comp
 
 \subsection{Simulations of FRW Cosmology: Large Scale Properties}
 
-In words, the $\Lambda$CDM paradigm described in Chapter~\ref{ch:introduction} prescribes a Universe comprised of four fundamental substances: baryond, radiation, dark matter, and dark energy. On large scales, the Universe is also believed to be isotropic and homogeneous, meaning the patch we occupy is the exact same as any other patch. General Relativity provides a mechanism for us to meaningfully compute distances between patches is this scenario. The so-called Friedmann-Robertson-Walker metric tells us that the \textit{proper distance} between two points at different positions in space and at different times is \citep{kolb_turner, dodelson},
+In words, the $\Lambda$CDM paradigm described in Chapter~\ref{ch:introduction} prescribes a Universe comprised of four fundamental substances: baryons, radiation, dark matter, and dark energy. On large scales, the Universe is also believed to be isotropic and homogeneous, meaning the patch we occupy is the exact same as any other patch. General Relativity provides a mechanism for us to meaningfully compute distances between patches is this scenario. The so-called Friedmann-Robertson-Walker metric tells us that the \textit{proper distance} between two points at different positions in space and at different times is \citep{kolb_turner, dodelson},
 \begin{equation}
 \text{d}\,s^2 = c^2 \text{d}\,t^2 + a^2(t) \left(\frac{\text{d}\,r^2}{1 - k r^2} + r^2\text{d}\,\Omega^2 \right).
 \end{equation}
@@ -305,7 +305,7 @@ Here, $c$ is the speed of light, $t$ is the time coordinate, $a$ is the scale fa
 \left( \frac{\dot{a}}{a} \right)^2 &=& \frac{8 \pi G}{3} \rho\\
 \frac{\ddot{a}}{a} &=& -\frac{4 \pi G}{3}\left(\rho + \frac{3 p}{c^2}\right).
 \end{eqnarray}
-Here $\rho$ is the density of the Universe, $p$ is the pressure of the Universe, and we introduce the defintion $H(t) = \dot{a} / a$, the Hubble parameter. With the definition of the Hubble parameter, the first of the Friedmann equations is commonly expressed,
+Here $\rho$ is the density of the Universe, $p$ is the pressure of the Universe, and we introduce the definition $H(t) = \dot{a} / a$, the Hubble parameter. With the definition of the Hubble parameter, the first of the Friedmann equations is commonly expressed,
 \begin{equation}
 \left(\frac{H(t)}{H_0}\right)^2 = a^{-4} \Omega_{R,0} + a^{-3} \Omega_{M,0} + \Omega_{\Lambda,0}
 \end{equation}
@@ -325,7 +325,7 @@ If two objects are at rest with respect to the proper coordinate system at prese
 \begin{equation}
 \dot{d} = H_0 r.
 \end{equation}
-This effect was first described by \citet{hubble_1929}, and explains why distant galaxies appear to be moving away from us. More generally, we call this term in the proper velocitiy the \textit{Hubble flow}.
+This effect was first described by \citet{hubble_1929}, and explains why distant galaxies appear to be moving away from us. More generally, we call this term in the proper velocity the \textit{Hubble flow}.
 
 
 % Comoving coordinates and redshift
@@ -335,7 +335,7 @@ Following up on this concept, we introduce the notion of \textit{redshift}. The 
 \begin{equation}
 1 + z = \frac{1}{a}
 \end{equation}
-in analogy to this phenomenon. This is a descending unit of time that is often used interchangably with the scale factor, $a$.
+in analogy to this phenomenon. This is a descending unit of time that is often used interchangeably with the scale factor, $a$.
 \subsection{Simulations of FRW Cosmology: Cosmological Initial Conditions}
 
 Of course, the Universe is not actually homogeneous on small scales. As we suggested in Chapter~\ref{ch:introduction}, small scale fluctuations are present in the early Universe which collapse to form galaxies. Initially, these fluctuations evolve independently of each other in the so-called \textit{linear regime}. Initial conditions for $\Lambda$CDM simulations rely on this fact to generate the initial perturbations for the simulation.
@@ -389,7 +389,7 @@ K_t(\Delta t) : \begin{cases}
       \textbf{p}^\prime_i & \longrightarrow  \textbf{p}^\prime_i - \nabla^\prime\phi^\prime \int_{t}^{t + \Delta t} \frac{\text{d}\,t}{a(t)}
       \end{cases}
 \end{eqnarray}
-Since these operators derive directly from a separatable Hamiltonian, this integrator is symplectic. Even though the energy of our cosmological system is not conserved, there will be no drift about the continuum system's actual energy. This is the integration scheme used in \textsc{Gadget-3} for cosmological simulations.
+Since these operators derive directly from a separable Hamiltonian, this integrator is symplectic. Even though the energy of our cosmological system is not conserved, there will be no drift about the continuum system's actual energy. This is the integration scheme used in \textsc{Gadget-3} for cosmological simulations.
 
 \subsection{Extension of Numerical Methods: Gravity Calculation}
 
@@ -430,5 +430,3 @@ The resultant data structure after applying this algorithm sequentially to all s
 %\subsection{MCMC}
 \bibliographystyle{apalike}
 \bibliography{bibliography_background}
-
-

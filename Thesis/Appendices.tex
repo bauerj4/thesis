@@ -4,44 +4,7 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-\chapter{Euler's Equations in Comoving Coordinates} \label{sec:derivation}
 
-The time-evolution of the angular momentum vector ${\bf L}$ of a rigid
-body acted upon by a torque $\boldsymbol{\tau}$ is given by
-
-\begin{equation}
-  \left(\frac{{d} \bf{L}}{{d} t}\right)_f = \left(\frac{{d} \bf{L}}{{d} t}\right)_b  + \boldsymbol \omega \times \bf{L}
-  = \boldsymbol{\tau}
-\end{equation}
-
-\noindent where the subscripts $f$ and $b$ denote the frame of the
-simulation box and the body frame, respectively.  In physical
-coordinates, ${\bf L} = {\bf r \times p}$.  Alternatively, we can
-write ${\bf L} = {\bf s\times q}$ where ${\bf s} = a^{-1}{\bf r}$
-refer to comoving coordinates and ${\bf q} = a^2\dot{\bf s}$ is the
-conjugate momentum to ${\bf s}$ (see \citet{QuinnIntegrators}).
-
-For a rigid body, the components of the angular momentum are given by $L_i = I_{ij} \omega_j$ where $i,j$ run over $x,\,y,\,z$ and there is an implied sum over $j$.  Since \textsc{gadget-3} uses comoving coordinates, we write $I_{ij} = a^2 J_{ij}$ where $J$ is the moment of inertia tensor written in terms of the comoving coordinates, ${\bf s}$, rather than the physical coordinates, ${\bf r}$.  For convenience, we define a ``comoving'' angular velocity $\boldsymbol{\varpi} = a^{-2}\boldsymbol{\omega}$.  We then have $L_i = J_{ij} \varpi_j$.  Note that because of the symmetry of our disc, the moment of inertia tensor is diagonal with $J_{xx} = J_{yy}= J_{zz} \equiv J/2$.  The equations of motion for the Euler angles and the disc angular velocity are then given by the standard Euler equations of rigid body dynamics, modified to account for the time-dependence of the disc's moment of inertia:
-
-\begin{equation}
-\frac{d\phi}{dt} = a^{-2}\sin^{-1}{\theta} \left (\varpi_x\sin(\psi) + \varpi_y \cos(\psi)\right )~,
-\end{equation}
-\begin{equation}
-\frac{d\theta}{dt} = a^{-2}\left (  \varpi_1\cos(\psi) - \varpi_y \sin(\psi)\right )~,
-\end{equation}
-\begin{equation}
-J\frac{\varpi_x}{dt} + \varpi_x\frac{dJ}{dt}
-+ J\varpi_y\varpi_z
-=  \tau_x~,
-\end{equation}
-and
-\begin{equation}
-\frac{\varpi_y}{dt} + \varpi_y\frac{dJ}{dt}
-- J\varpi_x\varpi_z
-=  \tau_y~.
-\end{equation}
-
-\noindent We have omitted the equations for $\psi$ (rotations in the body frame about the symmetry axis) and $\varpi_z$ since these are determined directly from Eq.\,\ref{eq:omega3}.   
 
 \chapter{Referenced Code: kicks.c} \label{ch:kicks.c}
 \lstinputlisting[language=C,basicstyle=\footnotesize,

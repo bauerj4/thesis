@@ -235,6 +235,11 @@
   in the Milky Way}.
 \newblock {\em \nat}, 477:301--303.
 
+\bibitem[{Quinn} et~al., 1997]{QuinnIntegrators}
+{Quinn}, T., {Katz}, N., {Stadel}, J., and {Lake}, G. (1997).
+\newblock {Time stepping N-body simulations}.
+\newblock {\em ArXiv Astrophysics e-prints}.
+
 \bibitem[{Ro{\v s}kar} et~al., 2010]{RoskarDiskMisalignment}
 {Ro{\v s}kar}, R., {Debattista}, V.~P., {Brooks}, A.~M., {Quinn}, T.~R.,
   {Brook}, C.~B., {Governato}, F., {Dalcanton}, J.~J., and {Wadsley}, J.

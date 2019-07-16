@@ -1,9 +1,32 @@
 \begin{thebibliography}{}
 
+\bibitem[{Aguerri} et~al., 2009]{bar_fraction_1}
+{Aguerri}, J.~A.~L., {M{\'e}ndez-Abreu}, J., and {Corsini}, E.~M. (2009).
+\newblock {The population of barred galaxies in the local universe. I.
+  Detection and characterisation of bars}.
+\newblock {\em \aap}, 495:491--504.
+
+\bibitem[{Athanassoula}, 2003]{athanassoula_2003}
+{Athanassoula}, E. (2003).
+\newblock {What determines the strength and the slowdown rate of bars?}
+\newblock {\em \mnras}, 341:1179--1198.
+
+\bibitem[{Athanassoula} et~al., 2005]{athanassoula_2005}
+{Athanassoula}, E., {Lambert}, J.~C., and {Dehnen}, W. (2005).
+\newblock {Can bars be destroyed by a central mass concentration?- I.
+  Simulations}.
+\newblock {\em \mnras}, 363:496--508.
+
 \bibitem[{Athanassoula} and {Sellwood}, 1986]{AthanassoulaSellwood1986}
 {Athanassoula}, E. and {Sellwood}, J.~A. (1986).
 \newblock {Bi-symmetric instabilities of the Kuz'min/Toomre disc}.
 \newblock {\em \mnras}, 221:213--232.
+
+\bibitem[{Barazza} et~al., 2008]{bar_fraction_2}
+{Barazza}, F.~D., {Jogee}, S., and {Marinova}, I. (2008).
+\newblock {Bars in Disk-dominated and Bulge-dominated Galaxies at z \~{} 0: New
+  Insights from \~{}3600 SDSS Galaxies}.
+\newblock {\em \apj}, 675:1194--1212.
 
 \bibitem[{Bauer} et~al., 2018]{Bauer2018a}
 {Bauer}, J.~S., {Widrow}, L.~M., and {Erkal}, D. (2018).
@@ -47,14 +70,26 @@
 \newblock {Formation and properties of persisting stellar bars}.
 \newblock {\em \aap}, 96:164--173.
 
+\bibitem[{Debattista} et~al., 2006]{debattista_2006}
+{Debattista}, V.~P., {Mayer}, L., {Carollo}, C.~M., {Moore}, B., {Wadsley}, J.,
+  and {Quinn}, T. (2006).
+\newblock {The Secular Evolution of Disk Structural Parameters}.
+\newblock {\em \apj}, 645:209--227.
+
 \bibitem[{Debattista} and {Sellwood}, 1998]{debattista1998}
 {Debattista}, V.~P. and {Sellwood}, J.~A. (1998).
 \newblock {Dynamical Friction and the Distribution of Dark Matter in Barred
   Galaxies}.
 \newblock {\em \apjl}, 493:L5--L8.
 
-\bibitem[{Debattista} and {Sellwood}, 2000]{debattista2000}
-{Debattista}, V.~P. and {Sellwood}, J.~A. (2000).
+\bibitem[{Debattista} and {Sellwood}, 2000a]{debattista_sellwood_2000}
+{Debattista}, V.~P. and {Sellwood}, J.~A. (2000a).
+\newblock {Constraints from Dynamical Friction on the Dark Matter Content of
+  Barred Galaxies}.
+\newblock {\em \apj}, 543:704--721.
+
+\bibitem[{Debattista} and {Sellwood}, 2000b]{debattista2000}
+{Debattista}, V.~P. and {Sellwood}, J.~A. (2000b).
 \newblock {Constraints from Dynamical Friction on the Dark Matter Content of
   Barred Galaxies}.
 \newblock {\em \apj}, 543:704--721.
@@ -131,6 +166,16 @@
   offset, scatter and residuals correlations}.
 \newblock {\em \mnras}, 441:1243--1259.
 
+\bibitem[Hunter, 2007]{matplotlib}
+Hunter, J.~D. (2007).
+\newblock Matplotlib: A 2d graphics environment.
+\newblock {\em Computing In Science \& Engineering}, 9(3):90--95.
+
+\bibitem[Jones et~al., 2001]{scipy}
+Jones, E., Oliphant, T., Peterson, P., et~al. (2001).
+\newblock {SciPy}: Open source scientific tools for {Python}.
+\newblock [Online; accessed <today>].
+
 \bibitem[{Katz} et~al., 1994]{KatzQuasarZoom}
 {Katz}, N., {Quinn}, T., {Bertschinger}, E., and {Gelb}, J.~M. (1994).
 \newblock {Formation of Quasars at High Redshift}.
@@ -159,6 +204,13 @@
   determine the integral surface mass density of the disc near the sun.}
 \newblock {\em \mnras}, 239:571--603.
 
+\bibitem[{Laporte} et~al., 2018]{laporte_2018_low_latitude}
+{Laporte}, C.~F.~P., {Johnston}, K.~V., {G{\'o}mez}, F.~A., {Garavito-Camargo},
+  N., and {Besla}, G. (2018).
+\newblock {The influence of Sagittarius and the Large Magellanic Cloud on the
+  stellar disc of the Milky Way Galaxy}.
+\newblock {\em \mnras}, 481:286--306.
+
 \bibitem[{Martin} et~al., 2014]{martin2014}
 {Martin}, N.~F., {Ibata}, R.~A., {Rich}, R.~M., {Collins}, M.~L.~M., {Fardal},
   M.~A., {Irwin}, M.~J., {Lewis}, G.~F., {McConnachie}, A.~W., {Babul}, A.,
@@ -182,12 +234,43 @@
 \newblock {Galaxy Zoo: passive red spirals}.
 \newblock {\em \mnras}, 405:783--799.
 
+\bibitem[{Masters} et~al., 2012]{masters2012}
+{Masters}, K.~L., {Nichol}, R.~C., {Haynes}, M.~P., {Keel}, W.~C., {Lintott},
+  C., {Simmons}, B., {Skibba}, R., {Bamford}, S., {Giovanelli}, R., and
+  {Schawinski}, K. (2012).
+\newblock {Galaxy Zoo and ALFALFA: atomic gas and the regulation of star
+  formation in barred disc galaxies}.
+\newblock {\em \mnras}, 424:2180--2192.
+
+\bibitem[{Masters} et~al., 2011]{masters2011}
+{Masters}, K.~L., {Nichol}, R.~C., {Hoyle}, B., {Lintott}, C., {Bamford},
+  S.~P., {Edmondson}, E.~M., {Fortson}, L., {Keel}, W.~C., {Schawinski}, K.,
+  {Smith}, A.~M., and {Thomas}, D. (2011).
+\newblock {Galaxy Zoo: bars in disc galaxies}.
+\newblock {\em \mnras}, 411:2026--2034.
+
 \bibitem[{McCarthy} et~al., 2012]{mccarthy2012}
 {McCarthy}, I.~G., {Font}, A.~S., {Crain}, R.~A., {Deason}, A.~J., {Schaye},
   J., and {Theuns}, T. (2012).
 \newblock {Global structure and kinematics of stellar haloes in cosmological
   hydrodynamic simulations}.
 \newblock {\em \mnras}, 420:2245--2262.
+
+\bibitem[McKinney, 2010]{pandas}
+McKinney, W. (2010).
+\newblock Data structures for statistical computing in python.
+\newblock In van~der Walt, S. and Millman, J., editors, {\em Proceedings of the
+  9th Python in Science Conference}, pages 51 -- 56.
+
+\bibitem[{Merritt}, 1996]{merritt_1996}
+{Merritt}, D. (1996).
+\newblock {Optimal Smoothing for N-Body Codes}.
+\newblock {\em \aj}, 111:2462.
+
+\bibitem[{Nair} and {Abraham}, 2010]{na2010}
+{Nair}, P.~B. and {Abraham}, R.~G. (2010).
+\newblock {On the Fraction of Barred Spiral Galaxies}.
+\newblock {\em \apjl}, 714:L260--L264.
 
 \bibitem[{Navarro} et~al., 1994]{NavarroWhiteZoom}
 {Navarro}, J.~F., {Frenk}, C.~S., and {White}, S.~D.~M. (1994).
@@ -214,6 +297,11 @@
 \newblock {How to zoom: bias, contamination and Lagrange volumes in multimass
   cosmological simulations}.
 \newblock {\em \mnras}, 437:1894--1908.
+
+\bibitem[Oliphant, 2015]{numpy}
+Oliphant, T.~E. (2015).
+\newblock {\em Guide to NumPy}.
+\newblock CreateSpace Independent Publishing Platform, USA, 2nd edition.
 
 \bibitem[{Ostriker} and {Peebles}, 1973]{PeeblesOstriker1973}
 {Ostriker}, J.~P. and {Peebles}, P.~J.~E. (1973).
@@ -264,6 +352,23 @@
   (2003).
 \newblock {Tracing the Galactic Anticenter Stellar Stream with 2MASS M Giants}.
 \newblock {\em \apjl}, 594:L115--L118.
+
+\bibitem[{Romeo}, 1994]{romeo_1994}
+{Romeo}, A.~B. (1994).
+\newblock {How faithful are N-body simulations of disc galaxies?}
+\newblock {\em \aap}, 286:799--806.
+
+\bibitem[{Romeo}, 1997]{romeo_1997}
+{Romeo}, A.~B. (1997).
+\newblock {Dynamical effects of softening in N-body simulations of disc
+  galaxies. Method and first applications.}
+\newblock {\em \aap}, 324:523--533.
+
+\bibitem[{Romeo}, 1998]{romeo_1998}
+{Romeo}, A.~B. (1998).
+\newblock {Modelling gravity in N-body simulations of disc galaxies. Optimal
+  types of softening for given dynamical requirements}.
+\newblock {\em \aap}, 335:922--928.
 
 \bibitem[{Ryden} and {Gunn}, 1987]{ryden1987}
 {Ryden}, B.~S. and {Gunn}, J.~E. (1987).
@@ -353,6 +458,12 @@
   and {Hernquist}, L. (2013).
 \newblock {A model for cosmological simulations of galaxy formation physics}.
 \newblock {\em \mnras}, 436:3031--3067.
+
+\bibitem[{Weinberg}, 1996]{weinberg_1996}
+{Weinberg}, M.~D. (1996).
+\newblock {High-Accuracy Minimum Relaxation N-Body Simulations Using Orthogonal
+  Series Force Computation}.
+\newblock {\em \apj}, 470:715.
 
 \bibitem[{Widrow} et~al., 2008]{WPDGalactICSReference}
 {Widrow}, L.~M., {Pym}, B., and {Dubinski}, J. (2008).

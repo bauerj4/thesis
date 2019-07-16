@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_III.aux
+The style file: apalike.bst
+Database file #1: bibliography_paper_iii.bib.bib
+Warning--can't use both author and editor fields in Sellwood2013
+Warning--empty publisher in Sellwood2013
+You've used 77 entries,
+            1935 wiz_defined-function locations,
+            890 strings with 18855 characters,
+and the built_in function-call counts, 37554 in all, are:
+= -- 3458
+> -- 2264
+< -- 28
++ -- 817
+- -- 815
+* -- 3474
+:= -- 6656
+add.period$ -- 230
+call.type$ -- 77
+change.case$ -- 790
+chr.to.int$ -- 75
+cite$ -- 79
+duplicate$ -- 1158
+empty$ -- 2211
+format.name$ -- 924
+if$ -- 7210
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 77
+newline$ -- 387
+num.names$ -- 233
+pop$ -- 636
+preamble$ -- 1
+purify$ -- 791
+quote$ -- 0
+skip$ -- 898
+stack$ -- 0
+substring$ -- 2410
+swap$ -- 157
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 460
+warning$ -- 2
+while$ -- 230
+width$ -- 0
+write$ -- 999
+(There were 2 warnings)

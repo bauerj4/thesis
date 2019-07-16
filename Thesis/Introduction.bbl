@@ -20,6 +20,11 @@
 \newblock {Vertical waves in the solar neighbourhood in Gaia DR2}.
 \newblock {\em \mnras}, 482:1417--1425.
 
+\bibitem[{Binney} and {Tremaine}, 2008]{BT}
+{Binney}, J. and {Tremaine}, S. (2008).
+\newblock {\em {Galactic Dynamics: Second Edition}}.
+\newblock Princeton University Press.
+
 \bibitem[{Carlin} et~al., 2013]{carlin_2013_lamost}
 {Carlin}, J.~L., {DeLaunay}, J., {Newberg}, H.~J., {Deng}, L., {Gole}, D.,
   {Grabowski}, K., {Jin}, G., {Liu}, C., {Liu}, X., {Luo}, A.-L., {Yuan}, H.,
@@ -156,6 +161,11 @@
 \newblock {MUSIC: MUlti-Scale Initial Conditions}.
 \newblock Astrophysics Source Code Library.
 
+\bibitem[{Hui} et~al., 2017]{hui_2017}
+{Hui}, L., {Ostriker}, J.~P., {Tremaine}, S., and {Witten}, E. (2017).
+\newblock {Ultralight scalars as cosmological dark matter}.
+\newblock {\em \prd}, 95(4):043541.
+
 \bibitem[{Ibata} et~al., 1994]{ibata_discovery}
 {Ibata}, R.~A., {Gilmore}, G., and {Irwin}, M.~J. (1994).
 \newblock {A dwarf satellite galaxy in Sagittarius}.
@@ -209,6 +219,12 @@
 \newblock {Stellar disc streams as probes of the Galactic potential and
   satellite impacts}.
 \newblock {\em \mnras}, 483:1427--1436.
+
+\bibitem[{Libeskind} et~al., 2013]{alternate_dm}
+{Libeskind}, N.~I., {Di Cintio}, A., {Knebe}, A., {Yepes}, G., {Gottl{\"o}ber},
+  S., {Steinmetz}, M., {Hoffman}, Y., and {Martinez-Vaquero}, L.~A. (2013).
+\newblock {Cold versus Warm Dark Matter Simulations of a Galaxy Group}.
+\newblock {\em \pasa}, 30:e039.
 
 \bibitem[{Lucy}, 1977]{LucySPH}
 {Lucy}, L.~B. (1977).
@@ -329,6 +345,12 @@ Powell, R. (2017).
   and a Cosmological Constant}.
 \newblock {\em \aj}, 116:1009--1038.
 
+\bibitem[{Rubin} et~al., 1980]{rubin_1980}
+{Rubin}, V.~C., {Ford}, Jr., W.~K., and {Thonnard}, N. (1980).
+\newblock {Rotational properties of 21 SC galaxies with a large range of
+  luminosities and radii, from NGC 4605 /R = 4kpc/ to UGC 2885 /R = 122 kpc/}.
+\newblock {\em \apj}, 238:471--487.
+
 \bibitem[{Sanders} and {Binney}, 2013]{sanders_binney_2013_a}
 {Sanders}, J.~L. and {Binney}, J. (2013).
 \newblock {Stream-orbit misalignment - I. The dangers of orbit-fitting}.
@@ -363,13 +385,14 @@ Powell, R. (2017).
   simulations - I. Isolated galaxies}.
 \newblock {\em \mnras}, 373:1074--1090.
 
-\bibitem[{U.S. Census Bureau}, 2010a]{manhattan_population_density}
-{U.S. Census Bureau} (2010a).
-\newblock {2010 Census Gazetteer Files: New York County Subdivisions}.
+\bibitem[{Taylor}, 2011]{taylor_2011}
+{Taylor}, J.~E. (2011).
+\newblock {Dark Matter Halos from the Inside Out}.
+\newblock {\em Advances in Astronomy}, 2011:604898.
 
-\bibitem[{U.S. Census Bureau}, 2010b]{2010_us_census}
-{U.S. Census Bureau} (2010b).
-\newblock {Population Distribution in the United States and Puerto Rico}.
+\bibitem[{U.S. Census Bureau}, 2010]{manhattan_population_density}
+{U.S. Census Bureau} (2010).
+\newblock {2010 Census Gazetteer Files: New York County Subdivisions}.
 
 \bibitem[{Vogelsberger} et~al., 2014]{Illustris}
 {Vogelsberger}, M., {Genel}, S., {Springel}, V., {Torrey}, P., {Sijacki}, D.,
@@ -422,5 +445,10 @@ Powell, R. (2017).
 \newblock {The stability of stellar discs in Milky Way-sized dark matter
   haloes}.
 \newblock {\em \mnras}, 452:2367--2387.
+
+\bibitem[{Zwicky}, 1933]{zwicky_1933}
+{Zwicky}, F. (1933).
+\newblock {Die Rotverschiebung von extragalaktischen Nebeln}.
+\newblock {\em Helvetica Physica Acta}, 6:110--127.
 
 \end{thebibliography}

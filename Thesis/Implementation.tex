@@ -1,6 +1,7 @@
 
 
 \chapter{Implementing Disc Insertion Schemes in \textsc{Gadget-3}}\label{ch:implementation}
+\newpage
 
 This chapter is meant to provide more details on exactly how to implement the method described in Chapter~\ref{ch:paper_i}. Example code is included where relevant, but the author believes it is a useful exercise for a new graduate student to implement this themselves, as it tests their understanding of the material in Chapter~\ref{ch:background}. For the purposes of this guide, we are going to assume that the reader has the copy of \textsc{Gadget-3} used for this thesis and has a working understanding of how to use a compiler, MPI, and \textsc{GalactICS}\footnote{You can reach the author at \url{jake.bauer.2.71828@gmail.com}. If a question is not answered well here, please reach out. The author is also happy to give direction on learning the prerequisite material.}.
 
@@ -20,7 +21,7 @@ To generate the initial conditions, you need to have the zoom-in snapshot with t
 
 Once the disk is finished generating, you need to merge it with the zoom-in particles. Place the unrotated disk at the origin, and the code will place the rigid disk upon initialization. You may use the C++ script we have provided in Appendix~\ref{ch:merge_ics.cpp}. This file will reassign all of the particle IDs and types, so make sure if you use this script that you do not need to preserve the old ones. Make sure \texttt{\#define append} and \texttt{\#define GADGET\_COSMOLOGY} are uncommented.
 
-The disk position, velocity, angular position, and rate of Euler angle change are recorded in \texttt{disk\_vars.txt}. The differences in these quantities from the last timstep are recorded in \texttt{disk\_dvars.txt}. A variety of other quantities are written out into other log files that are pretty self explanatory. Appply \texttt{grep} to the code if you are unsure what a particular log file is. There should be comments.
+The disk position, velocity, angular position, and rate of Euler angle change are recorded in \texttt{disk\_vars.txt}. The differences in these quantities from the last timestep are recorded in \texttt{disk\_dvars.txt}. A variety of other quantities are written out into other log files that are pretty self explanatory. Apply \texttt{grep} to the code if you are unsure what a particular log file is. There should be comments.
 
 %\textsc{Gadget-3} should now be run as described. You may occasionally run into an issue where \textsc{Gadget-3} cannot construct a tree and it keeps trying to increase the tree allocation factor.
 
@@ -38,7 +39,7 @@ On the topic of timesteps, you will need to force all of the disk particles into
 
 \subsection{Integration}
 
-The actual integration scheme is handled in \texttt{rigiddisk.c}. The functions are self-explanatory and implement routines for generating the Euler rotataion matrix. At runtime, the particles in the rigid disk have their relevant quantities (acceleration, torque, etc.) rotated into the frame where the disk axis is the $z$-axis. We solve the angular part of the disk dynamics in this frame using the implicit Euler method. For the actual timestep used in the integration method, make sure you use the time calculated in \texttt{update\_halo\_positions.c}. This is the actual time elapsed as formulated\footnote{You can check that you're using the right timestep by ensuring the total time elapsed corresponds to the time elapsed in that cosmology.}, not the drift or kick steps given for the conjugate positions and velocities. We apologize for the horrible mess that this section of code has become. Perhaps it would be instructive to write your own halo tracker.
+The actual integration scheme is handled in \texttt{rigiddisk.c}. The functions are self-explanatory and implement routines for generating the Euler rotation matrix. At runtime, the particles in the rigid disk have their relevant quantities (acceleration, torque, etc.) rotated into the frame where the disk axis is the $z$-axis. We solve the angular part of the disk dynamics in this frame using the implicit Euler method. For the actual timestep used in the integration method, make sure you use the time calculated in \texttt{update\_halo\_positions.c}. This is the actual time elapsed as formulated\footnote{You can check that you're using the right timestep by ensuring the total time elapsed corresponds to the time elapsed in that cosmology.}, not the drift or kick steps given for the conjugate positions and velocities. We apologize for the horrible mess that this section of code has become. Perhaps it would be instructive to write your own halo tracker.
 
 \section{Live Disk Setup and Initial Conditions}
 
@@ -59,17 +60,17 @@ You will, however, need to set the values of the initial angular velocities. The
 
 \section{Known Issues and Pet Peeves}
 
-As with most code developed in academia, individual researchers are largely responsible for the development, application, and maintenance of their codes. Balancing these priorties often means sacrificing on certain optimizations. Here, we list some potential improvements to the existing algorithm that might be explored.
+As with most code developed in academia, individual researchers are largely responsible for the development, application, and maintenance of their codes. Balancing these priorities often means sacrificing on certain optimizations. Here, we list some potential improvements to the existing algorithm that might be explored.
 
 \subsection{Choosing a Timestep and Integration Scheme}
 
-In the paper, we use a fixed timestep for the rigid disk that is based on the center-of-mass acceleration timescale. Often, this timescale is too long for the implicit Euler scheme that we use to integrate the rigid body equations. This is why we introduced a fixed \texttt{TIMESTEP\_REDUCTION\_FACTOR}. In reality, the timestep should be determined from the current magnitude of the torque and angular velocity. We would recommnend experimenting with an adaptive timestep. One form that might be tried is,
+In the paper, we use a fixed timestep for the rigid disk that is based on the center-of-mass acceleration timescale. Often, this timescale is too long for the implicit Euler scheme that we use to integrate the rigid body equations. This is why we introduced a fixed \texttt{TIMESTEP\_REDUCTION\_FACTOR}. In reality, the timestep should be determined from the current magnitude of the torque and angular velocity. We would recommend experimenting with an adaptive timestep. One form that might be tried is,
 \begin{equation}
 \Delta t = \frac{2 \pi \alpha}{\vert \boldsymbol \omega \vert}
 \end{equation}
-where $\alpha$ is a constant for which lower values yield more accurate integation, and $\boldsymbol \omega$ is the angular velocity in the disk's body frame. There were a number of halos where we found the fixed timestep to be inadequate for capturing the angular evolution of the disk. This is especially an issue when the disk begins to settle in the host halo and sheds some of its angular velocity. An adaptive timestep would give us the low error required to resolve these scenarios as well as giving us efficiency when angular velocities are low.
+where $\alpha$ is a constant for which lower values yield more accurate integration, and $\boldsymbol \omega$ is the angular velocity in the disk's body frame. There were a number of halos where we found the fixed timestep to be inadequate for capturing the angular evolution of the disk. This is especially an issue when the disk begins to settle in the host halo and sheds some of its angular velocity. An adaptive timestep would give us the low error required to resolve these scenarios as well as giving us efficiency when angular velocities are low.
 
-We are also able to improve on the integration schemne. We use, Implicit Euler, a first order integration scheme. By modifying the code to make use of the fact that \textsc{Gadget-3} is already using a higher order leapfrog scheme, we may be able to improve the integration accuracy.
+We are also able to improve on the integration scheme. We use Implicit Euler, a first order integration scheme. By modifying the code to make use of the fact that \textsc{Gadget-3} is already using a higher order leapfrog scheme, we may be able to improve the integration accuracy.
 
 \subsection{Damping}
 

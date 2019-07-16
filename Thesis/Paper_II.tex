@@ -1,9 +1,10 @@
-
 \chapter{Cosmological Bar Formation: Nature vs Nurture} \label{ch:paper_ii}
 
-%\last_written_page
+\textbf{This chapter contains a reproduction of a paper published in  Monthly Notices of the
+Royal Astronomical Society as: Jacob S. Bauer and Lawrence M. Widrow. Can stellar discs in a cosmological setting avoid forming strong bars?. \textit{Monthly Notices of the Royal Astronomical Society}, 476:523-537,
+2019. }
 
-% Abstract of the paper
+\newpage% Abstract of the paper
 \section{Abstract}
 
 We investigate the connection between the vertical structure of
@@ -13,21 +14,22 @@ In particular, we simulate a suite of isolated galaxy models that have
 the same Toomre $Q$ parameter and swing amplification parameter but
 that differ in the vertical scale height and velocity dispersion.  We
 find that the onset of bar formation occurs more slowly in models with
-thicker discs.  Moreover, thicker discs and also discs evolved in
-simulations with larger force softening also appear to be more
+thicker discs.  Moreover, thicker discs and discs in
+simulations with larger force softening are found to be more
 resilient to buckling, which acts to regulate the length and strength
-of bars.  We also simulate disc-halo systems in the cosmological
+of bars.  We  simulate disc-halo systems in the cosmological
 environment using a disc-insertion technique developed in a previous
 paper.  In this case, bar formation is driven by the stochastic
 effects of a triaxial halo and subhalo-disc interactions and the
 initial growth of bars appears to be relatively insensitive to the
 thickness of the disc.  On the other hand, thin discs in cosmological
-halos do appear to be more susceptible to buckling than thick ones and
+haloes do appear to be more susceptible to buckling than thick ones and
 therefore bar strength correlates with disc thickness as in the
-isolated case.  More to the point, one can form discs in cosmological
+isolated case.  Thus, one can form discs in cosmological
 simulations with relatively weak bars or no bars at all provided the
 discs as thin as the discs we observe and the softening length is
 smaller than the disc scale height.
+
 
 
 \section{Introduction}
@@ -40,58 +42,82 @@ length, and pattern speed.  While it is often difficult to make
 precise, quantitative statements about bars from observations, general
 properties of their distribution have emerged (See
 \citet{sellwood1993}, \citet{Sellwood2013} and \citet{BT} for
-reviews).  Roughly 30-40 per cent of disc galaxies exhibit strong
-bars, that is bars that dominate the disc luminosity.  Another 20 per
-cent or more have relatively weak bars.  The bar fraction appears to
+reviews).  Roughly 25-30 per cent of disc galaxies exhibit strong
+bars {(that is bars that dominate the disc luminosity) and another 20 per
+cent or more have relatively weak bars \citep{bar_fraction_2,bar_fraction_1, masters2010, Sellwood2013}. } The bar fraction appears to
 increase with time.  Approximately one tenth of disc galaxies between
 $0.5 \le z \le 2$ have visually identifiable strong bars, which is a
 factor of 3-4 smaller than the fraction in the local Universe (see
-\citet{simmons2014} and references therein).  The bar fraction also
+\citet{simmons2014} and references therein). 
+
+The bar fraction also
 varies with galaxy type.  \citet{masters2010} find that $70\pm 5$ per
 cent of the so-called passive red spirals have bars as compared to a
 $25\pm 5$ per cent bar fraction for blue spirals.  Since the red
 spirals are interpreted as old galaxies that have used up their
 star-forming gas, this result is consistent with a bar fraction that
-increases with time.  The upshot of these observations is that in
-terms of bars, disc galaxies in the local Universe divide into three
+increases with time. 
+
+{Further evidence of a colour correlation with galaxy bar fractions was presented in \citet{masters2011}. They also found an increased bar
+fraction in galaxies with dominant bulges. Other correlations were explored by \citet{na2010}, who found correlations between bar fractions galaxies of different morphological types and characteristic masses. They also found that central mass concentrations were correlated with different strong bar fractions depending on the morphological type and mass of the galaxies considered. In the same line of thought, \citet{masters2012} found a correlation between the gas content of a galaxy and the likelihood of a strong bar being present.}
+
+{Putting all of these observations together}, 
+disc galaxies in the local Universe divide into three
 roughly equal bins: those with strong bars, those with weak bars, and
-those with no detectable bar.  These observations suggest that bars are 
-capable of forming at a wide range of cosmic times, but once formed,
-are difficult to destroy.
+those with no detectable bar.  {These observations suggest that
+bars are capable of forming at a wide range of cosmic times, but 
+once formed are difficult to destroy. Though bars can, in theory, be
+destroyed through an increased central mass concentration, the requisite
+mass exceeds typical masses for supermassive black holes \citep{athanassoula_2005}.
+}
+
+%\textbf{These observations suggest that bars are 
+%capable of forming at a wide range of cosmic times, but once formed,
+%are difficult to destroy. Bars can, in theory, be destroyed or weakened 
+%by growing a large central mass, but this mass often exceeds typical masses for
+%central supermassive black holes \citep{athanassoula_2005}.}
 
 Intuition tells us that properties of a bar should depend on the
 properties of its host galaxy and the environment in which that
 galaxy lives.  Theoretical arguments indicate that cold, thin discs
-are susceptible to local ``Toomre'' instabilities.  Furthermore, discs
-that are strongly self-gravitating, that is discs that contribute the
-bulk of the gravitational force required to maintain their rotational
+are susceptible to local ``Toomre'' instabilities {\citep{BT}}.  
+Furthermore, discs that are strongly self-gravitating, that is discs that 
+contribute the bulk of the gravitational force required to maintain their rotational
 motion, are susceptible to global instabilities.  Thus, one can
 construct initially axisymmetric galaxy models that form bars with
 vastly different properties (or no bars at all) by changing the
 internal disc dynamics or trading off disc mass for bulge and halo
-mass.  The implication is that the distribution of bars provides an
+mass.  The implication is that the {structure of bars} provides an
 indirect means for inferring a disc's kinematics and mass-to-light
 ratio as well as the distribution of mass in a galaxy's dynamically
-``hot'' components, namely its bulge and dark matter halo.
+``hot'' components, namely its bulge and dark matter halo. {However,
+it is difficult to infer the mass distribution of a galaxy from bar
+strengths alone since it depends on the halo velocity dispersion, 
+which cannot be observed directly \citep{athanassoula_2003}.}
+
+%\textbf{However,
+% as \citet{athanassoula_2003} notes, we run into ambiguity while
+%inferring mass distributions from bar strengths alone, since these depend
+%on an unobservable halo velocity dispersion.}
 
 A galaxy's ability to resist local instabilities is typically
-expressed in terms of the (kinetic) Toomre $Q$-parameter
+expressed in terms of the (kinetic) Toomre $Q$-parameter {(see Eq. \eqref{eq:q})}
 \citep{ToomreParameter} while its ability to resist global
-instabilities is encapsulated in the swing-amplification $X$-parameter
+instabilities is encapsulated in the swing-amplification $X$-parameter {(see Eq. \eqref{eq:xm})}
 \citep{GoldreichTremaine1978,GoldreichTremaine1979}.  Both parameters
 are defined so that large values imply a more stable disc.  The
 hypothesis that they determine a galaxy's susceptibility to bar
 formation has been tested by simulations of isolated, idealized galaxy
 models \citep{PeeblesOstriker1973, ZangHohlBars1978,
   CombesSandersBars1981,Sellwood1981}.  Typically, the initial galaxy
-is represented by an N-body (Monte Carlo) realization of an equilibrium solution to
+is represented by an N-body {(Monte Carlo)} realization of an equilibrium solution to
 the collisionless Boltzmann equation comprising a disc, dark matter
 halo, and often, a bulge.  Equilibrium does not imply
 stability, and a galaxy can develop spiral structure and a bar through
 instabilities that are seeded by shot noise
 \citep{EfstathiouShotNoise} and amplified by feedback loops such as
-swing amplification \citep{Sellwood2013}. A common way to suppress the mechanisms
-which give rise to these effects is by increasing either $Q$ or $X$.  For
+swing amplification \citep{Sellwood2013}. {A common way to suppress the mechanisms
+which give rise to these effects is} by increasing either $Q$ or $X$.  For
 example, in dynamically warm discs (that is, discs with high $Q$)
 perturbations are randomized on timescales short enough to prevent the
 feedback loop from starting \citep{AthanassoulaSellwood1986}.
@@ -129,7 +155,12 @@ instability and slowdown of the bar due to angular momentum transfer
 with the dark halo \citep{dbs2009}.
 
 Of course, galaxies are neither isolated nor born as axisymmetric,
-equilibrium systems. In these idealized systems, instabilities can only come from shot noise, whereas this is is not true in a complicated dynamical environment. As such, bar formation may be very different in idealized
+equilibrium systems. 
+%\textbf{In these idealized systems, instabilities can only come from shot noise, whereas this is is not true in a complicated dynamical environment. As such,} 
+{In N-body realizations of these idealized systems, instabilities
+are seeded from the shot noise of the particle distribution. On the other
+hand, interactions in real galaxies can be driven by interactions
+with the given galaxy's environment. As such, the process of} bar formation may be very different in idealized
 galaxies as compared with galaxies in a cosmological setting.  For
 example, halo substructure in the form of satellite galaxies and dark
 matter subhaloes can pass through and perturb the disc.
@@ -198,7 +229,7 @@ $X$ they share two important properties.  First, the ratio of the
 radial and vertical velocity dispersion is set to unity throughout the
 disc.  Second, the ratio of the vertical and radial scale lengths is
 fixed at $0.2$, which is roughly a factor of two larger than that of
-the Milky Way's thin disc.  In addition, the softening length in their
+the Milky Way's thin disc.  In addition, the gravitational softening length in their
 simulations is fixed at $680\,{\rm pc}$.  Thus, the discs in their
 simulations are thicker and (vertically) warmer than what one might
 expect for Milky Way-like galaxies.  The results from
@@ -224,14 +255,14 @@ the ratio of the vertical and radial scale lengths.  We also discuss
 possible effects of gravitational softening.  In
 \ref{sec:thick_discs_suppress} we describe our sequence of simulations
 and discuss how they fit in with previous work.  We discuss results
-for our isolated galaxy simulations in \S \ref{sec:isolated} and our
+for our isolated galaxy simulations in \S \ref{sssec:isolated} and our
 cosmological ones in \S \ref{sec:cosmo}.  We conclude with a
 discussion of the implications of our results in \S
 \ref{sec:conclusions}.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth]{../figures/rotation_curves_two_panel.eps}
+	\includegraphics[width=0.8\textwidth]{../figures/rotation_curves_two_panel.eps}
 	\caption{Rotation curve decomposition for our models. Total
           rotation curves are shown as solid lines while the separate
           contributions from the disc and halo are shown as dashed and
@@ -244,30 +275,31 @@ discussion of the implications of our results in \S
           E.II.}\label{fig:rcs}
 \end{figure}
 
-\begin{table*}
-\begin{tabular}{l l l l l l l l l l l l}
+
+\begin{sidewaystable}
+\begin{tabular}{l l l l l l l l l l l l l}
 \hline
- & $M_d$ & $R_d$ & $V_c$ & $\sigma_R$ & $z_d/R_d$  & $\sigma_R/\sigma_z$  & $X$ &  $Q$ & $\rho_h/\rho_0$ & $\epsilon$ \\ 
+ & $M_d$ & $R_d$ & $V_c$ & $\sigma_R$ & $z_d/R_d$  & $\sigma_R/\sigma_z$  & $X$ &  $Q$ & $\rho_h/\rho_0$ & $\epsilon$ & {Description}\\ 
 \hline
-A.I     & 3.49 & 2.50 & 216 & 25.3 & 0.10 & 1.27 & 2.34 & 1.00 & 0.14 & 0.15\\
-A.II    & 3.49 & 2.50 & 216 & 25.3 & 0.10 & 1.27 & 2.34 & 1.00 & 0.14 & 0.50\\
-B.I     & 3.49 & 2.50 & 213 & 25.3 & 0.20 & 0.97 & 2.34 & 1.00 & 0.28 & 0.15\\
-B.II    & 3.49 & 2.50 & 213 & 25.3 & 0.20 & 0.97 & 2.34 & 1.00 & 0.28 & 0.50\\
-C.I     & 3.49 & 2.50 & 208 & 25.3 & 0.40 & 0.77 & 2.34 & 1.00 & 0.50 & 0.15\\
-C.I.Ag  & 3.49 & 2.50 & 216 & 25.3 & 0.40 & 0.77 & 2.34 & 1.00 & 0.50 & 0.15\\
-D.IV    & 5.82 & 3.70 & 245 & 25.2 & 0.10 & 1.14 & 2.45 & 1.00 & 0.29 & 0.18\\
-E.IV    & 5.82 & 3.70 & 245 & 27.4 & 0.25 & 0.72 & 2.45 & 1.00 & 0.73 & 0.74\\
+A.I{/A.III}     & 3.49 & 2.50 & 216 & 25.3 & 0.10 & 1.27 & 2.34 & 1.00 & 0.14 & 0.15 & {Thin, Fiducial / Thin, Isotropized}\\
+A.II    & 3.49 & 2.50 & 216 & 25.3 & 0.10 & 1.27 & 2.34 & 1.00 & 0.14 & 0.50 & {Thin, High Softening}\\
+B.I{/B.III}     & 3.49 & 2.50 & 213 & 25.3 & 0.20 & 0.97 & 2.34 & 1.00 & 0.28 & 0.15 & {Mid, Fiducial / Mid, Isotropized}\\
+B.II    & 3.49 & 2.50 & 213 & 25.3 & 0.20 & 0.97 & 2.34 & 1.00 & 0.28 & 0.50 & {Mid, High Softening}\\
+C.I     & 3.49 & 2.50 & 208 & 25.3 & 0.40 & 0.77 & 2.34 & 1.00 & 0.50 & 0.15 & {Thick, Fiducial} \\
+C.I.Ag  & 3.49 & 2.50 & 216 & 25.3 & 0.40 & 0.77 & 2.34 & 1.00 & 0.50 & 0.15 & {Thick, AGAMA ICs}\\
+D.I    & 5.82 & 3.70 & 245 & 25.2 & 0.10 & 1.14 & 2.45 & 1.00 & 0.29 & 0.18  & {Thin, Cosmological}\\
+E.II    & 5.82 & 3.70 & 245 & 27.4 & 0.25 & 0.72 & 2.45 & 1.00 & 0.73 & 0.74 & {Thick, High Softening, Cosmological}\\
 \hline
-YS15.A5 & 5.00 & 3.00 & 263 & 30.7  & 0.2 & 1.00 & 3.22 & 1.38 & 0.21 & 0.68\\
-YS15.B5 & 5.00 & 3.00 & 211 & 26.6  & 0.2 & 1.00 & 2.06 & 0.96 & 0.11 & 0.68\\
-YS15.C5 & 5.00 & 3.00 & 270 & 30.3  & 0.2 & 1.00 & 3.31 & 1.42 & 0.23 & 0.68\\
-YS15.D5 & 5.00 & 3.00 & 236 & 26.6  & 0.2 & 1.00 & 2.58 & 1.12 & 0.16 & 0.68\\
-YS15.E5 & 5.00 & 3.00 & 233 & 27.1  & 0.2 & 1.00 & 2.58 & 1.11 & 0.15 & 0.68\\
-YS15.F5 & 5.00 & 3.00 & 219 & 27.0  & 0.2 & 1.00 & 2.22 & 1.02 & 0.11 & 0.68\\
-YS15.G5 & 5.00 & 3.00 & 227 & 28.2  & 0.2 & 1.00 & 2.45 & 1.09 & 0.13 & 0.68\\
-YS15.H5 & 5.00 & 3.00 & 244 & 28.6  & 0.2 & 1.00 & 2.85 & 1.21 & 0.16 & 0.68\\
+YS15.A5 & 5.00 & 3.00 & 263 & 30.7  & 0.2 & 1.00 & 3.22 & 1.38 & 0.21 & 0.68 & {--}\\
+YS15.B5 & 5.00 & 3.00 & 211 & 26.6  & 0.2 & 1.00 & 2.06 & 0.96 & 0.11 & 0.68 & {--}\\
+YS15.C5 & 5.00 & 3.00 & 270 & 30.3  & 0.2 & 1.00 & 3.31 & 1.42 & 0.23 & 0.68 & {--}\\
+YS15.D5 & 5.00 & 3.00 & 236 & 26.6  & 0.2 & 1.00 & 2.58 & 1.12 & 0.16 & 0.68 & {--}\\
+YS15.E5 & 5.00 & 3.00 & 233 & 27.1  & 0.2 & 1.00 & 2.58 & 1.11 & 0.15 & 0.68 & {--}\\
+YS15.F5 & 5.00 & 3.00 & 219 & 27.0  & 0.2 & 1.00 & 2.22 & 1.02 & 0.11 & 0.68 & {--}\\
+YS15.G5 & 5.00 & 3.00 & 227 & 28.2  & 0.2 & 1.00 & 2.45 & 1.09 & 0.13 & 0.68 & {--}\\
+YS15.H5 & 5.00 & 3.00 & 244 & 28.6  & 0.2 & 1.00 & 2.85 & 1.21 & 0.16 & 0.68 & {--}\\
 \hline
-G06     & 7.77 & 5.57 & 226 & 17.1  & 0.06  & 1.80 & 2.78 & 1.43 & 0.10 & 0.15 \\
+G06     & 7.77 & 5.57 & 226 & 17.1  & 0.06  & 1.80 & 2.78 & 1.43 & 0.10 & 0.15 & {--}\\
 \hline
 %$M_d$ & $7.2 \times 10^{10} M_\odot$\\
 %$N_d$ & $10^6$\\
@@ -275,7 +307,7 @@ G06     & 7.77 & 5.57 & 226 & 17.1  & 0.06  & 1.80 & 2.78 & 1.43 & 0.10 & 0.15 \
 %$N_{r}$ & $4096^3$
 \end{tabular}
 \caption{Summary of parameters for the simulations considered in this
-  paper, the disk-halo simulations considered in
+  paper, the disc-halo simulations considered in
   \citet{YurinSpringelStellarDisks} (labeled YS15) and the
   \citet{gauthier2006} (G06).  $M_d$ is the final disc mass in units of
   $10^{10}\,M_\odot$ , $R_d$ is the disc scale radius in units of
@@ -291,7 +323,7 @@ G06     & 7.77 & 5.57 & 226 & 17.1  & 0.06  & 1.80 & 2.78 & 1.43 & 0.10 & 0.15 \
   same as A.I and B.I except that they are run with vertical motions
   isotropized so as to shut off the buckling
   instability.} \label{tab:sims}
-\end{table*}
+\end{sidewaystable}
 
 \section{Theoretical Considerations}
  \label{sec:ics}
@@ -304,8 +336,8 @@ vertical velocity dispersion, and surface density.  Finally, we
 consider the effect softening might have on bar formation.
 
 \begin{figure}
-	\centering
-        \includegraphics[width=0.9\textwidth]{../figures/falpha.eps}
+		\centering
+        \includegraphics[width=0.8\textwidth]{../figures/falpha.eps}
         \caption{The dimensionless ratio $\sigma_z^2/\pi G\Sigma z_d$ as a
           function of $\rho_h/\rho_0$ for the models considered in
           this paper (stars), the disc-halo models from
@@ -315,8 +347,8 @@ consider the effect softening might have on bar formation.
           )^{1/2}\rho_h/\rho_0$ discussed in the text.}
 \label{fig:falpha}\end{figure}
 
-\begin{figure*}
-	\centering
+\begin{figure}
+		\centering
         \includegraphics[width=1.\textwidth]{../figures/qxr.eps}
         \caption{Distribution of simulations considered in this paper
           in the $Q-X$ and the $z_d/R_d-\sigma_R/\sigma_z$ planes.
@@ -326,40 +358,41 @@ consider the effect softening might have on bar formation.
           the simulation of M31 run in \citet{gauthier2006}; open
           pentagons denote the simulations described in
           \citet{WPDGalactICSReference}.
-        }\label{fig:QXR}\end{figure*}
+        }\label{fig:QXR}\end{figure}
 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.75\textwidth]{../figures/wpd.eps}
+	\includegraphics[width=0.8\textwidth]{../figures/wpd.eps}
 	\caption{Strength and length of bars for the simulations
-          considered in \citet{gauthier2006}.  The twenty-five models
+          considered in \citet{WPDGalactICSReference}.  The twenty-five models
           span the $Q$-$X$ plane.  Top panel shows the $A_2$ parameter
-          while the bottom panel shows the bar length.  Both are
+          while the bottom panel shows the bar length, $l_b$.  Both are
           measured at $5\,{\rm Gyr}$ (the final snapshot of the
-          simulations).}
+          simulations). {The bar length is the full bar length.}}
 	\label{fig:qxa2}
 \end{figure}
 
 
-\begin{figure*}
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../figures/isolated_xy_with_agama_with_circles.eps}
 	\caption{Surface density maps for isolated galaxy simulations
           at select times. Time proceeds from 0 to 10 Gyr,
           left-to-right, and the models span top-to-bottom in order of
           their appearance in Table \ref{tab:sims}. The overlaid red
-          circles have radii $R_p=5.5\,{\rm kpc}$ and 20 kpc.}
+          circles have radii $R_p=5.5\,{\rm kpc}$ and 20 kpc. {Recall $R_P=2.2 R_d$, the 
+          radius of peak circular velocity.}}
 	\label{fig:face_on_isolated}
-\end{figure*}
+\end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth]{../figures/isolated_a2_vs_t_2rd_weighted.eps}
+	\includegraphics[width=0.8\textwidth]{../figures/isolated_a2_vs_t_2rd_weighted.eps}
 	\caption{Mean bar strength parameter inside a cylindrical
           radius $R_p$, $A_2(<R_p)$, as a function of time. Curves are
           smoothed in time with a top-hat moving window of width
-          $1\,{\rm Gyr}$.  Line colors are blue, red, and green for
+          $1\,{\rm Gyr}$.  Line colours are blue, red, and {orange} for
           models A, B, and C, respectively.  Results for the
           fiducial runs A.I, B.I, and C.I are shown as solid curves
           while the results for the runs with high softening length,
@@ -368,15 +401,15 @@ consider the effect softening might have on bar formation.
           curve.} \label{fig:isolated_a2_vs_t}
 \end{figure}
 
-\begin{figure*}
+\begin{figure}
 	\centering
 	\includegraphics[width=1.1\textwidth]{../figures/isolated_r_t_a2_with_agama.eps}
 	\caption{Bar strength parameter $A_2$ as a function of radius
           and time.  The trajectory of corotation is shown by the
           dashed red line.} \label{fig:isolated_r_t_a2}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../figures/isolated_four_panel_zrms.eps}
 	\caption{Root mean square height $\zrms$ as a function of
@@ -384,9 +417,9 @@ consider the effect softening might have on bar formation.
           the first $500\,{\rm Myr}$.  Panels are for simulations A.I
           (upper left), A.II (upper right), C.I (lower left) and
           C.I.Ag (lower right).} \label{fig:zrms}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../figures/isolated_dispersion_evolution_with_agama_zrms.eps}
 	\caption{Diagonal components of the velocity dispersion tensor
@@ -395,7 +428,7 @@ consider the effect softening might have on bar formation.
           are profiles for $\zrms$, $\sigma_z$, $\sigma_R$, and $\sigma_\phi$
           for the same size models included in
           Fig.\,\ref{fig:face_on_isolated}.} \label{fig:isolated_dispersions}
-\end{figure*}
+\end{figure}
 
 \subsection{$Q$ and $X$} 
 The stability of a stellar disc is generally thought to be determined
@@ -476,9 +509,11 @@ vertical velocity dispersion $\sigma_z$, surface density $\Sigma$, and
 scale height.  For a self-gravitating plane-symmetric isothermal disc
 these quantities are connected through the relation $\sigma_z^2 =
 \sqrt{12}G\Sigma \zrms$ where $\zrms$ is the root mean square distance
-of ``stars'' from the midplane.  \citep{spitzer1942, camm1950}.
+of ``stars'' from the midplane, and $z_d$ is the disc scale height (See
+\S\ref{sec:isolated} and 
+\citet{spitzer1942, camm1950}).
 
-We can incorportate the effects of dark matter by modifying
+We can incorporate the effects of dark matter by modifying
 the Poisson equation
 
 \begin{equation} \label{eq:spitzerpoisson}
@@ -488,7 +523,7 @@ the Poisson equation
 \end{aligned}
 \end{equation}
 
-\noindent where $\rho_d$ and $\rho_h$ are the densities of the disk
+\noindent where $\rho_d$ and $\rho_h$ are the densities of the disc
 and halo, respectively, and $\rho_0$ is the density of the disc in the
 midplane.  In the second line we assume, as is done in the pure
 self-gravitating case, that the disc stars are vertically isothermal
@@ -502,10 +537,17 @@ well-described by the relation
 G\Sigma \zrms \left (1 + \alpha\rho_h/\rho_0\right )
 \end{equation}
 
-\noindent where the factor $1 + \alpha = 1 + \sqrt{2\pi/3}$ provides a
+\noindent where the factor $\alpha = \sqrt{2\pi/3}$ provides a
 simple interpolation between the pure self-gravitating case and the
 case where disc particles are test particles in the (harmonic)
-potential of a constant density halo.  As discussed in the next
+potential of a constant density halo.  {We plot the simulations to 
+be presented in this paper, along with others, in Fig. \ref{fig:falpha}.
+We see variation about a line with slope $\alpha$ of the simulations
+detailed in Table \ref{tab:sims}. Simulations deviate from this trendline
+substantially as the disc scale height is increased and the planar model
+we considered becomes less accurate.}
+
+As discussed in the next
 section Eq.\,\ref{eq:sigz2} holds at the 10 per cent level for our
 equilibrium models.  Departures from Eq.\,\ref{eq:sigz2} might come
 from radial gradients and the rotation of the disc. (See, for example,
@@ -537,15 +579,21 @@ that is initially in equilibrium, the onset of bar formation is
 delayed when mass resolution is increased \citep{dbs2009}
 essentially because the bar instability is seeded by shot noise.  The
 importance of mass resolution as well as force resolution and time
-stepping are also discussed in \citet{Klypin2009}.
+stepping have been discussed in \citet{Klypin2009}.
 
-In this section, we focus on the effects of force softening.
+In this section, we focus on the effects of force softening. {Gravitational
+softening is necessary to avoid large (possibly infinite) forces that arise
+from Newtonian two-body interactions. }
 Equilibrium models, such as the ones used as initial conditions in
 isolated galaxy simulations, satisfy the collisionless Boltzmann and
 Poisson equations.  When evolved with force softening, they will begin
 slightly out of equilibrium.  This effect should be most noticeable
 when the softening length is comparable to or larger than the
-thickness of the disc.  To gain some intuition as to this extent of
+thickness of the disc. {Detailed discussions of the 
+effect softened gravity has on the secular evolution of N-body galaxies can be found in
+\citet{romeo_1994,AthanassoulaSellwood1986,merritt_1996,weinberg_1996, romeo_1997, romeo_1998}.}
+
+To gain some intuition as to this extent of
 this effect we the Poisson equation in one dimension.  The potential
 for a mass distribution with vertical density profile of $\rho(z)$ can
 be calculated by convolving $\rho$ with the Green's function:
@@ -589,7 +637,7 @@ growth of bars.
 
 \section{Models and Simulations} \label{sec:thick_discs_suppress}
 
-\subsection{Initial Conditions for Isolated Galaxy Simulations}
+\subsection{Initial Conditions for Isolated Galaxy Simulations} \label{sssec:isolated}
 
 We follow the evolution of isolated disc-halo systems using the N-body
 code \textsc{gadget-3} \citep{GadgetCodePaper}.  The initial
@@ -599,7 +647,7 @@ which allows users to build multicomponent, axisymmetric equilibrium
 systems with prescribed structural and kinematic properties.  Disc
 particles are sampled from a distribution function (DF) that is a
 semi-analytic function of the total energy $E$, the angular momentum
-about the disc symmetry axis $L_z$, and the vertical energy $E_z = \Phi(R,0) - \Phi(R,z) + \frac{1}{2} v_z^2$, where $\Phi$ is the gravitational potential and $v_z$ is an orbit's vertical velocity.  By
+about the disc symmetry axis $L_z$, and the vertical energy {$E_z = \Phi(R,0) - \Phi(R,z) + \frac{1}{2} v_z^2$, where $\Phi$ is the gravitational potential and $v_z$ is an orbit's vertical velocity. } By
 design, the disc DF yields a density law in cylindrical $\left
 (R,\,\phi,\,z\right )$ coordinates given, to a good approximation, by
 $\rho(R,z) = \Sigma(R)\,{\rm sech}^2(z/z_d)$.  Here $\Sigma(R)$ is
@@ -620,12 +668,18 @@ will not represent true equilibrium solutions to the dynamical
 equations.  To test whether non-conservation of vertical energy
 affects our results, we compare a thick disc model with
 \textsc{GalactICS} initial conditions with a similar one where the
-initial conditions are generated with \textsc{AGAMA} \citep{agama}.
+initial conditions are generated with \textsc{AGAMA} \citep{agama}, 
+{an action-based code that does not rely on the epicycle 
+approximation.  \textsc{AGAMA} initial conditions should be closer 
+to the true equilibrium than \textsc{GalactICS} models, especially for the thick discs.}
+%{Since
+%\textsc{AGAMA} generates its initial conditions from functions of the 
+%\textit{actions}, and does not assume the epicycle approximation.}
 In principle, this action-based code should yield initial conditions
 that are closer to a true equilibrium system than ones based on $E_z$
 especially for thick discs.
 
-\subsection{Description of simulations}
+\subsection{Description of Simulations}
 
 In this section, we describe a suite of simulations where $Q$ and $X$
 are fixed and where the velocity dispersion and scale length
@@ -647,8 +701,8 @@ length of $736\,{\rm pc}$, which is close to the value assumed in
 to C.I (large scale height) but run with \textsc{AGAMA} initial
 conditions.  A comparison of its rotation curve decomposition with
 that for model C.I is shown in the top panel of Fig. \ref{fig:rcs}.
-The contributions from the disks in the two models are nearly the same
-and the contributions from the halos differ significantly only beyond
+The contributions from the discs in the two models are nearly the same
+and the contributions from the haloes differ significantly only beyond
 $\sim 10\,{\rm kpc}$.  The simulations A.III and B.III use a scheme to
 isotropize vertical motions and effectively shut off buckling and are
 discussed in \S \ref{sec:buckling}.
@@ -676,8 +730,16 @@ toward the bulge.  (See \citet{hartmann2014} for a further analysis of
 these simulations.)  As expected, the onset of the bar instability is
 delayed in models with large initial values for $Q$ and/or $X$.
 However, the dependence on these parameters of the bar strength and
-length is more complicated.  In Fig.\ref{fig:qxa2} we show the bar
-strength parameter $A_2$ and length of the bar across these models.
+length is more complicated.  {In Fig. \ref{fig:QXR}, we show the distribution
+of models  in the $Q-X$ and $z_d/R_d-\sigma_R/\sigma_z$ planes from a few papers which
+ consider Milky Way like galaxies.
+It is common for bar formation studies to consider only a small subset
+of the total parameter space. As we will see, models which are close together
+in $Q$ and $X$ may exhibit very different bar formation behaviour.}
+
+In Fig.\ref{fig:qxa2}, we show the bar
+strength parameter $A_2$ and length of the bar { across the models considered
+in \citet{WPDGalactICSReference}.}
 Evidently, the models that form the strongest and longest bars have
 intermediate values of $Q$ and $X$.  The implication is that models
 where the instabilities grow too quickly lead to weaker and somewhat
@@ -720,19 +782,20 @@ B.I and B.II in the $3.0\,{\rm Gyr}$ and $4.5\,{\rm Gyr}$ snapshots.
 \subsection{Bar Strength Parameter $A_2$}
 
 It is convenient to think of the azimuthal distribution of particles
-in a given radial bin as a Fourier series.  We define the coefficient
-of the Fourier component with $m$-fold azimuthal symmetry to be
+in a given radial bin as a Fourier series.  {We use the canonical definition for the coefficient
+of the Fourier component with $m$-fold azimuthal symmetry (see \citet{debattista_sellwood_2000}, for instance),}
 \begin{equation}\label{eq:cm}
 c_m =  \frac{1}{M_S} \sum_{j \in S} \mu_i e^{i m \phi}
 \end{equation}
 
-\noindent where $\mu_i$ is the mass of the $i$-th particle and $S$ is
-a circularly symmetric region of the disc.  The normalization is
+\noindent {where $\mu_i$ is the mass of the $i$-th particle, $S$ is
+a circularly symmetric region of the disc, and $M_S$ is the mass in this region. }
+The normalization is
 chosen so that a distribution of particles along a line through the
 origin will have $|c_m|=1$ for all $m$ even.  Moreover, for a uniform
 distribution of particles, $c_0=1$ and $c_m=0$ for all $m>0$.  The
 amplitude and phase for the $m$-th Fourier coefficient are given by
-$A_m \equiv \vert c_m \vert$ and $\phi_m = \text{arg } c_m$,
+$A_m \equiv \vert c_m \vert$ and $\phi_m = \text{arg } (c_m)$,
 respectively.  Note that both of these quantities depend on the region
 $S$
 
@@ -782,7 +845,7 @@ at which $\Omega_p = V_c/R$.  Thus, since our galaxy models have
 roughly flat rotation curves beyond $5\,{\rm kpc}$, the corotation
 essentially gives the inverse patter speed or pattern period.
 
-From Fig. \ref{fig:isolated_a2_vs_t} we see that the corotation radius
+From {Fig. \ref{fig:isolated_r_t_a2}} we see that the corotation radius
 tends to grow with time and provides an envelope for the bar and other
 $m=2$ structures such as two-armed spirals and elliptical rings.  The
 bar pattern speed is therefore decreasing with time, presumably due to
@@ -808,13 +871,18 @@ attribute this dip to buckling.
 
 \subsection{Vertical Structure and Velocity Dispersion}
 
-Figs.\,\ref{fig:zrms} and \ref{fig:isolated_dispersions} show the
-$\zrms$ and velocity dispersion profiles for a sequence of snapshots
-in various models.  The first of these plots focuses on the evolution
-of $\zrms$ during the initial $500\,{\rm Myr}$ of the simulation.  The
+%Figs.\,\ref{fig:zrms} and \ref{fig:isolated_dispersions} show the
+%$\zrms$ and velocity dispersion profiles for a sequence of snapshots
+%in various models.  
+
+{Fig.\,\ref{fig:zrms} shows the
+$\zrms$ radial profiles for a sequence of snapshots
+in various models.  
+The  evolution
+of $\zrms$ is studied during the initial $500\,{\rm Myr}$ of the simulation.  The
 top panels show the $\zrms$ profiles for simulations A.I and A.II and
 illustrate the effect softening has on the evolution from
-``equilibrium'' initial conditions.  As discussed in Section 2 as
+``equilibrium'' initial conditions.  As discussed in \S2,} a
 system that is initialized to be in equilibrium under the assumption
 of Newtonian gravity will be out of equilibrium if evolved with
 softened gravity.  In particular, the mean potential energy will be
@@ -825,7 +893,10 @@ for the vertical structure to be $2T/W\simeq 1.7$.  Of course, the
 excess kinetic energy will redistribute itself into both kinetic and
 potential energy.  The upshot is that the system quickly settles into
 a new state with a thickness somewhat larger than the initial one as
-seen in the right hand panel.
+seen in the right hand panel. {One might be tempted to suggest
+that a high softening implies that a disc behaves like a thicker disc.
+This picture is not quite correct, since a thicker disc will not 
+substantially redistribute energy if it is initialized in equilibrium.}
 
 The bottom panels in Fig.\,\ref{fig:zrms} provide a comparison of
 $\zrms$ profiles for the thick disc simulations with
@@ -842,39 +913,115 @@ oscillations is that they are due to the fact that $E_z$ is not a true
 constant of motion.  In any case, the system quickly settles to to a
 new equilibrium state not too different from the initial one.
 
-Fig.\,\ref{fig:isolated_dispersions} shows profiles for $\zrms$ and the
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{../figures/dispersions_vs_time.eps}
+\caption{The velocity dispersions, $\sigma_R$, $\sigma_\phi$, and $\sigma_z$, and $z_{rms}$
+as a function of time for our six fiducial models. The lines are averaged in the circular region
+of radius 0.25 kpc (solid), an annulus of width 0.25 kpc centered near 2.2 $R_d$ (dashed),
+and a 0.25 kpc width annulus centered at around 5 $R_d$ (dot-dashed). } \label{fig:dispersions_vs_time}
+\end{figure}
+
+
+Fig.\,\ref{fig:isolated_dispersions} shows profiles for $z_{rms}$ and the
 diagonal components of the velocity dispersion tensor, $\sigma_z$,
-$\sigma_R$, and $\sigma_\phi$.  The effect of bar formation is readily
-apparent in the $\zrms$ and $\sigma_z$ profiles.  In simulation A.I,
-for example, bar formation, which begins around $t\simeq 1.5\,{\rm
-  Gyr}$ is accompanied by thickening and vertical heating.  By the end
-of the simulation, $\zrms$ increases linearly with $R$ from a
-central value of about $400\,{\rm pc}$ to $1.5\,{\rm kpc}$ at a radius
-of about $6-7\,{\rm kpc}$ and then decreases beyond this radius.  The
-evolution is similar in simulations B.I and C.I.  Interestingly
-enough, the central and peak values are very similar in all three
-cases even though the initial thick of the discs are very different.
-Indeed, the central value for $\zrms$ actually decreases with time
-in our thick disc simulation.  
+$\sigma_R$, and $\sigma_\phi$.
+{All models exhibit
+significant in-plane heating across the disc and throughout the
+simulations. While the initial radial velocity dispersion profiles are
+exponential in $R$ the final profiles are relatively flat within the central 5
+kpc. Thus, the greatest increase in radial velocity dispersion is at
+about this radius, which corresponds to the end of the bar. Likewise
+the $\sigma_\phi$ profile develops a ``bump" around
+$R\simeq 5-10$ kpc.}
 
-Vertical heating of the disc in the central regions also seems to be
-connected with bar formation, at least in the thin and intermediate
-thickness cases.  In A.I, for example, the central velocity dispersion
-appears to increase rapidly starting around $3\,{\rm Gyr}$ and
-reaching a final value of $\sim 100\,{\rm km\,s^{-1}}$, which is
-roughly a factor of two larger than the initial value.  As with
-$\zrms$, the value of the central vertical velocity dispersion is
-nearly identical in all models.  Evidently, the final vertical
-structure of the barred disc is insensitive to initial conditions.
+%{The $\sigma_R$ and $\sigma_\phi$ components
+%heat substantially in all models. The $\sigma_z$ profile heats in the thinner 
+%discs, but remains relatively constant in C.I and C.I.Ag. While vertical heating occurs
+%relatively uniformly, the cylindrically averaged $\sigma_R$ and $\sigma_\phi$ have
+%characteristic non-uniformity around the region of the bar. This is also reflected
+%%in the $z_{rms}$ profiles as a function of radius. Strangely, the disc cools vertically
+%in the thicker models. This latter effect is clearer
+%in Fig. \ref{fig:dispersions_vs_time} which plots the dispersions and $z_{rms}$
+%at several radii against time. A decreasing slope in the central $z_{rms}$ is 
+%obvious in C.I and C.I.Ag. The vertical dispersion remains roughly
+%constant while the other components heat up. }
 
-All models show significant in-plane disc heating across the disc and
-throughout the simulation.  While the initial radial velocity
-dispersion profile is exponential in $R$ the final profile is almost
-flat within the central $5\,{\rm kpc}$.  Thus, the greatest increase
-in radial velocity dispersion is at about this radius, which
-corresponds to the end of the bar.  On the other hand, the greatest
-increase in $\sigma_\phi$ occurs at larger radii, closer to $10\,{\rm
-  kpc}$.
+{Vertical heating and thickening also appear to be connected with
+bar formation.  The $\sigma_z$ profile increases in the A.I/A.II and B.I/B.II simulations such
+that by 10 Gyr, the central value is ~ 100 km/s. This value is roughly
+equal to the initial value in the C.I and C.I.Ag (thick disc)
+simulations. Note as well that vertical heating in the inner disc
+occurs rapidly beginning around 3-4 Gyr, roughly when the bar
+is forming. By contrast, vertical heating of the outer disc occurs
+gradually over the entire simulation.}
+
+
+{The bottom row in Fig. \ref{fig:isolated_dispersions} shows the $z_{rms}$ profiles for the different
+simulations. Again, we see that the inner disc in the A.I/A.II and B.I/B.II
+simulations begins to thicken around 3-4 Gyr. Moreover, the thickness of the inner disc
+increases with $R$ reaching a maximum at around $R \sim 5-7$ kpc.
+Curiously enough, the innermost region of the discs in C.I and C.I.Ag
+decrease with time. As with $\sigma_z$, the thickness of the discs for
+$R\simeq 0$ at late times are all approximately the same.
+Evidently, bar formation tends to drive the innermost regions of the host disc
+to a common vertical structure. }
+
+{Fig. \ref{fig:dispersions_vs_time} provides a different perspective on these results. Here we
+plot $\sigma_R$, $\sigma_\phi$, $\sigma_z$, and $z_{rms}$ as a function of time for three representative
+radii.
+From the upper three rows, we see that the increase in velocity dispersion
+is most abrupt in the inner disc, implying that heating there is
+driven by bar formation. Furthermore, the vertical velocity dispersion
+in the thick disc models is very nearly time-independent.
+As in Fig. \ref{fig:isolated_dispersions}, we see that the discs in all simulations are thickest
+for $R \simeq 2.2\,R_d \simeq 5-6$ kpc. Finally, we again observe that
+in the thick disc simulations, the inner disc becomes thinner with time.}
+
+
+
+%{Time evolution of these profiles
+%is directly correlated with bar formation.} In simulation A.I,
+%for example, bar formation, which begins around $t\simeq 1.5\,{\rm
+%  Gyr}$ is accompanied by thickening and vertical heating.  By the end
+%of the simulation, $\zrms$ increases linearly with $R$ from a
+%central value of about $400\,{\rm pc}$ to $1.5\,{\rm kpc}$ at a radius
+%of about $6-7\,{\rm kpc}$ and then decreases beyond this radius.  The
+%evolution is similar in simulations B.I and C.I.  Interestingly
+%enough, the central and peak values are very similar in all three
+%cases even though the initial thickness of the discs are very different.
+
+%{Indeed, the central value for $\zrms$ actually decreases with time
+%in our thick disc simulation. There is likely reasonable significance behind this
+%point, which is very clearly illustrated in Fig. \ref{fig:dispersions_vs_time}. 
+%The suggestion is that bar formation in the thick disc case can transfer
+%angular momentum inward. We are reminded of \citet{athanassoula_2003} which
+%related the rate of bar slowdown to angular momentum transfer. Interestingly,
+%as evidenced by Fig. \ref{fig:isolated_r_t_a2}, corotation in the thick disc
+%remains roughly constant at about 5 Gyr while $z_{rms}$ declines in the central
+%regions. This suggests that very thick discs can have substantial angular momentum transfer 
+%\textit{without slowing the bar}. Further study is needed to describe the 
+%exact process by which this happens.}
+
+%Vertical heating of the disc in the central regions also seems to be
+%connected with bar formation, at least in the thin and intermediate
+%thickness cases.  In A.I, for example, the central velocity dispersion
+%appears to increase rapidly starting around $3\,{\rm Gyr}$ and
+%%reaching a final value of $\sim 100\,{\rm km\,s^{-1}}$, which is
+%roughly a factor of two larger than the initial value.  As with
+%$\zrms$, the value of the central vertical velocity dispersion is
+%nearly identical in all models.  Evidently, the final vertical
+%structure of the barred disc is insensitive to initial conditions.
+
+%All models show significant in-plane disc heating across the disc and
+%throughout the simulation.  While the initial radial velocity
+%dispersion profile is exponential in $R$ the final profile is almost
+%flat within the central $5\,{\rm kpc}$.  Thus, the greatest increase
+%in radial velocity dispersion is at about this radius, which
+%corresponds to the end of the bar.  On the other hand, the greatest
+%increase in $\sigma_\phi$ occurs at larger radii, closer to $10\,{\rm
+%  kpc}$.
 
 \subsection{Simulations Where Buckling is Suppressed}\label{sec:buckling}
 
@@ -882,7 +1029,7 @@ Buckling is a well-known phenomena often seen in simulations of
 bar-forming galaxies where the bar bends in and out of the disc plane.
 Eventually, these coherent oscillations are converted to random
 vertical motions \citep{BT}.  Buckling typically leads to shorter and
-weaker bars \citep{VP2004}
+weaker bars \citep{VP2004, debattista_2006}
 
 To isolate the effects of buckling we implement a simple scheme
 that prevents the instability from taking hold.  Essentially, at
@@ -904,7 +1051,7 @@ buckling doesn't appear to occur in our thick disc simulations.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth]
+	\includegraphics[width=0.8\textwidth]
 {../figures/isolated_a2_vs_t_2rd_no_buckling_weighted.eps}
 	\caption{Mean bar strength parameter inside the cylindrical
           radius $R_p$, $A_2(<R_p)$, as a function of time.  The
@@ -915,7 +1062,7 @@ buckling doesn't appear to occur in our thick disc simulations.
 \end{figure}
 
 
-\begin{figure*}
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../figures/cosmo_three_by_threes.eps}
 	\caption{Projections for the D.I (left three columns) and E.II
@@ -924,11 +1071,11 @@ buckling doesn't appear to occur in our thick disc simulations.
             Gyr}$, $5.9\,{\rm Gyr}$, and $13.7\,{\rm Gyr}$ after the
           Big Bang. The overlaid red circles have radii $R_p$ and 20
           $h^{-1} \,$kpc.} \label{fig:face_on_cosmo}
-\end{figure*}
+\end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth]{../figures/cosmo_a2_vs_t_2rd_weighted.eps}
+	\includegraphics[width=0.8\textwidth]{../figures/cosmo_a2_vs_t_2rd_weighted.eps}
 	\caption{$A_2(<R_p)$ as a function of the age of the Universe
           for simulations D.I (solid curve) and E.II (dashed
           curve). } \label{fig:cosmo_a2_vs_t}
@@ -937,7 +1084,7 @@ buckling doesn't appear to occur in our thick disc simulations.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth]{../figures/kicked_up_disk.eps}
+	\includegraphics[width=0.8\textwidth]{../figures/kicked_up_disk.eps}
 	\caption{Fraction of particles with distance from the midplane greater
 than some distance $d$ as a function of $d$.  The difference colours correspond to
 different bins in cylindrical radius $R$: $0<R<5\,{\rm kpc}$ --- black;
@@ -1030,8 +1177,8 @@ very similar to those seen in the simulations of
 \citet{DeBuhrStellarDisks}, \citet{YurinSpringelStellarDisks}, and
 \citet{Bauer2018a}.  The fact that the bar in D.I is weaker than the
 one in E.II is consistent with the results from our isolated galaxy
-simulations that thicker discs produce stronger bars (See
-Fig.\,\ref{fig:face_on_isolated}.
+simulations that thicker discs produce stronger bars (see
+Fig.\,\ref{fig:face_on_isolated}).
 
 The most significant difference between bar formation in the
 cosmological setting and bar formation in isolated galaxies concerns
@@ -1055,7 +1202,7 @@ discs start from axisymmetric initial conditions, the only source of
 the $m=2$ perturbations that drive bar formation is shot noise from
 the N-body distribution.  Evidently, making a disc thicker slows the
 growth of these perturbations.  On the other hand, $m=2$ perturbations
-abound in the cosmological environment where halos are clumpy and
+abound in the cosmological environment where haloes are clumpy and
 triaxial.  The initial growth of the bar may, in fact, be relatively
 insensitive to the thickness of the disc, once discs are placed in a
 cosmological setting.  On the other hand, disc thickness does effect
@@ -1073,7 +1220,7 @@ analysis of kinematic and photometric data for the Andromeda galaxy
 \citep{dorman2013}.  Furthermore, the idea of kicked-up stars has been
 invoked by \citep{pricewhelan2015} to explain the Triangulum-Andromeda
 stellar clouds \citep{rochapinto2003, martin2014} and by
-\citep{sheffield2018} to explain the Monoceros Ring \citep{yanny2000,
+\citep{sheffield2018, laporte_2018_low_latitude} to explain the Monoceros Ring \citep{yanny2000,
   newberg_2002} and associated A13 stellar overdensity
 \citep{sharma2010}.
 
@@ -1096,10 +1243,19 @@ larger since a fraction of the kicked-up stars will be passing through
 the disc with large vertical velocities.
 
 \section{Conclusions}\label{sec:conclusions}
+{
+We briefly summarize our findings as:
+\begin{itemize}
+\item Bar strength in a cosmological setting depends on $X$ and $Q$, as well as additional properties such as thickness and vertical dispersion.
+\item In isolation, thick discs appear more resilient to buckling.
+\item In a cosmological setting, environment appears to be a much larger driver of bar formation than internal disc dynamics.
+\item Disc scale height has little-to-no impact on the number of stars being kicked out of a stellar disc.
+\end{itemize}
+}
 
 The seminal work of \citet{PeeblesOstriker1973} introduced the notion
 that disc dynamics provides a powerful constraint on the structure of
-discs and the halos in which they reside.  In short, discs that are
+discs and the haloes in which they reside.  In short, discs that are
 dynamically cold and that account for a substantial fraction of the
 gravitational force that keeps their stars on nearly circular orbits
 are unstable to the formation of strong bars and spiral structure.
@@ -1112,10 +1268,10 @@ simple assumptions (e.g., exponential surface density profile) one can
 derive a relation among the structural parameters of a disc in
 approximate equilibrium and thus a constraint on initial conditions
 that one might choose for simulations.  For example, if one fixes
-$h_d/R_d$ and $\sigma_R/\sigma_z$, as was done in
+$z_d/R_d$ and $\sigma_R/\sigma_z$, as was done in
 \citet{YurinSpringelStellarDisks}, then there is an approximately
 one-to-one relationship between $Q$ and $X$.  Likewise, fixing $Q$ and
-$X$ implies a relationship between $h_d/R_d$ and $\sigma_R/\sigma_z$.
+$X$ implies a relationship between $z_d/R_d$ and $\sigma_R/\sigma_z$.
 These results have important implications for applying disc dynamics
 as a constraint on models of galaxy formation.  In particular,
 inconsistencies between bar demographics in a galaxy formation model
@@ -1142,8 +1298,8 @@ delayed in thick disc models of isolated galaxies may be purely
 academic --- bar formation in the cosmological environment will be
 initiated by a variety of stochastic effects regardless of the
 thickness of the disc.  On the other hand, the resilience of thick
-disks to buckling {\it is} relevant in the cosmological setting and
-may explain why thick disks tend to form strong bars.  The upshot is 
+discs to buckling {\it is} relevant in the cosmological setting and
+may explain why thick discs tend to form strong bars.  The upshot is 
 that a proper understanding the distribution of bars in cosmological models
 must go hand-in-hand with a proper understanding of the vertical 
 structure of discs.
@@ -1152,17 +1308,24 @@ Clearly, a more exhaustive exploration of the model parameter space is
 in order.  One might, for example, include galaxy scaling relations to
 further constrain the space of models.  In addition, it would be of
 interest to insert different discs (and for that matter, nearly
-identical ones) into different halos in order to explore the
+identical ones) into different haloes in order to explore the
 random nature of disc-halo interactions.  Ultimately, improvements
 in observations together with a more complete survey of models via
 simulations should allow us to fully exploit bars in discs as a means
 of testing and constraining theories of structure formation.
 
 \section*{Acknowledgements}
-{LMW and JB are supported by a Discovery Grant with the Natural
+{LMW and JSB are supported by a Discovery Grant with the Natural
   Sciences and Engineering Research Council of Canada. JSB
   acknowledges the assistance of Matthew Chequers and Keir Darling in
-  understanding the \textsc{AGAMA} program interface.}
+  understanding the \textsc{AGAMA} program interface. The authors
+  acknowledge the contributions of the Python scientific open source community,
+  particularly the SciPy project \citep{scipy}, NumPy \citep{numpy}, Pandas \citep{pandas},
+  and matplotlib \citep{matplotlib}.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
 
 % The best way to enter references is to use BibTeX:
 

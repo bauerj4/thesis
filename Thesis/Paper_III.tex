@@ -8,7 +8,11 @@
 
 \newpage
 \section{Abstract}
+
 We present and study vertical structure evolution twelve high resolution simulations of Milky Way stellar discs inserted into cosmological dark matter haloes. The simulations exhibit a wide variety of vertical structure formation arising from bar buckling, interactions with the host halo, and substructure. A systematic study of the effects of the disc's initial dynamical temperature, measured by Toomre $Q$, and the time of insertion on the disc properties is conducted. Inserting a disc into a more equilibrated halo appears to lead to quieter vertical structure evolution, and increasing the disc's internal dynamical temperature appears to have a non-trivial impact. Furthermore, we identify a population of stars that get kicked up to high latitudes in each simulation. Our results are consistent with the idea that a disc-satellite interaction origin of these structures requires a perturber in the region of $10^{11} \, \solarm$ in close proximity to the disc. A broader interaction with the triaxial host halo is much better at generating these higher latitude structures on short timescales.  As such, we determine that a wide variety of cosmological environments are able to explain low-latitude disc structures like Monoceros, A13, and TriAnd. 
+
+\vspace{1in}
+
 \section{Introduction} \label{sec:introduction}
 %Literature review about vertical structure.
 
@@ -44,13 +48,6 @@ It is worth noting that disc-halo misalignment is not the only way to induce sub
 
 
 
-%Here, bar buckling is proposed to have a long-lasting impact on the vertical structure of a stellar disc. Since bars buckle in response to unstable bending waves, it is possible that the effect of bar buckling in the Milky Way is long lived and observable in the thin disc.
-
-%
-
-
-
-
 
 % Fully cosmological models
 
@@ -59,11 +56,9 @@ In this paper, we study how vertical structure evolves in a realistic $\Lambda$C
 Our technique was successfully used to study bar formation in a cosmological context in \citet{bauer2018b}. Bar buckling is another mechanism for exciting vertical structure in stellar discs \citep{bar_buckling_echo}. When unstable bending waves are present at the centres of bar-forming discs, this gives rise to a time-dependent vertical potential. In turn, this excites new bending waves throughout the disc. This paper studies this important mechanism in more detail.
 
 
-
-Our paper is then organized as follows. To motivate our simulation suite, we present two toy models in \S\ref{sec:overview} to serve as discussion points. In particular, they focus on the important effect of inertial acceleration of the disc. We then describe twelve simulations of discs inserted into cosmological haloes in \S \ref{sec:description}. Although the halo evironments have similar total mass to the Milky Way, they vary widely in terms of their substructure and smooth density components. The time evolution of key structural statistics in all models is studied in \S \ref{sec:evolution}. Focusing on the outer disc, we examine how stars can be stripped to high latitudes in \S \ref{sec:kud}. To connect the previous results to their halo environments, we examine several representative evolution scenarios in more detail in \S\ref{sec:disentangle}. These scenarios include a disc-halo misalignment dominated system, a substructure interaction dominated system, and a system which is somewhere in between. Finally, we discuss our key results in \S\ref{sec:discussion}.
-
-
 We demonstrate that a variety of halo environments could plausibly explain the Milky Way's vertical structure without the need for a very massive Sgr dSph. A number of the above effects are significant, and Monoceros-like structure appears ubiquitous. We also show that low latitude streams in the outer disc simply require a consistent perpendicular torque in the disc plane to be generated.
+
+Our paper is then organized as follows. To motivate our simulation suite, we present two toy models in \S\ref{sec:overview} to serve as discussion points. In particular, they focus on the important effect of inertial acceleration of the disc.  The time evolution of key structural statistics in all models is studied in \S \ref{sec:evolution}. Focusing on the outer disc, we examine how stars can be stripped to high latitudes in \S \ref{sec:kud}. To connect the previous results to their halo environments, we examine several representative evolution scenarios in more detail in \S\ref{sec:disentangle}. These scenarios include a disc-halo misalignment dominated system, a substructure interaction dominated system, and a system which is somewhere in between. Finally, we discuss our key results in \S\ref{sec:discussion}.
 
 
 
@@ -86,14 +81,17 @@ We demonstrate that a variety of halo environments could plausibly explain the M
 In this section, we illustrate the factors driving vertical structure in stellar discs with two toy models.
 \subsection{Quantifying Structure in Discs}
 %\vspace{0.6in}
-We choose to approach summarizing our models in this paper by looking at statistics of the form,
+
+The analysis of simulated galaxies invariably involves computing averages of physical quantities, namely functions of the phase-space coordinates, $\textbf{r}$ and $\textbf{v}$. For some observable function,  $\Theta(\textbf{r},\textbf{v})$, the average in a region $S$ is,
+\begin{eqnarray}
+\langle\Theta\rangle_S &=&\frac{1}{M_S} \int_S \text{d}^3 \textbf{r} \text{d}^3\textbf{v} f(\textbf{r}, \textbf{v}) \Theta(\textbf{r}, \textbf{v})\\
+&\approx& \frac{1}{M_S} \sum_{j \in S} m_j \Theta(\textbf{r}_j, \textbf{v}_j) \label{eq:z_statistic}
+\end{eqnarray}
+where $M_S$ is the mass in $S$, $f(\textbf{r},\textbf{v})$ is the phase space distribution function, and $m_j$ is the mass of the $j$-th particle in $S$. For stellar discs, we are often interested in the Fourier series representation of $\Theta$ to quantify $m$-fold angular symmetries in some annulus with mean radius, $R_S,$
 \begin{equation}
-Z_m^n  = \left \vert \frac{1}{M_s} \sum_{j \in S} m_j e^{i m \phi_h} z^n_j \right\vert \label{eq:z_statistic}
+\langle\Theta(R_S,m)\rangle_S = \frac{1}{M_S} \sum_{j \in S} e^{i m \phi_j} m_j \Theta(\textbf{r}, \textbf{v})
 \end{equation}
-where $M_S$ is the mass in some region $S$, $m_j$ is the mass of the $j$-th particle in $S$, and $\phi_j$ is the azimuthal angle of particle $j$, and $z_j$ is its height. The quantities $m$ and $n$ are chosen to give the statistic a desired meaning. For example, $(m,n) = (0,1)$ is the mean height in $S$, whereas $(m,n) = (0,2)$ is the mean-squared height. Higher values of $m$ will pick out certain symmetries. In the case of $m=1$, ring-like vertical displacements show up. The special case of $(m,n) = (2,0)$ will be high if there are planar features with two symmetry axes, like bars. These special cases of Eq. \eqref{eq:z_statistic} have important significance in the evolution of spiral galaxies, as we discuss throughout the paper.
-\\
-
-
+where $m$ is the degree of symmetry, and $\phi_j$ is the azimuthal angle of particle $j$. When $\Theta = z^n$, we call the average $Z_m^n$. We make extensive use of this form for this paper.
 
 \subsection{Toy Model: Acceleration Along the Symmetry Axis} \label{ssec:toy_model_1}
 
@@ -101,7 +99,7 @@ where $M_S$ is the mass in some region $S$, $m_j$ is the mass of the $j$-th part
 For our first simulation, we study the vertical structure that is excited when a dark matter subhalo falls along the disc symmetry axis from a height of 100 kpc.  We generate the initial conditions using  the \textsc{GalactICS} code \citep{KGGalactICSReference,WPDGalactICSReference}, and simulate the system using \textsc{Gadget-3}, a privately released version of the popular \textsc{Gadget-2} code \citep{GadgetCodePaper}.
 
 % This experiment is similar to Sellwood 1996...
-The disc has an exponential surfacec density with scale length $R_d=3.7\,\kpc$ and mass $M_d=4\times10^{10} \,\solarm$. The halo is taken to be NFW, with scale length $R_h=33.2\,\kpc$, virial mass $M_h=1.1\times10^{12}$, and concentration $c=6.7$\footnote{The parameters for the halo are taken to be a sphericalized version of simulation B.Late in Table \ref{tab:sims}. This simulation will be described in more detail in \S\ref{sec:description}.}. We use $10^5$ halo particles and $3.5 \times 10^{5}$ disc particles. The subhalo is also assumed to be NFW with scale length $R_h=1.70\,\kpc$, virial mass $M_h=2.7\times10^{10}$, and concentration $c=38.1$\footnote{ The parameters for the substructure are given by B.Late.a in Table \ref{tab:substructure}.}. The subhalo is given a height of $z=100\,\kpc$ and zero velocity.
+The disc has an exponential surface density with scale length $R_d=3.7\,\kpc$ and mass $M_d=4\times10^{10} \,\solarm$. The halo is taken to be NFW, with scale length $R_h=33.2\,\kpc$, virial mass $M_h=1.1\times10^{12}$, and concentration $c=6.7$\footnote{The parameters for the halo are taken to be a sphericalized version of simulation B.Late in Table \ref{tab:sims}. This simulation will be described in more detail in \S\ref{sec:description}.}. We use $10^6$ halo particles and $3.5 \times 10^{6}$ disc particles. The subhalo is also assumed to be NFW with scale length $R_h=1.70\,\kpc$, virial mass $M_h=2.7\times10^{10}$, and concentration $c=38.1$\footnote{ The parameters for the substructure are given by B.Late.a in Table \ref{tab:substructure}.}. The subhalo is given a height of $z=100\,\kpc$ and zero velocity.
 
 
 
@@ -109,19 +107,17 @@ A disc-centered mean height map for disc particles is shown in Fig. \ref{fig:toy
 
 
 
-The oscillation pattern seen in Fig. \ref{fig:toy_model_1_mean_height} is not stationary in time, but rather becomes more complicated as time goes on. Immediately after the first sign reversal, the pattern starts to propagate outwards more slowly as evidenced by decreasing (increasing magnitude) slope of the ridges. The mean height shows oscillating single fixed-point standing wave behaviour, at some points (around 1 Gyr) appearing to gain another node.  As the system equilibrates, the $m=0$ disturbances are pushed further to the outer disc, but the magnitude of the perturbations remains high.
+The oscillation pattern seen in Fig. \ref{fig:toy_model_1_mean_height} is not stationary in time, but rather becomes more complicated as time goes on. Immediately after the displacement first changes signs, the pattern starts to propagate outwards more slowly as evidenced by decreasing (increasing magnitude) slope of the ridges. The mean height shows oscillating single fixed-point standing wave behaviour, at some points (around 1 Gyr) appearing to gain another node.  As the system equilibrates, the $m=0$ disturbances are pushed further to the outer disc, but the magnitude of the perturbations remains high.
 
 Qualitatively similar behaviour can be seen in the halo. Fig. \ref{fig:toy_model_1_mean_height_halo} shows the mean height of spherical shells in the halo. It paints a similar picture to the disc; the inner shells are dragged with the disc as the substructure pulls on the inner disc-halo system more strongly, while the outer halo lags the oscillations. The shells in the outer halo are displaced with longer periods of oscillation than in annuli in the outer disc, indicating a more complicated interaction with the substructure and inner disc-halo system. The halo develops multiple nodes in mean height by the end of the simulation, suggesting a similar standing wave-like phenomenon is occurring in the halo.
 
-What is interesting about this experiment is the very long-lived nature of the flapping in the disc. Vertical instabilities are generally expected to phase mix, causing the disc to thicken. The flapping in our disc persists for much longer than a dynamical time. In fact, a similar observation was made in an experiment performed by \citet{sellwood_1996} where a disc with similar properties was given an initial bulk displacement that varied as a function of radius. While other bending behaviour is rapidly suppressed, a flapping motion remained in the perturbed disc. Qualitatively, the results of \citet{sellwood_1996} are similar in magnitude to our own, suggesting that flapping naturally arises from near-axisymmetric perturbations of the disc.
+What is interesting about this experiment is the very long-lived nature of the flapping in the disc. Vertical instabilities are generally expected to phase mix, causing the disc to thicken. The flapping in our disc persists for longer than a dynamical time. In fact, a similar observation was made in an experiment performed by \citet{sellwood_1996} where a disc with similar properties was given an initial bulk displacement that varied as a function of radius. While other bending behaviour is rapidly suppressed, a flapping motion remained in the perturbed disc. Qualitatively, the results of \citet{sellwood_1996} are similar in magnitude to our own, suggesting that flapping naturally arises from near-axisymmetric perturbations of the disc.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{../figures/isolated_orbits_two_fits.eps}
 	\caption{The orbit of the disc (blue), halo (red), and subhalo(green) peak densities of the toy model described in \S\ref{ssec:toy_model_2}. The dashed black lines show the fits described in the text.} \label{fig:toy_model_2_orbits}
 \end{figure}
-
-
 
 
 
@@ -133,12 +129,11 @@ What is interesting about this experiment is the very long-lived nature of the f
 \end{figure}
 
 
-Here, we present a more complicated satellite encounter. The orbit is inspired by a satellite in one of our cosmological simulations, and shows a massive satellite on a close, polar orbit with the disc. The parameters for the disc, halo, and subhalo are the same as in \S\ref{ssec:toy_model_1}.
-
+Here, we present a more complicated satellite encounter. The orbit is inspired by a satellite in one of our cosmological simulations, and shows a massive satellite on a close orbit with the disc, passing through the midplane several times. The parameters for the disc, halo, and subhalo are the same as in \S\ref{ssec:toy_model_1}.
 
 
 We plot the $z$ coordinate of the subhalo, disc, and halo peak densities in Fig. \ref{fig:toy_model_2_orbits}.
-Initially, the subhalo is far from the disc at around 100 kpc, and about 50 kpc above the disc in $z$. We see the disc and halo peak densities track each other almost exactly over the course of the simulation, consistent with Fig. \ref{fig:toy_model_1_mean_height} and Fig. \ref{fig:toy_model_1_mean_height_halo}. In some short frame of time, we suggest that this system can be viewed as a two body problem between the disc-halo system and subhalo. That is, we have motion described by,
+Initially, the subhalo is far from the disc at over 100 kpc, and about 20 kpc above the disc in $z$. We see the disc and halo peak densities track each other almost exactly over the course of the simulation, consistent with Fig. \ref{fig:toy_model_1_mean_height} and Fig. \ref{fig:toy_model_1_mean_height_halo}. In some short frame of time, we suggest that this system can be viewed as a two body problem between the disc-halo system and subhalo. That is, we have motion described by,
 \begin{equation}
 \frac{M_{dh}\textbf{r}_{dh} +  + M_{sh} \textbf{r}_{sh}}{M_{dh} + M_{sh}} = \textbf{r}_{c,0} + \textbf{v}_{c,0} t
 \end{equation}
@@ -146,30 +141,27 @@ where $M_{dh}$ is the implied two-body disc-halo mass, $M_{sh}$ is the implied t
 
 We can find the density modes from the particle distributions each time very easily. However, $M_{dh}$, $M_{sh}$, $\textbf{r}_{c,0}$, and $\textbf{v}_{c,0}$ are unknowns. We maximize the likelihood,
 \begin{equation}
-\ln \mathcal{L} = \left\vert \frac{M_{dh}\textbf{r}_{dh} +  + M_{sh} \textbf{r}_{sh}}{M_{dh} + M_{sh}} - \textbf{r}_{c,0} + \textbf{v}_{c,0} t \right\vert^2
+\ln \mathcal{L} = \left\vert \frac{M_{dh}\textbf{r}_{dh} +  + M_{sh} \textbf{r}_{sh}}{M_{dh} + M_{sh}} - \textbf{r}_{c,0} + \textbf{v}_{c,0} t \right\vert^2 \, \text{kpc}^{-2}
 \end{equation}
-in two 1.0 Gyr windows centered on the pericenters at 0.5 Gyr and 2.0 Gyr. The two center of mass motion lines, $\textbf{r}_{c,0} + \textbf{v}_{c,0} t$ are shown as the solid black and dashed black lines in Fig. \ref{fig:toy_model_2_orbits}, respectively. At first and second pericenters, we imply effective two-body mass ratios of 14.4:1 and 29.2:1, respectively, for disc-halo:subhalo masses. 
+in two 1.0 Gyr windows  centered on 0.5 Gyr and 2.0 Gyr, respectively. These windows are chosen since they encompass the time before pericentric passages at 0.85 Gyr and 3.0 Gyr, when the subhalo is losing the most mass. The idea is that during pericentric passages, we expect the system to be poorly described by a two-body fit. The two center of mass motion lines, $\textbf{r}_{c,0} + \textbf{v}_{c,0} t$ are shown as the solid black and dashed black lines in Fig. \ref{fig:toy_model_2_orbits}, respectively. We imply effective two-body mass ratios of 16.3:1 and 85.0:1, respectively, for disc-halo:subhalo masses. 
 
-The first pericenter mass ratio is in good agreement with the distance to center of mass ratio of the disc-halo and subhalo, which is 13.2:1. The fact that this is close to the mass ratio is a good indication that two body motion describes the disc-halo system's response to the subhalo in the time around the first pericentric passage. This is because the distance ratio was not a parameter in our fit, but we know it must be the same as the mass ratio for true two-body motion. We submit this technique as a way to quantify the effect of inertial acceleration in isolated satellite encounters.
-
-Although the drift velocity of the system changes as the satellite sheds mass, the picture is clear: the disc is placed on an oscillating orbit in $z$, and is no doubt subject to differential vertical acceleration. 
-We see the orbit's effect on the mean height of the disc in Fig. \ref{fig:toy_model_2_mean_height}. At the beginning of the simulation, although the amplitude of the oscillations is lower, we see qualitatively similar behaviour to the first toy model. There is no obvious mean height bump when the substructure is at pericenter, indicating that passages through the disc plane are less substantial for generating corrugations than the overall orbit. We also note that the disc orientation is relatively undeflected during this time period, being constrained to less than $5^{\circ}$ in the first 2.5 Gyr.
+The likelihood represents the mean distance deviation from our fit. For the two windows centered at 0.5 Gyr and 2.0 Gyr, we have the average root-log-likelihood $(N^{-1}\ln\mathcal{L})^{1/2}= 0.19$ in the first window and  $(N^{-1}\ln\mathcal{L})^{0.5} = 0.29$ in the second, where $N$ is the number of observations in the window. We thus infer small deviations from a two body problem when the subhalos are not at pericenter, implying that this model describes the data well.  We submit this technique as a way to quantify the effect of inertial acceleration in isolated satellite encounters. Although the drift velocity of the system changes as the satellite sheds mass, the picture is clear: the disc is placed on an oscillating orbit in $z$, and is no doubt subject to differential vertical acceleration. Despite this acceleration, the disc axis as measured by its moment of inertia tensor is relatively undeflected, being constrained to less than $2^{\circ}$ in the first 4 Gyr.
 
 
+We see the orbit's effect on the mean height of the disc in Fig. \ref{fig:toy_model_2_mean_height}. At the beginning of the simulation, although the amplitude of the oscillations is lower, we see qualitatively similar behaviour to the first toy model. There is no obvious mean height bump when the substructure is at pericenter, indicating that passages through the disc plane are less substantial for generating $m=0$ corrugations than the overall two-body orbit. We expect that any subhalo capable of creating two-body motion of the disc along the disc axis will generate substantial, several hundred parsec corrugations. 
 
 
 \section{Description of Experiments} \label{sec:description}
 
 
-With the findings of \S\ref{sec:overview} in mind, we proceed to generalize to a fully cosmological environment. In this section, we give an overview of our cosmological simulations. We begin by summarizing the disc insertion technique. Then, we give a detailed description of the individual halo environments. Finally, we present broad results on the evolution of bars and vertical structure in our models.
 
+In this section, we proceed to generalize to a fully cosmological environment. 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{../figures/rotation_curve.eps}
 	\caption{The rotation curves for all considered models. The same disc is used in all runs, and its rotation curve contribution shown by the black dashed line. The halo contributions  for the Early and Warm subsuites are shown in the top panel as dot-dashed lines, with the total rotation curves being solid. The bottom panel shows the same for the Late subsuite.} \label{fig:rotation_curves}
 \end{figure}
-
 
 
 
@@ -201,7 +193,7 @@ system is evolved to the present epoch.
 For our pure dark matter simulation, we implement the zoom-in
 technique of \citet{KatzQuasarZoom} and \citet{NavarroWhiteZoom}.
 Selecting for Milky Way-like halos with no major mergers, we use the
-results of \cite{onorbe_etal_2014} to ensure no low-resolution particle contamination 
+results of \cite{onorbe_etal_2014} to ensure no low-resolution particle contamination.
 We choose cosmological parameters based on the results
 from Planck 2013 \citep{planck_2014} with $H_0=67.9\,{\rm
   km\,s}^{-1}\,{\rm kpc}^{-1}$, $\Omega_b = 0.0481$, $\Omega_0 =
@@ -226,6 +218,7 @@ halo \citet{bauer2018a}.
 
 \subsection{Numerical Experiments} \label{ssec:numerical_experiments}
 
+%We apply the technique described in \S \ref{ssec:disc_insertio} to understand a possible disc origin of low-latitude streams, and more generally how vertical structure evolves in pure stellar discs. In particular, we are interested in understanding how, in a cosmological simulation, stars are kicked up out of the disc. They comprise a component, if not all member stars of low-latitude streams. We discuss useful definitions of this population subsequently in \S\ref{ssec:def}. Such kicked-up disc stars (KUD stars) may be useful probes of the Galactic potential if we can understand how their orbits were altered.
 
 We present a concise description of our cosmological models in Table \ref{tab:sims}. The haloes are chosen such that the total circular speed curves are similar to the Milky Way's. One of the haloes is considered by \cite{bauer2018b}, and the other three, A, B, and C, are previously unpublished.
  
@@ -239,7 +232,9 @@ Although we explore all of our models in \S\ref{sec:evolution} and \S\ref{sec:ku
 \item \textbf{Disc-Halo Misalignment:} C.Early presents a case with no massive subhalo interactions, but a substantial misalignment from its host halo.
 \item \textbf{Distant Massive Subhaloes:} A.Early is relatively aligned to its host halo, but its most massive substructures do not interact closely with the disc.
 \end{enumerate}
-These simulations represent three archetypal halo environments, which we explore in more detail in the next section.
+These simulations represent three archetypal halo environments, which we explore in more detail in subsequent sections.
+
+
 
 \begin{sidewaystable}
 \centering
@@ -268,17 +263,22 @@ C.Late            & $6.7 \times 10^{11}$ & 13.6 &  14.0 &   0.75 & $3.5 \times 1
 \subsection{Halo Environments} \label{ssec:halo_env}
 
 
+%As mentioned in \S\ref{ssec:numerical_experiments}, the haloes we consider are meant to resemble the Milky Way. In Table \ref{tab:sims}, all of the simulations we consider are listed. 
+
+
+%In addition to basic properties like halo mass, $M_h$, and scale radius, $R_h$, we also want to know how equilibrated the halo is with the disc. Discs will tumble in response to an external specific torque, $\boldsymbol \tau$, induced by the non-equilibrated halo. This invariably produces vertical structure.
+
 Here, we further quantify our halo environments in terms of the effects we expect their smooth distributions and subhalos to have on the disc. For the former of these, we examine the following timescale,
 \begin{equation}
 T_\tau = \frac{L(R)}{\tau_\perp(R)},
 \end{equation}
-where $L(R)$ is the magnitude of the angular momentum in a ring centered at radius $R$, and $\tau_\perp(R)$ is the cylindrically averaged perpendicular torque in an annulus centered at $R$. This timescale is plotted as a function of radius at initialization for our models in Fig. \ref{fig:ratio_freqs}. This lower the timescale, the more the initial halo configuration contributes to the relevant torque. For example, we would interpret the simulation C.Early as being substantially non-equilibrated at initialization. Generally speaking, the more misaligned disc-halo systems have shorter torque action timescales. The effect of having a warmer disc is most pronounced in the inner regions, where the increased angular momentum appears to increase $T_\tau$.
+where $L(R)$ is the magnitude of the angular momentum in a ring centered at radius $R$, and $\tau_\perp(R)$ is the cylindrically averaged perpendicular torque in an annulus centered at $R$. This timescale is plotted as a function of radius at initialization for our models in Fig. \ref{fig:ratio_freqs}. This lower the timescale, the more the initial halo configuration contributes to the relevant torque. For example, we would interpret the simulation C.Early as being substantially non-equilibrated at initialization. Generally speaking, the more misaligned disc-halo systems have shorter torque action timescales. The effect of having a warmer disc is most pronounced in the inner regions, where the increased angular momentum from asymmetric drift appears to increase $T_\tau$.
 
+%In a non-equilibrium state, shells of the halo may be misaligned from others at different radii. This creates a torquing effect on the disc and causes it to reorient (see \cite{DubinskiKuijkenRigidDisks}, for example). Torques present an opportunity for the angular momenta of orbits to change, and may result in the generation of KUD stars. Fig. \ref{fig:disk_torques} shows the specific torque as a function of radius for all models. In the most misaligned simulations, bauer2018b.Early/Warm, bauer2018b.Late, and C.Early/Warm, there is an obvious torque signature in the intermediate parts of the disc.
 
+%he relative tilt of the halo principal axes compared to the halo interior for all runs. The model considered in \citet{bauer2018b}, bauer2018b.Early stands out the most. It shows substantial misalignment at all radii. C.Early also shows substantial misalignment, but the other simulations seem to have mostly aligned short axes.\
  
 Subhalo interactions pose another potential source of perpendicular torque. We expect the timescales over which these events act to be shorter, but we can understand them by looking at the subhalo orbits directly. Fig. \ref{fig:substructure_orbits} shows the two most massive substructures in a plot of $r$ vs $t$ for all runs. A list of the top five most massive (at initialization) substructures' masses and scale radii is presented in Table \ref{tab:substructure}. The orbits present a wide variety of behaviour. For example, the subhaloes in bauer2018b.Early live most of their lives in the outer halo on roughly tangential orbits. Opposite to this are radial orbits like the one of C.Late.b, for example. Of course, most orbits exist somewhere in between on this scale. 
-
-
 
 
 \begin{sidewaystable}
@@ -327,7 +327,7 @@ We briefly summarize the evolution of the models in our simulation suite. We are
 
 \begin{figure}
     \centering
-	\includegraphics[width=0.8\textwidth]{../figures/three_panel_densities.eps} \caption{The final face-on density projections for the C.Early, C.Warm, and C.Late models. The circles correspond to $R_p = 2.2\, R_d = 8.1 \,\kpc$ and $20 \kpch = 29.5 \, \kpc$.}
+	\includegraphics[width=0.8\textwidth]{../figures/surface_density_ratios.eps} \caption{The ratio of surface density, $\Sigma$, to azimuthally averaged surface density, $\Sigma_0$ for the C.Early, C.Warm, and C.Late models. The circles correspond to $R_p = 2.2\, R_d = 8.1 \,\kpc$ and $20 \,\kpch = 29.5 \, \kpc$.}
 	\label{fig:final_densities}
 \end{figure}
 
@@ -339,22 +339,21 @@ We briefly summarize the evolution of the models in our simulation suite. We are
 
 
 
-In isolation, a disc-halo system forms a bar when shot noise induced perturbations exponentially grow \citep{EfstathiouShotNoise}. Factors such as the relative contribution of the disc to the rotation curve, radial velocity dispersion, and disc scale height broadly determine how a disc forms a bar in isolation \citep{AthanassoulaSellwood1986,ChristodoulouStability1995, Klypin2009, Sellwood2013, bauer2018b}. 
-
-In the presence of strong environmental perturbers, $m=2$ symmetric perturbations can induce rapid bar formation \citep{gauthier_2006, kazantzidis2008, purcell2011, bauer2018b}. In similar studies using simpler disc insertion schemes, \citet{debuhr_2012,ys_2015} found that pure stellar discs invariably formed large bars in cosmological environments. Although \citet{bauer2018b} found that disc-halo systems form bars, they found that the strength of the bar was not doomed to be unrealistic. Since \citet{bauer2018b} considered only one halo, the previously stated result is tenuous. 
-
-A full study of how bars form in our simulations is outside the scope of this work, but since \citet{bar_buckling_echo} suggests that the buckling of a bar is a significant driver of vertical structure, it is important to understand the bar strength history in our simulations. In particular, we are looking for variations in the buckling times of our discs.
-
-%With the twelve simulations presented in this paper, we can complete our contribution to how pure stellar discs behave in a cosmological setting.
-%\\
-
-Broadly speaking, our simulations form bars similar to the Milky Way;s bar. The final, present-day snapshot for several models is shown in Fig. \ref{fig:final_densities}. The bulk of the bar mass in all simulations appears contained to within $R_p = 2.2\, R_d$, as shown by visual inspection of the inner circles. Furthermore, it is worth noting that the warm suite is not substantially distinguishable upon inspection of this snapshot, indicating that the increased radial velocity dispersion did little to stop the formation of a bar in a cosmological setting.   The late-insertion suite shows a reduced bar length, bolstering an idea presented in \citet{bauer2018b} that for similar galaxies, one might be able to use the bar length to compare relative dates of stellar discs. Although we show only the the C.Early, C.Warm, and C.Late models, we find no substantial differences with other models within each subsuite.
+In isolation, a disc-halo system forms a bar when shot noise induced perturbations exponentially grow \citep{EfstathiouShotNoise}. Factors such as the relative contribution of the disc to the rotation curve, radial velocity dispersion, and disc scale height broadly determine bar formation rate, strength, and length \citep{AthanassoulaSellwood1986,ChristodoulouStability1995, Klypin2009, Sellwood2013, bauer2018b}. 
+Strong environmental perturbers such as halo substructure and tides can induce bar formation even in discs that resist bar formation in isolation \citep{gauthier_2006, kazantzidis2008, purcell2011}. In similar studies using simpler disc insertion schemes, \citet{debuhr_2012,ys_2015} used a disc insertion scheme, and found that stellar discs always form bars in a cosmological environment, even if they are submaximal. \citet{ys_2015} found that the presence of a classical bulge substantially mitigated this conclusion. 
 
 
-We can see the full time evolution of the bar strength in Fig. \ref{fig:a_2} as measured by the $A_2$ parameter. Conventionally, we define $A_m = Z^0_m$ \citep[for instance]{debattista_sellwood_2000}. We can evaluate $A_2$ in the region interior to $R_p$ as a global measure of bar strength. The top panel of Fig. \ref{fig:a_2} shows the evolution of $A_2(<R_p)$ for our fiducial and warm suites. Generally speaking, the increased vertical temperature has little-to-no effect on bar strength. The discs show increased bar growth until $a\sim0.6$, where the bars buckle and then resume growing for the remainder of the simulation. One notable exception is a slight difference prior to $a=0.75$ in the evolution of A.Early and A.Warm. In A.Warm, the buckling time is shifted to slightly after $a=0.7$, a result we might be able to understand in terms of the halo environment. From Table \ref{tab:sims}, we see that these simulations are characterized by very low disc-halo misalignment, and from Fig. \ref{fig:substructure_orbits} we see the most massive subhalo is quite far from the disc and on a tangential orbit. This relatively unperturbed state may be why the disc nurture matters more at early times. However, both models eventually end up quite similar at late times ($a>0.75$). The late-insertion suite shown in the bottom panels is similar to the top panel if it were shifted. The bar grows for a similar amount of time, and we can see the beginnings of buckling near the end of these simulations.
-\\
+In a previous paper, we argued that these simulations overestimated the susceptibility of the disc to forming strong bars \citep{bauer2018b}. This argument stems from the initial thickness used in these studies, which we found to be a major factor in determining present-day bar strength. Specifically, this is because thin discs grow bars more quickly, and are able to buckle more easily, a process which regulates their strength. In contrast, thick discs grow their bars almost completely monotonically.
 
-The picture painted between Fig. \ref{fig:final_densities} and Fig. \ref{fig:a_2} suggests that Milky Way discs in a cosmological environment will all form bars, although these bars are far more realistic than the ones presented in previous studies using disc insertion techniques. Upon inspection, the bars are qualitatively similar to Milky Way's bar, suggesting no real problem on this front for a Milky Way thin stellar disc forming around or slightly after $z=1$. If the Milky Way took a similar trajectory to these simulations, it would not be unreasonable to suspect that observed vertical structure in the Milky Way is in part driven by a buckling bar.
+
+The final, present-day surface density excesses are shown in Fig. \ref{fig:final_densities}. Broadly speaking, our simulations form bars similar to the Milky Way's bar.  The bulk of the bar mass in all simulations appears contained to within $R_p = 2.2\, R_d$, as shown by visual inspection of the inner circles. Furthermore, it the warm suite is not substantially distinguishable upon inspection of this snapshot, indicating that the increased radial velocity dispersion did little to stop the formation of a bar in a cosmological setting.   The late-insertion suite shows a reduced bar length, bolstering an idea presented in \citet{bauer2018b} that for similar galaxies, one might be able to use the bar length to compare relative dates of stellar discs. Although we show only the the C.Early, C.Warm, and C.Late models, we find no substantial differences with other models within each subsuite.
+
+
+In Fig. \ref{fig:a_2}, we plot the bar strength parameter (Eq. \eqref{eq:z_statistic} with $\theta=1$ and $m=2$)  evaluated in the region $R < R_p$ \citep{debattista_sellwood_2000}. First, we note that all models experience some kind of buckling event. We notice that the late suite appears to buckle lower magnitudes. Generally speaking, we see that the warm discs are delayed in their bar formation and buckling, although bauer2018b.Warm is an exception. The final bar strengths as measured by $A_2(R<R_p)$ are similar in magnitude, consistent with Fig. \ref{fig:final_densities}.
+
+
+
+The picture painted between Fig. \ref{fig:final_densities} and Fig. \ref{fig:a_2} bolsters the previous claim that Milky Way discs in a cosmological environment will all form bars. Upon inspection, the bars are qualitatively similar to Milky Way's bar, suggesting no real problem on this front for a Milky Way thin stellar disc forming around or slightly after $z=1$. If the Milky Way took a similar trajectory to these simulations, it would not be unreasonable to suspect that observed vertical structure in the Milky Way is in part driven by a buckling bar.
 
 \subsection{Disc Heating}
 \begin{figure}
@@ -367,7 +366,7 @@ The picture painted between Fig. \ref{fig:final_densities} and Fig. \ref{fig:a_2
 The tendency for discs to thicken as they evolve, as measured by $z_{rms} = \sqrt{Z_2^0}$, is a well-studied phenomenon. In the secular evolution of galaxies, bars and spiral structure drive disc heating \citep{mcmillan_dehnen_2007,Sellwood2013}. Other sources of vertical heating include interactions with massive satellites and the cosmological environment \citep[for example]{lacey_ostriker_1985, toth_ostriker_1992, sellwood_1998, bauer2018b}. These two effects together suggest that we expect cosmological disc systems to thicken with time.
 %\\
 
-In fact, we see this confirmed in our simulations.  Fig. \ref{fig:z_rms} shows the evolution of the root-mean-squared height for each disc in the fiducial and warm suites. We see that substantial heating follows bar buckling in each simulation, a result consistent with \citet{ys_2015,bauer2018b}. An interesting point to make is that the warm suite exhibits up to 25\% more disc heating depending on the point in disc evolution. We understand this as being due to a rotation of local velocity ellipsoids out of the plane of the disc. When this happens, a larger initial $Q$ translates to a larger out-of-plane component, which would enhance vertical heating. In other words, increased radial dispersion amplifies secular heating mechanisms. There is very little to say about the late-insertion scheme in this respect other than that the discs approximately double in height over the simulation time. These simulations end as the buckling process begins, and this may explain why vertical heating is more limited.\\
+In fact, we see this confirmed in our simulations.  Fig. \ref{fig:z_rms} shows the evolution of $z_{rms}$ for each disc in the fiducial and warm suites. We see that substantial heating follows bar buckling in each simulation, a result consistent with \citet{ys_2015,bauer2018b}. We note that the warm suite exhibits up to 25\% more disc heating.  There is very little to say about the late-insertion scheme in this respect other than that the discs approximately double in height over the simulation time. These simulations end as the buckling process begins, and this may explain why vertical heating is more limited.\\
 
 \subsection{Bending in Cosmological Discs}
 \begin{figure}
@@ -390,9 +389,6 @@ In fact, we see this confirmed in our simulations.  Fig. \ref{fig:z_rms} shows t
 \end{figure}
 
 
-
-Bulk displacements beyond the Solar neighborhood could explain structures like the Monoceros Ring discovered by \citet{newberg_2002}. One thing we are particularly interested in is how the disk is bending in these regions as a function of time in the simulation. To this end, we want to quantify bending modes in the vicinity of where a Monoceros analogue would be. We look at the mean height and the $m=1$ bending mode, $Z_1 = Z_1^1$.
-
 We can get a feel for the various kinds of structure present in the disc by looking at the displacement maps in a single snapshot. Fig. \ref{fig:vertical_displacement_map} shows our models' mean height in the middle of their evolution. Substantial vertical structure is ubiquitous, with displacements growing in magnitude toward the outer disc. While $m=0$ structure is definitely present, the dominant mode in all cases appears to be $m=1$. Some simulations like A.Early and C.Warm appear to show higher-order bending structure as well. The suggestion is that cosmological discs cannot avoid forming substantial vertical structure, even in the quieter Late suite.
 
 Fig. \ref{fig:z_0} shows the mean height in an approximately $2 \text{ kpc}$ annulus just beyond the solar neighborhood. A signal here represents a flapping mode of the disc that could appear as a Monoceros-like structure. The first thing we note is that the cases with the most halo misalignment, namely C.Early, show a very different flapping signature. C.Early displays a strong vertical displacement following bar buckling at $a=0.7$.  What separates C.Early from other simulations is that aside from this event, the disc does not flap over the simulation. In fact, C.Late has no distinguishable signal.
@@ -401,9 +397,28 @@ Aside from C.Early, all other discs immediately begin to flap on the scale of hu
 
 Aside from flapping modes, we might also observe Monoceros-like structures as rings of stars tilted from the disc. By computing $Z_1$ in this region, we can quantify this effect. All simulations see several hundred parsec $m=1$ bending modes in the region of Monoceros. Unlike flapping, $m=1$ bending modes appear to be more ubiquitous and have slightly higher magnitude. These bending modes also appear to be more sensitive to the initial dynamical temperature of the disc, with warmer discs generally producing stronger $m=1$ signal. We also note that where B.Late did not show any flapping from its substructure encounter, a 150 pc $m=1$ bending mode is observed following its massive subhalo's pericenter.
 
-\section{KUD Dynamics} \label{sec:kud}
+%\begin{equation}
+%Z_m(S) = \left\vert \frac{1}{M_S} \sum_{j \in S} m_j z_j e^{i m \phi_j} \right\vert, \label{eq:z1}
+%\end{equation}
+%where $S$,$M_S$, and $\phi_j$ are defined as in Eq. \ref{eq:a2}, $z_j$ is the displacement of the $j$-th particle in $S$, and $m=1$ for the relevant bending mode. We take $S$ to be the annulus, $R \in [4.0 \,R_d,4.5\,R_d]$. The bending mode is plotted against time for all of our simulations in Fig. \ref{eq:z1}.  Milky Way discs are known to spontaneously form bending waves in isolation due to shot noise \citep{chequers_2017}, as well as in response to realistic populations of subhaloes \citep{chequers_2018}. In the absence of a major perturber, as in \citet{chequers_2018}, the $m=1$ height bending mode is constrained to less than but on the order of $10^{-1}$ in the region we are considering.
 
-The last section focused on bulk bending of the disc around the solar neighborhood. Here, we focus on stars which may be stripped from the disc to very high latitudes. We give a definition for this population and succinctly summarize its dynamics.
+%In the top panel, the four simulations with the highest $m=1$ bending mode signals are bauer2018b.Early, bauer2018b.Warm, C.Early, and C.Warm. These simulations correspond to the most angularly displaced simulations in the entire suite. By contrast, bauer2018.Late, B.Early, B.Warm, and B.Late which only have satellite perturbers of Sgr mass have a peak signal on the order of half the angularly displaced simulations. The suggestion is that halo realignment causes stronger bending modes than a Sgr-like perturber would. This can be seen in Fig. \ref{fig:vertical_displacement_map} too, with the aforementioned simulations that are angularly displaced from their haloes showing kpc-scale perturbations in the region of Monoceros. It is also interesting to note that increased dynamical temperature does not suppress $m=1$ bending waves to any substantial degree, even in the quieter haloes.
+%\subsection{Summary}
+
+%Despite originating in moderately different halo environments, all models display qualitatively similar evolution. A bar begins to form almost immediately after the disc becomes live. The bar proceeds to buckle while vertical structure is excited through the disc, causing complicated vertical structure even in the disc interior. The bar grows and heats the disc, giving rise to something similar-looking present-day Milky Ways.
+
+
+%Fig. XX shows the $v_z$ displacement field for all runs at select times.
+
+%Fig. XX shows the correlation of $v_z$ and $z$ for all runs at select times.
+
+%Fig. XX shows the strength of the $m=1$ modes for the three cylindrical velocity components vs time in all runs.
+
+%Fig. XX shows the strength of the $m=2$ modes for the three cylindrical velocity components vs time in all runs.
+
+\section{KUD Dynamics} \label{sec:kud}
+In this section, we focus on stars which are stripped from the disc, and whose orbits take them to very high Galactic latitudes.
+%The last section focused on bulk bending of the disc around the solar neighborhood. Here, we focus on stars which may be stripped from the disc to very high latitudes. We give a definition for this population and succinctly summarize its dynamics.
 
 % Outer halo does not realign
 
@@ -412,7 +427,6 @@ The last section focused on bulk bending of the disc around the solar neighborho
 
 
 \subsection{Definition and Calculation from Simulations} \label{ssec:def}
-
 
 \begin{figure}
     \centering
@@ -424,18 +438,17 @@ The last section focused on bulk bending of the disc around the solar neighborho
 
 
 
-
 \begin{figure}
     \centering
   	\subfloat[]{\includegraphics[width=0.8\textwidth]{../figures/kud_early_insert_face_on.pdf}}\\
 	\subfloat[]{\includegraphics[width=0.8\textwidth]{../figures/kud_early_insert_edge_on.pdf}} \caption{KUD stars are shown for the fiducial suite in face-on (a) and edge-on (b) projections in the initial disc (upper panel) and final snapshot (lower panel). The non-kicked stars are shown as a histogram and the KUD stars are coloured by the time satisfying Eq. \ref{eq:kud_def}. Each column is one of the haloes considered in this paper.}
 	\label{fig:kud_stars_final_ics}
 \end{figure}
-Any definition for what it means to be stripped from the disc is on some level arbitrary. We are interested in tracking a population of stars which reaches high Galactic latitudes. Since these are simulations, we can simply set a height threshold for the star orbits. We then call a star kicked up at time $t_i$ for
+Any definition for what it means to be stripped from the disc is on some level arbitrary. Since we are interested in tracking a population of stars which reaches high Galactic latitudes, we simply set a height threshold for a stellar orbit. We then call a star kicked up at time $t_i$ for
 \begin{equation}
 t_{i} = \underset{t}{\operatorname{argmin}} \vert z_i(t) - \eta z_{rms}(R_p,t) \vert, \label{eq:kud_def}
 \end{equation}
-where $t_{i}$ is the stripping time for the $i$-th particle, $z_i(t)$ is the height of the $i$-th particle in the body frame of the disc, interpolated between snapshots, and $z_{rms}(R_p,t)$ is the time-dependent $z_{rms}$ of the disc at an annulus centered on $R_p$. 
+where $\eta$ is a free parameter, $t_{i}$ is the stripping time for the $i$-th particle, $z_i(t)$ is the height of the $i$-th particle in the body frame of the disc, interpolated between snapshots, and $z_{rms}(R_p,t)$ is the time-dependent $z_{rms}$ of the disc at an annulus centered on $R_p$. Expressed verbally, we identify KUD stars as those stars whose orbits take them a distance $\eta z_{rms}(R_p,t)$ from the midplane.
 
 
 %\subsection{Choice of $\eta$} \label{ssec:choice}
@@ -447,6 +460,8 @@ Furthermore, stars whose orbits stay in the plane of the disc will have large an
 Taking these things together, we take a look at how the choice of $\eta$ impacts the number of kicked-up disc stars identified in C.Early. Choices of $\eta=4$, $\eta=8$, and $\eta=12$ yield (216,529 particles, $6.2\%$), (18,612 particles, $5.3 \times 10^{-1}\%$), and (4,302 particles, $6.9 \times 10^{-2}\%$) KUD stars, respectively. In the cases of $\eta=8$ and $\eta=12$, the number of stars detected substantially exceeds the number expected from a smooth disc population assuming a uniform exponential scale length, by over an order of magnitude in each case. 
 \begin{figure}
     \centering
+  	%\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/fiducial_halo_268824_xy_s_009.pdf}}\\
+	%\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/fiducial_halo_268824_xy_s_016.pdf}} \caption{KUD stars are plotted for C.Early at the labeled times. The top panels (a) occur near the beginning of the simulation, before any KUD stars are generated, and the bottom panels (b) come slightly later. We see clear association with spiral arms, suggesting the same generation mechanism presented in \citet{laporte_2019_feathers}.}
 	\includegraphics[width=0.8\textwidth]{../figures/fiducial_halo_268824_xy_s_016.pdf}
 	\caption{KUD stars are plotted for C.Early at the labeled times. Note the association with spiral arms, suggesting a similar mechanism to \citet{laporte_2019_feathers}.}
 	\label{fig:xy_tidal_tail_halo_c}
@@ -454,16 +469,13 @@ Taking these things together, we take a look at how the choice of $\eta$ impacts
 
 \begin{figure}
     \centering
-  	\subfloat[]{\includegraphics[width=0.8\textwidth]{../figures/fiducial_halo_268824_lb_s_055_overlay.pdf}}\\
-	\subfloat[]{\includegraphics[width=0.8\textwidth]{../figures/fiducial_halo_268824_warm_lb_s_055_overlay.pdf}} \caption{Heliocentric views of KUD stars in several different distance shells. The top panel depicts this for C.Early and the bottom panel depicts the same for C.Warm at $a=0.775$.}
-	\label{fig:lb_halo_c_warm_comparison}
+  	\subfloat[]{\includegraphics[width=0.8\textwidth]{../figures/fiducial_halo_268824_lb_s_055_overlay.pdf}\label{fig:lb_halo_c_warm_comparison}}\\
+  	\subfloat[]{\includegraphics[width=0.8\textwidth]{../figures/fiducial_halo_268818_late_insert_lb_s_095_overlay.pdf} \label{fig:lb_halo_b_late}}
+	%\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/fiducial_halo_268824_warm_lb_s_055_overlay.pdf}} 
+	\caption{Heliocentric views of KUD stars in several different distance shells. The top panel depicts this for C.Early at $a=0.775$. The bottom panel shows the same for B.Late at $a=0.975$.}
 \end{figure}
 
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.8\textwidth]{../figures/fiducial_halo_268818_late_insert_lb_s_095_overlay.pdf}\caption{Heliocentric view of KUD stars in several different distance shells. The figure depicts these shells for B.Late at $a-0.975$} \label{fig:lb_halo_b_late}
-\end{figure}
 \begin{figure}
 	%\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/b_late_torque_a_0_75.eps}}\\
 	%\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/b_late_torque_a_0_885.eps}}
@@ -471,6 +483,8 @@ Taking these things together, we take a look at how the choice of $\eta$ impacts
 	%\caption{The $x-y$ projected perpendicular torques on the disc in B.Late at two different snapshots. The first is at initialization, and the second is when the most massive substructure in B.Late is at pericentre. The circles correspond to $R_p = 2.2\,R_d=8.1\,\kpc$ and $20\,\kpch=29.5\,\kpc$.}
 	\caption{The $x-y$ projected perpendicular torque on the disc in B.Late at $a=0.885$. This corresponds to when the most massive substructure in B.Late is at pericentre. The circles correspond to $R_p = 2.2\,R_d=8.1\,\kpc$ and $20\,\kpch=29.5\,\kpc$.}\label{fig:torque_b_late}
 \end{figure}
+
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{../figures/c_early_torque_a_0_5.eps}
@@ -478,9 +492,9 @@ Taking these things together, we take a look at how the choice of $\eta$ impacts
 \end{figure}
 \begin{figure}
 	\centering
-	\subfloat[]{\includegraphics[width=0.4\textwidth]{../figures/b_late_z_0_r_a.eps} \label{fig:b_late_r_a}}
-	\subfloat[]{\includegraphics[width=0.4\textwidth]{../figures/c_early_z_0_r_a.eps} \label{fig:c_early_r_a}}\\
-	\subfloat[]{\includegraphics[width=0.4\textwidth]{../figures/a_early_z_0_r_a.eps} \label{fig:a_early_r_a}}	\caption{The $m=0$ bending mode for B.Late (a), C.Early (b), and A.Early (c) as a function of radius and scale factor. }
+	\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/b_late_z_0_r_a.eps} \label{fig:b_late_r_a}}
+	\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/c_early_z_0_r_a.eps} \label{fig:c_early_r_a}}\\
+	\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/a_early_z_0_r_a.eps} \label{fig:a_early_r_a}}	\caption{The $m=0$ bending mode for B.Late (a), C.Early (b), and A.Early (c) as a function of radius and scale factor. }
 \end{figure}
 
 For a choice of $\eta=8$, we have Fig. \ref{fig:angmom_eta} showing the angular momentum decomposition of the KUD stars in spherical shells in relation to the smooth disc. As expected, the stars that are identified here have high $\L_\parallel$ in general, except at high radii where high $L_\perp$ stars may still be identified as KUD stars with our definition. It is likely that there is some contamination at these radii by stars which were simply part of a warp, but this is to be expected for our simplistic definition.
@@ -489,34 +503,33 @@ For a choice of $\eta=8$, we have Fig. \ref{fig:angmom_eta} showing the angular 
 \subsection{KUD Star Dynamics} \label{ssec:kud_dynamics}
 
 
-We now turn our attention to the dynamics of the stars identified with our choice of $\eta=8$. Fig. \ref{fig:kud_stars_final_ics} shows the KUD stars in our fiducial suite in two different projections in both the final snapshot and initial conditions. What we see is a variety behavior in terms of stars being kicked-up. It is apparently not true that all discs will form substantial kicked-up populations, as shown by A.Early  and B.Early. The simulations bauer2018b.Early and C.Early show substantial kicked-up disc activity formed by stars which originated in the outer disc. C.Early sees most of its KUD population stripped from the disc early in its evolution, where bauer2018b.Early sees continuing excitement of KUD structure from the outer disc. 
+We now turn our attention to the dynamics of the stars identified with our choice of $\eta=8$. Fig. \ref{fig:kud_stars_final_ics} shows the KUD stars in our fiducial suite in two different projections in both the final snapshot and initial conditions. Specifically, the top rows of (a) and (b)  show all of the stars kicked up by the the end of the simulation rewound  to where they come from in the initial disc.  The bottom rows show where they are in the final snapshot.
+
+On one extreme, A.Early shows very little KUD structure, and the KUD structure it does have exists at very low latitudes, kicked up very early in the simulation. B.Early forms a few small streams at times we know it has a close encounter with a massive subhalo. We note the discrete groups of kick-up times in this simulation. 
+The two plotted simulations that show substantial KUD populations are bauer2018b.Early and C.Early. These also correspond to the most misaligned halo environments with short $T_\tau$. In both cases, we see a continuous range of times over which stars are excited, rather than discrete events. Furthermore, in the case of C.Early, it seems like some stars are transported from the inner disc to form part of the kicked up population.
 
 
 
-The mechanism by which stars are kicked out of the disc is highlighted in Fig. \ref{fig:xy_tidal_tail_halo_c}. Each new round of KUD stars appears to be associated with a tidal arm. Together with Fig. \ref{fig:kud_stars_final_ics}, we are left  with the picture that while KUD stars may originate from the inner disc, strong $m=2$ perturbations introduce spiral structure and warps, and some stars in these warps are stripped from the disc entirely. 
 
 
-
-\citet{laporte_2019_feathers} suggested what this mechanism might look like from the position of the Sun. Stars associated with the tidal tails seen in Fig. \ref{fig:xy_tidal_tail_halo_c} would form filamentary structures with a characteristic bifurcation. They call the bifurcated parts of these structures ``feathers". A feather is visually identified after the fact, and like our KUD star definition, is an arbitrary delineation.
-
-In panel (a) of Fig. \ref{fig:lb_halo_c_warm_comparison}, we see the KUD stars in C.Early as they appear from the Solar neighborhood at $a=0.775$. The stars form the top and bottom feather structure described in \citet{laporte_2019_feathers}, and are undoubtedly associated with $m=2$ grand design spiral structure. The similarities suggest that global tides, at least superficially, create observable, stream-like structures at low-to-mid Galactic latitudes, extending along the length of the sky.
-
-The radial velocity dispersion was observed to have a minor effect on global disc evolution in \S\ref{sec:evolution}. The Toomre $Q$ parameter is a metric of local stability, however, and it is interesting to see how it effects the proposed KUD generation mechanism. Another benefit of the disc insertion technique described in \S\ref{ssec:disc_insertio} is that we may freely modify the radial velocity dispersion to unambiguously determine how a warmer disc responds in the same environment.  It appears that while the magnitude of the KUD mass fraction is not changed substantially, the details of where the stars are kicked from depends non-trivially on $Q$. 
-
-While one might naively think that increasing the radial dispersion of the initial disc would smear out any KUD structure, we can see in the bottom panel of Fig. \ref{fig:lb_halo_c_warm_comparison} that this is not the case. The differences between the two panels are so small, that we are left to believe the core mechanism behind KUD generation is not substantially affected by and increased $Q$.
+The mechanism in C.Early by which stars from the inner disc can be kicked up is highlighted in Fig. \ref{fig:xy_tidal_tail_halo_c}. Each new round of KUD stars appears to be associated with a wrapping spiral pattern. Together with Fig. \ref{fig:kud_stars_final_ics}, we are left  with the picture that  KUD stars generally come from the outer disc. In some environments, like in C.Early, strong spiral structure transfers stars outward and into strong warps. Some stars in these warps are stripped from the disc entirely. The stripped stars then phase mix to form the high-latitude structures seen in the final snapshot of C.Early.
 
 
-As described in \S \ref{ssec:halo_env}, we get broadly more equilibrated disc-halo systems later in time. We even get two simulations similar to those run by \citet{laporte_2016,laporte_2018}, those being bauer2018b.Late and B.Late. They are similar in the respect that they have Sgr analogues, but no substantial halo misalignment. 
+\citet{laporte_2019_feathers} shows what the tidal arm transport mechanism looks like from the position of the Sun. Stars associated with the tidal tails seen in Fig. \ref{fig:xy_tidal_tail_halo_c} form filamentary structures with a characteristic bifurcation. They call the bifurcated parts of these structures ``feathers". A feather is visually identified after the fact, and like our KUD star definition, is an arbitrary delineation.
 
-The preceding fact is reflected in the KUD fraction of the Late suite, which is lower than in the Early/Warm suites. As presented in Table \ref{tab:sims}, we see either no significant change in the KUD fraction in the most equilibrated cases (B.Early and B.Late), but a substantial reduction in the KUD fraction in the less equilibrated systems. Generally speaking, these systems see a reduction by over an order of magnitude in their KUD fraction. Given that the vast majority of stars are kicked up in the first half of bauer2018b.Early, A.Early, and C.Early, this should be expected.
+In  Fig. \ref{fig:lb_halo_c_warm_comparison}, we see the KUD stars in C.Early as they appear from the Solar neighborhood at $a=0.775$. The stars form the top and bottom feather structure described in \citet{laporte_2019_feathers}, and are undoubtedly associated with grand design spiral structure. The similarities suggest that global tides, at least superficially, create observable, stream-like structures at low-to-mid Galactic latitudes, extending along the length of the sky.
 
-While the KUD fraction in the Sgr interaction analogues, B.Early/Late, does not change much between Early and Late, the stars in B.Early kicked before B.Late's start time can reach higher latitudes. From the perspective of the Sun, we can look at the KUD structure present in B.Late, shown in Fig. \ref{fig:lb_halo_b_late}. The stars in this simulation that are identified as kicked up appear at relatively low latitudes overall, consistent with the idea that even a moderate mass Sgr dSph could not excite high latitude structures on a small timescale.
+
+We contrast this to the moderate-mass Sgr interaction presented in B.Late. From the perspective of the Sun, we can look at the KUD structure present in B.Late, shown in Fig. \ref{fig:lb_halo_b_late}. The stars in this simulation that are identified as kicked up appear at relatively low latitudes overall, consistent with the idea that even a moderate mass Sgr dSph could not excite high latitude structures on a small timescale. 
+
 
 
 
 \section{What Causes the Milky Way's Vertical Structure?} \label{sec:disentangle}
 
 In this section, we delve into more detail regarding potential observational signatures in the vertical structure of stellar discs that would delineate between different environments. 
+
+
 
 
 
@@ -530,16 +543,26 @@ The torque signature of the purely misaligned environment is very different from
 The takeaway here is that a halo misalignment produces $\tau_\perp$ slightly less than in a massive satellite encounter, but that the consistent exposure over a billions of years at the beginning of the simulation can cause more drastic KUD behavior in a continually excited fashion, rather than simply at each pericentric passage of a satellite. The presence of low-latitude streams cannot be a unique signature of a massive satellite interaction, as we will discuss.
  
 \subsection{Time Evolution in Characteristic Scenarios} \label{ssec:mean_height}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{../figures/a_early_displacement_a_0_875.eps}
+	\caption{The mean height, $\langle z \rangle$, map for A.Early at $a=0.875$.}\label{fig:a_early_displacement}
+\end{figure}
+
+
+
+
 
 
 
 
 \begin{figure}
 	\centering
-	\subfloat[]{\includegraphics[width=0.4\textwidth]{../figures/b_late_z_1_r_a.eps} \label{fig:b_late_r_a_1}}
-	\subfloat[]{\includegraphics[width=0.4\textwidth]{../figures/c_early_z_1_r_a.eps} \label{fig:c_early_r_a_1}}\\
-	\subfloat[]{\includegraphics[width=0.4\textwidth]{../figures/a_early_z_1_r_a.eps} \label{fig:a_early_r_a_1}}	\caption{The $m=1$ bending mode for B.Late (a), C.Early (b), and A.Early (c) as a function of radius and scale factor. }
+	\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/b_late_z_1_r_a.eps} \label{fig:b_late_r_a_1}}
+	\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/c_early_z_1_r_a.eps} \label{fig:c_early_r_a_1}}\\
+	\subfloat[]{\includegraphics[width=0.45\textwidth]{../figures/a_early_z_1_r_a.eps} \label{fig:a_early_r_a_1}}	\caption{The $m=1$ bending mode for B.Late (a), C.Early (b), and A.Early (c) as a function of radius and scale factor. }
 \end{figure}
+
 
 
 Turning our attention to the longer term evolution of axisymmetric vertical structure in the disc, we study Fig. \ref{fig:b_late_r_a}. This figure corresponds to the mean height evolution of B.Late, our Sgr model. We can see an alternation of relative displacement of the outer disc as time progresses. The oscillations seen here are similar to the ones seen in the displaced disc experiment presented in \S\ref{ssec:toy_model_2}, which was loosely based on this simulation. Monoceros-scale fluctuations interior to 20 kpc occur almost instantly, and persist throughout the entire simulation. Interior to 15 kpc, the disc is quiet, much like the toy model. While there are some slight differences, we note the presence of another massive substructure in the the vicinity of the disc, so a one-to-one comparison is not expected.
@@ -547,28 +570,14 @@ Turning our attention to the longer term evolution of axisymmetric vertical stru
 
 In the case of pure misalignment, we look at the same plot for C.Early. Fig. \ref{fig:c_early_r_a} shows the evolution of the mean height as a function of radius and scale factor. We see the induction of corrugations on the scale of 100-200 pc as close in as $4\,R_d$ at early times. The inner disc on the other hand exhibits less of a signature from the uniform acceleration of the disc interior to 20 kpc than seen in B.Late. It is worth noting that the tidal arms generating the KUD stars in Fig. \ref{fig:xy_tidal_tail_halo_c} are reflected in the $m=0$ signature. At these large radii, we should see both the tidal arms which generate KUD stars and the tidal effect on the disc where present. In the case of C.Early, which is not substantially displaced as a result of substructure, this is entirely due to the grand-design spiral pattern created by misalignment from the host halo.
 
-A more complicated scenario is presented by A.Early. Its displacement map is shown in Fig. \ref{fig:a_early_r_a}, and we immediately see very strong perturbations inside 20 kpc. These persist throughout the simulation, with the strongest perturbations being confined further out in the disc as the simulation progresses. A very interesting feature is the development of a net displacement of the disc center from the mean height. We talk about this in more detail in \S\ref{ssec:another}.
+A more complicated scenario is presented by A.Early. Its displacement map is shown in Fig. \ref{fig:a_early_r_a}, and we immediately see very strong perturbations inside 20 kpc. These persist throughout the simulation, with the strongest perturbations being confined further out in the disc as the simulation progresses. A very interesting feature is the development of a net displacement of the disc center from the mean height. A displacement map for A.Early is shown in \ref{fig:a_early_displacement}. The central displacement appears to be a long-lived bending mode along the length of the bar, which we call a ``banana bar". 
 
-In addition to flapping modes, we detect a strong $m=1$ warp signature in our three detailed examples. In the case of the pure satellite encounter, B.Late, we see a sub-kpc warp present in Fig. \ref{fig:b_late_r_a_1} during the first half of the simulation. As the substructure orbit continues, a close pass excites stronger $m=1$ structure. 
+
+In addition to flapping modes and axisymmetric displacements, we detect a strong $m=1$ warp signature in our three detailed examples. In the case of the pure satellite encounter, B.Late, we see a sub-kpc warp present in Fig. \ref{fig:b_late_r_a_1} during the first half of the simulation. As the substructure orbit continues, a close pass excites stronger $m=1$ structure. 
 
 In contrast, the pure misalignment case, C.Early sees several kpc bending modes in the outer disc immediately. Furthermore, strong kpc-scale signal extends inside of 25 kpc at the beginning of the simulation where there is relatively little $m=0$ signature, and also where B.Late has relatively low $m=1$ signal. The contour of the $m=1$ bending mode post-buckling roughly traces the $m=0$ contour with a similar magnitude, suggesting a superposition of effects brought on by the environment's coupling to the buckling event.
 
 The intermediate case, A.Early, presents something qualitatively between B.Late and C.Early. While the outer disc is initially excited, this extreme behaviour subsides as the halo equilibrates. Rather, we see a somewhat consistent, weaker several hundred pc signal in the inner and outer disc over the simulation. Lastly, buckling has a less drastic impact on the $m=1$ signature for A.Early than it did for the $m=0$.
-
-\subsection{Banana Bars} \label{ssec:another}
-
-
-
-A key commonality between both the toy model, A.Early, and to some extent, B.Late on which the toy model was based, is the development of a ``banana bar". While we certainly have not run enough simulations to suggest that this structure, apparent in Fig. \ref{fig:a_early_displacement}, is ubiquitous in substructure dominated systems, it is peculiar that C.Early does not have this structure. Bar buckling in this scenario is less distinguishable from the vertical structure excited by substructure over the course of the simulation from substructure. Although it requires further study, it is possible that a vertically asymmetric bar could be a signature of satellite driven vertical structure. We state without presenting the displacement maps that this effect is pronounced in all simulations except C.Early.
-
-
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.8\textwidth]{../figures/a_early_displacement_a_0_875.eps}
-	\caption{The mean height, $\langle z \rangle$, map for A.Early at $a=0.875$.}\label{fig:a_early_displacement}
-\end{figure}
-
 
 
 
@@ -582,16 +591,18 @@ Perhaps the most obscure effect we explored was the generation of flapping modes
 
 There is reason to think that the first of these scenarios is uncommon, or is at least secondary to other effects like bending. \citet{gomez_2017} ran MHD simulations where they note a lack of U-shaped warps, presumably caused by flapping. While these simulations contained many satellite mergers, the dominant effect in their simulations was an S-shaped warp. B.Late is a perfect example of a simulation where flapping modes can be seen as the dominant effect; it has no buckling bar and is initialized in a quiet halo. For both A.Early and C.Early, we would be hard pressed to say that we see the same kind of behaviour, especially where the disc is decently resolved.
 
-The bar buckling generation mechanism for flapping modes is prominently displayed in C.Early. After the bar buckles, we see axisymmetric fluctuations in the mean height, as well as substantial flapping in the region of Monoceros. C.Early is clearly an outlier in this respect, and we suggest that bar buckling in conjunction with triaxility is a viable mechanism for corrugations in cosmological simulations. The general effect of bar buckling appears to introduce a signal in mean height, consistent with the simulation in \citet{bar_buckling_echo}. It may be possible to show that in general, disturbances from bar buckling are amplified in strongly triaxial haloes.
+The bar buckling generation mechanism for flapping modes is prominently displayed in C.Early. After the bar buckles, we see axisymmetric fluctuations in the mean height, as well as substantial flapping in the region of Monoceros. C.Early is clearly an outlier in this respect, and we suggest that bar buckling in conjunction with triaxility is a viable mechanism for corrugations in cosmological simulations. The general effect of bar buckling appears to introduce a signal in mean height, consistent with the simulation in \citet{bar_buckling_echo}. It may be possible to show that in general, disturbances from bar buckling are amplified in the presence of strong tides.
 
 \subsection{$m=1$ Bending}
 
 
+
 The $m=1$ signal appears to be the dominant mechanism in the outer disc in our simulations. Where we have substantial non-equilibrium activity, we see 100 pc scale activity that appears more ubiquitous than $m=0$ bending of that scale. Inspection of displacement maps at intermediate times reveals a picture consistent with the MHD simulations of \citet{gomez_2017}. The dominant state for the outer disc is some kind of S-shaped warp when it is present. 
 
-Consistent with \citet{gomez_2017}, we find that halo misalignment is not a likely source of bending in the inner disc. Rather, most of the $m=0$ and $m=1$ in the inner disc appears to be associated with bar buckling. However, the outer disc is almost definitely affected by the smooth halo, and this effect can drive structure in the inner disc before bar buckling.
+Consistent with \citet{gomez_2017}, we find that halo misalignment is not a likely source of bending in the inner disc. Rather, most of the $m=0$ and $m=1$ in the inner disc appears to be associated with bar buckling. However, the outer disc is almost definitely affected by the smooth halo's tides. We see this in C.Early's $m=1$ profile being much stronger than either B.Late or A.Early in the outer disc.
 
-Interactions with substructure do not appear to show any signal in $m=1$ bending for the inner disc. This suggests that absent a very large subhalo, we are not creating several hundred parsec scale $m=1$ bending in the inner disc. There is, however, a strong $m=1$ signal slowly being amplified in the outer disc. This roughly correlates with disc flapping and tidal arm generation from the subhalo flyby. Over time, we expect stars in the outer disc to become stripped by this mechanism to form the KUD population. 
+
+Interactions with substructure also do not appear to show any signal in $m=1$ bending for the inner disc before buckling. There is, however, a strong $m=1$ signal in the outer disc in A.Early and B.Late. This roughly correlates with disc flapping. While the discrete pericentric passages do not appear in the $m=1$ signal, it appears that substructure is also effective at generating this kind of vertical structure in the outer disc.Once again, we infer that in the Milky Way, bar buckling would be the most likely culprit of $m=1$ bending in the solar neighborhood. B.Late, C.Early, and A.Early all show substantial signal in the solar neighborhood after bar buckling. Furthermore, like in the $m=0$ case, this appears long-lived. A.Early and C.Early both show strong $m=1$ signal for several Gyr after their bars buckle.
 
 
 \subsection{KUD Stars and Feathers}
@@ -603,33 +614,26 @@ Of course, the proposed mass in \citet{laporte_2018_b} is at the higher end of e
 
 This passage follows substructure's passage through the disc plane at $a=0.875$. The orbit is similar to model L1 in \citet{laporte_2018_b}. Consistent with their findings, it does not appear that even this quite massive perturber can excite the kind of structure seen in other simulations in our suite. This can be seen in Fig. \ref{fig:lb_halo_b_late} at several heliocentric radii. We clearly see that the disc exhibits a corrugated structure, but that stars are only kicked up to $b<20^\circ$. 
 
-Qualitatively, the results of \citet{laporte_2018_b} and \citet{laporte_2019_feathers} appear consistent with our work. Specific torques on the order $10^3 \, \kpc^2\,\text{Gyr}^{-2}$ applied over half the disc at perturber pericenters can cause material to be kicked up into corrugated structures. However, a single moderate mass Sgr encounter cannot explain structures at higher latitudes. Kicking stars to higher latitudes either requires an extremely massive perturber, or substantial misalignment with the host halo. It is also possible that specific properties of the orbit may enhance the stripping mechanism, much like other resonant mechanisms in disc mechanics.
+We note that the simulations in which KUD stars reach their highest latitudes are the ones with substantial inner-halo-disc axis misalignment, namely C.Early and bauer2018b.Early. These are also the simulations with the highest $m=1$ bending signature in the outer disc. We address the question here of whether or not a distinct observational signature exists for a misalignment scenario versus simple substructure interaction. We understand this to be because in the absence of a very massive substructure, disc-halo misalignment is the only collisionless mechanism that can create strong enough $m=2$ perturbations for the mechanism suggested by \citet{laporte_2019_feathers} to act.
 
-We note that the simulations in which KUD stars reach their highest latitudes are the ones with substantial inner-halo-disc axis misalignment, namely C.Early and bauer2018b.Early. These are also the simulations with the highest $m=1$ bending signature. We address the question here of whether or not a distinct observational signature exists for a misalignment scenario versus simple substructure interaction. We understand this to be because in the absence of a very massive substructure, disc-halo misalignment is the only collisionless mechanism that can create strong enough $m=2$ perturbations for the mechanism suggested by \citet{laporte_2019_feathers} to act.
+The big picture is that specific torques on the order $10^3 \, \kpc^2\,\text{Gyr}^{-2}$ are responsible for high latitude features. Kicking stars to higher latitudes either requires an extremely massive perturber, or substantial misalignment with the host halo. It is also possible that specific properties of the orbit may enhance the stripping mechanism, much like other resonant mechanisms in disc mechanics.
 
-%We saw in \S \ref{ssec:kud_dynamics} that C.Early exhibited behaviour consistent with the feather generation scheme presented in \citet{laporte_2019_feathers}, despite having no massive perturber. Furthermore, in Fig. \ref{fig:lb_halo_c_warm_comparison}, we saw that the KUD stars make up a substantial portion of the feathers observed. Even near the middle of the simulation, $a=0.775$, there filamentary structure at $b > 20^{\deg}$. C.Early also sees one of the highest levels of displacement in the solar neighborhood of any simulation. Yet, C.Early is interacting solely through global torques from the host halo.
+The global dynamical picture is consistent with the study presented by \citet{laporte_2019_feathers} that these perturbed stars remain close to each other in phase space. For instance, B.Late forms its KUD stars at two discrete times from narrow regions of the disc. By the end of the simulation, these stars still appear associated with each other in phase space. 
 
 We can also infer from our simulations that for some mono-abundant chemical population at $z=1$, we would expect to see dynamically coherent (as supported by how stars are clustered by their kick-up time in the final snapshot) structures with a consistent chemical abundance. This is consistent with observations by \citet{bergemann_2018}, which found narrow abundance spreads for M-giants in A13 and TriAnd. The clustering of stars by their kickup time is true whether they were kicked by substructure, as in B.Late, or by the smooth halo, as in C.Early.
 
-The global dynamical picture is consistent with the study presented by \citet{laporte_2019_feathers} that these perturbed stars remain close to each other in phase space. By present-day, these stars are apparently organized in stream-like structures reaching relatively high Galactic latitudes. Although low-latitude structure is present in all of our simulations, bauer2018b.Early and C.Early suggest that it is easier to explain higher latitude structures with halo misalignment than with a simple substructure encounter.
-
-%As we suggested in \S\ref{ssec:toy_model_1}, \textit{any} differential acceleration of the disc of appropriate magnitude should excite kpc scale bending wave structure in the outer disc. It stands to reason that some of the stars in the kpc scale corrugations will become KUD stars via the mechanism suggested in \citet{laporte_2019_feathers}. However, we cannot unambigously rule out a low or moderate mass Sgr dSph in conjunction with global tides from the LMC or misalignment with the Milky Way's dark matter halo as mechanisms for generating low latitude streams. 
 
 
 \section{Conclusions}
 
 Our main findings can be summarized as follows:
 \begin{itemize}
-%\item Vertical structure can be excited in galactic discs in a wide variety of cosmological environments.
 \item Final bar strength is qualitatively similar in all models regardless of environment.
 \item Monoceros-like perturbations can form in a wide variety of cosmological environments, whereas higher latitude features appear more exclusive to environments with global tides.
 \item Stars can be kicked out of galactic discs relatively easily and consistently through global tidal interactions.
-%\item These kicked-up stars overlap with the presence of other widely studied features, such as Monoceros Ring and feather structures.
-%\item Substructure interactions create feathers and kicked-up stars, but so do global tidal interactions. Together with the interpretation of feathers in \citet{laporte_2019_feathers}, we can say that the mechanism that drives the formation of tidal tails in our discs is responsible for kicking up stars.
-\item The initial dynamical temperature of the disc modifies the resulting vertical structure, but does not change the overall bulk motion. That is, radially warm discs do not suppress bulk vertical motions.
+\item The initial dynamical temperature of the disc modifies the resulting vertical structure, but does not suppress bulk vertical motions.
 \item If a recent Sgr interaction is the cause of observed low-latitude streams, the progenitor mass is likely closer to $10^{11} \,\solarm$ than $10^{10} \,\solarm$.
-%\item We expect a wide range of ages in low latitude streams if their origin is global tidal fields, and a very narrow range if their origin is substructure-disc interactions.
-\item A vertically asymmetric bar may be a unique signature of massive substructure interaction around the time of bar buckling.
+\item A vertically asymmetric bar may be a unique signature of a cosmological environment with no global tides or close substructure encounters.
 \item Bar buckling echos for many Gyr in a cosmological setting.
 \end{itemize}
 
@@ -641,7 +645,7 @@ In quieter merger environments like the Milky Way models we studied, the dominan
 
 Taking these together, we have presented two observationally notable results. The first is that if we can establish that the Milky Way is aligned with the halo short axis, it would imply that the Sgr dSph is in the vicinity of $10^{11}\,\solarm$. This would be necessary to explain observed disc stars at higher latitudes. The second is that we might be able to establish substructure as the main driving force for vertical structure in the Milky Way's outer disc if we are able to observe a banana shaped bar. Given our small sample size, this hypothesis requires further study.
 
-Studies like this one are inherently limited to small sample sizes, and we should explore in greater detail the results presented here. Such a wide variety of cosmological environments exist, and ours are by no means exhaustive. However, we have established that haloes with massive perturbers or halo misalignment tend to yield qualitatively Milky Way-like vertical structure. The power of the technique we employ in this paper is that by using the same disc, we can unambiguously begin to make claims about the significance of various aspects of the cosmological environment. Further study along the line of collecting more samples will certainly address some of the issues left open by this work. Looking at large scale hydrodynamical simulations for these effects may be a more informative approach as large unigrid simulations approach sufficient resolution. We leave open the possibility of other observational signatures that we have not explored such as the breathing of the disc being able to further distinguish between halo environments. For now, it seems that the vertical structure in the Milky Way is at least somewhat indicative of its recent history, and we may be able to learn more about the status of the Milky Way's alignment with the halo from pushing this line of questioning.
+Studies like this one are inherently limited to small sample sizes, and we should explore in greater detail the results presented here. Such a wide variety of cosmological environments exist, and ours are by no means exhaustive. However, we have established that haloes with massive perturbers or halo misalignment tend to yield qualitatively Milky Way-like vertical structure. The power of the technique we employ in this paper is that by using the same disc, we can unambiguously begin to make claims about the significance of various aspects of the cosmological environment. Looking at large scale hydrodynamical simulations for these effects may be a more informative approach as large unigrid simulations approach sufficient resolution. Studying a wider variety of environments will certainly address some of the issues left open by this work. 
 
 \section*{Acknowledgements}
 {LMW and JSB are supported by a Discovery Grant with the Natural
@@ -657,5 +661,8 @@ Studies like this one are inherently limited to small sample sizes, and we shoul
 
 \bibliographystyle{apalike}
 \bibliography{bibliography_paper_iii.bib} % if your bibtex file is called example.bib
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

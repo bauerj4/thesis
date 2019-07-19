@@ -3,56 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Introduction.aux
 The style file: apalike.bst
 Database file #1: bibliography_introduction.bib
-Repeated entry---line 1636 of file bibliography_introduction.bib
+Repeated entry---line 1654 of file bibliography_introduction.bib
  : @misc{music
  :            ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1794 of file bibliography_introduction.bib
+I was expecting a `,' or a `}'---line 1812 of file bibliography_introduction.bib
  : 
  : OPTkey = {•},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty publisher in dodelson
 Warning--empty publisher in kolb_turner
-You've used 64 entries,
+You've used 65 entries,
             1935 wiz_defined-function locations,
-            822 strings with 21380 characters,
-and the built_in function-call counts, 38238 in all, are:
-= -- 3243
-> -- 3226
+            827 strings with 21552 characters,
+and the built_in function-call counts, 38613 in all, are:
+= -- 3278
+> -- 3244
 < -- 20
-+ -- 1216
-- -- 1216
-* -- 3896
-:= -- 7026
-add.period$ -- 188
-call.type$ -- 64
-change.case$ -- 924
-chr.to.int$ -- 64
-cite$ -- 66
-duplicate$ -- 883
-empty$ -- 1726
-format.name$ -- 1298
-if$ -- 6980
++ -- 1222
+- -- 1222
+* -- 3929
+:= -- 7095
+add.period$ -- 191
+call.type$ -- 65
+change.case$ -- 932
+chr.to.int$ -- 65
+cite$ -- 67
+duplicate$ -- 897
+empty$ -- 1751
+format.name$ -- 1305
+if$ -- 7051
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 62
-newline$ -- 319
-num.names$ -- 194
-pop$ -- 813
+missing$ -- 63
+newline$ -- 324
+num.names$ -- 197
+pop$ -- 819
 preamble$ -- 1
-purify$ -- 927
+purify$ -- 935
 quote$ -- 0
-skip$ -- 654
+skip$ -- 664
 stack$ -- 0
-substring$ -- 1785
-swap$ -- 68
+substring$ -- 1806
+swap$ -- 69
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 378
+type$ -- 384
 warning$ -- 2
-while$ -- 181
+while$ -- 184
 width$ -- 0
-write$ -- 815
+write$ -- 828
 (There were 2 error messages)

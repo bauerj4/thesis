@@ -46,13 +46,13 @@ The CBE is more commonly expressed in Cartesian coordinates as,
 \end{equation}
 where $\Phi$ is our total gravitational potential from stars and dark matter. The result is a quasilinear partial differential equation (PDE) for $f(\textbf{r},\textbf{v},t)$. The CBE is nothing more than an advection equation in phase space that expresses our view that particles are not self interacting, that they are identical, and that the phase space fluid is conserved and incompressible. In addition to the CBE which describes the evolution of the phase fluid, we have the Poisson equation, an elliptic equation describing the evolution of the potential \citep{BT},
 \begin{equation}
-\nabla^2 \Phi(\textbf{r},t) = -4 \pi G \rho(\textbf{r},t) \label{eq:poisson}
+\nabla^2 \Phi(\textbf{r},t) = 4 \pi G \rho(\textbf{r},t) \label{eq:poisson}
 \end{equation} 
-where $G$ is Newton's gravitational constant and,
+where $G$ is Newton's gravitational constant, $\rho$ is the mass density and,
 \begin{equation}
-\rho(\textbf{r},t) = \int_{\mathcal{D}} f(\textbf{r}, \textbf{v}, t) \text{d}^3 \textbf{v},
+\nu(\textbf{r},t) = \int_{\mathcal{D}} f(\textbf{r}, \textbf{v}, t) \text{d}^3 \textbf{v},
 \end{equation}
-where $\mathcal{D}$ is the phase space. We are left with a 6D space + 1D time solution domain on which to compute $f(\textbf{r},\textbf{v},t)$ as well as two PDEs and an integral.
+where $\nu$ is the number density and $\mathcal{D}$ is the phase space. Note that the mass density and number density differ by a factor of the system mass. We are left with a 6D space + 1D time solution domain on which to compute $f(\textbf{r},\textbf{v},t)$ as well as two PDEs and an integral.
 
 \subsection{Monte Carlo Solution of the Collisionless Boltzmann Equation}
 
@@ -77,7 +77,7 @@ We have shown how to map solving the CBE, the master equation for our system of 
 \dot{\textbf{r}}_i(t) &=& \textbf{v}_i(t)\\
 \dot{\textbf{v}}_i(t) &=& -\left.\deriv{\Phi}{\textbf{r}}\right\vert_{\textbf{r} = \textbf{r}_i}.
 \end{eqnarray}
-Our integro-differential equation system is now approximated as $6\,N$, where $N$ is the number of particles sampled to represent the stars and dark matter, ordinary differential equations (ODEs). These may be solved by any ODE system solver. There are two competing objectives when deciding on the best way to handle time stepping numerically; the first is that we want to maximize the accuracy of our integration scheme and the second is that we want to minimize the number of evaluations of $-\nabla \Phi$, the force. The latter consideration is a severe constraint because naively, the complexity of evaluating each pairwise force is $O(N^2)$.  Although, as we will see, approximations reduce this complexity to $O(N\,\log \, N)$. We note that finding the forces amounts to solving \eqref{eq:poisson}.
+where $\dot{\textbf{r}_i}$ and $\dot{\textbf{v}}_i$ are the first time derivatives of $\textbf{r}_i$ and $\textbf{v}_i$, respectively. Our integro-differential equation system is now approximated as $6\,N$, where $N$ is the number of particles sampled to represent the stars and dark matter, ordinary differential equations (ODEs). These may be solved by any ODE system solver. There are two competing objectives when deciding on the best way to handle time stepping numerically; the first is that we want to maximize the accuracy of our integration scheme and the second is that we want to minimize the number of evaluations of $-\nabla \Phi$, the force. The latter consideration is a severe constraint because naively, the complexity of evaluating each pairwise force is $O(N^2)$.  Although, as we will see, approximations reduce this complexity to $O(N\,\log \, N)$. We note that finding the forces amounts to solving \eqref{eq:poisson}.
 
 Nonetheless, the force calculation will be the most time consuming aspect of the integration, and we want to minimize the number of evaluations we need. This rules out some commonly used schemes in the Runge-Kutta class of integrators, since they would require four or five calculations of the force on millions of particles \citep{numerical_recipes_fortran}. The open question is how to construct a low-order integration scheme that preserves the Hamiltonian\footnote{In a collisionless system, the Hamiltonian should be conserved \citep{BT}.}.
 
@@ -95,13 +95,15 @@ K_t(\Delta t) : \begin{cases}
       \textbf{v}_i & \longrightarrow  \textbf{v}_i  - \nabla \Phi(\textbf{r}_i) \Delta t
    \end{cases}.
 \end{eqnarray}
-If the Hamiltonian is separable as $\mathcal{H} = T(v) + V(r)$ for $T$, the kinetic energy, and  $V$, the potential energy, and we are in a Cartesian coordinate system, combinations of these operators approximately preserve the Hamiltonian. This is a property of a class of integrators known as symplectic integrators, whose derivation starts with an assumption of Hamiltonian mechanics. We use the second order scheme implemented in \textsc{Gadget-3}, based on the code in \citet{GadgetCodePaper}. This integration scheme is specified as,
+If the Hamiltonian is separable as $\mathcal{H} = T(v) + V(r)$ for $T$, the kinetic energy, and  $V$, the potential energy, and we are in a Cartesian coordinate system, combinations of these operators approximately preserve the Hamiltonian. This is a property of a class of integrators known as symplectic integrators, whose derivation starts with an assumption of Hamiltonian mechanics. We use the second order Leapfrog scheme implemented in \textsc{Gadget-3}, based on the code in \citet{GadgetCodePaper}. It is specified as,
 \begin{equation}
-U(\Delta T) = K(\frac{\Delta t}{2}) D(\Delta t) K(\frac{\Delta t}{2}).
+U(\Delta T) = K\left(\frac{\Delta t}{2}\right) D\left(\Delta t\right) K\left(\frac{\Delta t}{2}\right).
 \end{equation}
-This integration scheme is reasonably accurate with only two force evaluations, and is colloquially referred to as Leapfrog. It is also symplectic, meaning that the Hamiltonian of the system will not drift. Chapter~3 of \citet{BT} has an excellent comparison of numerical integrators, including the Leapfrog scheme given here.
+This integration scheme is reasonably accurate with only two force evaluations. It is also symplectic, meaning that the Hamiltonian of the system will not drift. Chapter~3 of \citet{BT} has an excellent comparison of numerical integrators, including the Leapfrog scheme given here.
 
-The final remaining complication for the time stepping portion of solving the CBE is determining the timesteps themselves. This is slightly more complicated to do properly than choosing a fixed timestep for all particles. This is because accelerations and velocities in astrophysical systems vary by orders of magnitude, and the timestep needs to be small compared to the timescales defined by the relevant accelerations. The way that this is commonly implemented, including in \citet{GadgetCodePaper}, is to have a base timestep for all particles that gets bisected at each level of refinement. That is to say, particles at level 4 are updated four more times than particles at level 2. Suppose the highest level of refinement is $k$. The simulation proceeds in $\Delta t_{base} / 2^{k}$ intervals, with particles at $k - 1$ being updated at half of the timesteps, dividing the number of updates by two up to the coarsest level of temporal refinement. Where multiple levels need updates, particles at the lower levels are updated first.
+The final remaining complication for the time stepping portion of solving the CBE is determining the timesteps themselves.  Accelerations and velocities in astrophysical systems vary by orders of magnitude, and the timestep needs to be small compared to the timescales defined by the relevant accelerations. Because some particles experience accelerations on a different magnitude than others, we need an adaptive timestep.
+
+The way that this is commonly implemented, including in \citet{GadgetCodePaper}, is to have a base timestep, $\Delta t_{base}$, for all particles that gets bisected at each level of temporal refinement. That is to say, particles at level 4 are updated four more times than particles at level 2. Suppose the highest level of refinement is $k$. The simulation proceeds in $\Delta t_{base} / 2^{k}$ intervals, with particles at $k - 1$ being updated at half of the timesteps, dividing the number of updates by two up to the coarsest level of temporal refinement. Where multiple levels need updates, particles at the lower levels are updated first.
 
 The level of temporal refinement assigned to a given particle is determined primarily by the acceleration it experiences. That is, for \textsc{Gadget-3} \citep{GadgetCodePaper},
 \begin{equation}
@@ -153,7 +155,7 @@ To reduce the need to explicitly transfer particles between processes, \textsc{G
 
 
 \section{Phase Space, Equilibrium, and Initial Conditions} \label{sec:galaxy_ics}
-In \S\ref{sec:motivation} we outlined the underlying theory behind representing stars and dark matter in an N-body simulation. The focus of this thesis is studying the behavior of stellar disks in cosmological environments, and the first step towards that understanding is the construction of a pristine, equilibrium N-body model. Ultimately, in the course of running an N-body simulation, these pristine systems will diverge to higher entropy states, initially due to random errors in the N-body representation. Nonetheless, these models give us an understanding of how perfectly unperturbed galaxies will evolve due to the fact that real galaxies are also made of a finite number of particles.
+In \S\ref{sec:motivation} we outlined the underlying theory behind representing stars and dark matter in an N-body simulation. The focus of this thesis is studying the behavior of stellar disks in cosmological environments, and the first step towards that understanding is the construction of a pristine, equilibrium N-body model. Ultimately, in the course of running an N-body simulation, these pristine systems will diverge to higher entropy\footnote{The Shannon entropy is a commonly used measure for self-gravitating systems. See \citet{BT} for more details.} states, initially due to random errors in the N-body representation. Nonetheless, these models give us an understanding of how perfectly unperturbed galaxies will evolve due to the fact that real galaxies are also made of a finite number of particles.
 
 \subsection{Jeans Modelling and the Epicyclic Approximation}
 
@@ -270,7 +272,7 @@ f_d(E_p,L_z,E_z) = \frac{\Omega(R_c)}{(2 \pi^3)^{1/2} \kappa(R_c)} \frac{\tilde{
 \end{equation}
 Note that the quantities $\Omega$ and $\kappa$ have their usual definitions, the tilde functions are free choices to tune the disc properties (although they are qualitatively understood as velocity dispersions), and $E_c$ is the energy of a circular orbit. Note that the $R_c$-dependent quantities do not violate the sole dependence on integrals of motion, since $R_c$ is uniquely obtained in a one-to-one fashion from $L_z$.
 
-In terms of the choices for the tilde functions, we choose them to yield the closest thing to an exponential-sech$^2$ density profile with and exponential radial velocity dispersion as possible. Assuming an exponential radial dispersion profile, a disc density is obtained by iteratively adjusting $\tilde{\sigma_z}$ and $\tilde{\rho}$ such that \citep{kd95galactics},
+For the tilde functions, we choose them to yield the closest thing to an exponential-sech$^2$ density profile with and exponential radial velocity dispersion as possible. Assuming an exponential radial dispersion profile, a disc density is obtained by iteratively adjusting $\tilde{\sigma_z}$ and $\tilde{\rho}$ such that \citep{kd95galactics},
 \begin{equation}
 \rho_d(R,z) = \frac{M_d}{8 \pi R_d^2 z_d} e^{-R/R_d} \text{erfc }\left(\frac{R - R_{out}}{\sqrt{2} \delta R_{out}}\right) \exp \left[ -0.8676 \frac{\Psi_z(R,z)}{\Psi_z(R,z_d)}\right]
 \end{equation}
@@ -286,7 +288,7 @@ With this in mind, we introduce the actions \citep{BT},
 \begin{equation}
 \textbf{J} = \oint \textbf{p} \cdot \text{d}^n \textbf{q}
 \end{equation}
-where $\textbf{J}$ are the actions, and $textbf{p}$ and $\textbf{q}$ are canonical coordinates. The closed path over which this integral is evaluated yields a unique set of actions. If the system is axisymmetric and the path we have chosen is a circle of radius $R$, it is straightforward to see that the radial component of the action is just $L_z = R v_c$, which depends on the potential. 
+where $\textbf{J}$ are the actions, and $\textbf{p}$ and $\textbf{q}$ are canonical coordinates. The closed path over which this integral is evaluated yields a unique set of actions. If the system is axisymmetric and the path we have chosen is a circle of radius $R$, it is straightforward to see that the radial component of the action is just $L_z = R v_c$, which depends on the potential. 
 
 Turning the definition of the actions into a transformation from a physically motivated conjugate coordinate system is difficult in general. Closed form solutions for axisymmetric systems exist if the potential if of the St\"ackel form\footnote{For more detail, see Chapter~3.5.3 of \citet{BT}.}, but in general, these transformations do not exist. A commonly used technique is to locally approximate the potential as being of the St\"ackel form \citet{binney_2012}. In practice, one is reduced to approximating the potential instead of the third integral of motion as in the case of \textsc{GalactICS}. For nearly planar disc systems, the differences are insignificant, but become more relevant as one wants to initialize a thicker disc \citep{vasiliev_2018,bauer2018b}.
 
@@ -404,7 +406,7 @@ The picture of a simulated $\Lambda$CDM universe has been conceptually and quant
 
 First and foremost, the question of finding substructure in data is not unique to astrophysics. More generally, we are solving an unsupervised machine learning problem called \textit{clustering}. Solutions to clustering problems take unlabeled data, such as particle masses, positions, and velocities, and identify significant groups within the data \citep{statistical_learning_r}. 
 
-Although there are many techniques that one can use to find clusters in data, we focus on \textit{hierarchical clustering} methods, which as the name suggests, are meant to build hierarchies of clusters. Since $\Lambda$CDM simulations produce hierarchies of subhalos within halos, we expect a hierarchical structure of clusters.
+Although there are many techniques that one can use to find clusters in data, we focus on \textit{hierarchical clustering} methods, which as the name suggests, are meant to build hierarchies of clusters. Since $\Lambda$CDM simulations produce subhalos within halos, we expect a such a structure in these clusters.
 
 There are two general approaches to hierarchical clustering \citep{statistical_learning_r}. Agglomerative methods initially place each particle in their own cluster, and will merge two clusters if they meet some kind of \textit{linkage criterium}. For example, given clusters $C_1$ and $C_2$, the complete-linkage approach will merge the two clusters if $\max\left\{ d(c_1, c_2) : c_1 \in C_1 \wedge c_2 \in C_2\right\} < l$, for some distance metric\footnote{Common distance metrics are the Euclidean metric or the Mahalanobis distance \citep{statistical_learning_r}.}, $d$,  and a linking length, $l$ that is a free parameter. Other common metrics include the single-linkage criterion, $\min\left\{ d(c_1, c_2) : c_1 \in C_1 \wedge c_2 \in C_2\right\} < l$, and the average linkage criteria $\langle d(c_1,c_2) \rangle \left (c_1 \in C_1 \wedge c_2 \in C_2\right) < l$.
 

@@ -23,15 +23,15 @@
 \contentsline {subsection}{\numberline {2.1.4}Time Integration in N-Body Simulations}{37}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}Efficient Force Calculation}{40}{subsection.2.1.5}
 \contentsline {subsection}{\numberline {2.1.6}Complications on Distributed Systems}{43}{subsection.2.1.6}
-\contentsline {section}{\numberline {2.2}Phase Space, Equilibrium, and Initial Conditions}{45}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Jeans Modelling and the Epicyclic Approximation}{46}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}DF-based Models and the Jeans Theorem}{52}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.2}Phase Space and Initial Conditions}{45}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Modelling Approaches}{46}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}DF-based Models}{52}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Action-Angle Variables and the Strong Jeans Theorem}{55}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Cosmology and Implications for Galaxy Studies}{56}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Simulations of FRW Cosmology: Large Scale Properties}{56}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Simulations of FRW Cosmology: Cosmological Initial Conditions}{59}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Extension of Numerical Methods: Time Integration}{60}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Extension of Numerical Methods: Gravity Calculation}{62}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.3}Cosmology's Implications for Simulations}{56}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}FRW Cosmology: Large Scale Properties}{56}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}FRW Cosmology: Cosmological ICs}{59}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Numerical Methods: Time Integration}{60}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Numerical Methods: Gravity Calculation}{62}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}Identifying Substructure in Simulations}{63}{subsection.2.3.5}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-3}

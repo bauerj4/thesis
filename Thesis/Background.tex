@@ -154,10 +154,10 @@ Specifically, in an N-body simulation,  will have a subset of all of the particl
 To reduce the need to explicitly transfer particles between processes, \textsc{Gadget-3} notes that pairwise forces will only be needed for nearby particles. These represent the bulk of the tree force calculation. Any scheme which puts nearby particles on the same processor will reduce the overall communication time in the force calculation phase. One way to accomplish efficient load balancing is to partition the simulation space using a space filling curve. Fig. \ref{fig:peano} shows the Peano space-filling curve at several levels of refinement in 2D. This is the curve \textsc{Gadget-3} uses. A level of refinement is selected, and estimates of the computational cost in each cube are added up along the space filling curve to equally distribute the computational load. This results in nearby particles being on the same process, and in the processes having roughly equal work loads. \citet{GadgetCodePaper} shows that this is highly effective at reducing communication cost in the simulation, and it goes into more detail about how TreePM is carried out on distributed systems.
 
 
-\section{Phase Space, Equilibrium, and Initial Conditions} \label{sec:galaxy_ics}
+\section{Phase Space and Initial Conditions} \label{sec:galaxy_ics}
 In \S\ref{sec:motivation} we outlined the underlying theory behind representing stars and dark matter in an N-body simulation. The focus of this thesis is studying the behavior of stellar disks in cosmological environments, and the first step towards that understanding is the construction of a pristine, equilibrium N-body model. Ultimately, in the course of running an N-body simulation, these pristine systems will diverge to higher entropy\footnote{The Shannon entropy is a commonly used measure for self-gravitating systems. See \citet{BT} for more details.} states, initially due to random errors in the N-body representation. Nonetheless, these models give us an understanding of how perfectly unperturbed galaxies will evolve due to the fact that real galaxies are also made of a finite number of particles.
 
-\subsection{Jeans Modelling and the Epicyclic Approximation}
+\subsection{Modelling Approaches}
 
 The DF represents the 6D phase space information and completely describes an N-body system. In a simple disk-halo system, there is a flattened axisymmetric component (the disk), and a spheroidal component (the dark matter halo) each with their own DF. These are made self-consistent by the separate DFs' incorporation of their combined gravitational potential. 
 
@@ -244,7 +244,7 @@ where $v_c = R \Omega$. We have yet to discuss how we find $\langle v_\phi^2 \ra
 \end{equation}
 where the fraction in the product contains quantities solely determined from the potential, and the coefficient is determined from the assumed radial dispersion profile. This fully solves a disc-halo system. In practice, the system is realized by sampling the spatial density profile (by rejection sampling, for instance) and assigning velocities assuming Gaussians with means $\langle v_i \rangle$ and variances $\langle v_i^2 \rangle$. 
 
-\subsection{DF-based Models and the Jeans Theorem}
+\subsection{DF-based Models}
 
 Although Jeans modelling is used to set up initial conditions for galaxies because it does not require a DF to be known ahead of time, the best initial conditions are generated from DFs \footnote{That is not to say that no one uses Jeans modelling to set up ICs. Approaches like the one presented in \citet{hernquist_1993} were enormously successful and still used today.}. In general, the equilibrium DF is a function of six variables. However, there are some quantities, called \textit{integrals of motion}, which do not change along a star's orbit in a potential. For an axisymmetric potential, these are the total energy, $\mathcal{E}$, $L_z$ and a third quantity, $I_3$.  
 For spherical systems, up to five integrals of motion are admitted by the system, but the simplest \textit{ergodic} models simply have $f_{h}(\mathcal{E})$ for the DF. 
@@ -293,10 +293,10 @@ where $\textbf{J}$ are the actions, and $\textbf{p}$ and $\textbf{q}$ are canoni
 Turning the definition of the actions into a transformation from a physically motivated conjugate coordinate system is difficult in general. Closed form solutions for axisymmetric systems exist if the potential if of the St\"ackel form\footnote{For more detail, see Chapter~3.5.3 of \citet{BT}.}, but in general, these transformations do not exist. A commonly used technique is to locally approximate the potential as being of the St\"ackel form \citet{binney_2012}. In practice, one is reduced to approximating the potential instead of the third integral of motion as in the case of \textsc{GalactICS}. For nearly planar disc systems, the differences are insignificant, but become more relevant as one wants to initialize a thicker disc \citep{vasiliev_2018,bauer2018b}.
 
 
-\section{Cosmology and Implications for Galaxy Studies} \label{sec:cosmology}
+\section{Cosmology's Implications for Simulations} \label{sec:cosmology}
 Our discussion up to this point has focused on simulating isolated systems. Complications arise when we move to a fully cosmological environment. The purpose of this section is to briefly review relevant cosmology, and to explain what numerical methods must be modified and used to simulate cosmological systems. We conclude this section with a brief commentary on identifying substructure in simulations.
 
-\subsection{Simulations of FRW Cosmology: Large Scale Properties}
+\subsection{FRW Cosmology: Large Scale Properties}
 
 In words, the $\Lambda$CDM paradigm described in Chapter~\ref{ch:introduction} prescribes a Universe comprised of four fundamental substances: baryons, radiation, dark matter, and dark energy. On large scales, the Universe is also believed to be isotropic and homogeneous, meaning the patch we occupy is the exact same as any other patch. General Relativity provides a mechanism for us to meaningfully compute distances between patches is this scenario. The so-called Friedmann-Robertson-Walker metric tells us that the \textit{proper distance} between two points at different positions in space and at different times is \citep{kolb_turner, dodelson},
 \begin{equation}
@@ -338,7 +338,7 @@ Following up on this concept, we introduce the notion of \textit{redshift}. The 
 1 + z = \frac{1}{a}
 \end{equation}
 in analogy to this phenomenon. This is a descending unit of time that is often used interchangeably with the scale factor, $a$.
-\subsection{Simulations of FRW Cosmology: Cosmological Initial Conditions}
+\subsection{FRW Cosmology: Cosmological ICs}
 
 Of course, the Universe is not actually homogeneous on small scales. As we suggested in Chapter~\ref{ch:introduction}, small scale fluctuations are present in the early Universe which collapse to form galaxies. Initially, these fluctuations evolve independently of each other in the so-called \textit{linear regime}. Initial conditions for $\Lambda$CDM simulations rely on this fact to generate the initial perturbations for the simulation.
 
@@ -351,7 +351,7 @@ where $\alpha$ is a normalization constant, $n_s$ is a spectral index describing
 While a detailed discussion of how the transfer function is computed can be found in \citet{music}, we will simply say that it is a reflection of the idea that perturbations only grow when matter becomes dominant. It reflects how we believe that perturbations of different scales grew at different rates in the early Universe. However, once it is known at some desired time (redshift), we can sample a Gaussian density field with the right statistical characteristics. This spatial sample with corresponding velocities obtained via something called 2nd Order Lagrangian Perturbation Theory\footnote{See \citet{music} for a detailed description of this technique.} form the initial conditions for our $\Lambda$CDM simulation.
 
 % Maybe say something about zoom-ins?
-\subsection{Extension of Numerical Methods: Time Integration}
+\subsection{Numerical Methods: Time Integration}
 
 Two big problems are present for applying N-body techniques as described. The first, and maybe most obvious of these, is in how we step through time. The time integration scheme worked out in \S\ref{ssec:time_int} makes a critical assumption: the Hamiltonian and its separable components are time independent! Eq. \eqref{eq:comoving_dist} forces us to re-express the leapfrog scheme. For primed quantities as proper (comoving), we have  our new system\citep{quinn_1997},
 \begin{eqnarray}
@@ -393,7 +393,7 @@ K_t(\Delta t) : \begin{cases}
 \end{eqnarray}
 Since these operators derive directly from a separable Hamiltonian, this integrator is symplectic. Even though the energy of our cosmological system is not conserved, there will be no drift about the continuum system's actual energy. This is the integration scheme used in \textsc{Gadget-3} for cosmological simulations.
 
-\subsection{Extension of Numerical Methods: Gravity Calculation}
+\subsection{Numerical Methods: Gravity Calculation}
 
 Beyond the coordinate systems and time stepping scheme used in cosmological simulations, there is also the issue that the actual Universe, the system we are trying to simulate, extends over vast distances. Typically, only a box, a few tens to hundreds of Mpc per side is simulated. Gravity is a long range force, and there will be a contribution at any point in the simulation box from distant, massive objects. The way that this handled in modern cosmological simulations is to impose periodic boundary conditions when we solve Poisson's equation. This is essentially like viewing our simulation box cloned infinitely many times along each axis, shifted by its length along each axis.
 

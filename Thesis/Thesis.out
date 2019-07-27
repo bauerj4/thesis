@@ -20,15 +20,15 @@
 \BOOKMARK [2][-]{subsection.2.1.4}{Time Integration in N-Body Simulations}{section.2.1}% 20
 \BOOKMARK [2][-]{subsection.2.1.5}{Efficient Force Calculation}{section.2.1}% 21
 \BOOKMARK [2][-]{subsection.2.1.6}{Complications on Distributed Systems}{section.2.1}% 22
-\BOOKMARK [1][-]{section.2.2}{Phase Space, Equilibrium, and Initial Conditions}{chapter.2}% 23
-\BOOKMARK [2][-]{subsection.2.2.1}{Jeans Modelling and the Epicyclic Approximation}{section.2.2}% 24
-\BOOKMARK [2][-]{subsection.2.2.2}{DF-based Models and the Jeans Theorem}{section.2.2}% 25
+\BOOKMARK [1][-]{section.2.2}{Phase Space and Initial Conditions}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.1}{Modelling Approaches}{section.2.2}% 24
+\BOOKMARK [2][-]{subsection.2.2.2}{DF-based Models}{section.2.2}% 25
 \BOOKMARK [2][-]{subsection.2.2.3}{Action-Angle Variables and the Strong Jeans Theorem}{section.2.2}% 26
-\BOOKMARK [1][-]{section.2.3}{Cosmology and Implications for Galaxy Studies}{chapter.2}% 27
-\BOOKMARK [2][-]{subsection.2.3.1}{Simulations of FRW Cosmology: Large Scale Properties}{section.2.3}% 28
-\BOOKMARK [2][-]{subsection.2.3.2}{Simulations of FRW Cosmology: Cosmological Initial Conditions}{section.2.3}% 29
-\BOOKMARK [2][-]{subsection.2.3.3}{Extension of Numerical Methods: Time Integration}{section.2.3}% 30
-\BOOKMARK [2][-]{subsection.2.3.4}{Extension of Numerical Methods: Gravity Calculation}{section.2.3}% 31
+\BOOKMARK [1][-]{section.2.3}{Cosmology's Implications for Simulations}{chapter.2}% 27
+\BOOKMARK [2][-]{subsection.2.3.1}{FRW Cosmology: Large Scale Properties}{section.2.3}% 28
+\BOOKMARK [2][-]{subsection.2.3.2}{FRW Cosmology: Cosmological ICs}{section.2.3}% 29
+\BOOKMARK [2][-]{subsection.2.3.3}{Numerical Methods: Time Integration}{section.2.3}% 30
+\BOOKMARK [2][-]{subsection.2.3.4}{Numerical Methods: Gravity Calculation}{section.2.3}% 31
 \BOOKMARK [2][-]{subsection.2.3.5}{Identifying Substructure in Simulations}{section.2.3}% 32
 \BOOKMARK [0][-]{chapter.3}{A Method for Studying Discs in Cosmological Haloes}{}% 33
 \BOOKMARK [1][-]{section.3.1}{Abstract}{chapter.3}% 34

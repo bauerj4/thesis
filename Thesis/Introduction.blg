@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Introduction.aux
 The style file: apalike.bst
 Database file #1: bibliography_introduction.bib
@@ -14,45 +14,47 @@ I was expecting a `,' or a `}'---line 1812 of file bibliography_introduction.bib
 I'm skipping whatever remains of this entry
 Warning--empty publisher in dodelson
 Warning--empty publisher in kolb_turner
-You've used 65 entries,
+Warning--can't use both author and editor fields in Sellwood2013
+Warning--empty publisher in Sellwood2013
+You've used 66 entries,
             1935 wiz_defined-function locations,
-            827 strings with 21552 characters,
-and the built_in function-call counts, 38613 in all, are:
-= -- 3278
-> -- 3244
-< -- 20
-+ -- 1222
-- -- 1222
-* -- 3929
-:= -- 7095
-add.period$ -- 191
-call.type$ -- 65
-change.case$ -- 932
-chr.to.int$ -- 65
-cite$ -- 67
-duplicate$ -- 897
-empty$ -- 1751
-format.name$ -- 1305
-if$ -- 7051
+            834 strings with 21746 characters,
+and the built_in function-call counts, 38978 in all, are:
+= -- 3311
+> -- 3251
+< -- 22
++ -- 1224
+- -- 1224
+* -- 3955
+:= -- 7151
+add.period$ -- 193
+call.type$ -- 66
+change.case$ -- 937
+chr.to.int$ -- 66
+cite$ -- 70
+duplicate$ -- 919
+empty$ -- 1781
+format.name$ -- 1308
+if$ -- 7130
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 63
-newline$ -- 324
-num.names$ -- 197
-pop$ -- 819
+missing$ -- 65
+newline$ -- 328
+num.names$ -- 200
+pop$ -- 830
 preamble$ -- 1
-purify$ -- 935
+purify$ -- 941
 quote$ -- 0
-skip$ -- 664
+skip$ -- 681
 stack$ -- 0
-substring$ -- 1806
-swap$ -- 69
-text.length$ -- 2
+substring$ -- 1824
+swap$ -- 78
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 384
-warning$ -- 2
-while$ -- 184
+type$ -- 388
+warning$ -- 4
+while$ -- 187
 width$ -- 0
-write$ -- 828
+write$ -- 839
 (There were 2 error messages)

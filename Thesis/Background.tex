@@ -2,10 +2,10 @@
   \ensuremath{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}
 \newtheorem{theorem}{Theorem}[section]
 
-\chapter{A Dynamical Recipe for Cosmological Disks}\label{ch:background}
+\chapter{A Dynamical Recipe for Cosmological Discs}\label{ch:background}
 \newpage
 
-This chapter provides an overview of the background theory needed to understand subsequent chapters. In Chapter~\ref{ch:introduction}, we discussed simulations of galaxies being critical to having a theoretical understanding of cosmology and galaxy formation. The word ``simulation" was used without fully contextualizing its significance and meaning. We provide that context in \S\ref{sec:motivation}, where we describe what is actually being done when a simulation is run. In \S\ref{sec:galaxy_ics}, we talk about how to apply this theory to study the evolution of equilibrium galaxies.  We talk about  the implications of cosmology in detail in \S\ref{sec:cosmology}, and explain how this specifies an extended view of the discussion in \S\ref{sec:motivation}. This includes how we identify cosmic substructure and the techniques we use for analyzing the time-evolution of disk-derived quantities. 
+This chapter provides an overview of the background theory needed to understand subsequent chapters. In Chapter~\ref{ch:introduction}, we discussed simulations of galaxies being critical to having a theoretical understanding of cosmology and galaxy formation. The word ``simulation" was used without fully contextualizing its significance and meaning. We provide that context in \S\ref{sec:motivation}, where we describe what is actually being done when a simulation is run. In \S\ref{sec:galaxy_ics}, we talk about how to apply this theory to study the evolution of equilibrium galaxies.  We talk about  the implications of cosmology in detail in \S\ref{sec:cosmology}, and explain how this specifies an extended view of the discussion in \S\ref{sec:motivation}. This includes how we identify cosmic substructure and the techniques we use for analyzing the time-evolution of disc-derived quantities. 
 \section{Physical Motivation of Modelling} \label{sec:motivation}
 
 The goal of this section is to convey to the reader what we mean by a simulation of a galactic system. 
@@ -73,9 +73,9 @@ where $\delta^3$ is the 3D Dirac delta function, and we take the DF to be normal
 \subsection{Time Integration in N-Body Simulations} \label{ssec:time_int}
 
 We have shown how to map solving the CBE, the master equation for our system of stars and dark matter, to the evolution of a finite sample of particles. The system of equations we need to solve now is,
-\begin{eqnarray} \label{eq:nbody_system}
-\dot{\textbf{r}}_i(t) &=& \textbf{v}_i(t)\\
-\dot{\textbf{v}}_i(t) &=& -\left.\deriv{\Phi}{\textbf{r}}\right\vert_{\textbf{r} = \textbf{r}_i}.
+\begin{eqnarray} 
+\dot{\textbf{r}}_i(t) &=& \textbf{v}_i(t)\label{eq:nbody_system_1}\\
+\dot{\textbf{v}}_i(t) &=& -\left.\deriv{\Phi}{\textbf{r}}\right\vert_{\textbf{r} = \textbf{r}_i}.\label{eq:nbody_system_2}
 \end{eqnarray}
 where $\dot{\textbf{r}_i}$ and $\dot{\textbf{v}}_i$ are the first time derivatives of $\textbf{r}_i$ and $\textbf{v}_i$, respectively. Our integro-differential equation system is now approximated as $6\,N$, where $N$ is the number of particles sampled to represent the stars and dark matter, ordinary differential equations (ODEs). These may be solved by any ODE system solver. There are two competing objectives when deciding on the best way to handle time stepping numerically; the first is that we want to maximize the accuracy of our integration scheme and the second is that we want to minimize the number of evaluations of $-\nabla \Phi$, the force. The latter consideration is a severe constraint because naively, the complexity of evaluating each pairwise force is $O(N^2)$.  Although, as we will see, approximations reduce this complexity to $O(N\,\log \, N)$. We note that finding the forces amounts to solving \eqref{eq:poisson}.
 
@@ -113,7 +113,7 @@ Here, $\eta$ is a free accuracy parameter and $\epsilon$ is the gravitational so
 \begin{equation}
 \textbf{a}_i(\textbf{r}) = -\frac{G m_i}{\left(\vert\textbf{r} - \textbf{r}_i\vert^2 + \epsilon^2\right)^{3/2}}(\textbf{r} - \textbf{r}_i) \label{eq:point_mass}
 \end{equation}
-Higher choices of $\epsilon$ reduce large errors accumulating due to large forces, but also make the force calculation less accurate.
+Larger choices of $\epsilon$ reduce large errors accumulating due to large forces, but also make the force calculation less accurate.
 
 \subsection{Efficient Force Calculation}
 
@@ -137,7 +137,7 @@ The scheme proposed by \citet{barnes_hut} is widely used in astrophysics because
 
 Before proceeding to talk about the complications of executing TreePM on distributed systems like the Linux clusters worked with in this thesis, we would be remiss in not mentioning field expansion methods. Typically these take the form of an expansion of the potential in spherical harmonics using a set of radial basis functions. A brief discussion of these methods is presented in Chapter~2.9.4 of \citet{BT}. These methods have great historical significance, and have even seen a recent resurgence in helping understand the structure of dark matter halos \citep{lilley_2018_a, lilley_2018_b}.
 
-To summarize, there are a number of ways to find gravitational forces in a simulation that all amount to solving Poisson's Equation, \eqref{eq:poisson}. The most accurate way is to compute all pairwise forces, but efficient algorithms have been developed to accurately estimate forces from gravity. The force calculation together with a time stepping scheme for N-body realizations forms the main components of an N-body simulation, and solving Eq. \eqref{eq:nbody_system} to estimate $f(\textbf{r},\textbf{v},t)$ is what we mean when we say we ran a simulation.
+To summarize, there are a number of ways to find gravitational forces in a simulation that all amount to solving Poisson's Equation, \eqref{eq:poisson}. The most accurate way is to compute all pairwise forces, but efficient algorithms have been developed to accurately estimate forces from gravity. The force calculation together with a time stepping scheme for N-body realizations forms the main components of an N-body simulation, and solving Eqs. \eqref{eq:nbody_system_1} and \eqref{eq:nbody_system_2} to estimate $f(\textbf{r},\textbf{v},t)$ is what we mean when we say we ran a simulation.
 
 \subsection{Complications on Distributed Systems}
 
@@ -155,13 +155,13 @@ To reduce the need to explicitly transfer particles between processes, \textsc{G
 
 
 \section{Phase Space and Initial Conditions} \label{sec:galaxy_ics}
-In \S\ref{sec:motivation} we outlined the underlying theory behind representing stars and dark matter in an N-body simulation. The focus of this thesis is studying the behavior of stellar disks in cosmological environments, and the first step towards that understanding is the construction of a pristine, equilibrium N-body model. Ultimately, in the course of running an N-body simulation, these pristine systems will diverge to higher entropy\footnote{The Shannon entropy is a commonly used measure for self-gravitating systems. See \citet{BT} for more details.} states, initially due to random errors in the N-body representation. Nonetheless, these models give us an understanding of how perfectly unperturbed galaxies will evolve due to the fact that real galaxies are also made of a finite number of particles.
+In \S\ref{sec:motivation} we outlined the underlying theory behind representing stars and dark matter in an N-body simulation. The focus of this thesis is studying the behavior of stellar discs in cosmological environments, and the first step towards that understanding is the construction of a pristine, equilibrium N-body model. Ultimately, in the course of running an N-body simulation, these pristine systems will diverge to higher entropy\footnote{The Shannon entropy is a commonly used measure for self-gravitating systems. See \citet{BT} for more details.} states, initially due to random errors in the N-body representation. Nonetheless, these models give us an understanding of how perfectly unperturbed galaxies will evolve due to the fact that real galaxies are also made of a finite number of particles.
 
 \subsection{Modelling Approaches}
 
-The DF represents the 6D phase space information and completely describes an N-body system. In a simple disk-halo system, there is a flattened axisymmetric component (the disk), and a spheroidal component (the dark matter halo) each with their own DF. These are made self-consistent by the separate DFs' incorporation of their combined gravitational potential. 
+The DF represents the 6D phase space information and completely describes an N-body system. In a simple disc-halo system, there is a flattened axisymmetric component (the disc), and a spheroidal component (the dark matter halo) each with their own DF. These are made self-consistent by the separate DFs' incorporation of their combined gravitational potential. 
 
-However, the DF is not the quantity that is observed in external galaxies. Astronomers are not typically working with a 6D phase space description of the structures they observe. Luminosity (density) profiles are one observable , as well as circular velocities (rotation curves) for disks, and also the spread of line of sight (LOS) velocities of disk stars. A modelling approach that takes our understanding of these observables as input is conceptually easier to understand than a DF which may or may not be unique \citep{BT}.
+However, the DF is not the quantity that is observed in external galaxies. Astronomers are not typically working with a 6D phase space description of the structures they observe. Luminosity (density) profiles are one observable , as well as circular velocities (rotation curves) for discs, and also the spread of line of sight (LOS) velocities of disc stars. A modelling approach that takes our understanding of these observables as input is conceptually easier to understand than a DF which may or may not be unique \citep{BT}.
 
 In this spirit, \citet{jeans_1915}\footnote{Notably before the infamous 1920 Curtis-Shapley debate \citep{curtis_shapley} establishing that so-called ``spiral nebulae" were actually external galaxies.} laid out a framework to describe galaxy evolution in terms of the \textit{moments} of the distribution function. Specifically, the idea is to multiply the CBE (Eq. \eqref{eq:cbe_cartesian}) by $\textbf{v}_i$ or $\textbf{v}_i \textbf{v}_j$ and integrate over the velocity part of phase space. These together yield the second-order Jeans equations \citep{BT},
 \begin{eqnarray}
@@ -182,17 +182,17 @@ where $z$ is the Cartesian $z$, $R$ is the cylindrical radius, and $\phi$ is the
 
 We have also thrown out information about the DF by using moments and stopping at second order. Higher order Jeans equations can be appended to this system by multiplying the CBE by $v_i v_j v_k$ to obtain the third order equations, and so on. These get progressively more complicated, and we would require more additional equations to evaluate the equilibrium Jeans equations \citep{BT}.
 
-Despite these shortcomings, more information can be imposed on the system to make these equations applicable. \citet{hernquist_1993} presented one of the first successful applications of Jeans modelling to creating equilibrium galaxies with bulges, disks, and dark matter halos. In the case of the dark matter halo for a disk-halo system, one only has to specify the function,
+Despite these shortcomings, more information can be imposed on the system to make these equations applicable. \citet{hernquist_1993} presented one of the first successful applications of Jeans modelling to creating equilibrium galaxies with bulges, discs, and dark matter halos. In the case of the dark matter halo for a disc-halo system, one only has to specify the function,
 \begin{equation}
 \beta(r) = 1 - \frac{\langle v_\theta^2\rangle + \langle v_\phi^2 \rangle}{2 \langle v_R^2 \rangle}.
 \end{equation}
-This parameter measures anisotropy in the velocity ellipsoid defined by $\sigma_{ij}$ at each radius; $\beta = -\infty$ if all orbits are circular, $\beta=0$ if the system is isotropic, and $\beta = 1$ if orbits are purely radial. Together with an assumed density-potential pair, continuity equation, and the spherical second-order Jeans equation, the spherical halo's velocity structure is specified. At the time of writing, \citet{hernquist_1993} did not have much information about the dark matter distribution in galaxies (recall \citep{nfw} proceeded this work in establishing a common density profile for dark matter halos). As such, we will not talk about their uninformed choice of halo, and it really is not important.
+This parameter measures anisotropy in the velocity ellipsoid defined by $\sigma_{ij}$ at each radius; $\beta = -\infty$ if all orbits are circular, $\beta=0$ if the system is isotropic, and $\beta = 1$ if orbits are purely radial. Together with an assumed density-potential pair, continuity equation, and the spherical second-order Jeans equation, the spherical halo's velocity structure is specified. At the time of writing, \citet{hernquist_1993} did not have much information about the dark matter distribution in galaxies (recall \citep{nfw} followed this work in establishing a common density profile for dark matter halos). As such, we will not talk about their uninformed choice of halo, and it really is not important.
 
-In the case of the axisymmetric disk, \citet{hernquist_1993} based their model on the observations at the time which suggested that stellar disks had an exponential radial density profile \citep{freeman_1970}. This motivated a density profile commonly used today,
+In the case of the axisymmetric disc, \citet{hernquist_1993} based their model on the observations at the time which suggested that stellar discs had an exponential radial density profile \citep{freeman_1970}. This motivated a density profile commonly used today,
 \begin{equation}
 \rho_d(r) = \frac{M_d}{4 \pi R_d^2 z_d} e^{-R/R_d} \text{sech}^2\left(\frac{z}{z_d} \right). 
 \end{equation}
-Here, $M_d$ is the mass of the disk, $R_d$ is the radial scale length, and $z_d$ is the vertical scale length.
+Here, $M_d$ is the mass of the disc, $R_d$ is the radial scale length, and $z_d$ is the vertical scale length.
 Observations support the idea that the second radial velocity moment also has an exponential profile \citep{van_der_kruit_searle_1981, lewis_freeman_1989},
 \begin{equation}
 \langle v_R^2 \rangle = \sigma_{R,0} e^{-R/R_\sigma}.
@@ -254,7 +254,7 @@ If we assume the epicycle approximation, then $I_3 \approx E_z = \Phi(R,0) - \Ph
 \begin{theorem}[The Jeans Theorem]
 Any steady-state solution of the collisionless Boltzmann equation depends on the phase-space coordinates only through integrals of motion in a given potential, and any function of the integrals yields a steady-state solution of the collisionless Boltzmann equation.
 \end{theorem}
-Proof of this theorem can be obtained in \citet{jeans_1915} and in Chapter~4.2 of \citet{BT}, although it essentially amounts to observing that the time derivative of a function of time-independent quantities is zero by the chain rule. Now that we know that any DF of the integrals of motion gives a steady state solution, and that using the epicyclic approximation gives us three known integrals of motion, we can ask ourselves what kinds of DFs describe the NFW haloes and exponential disks that are easily obtained from Jeans modelling.
+Proof of this theorem can be obtained in \citet{jeans_1915} and in Chapter~4.2 of \citet{BT}, although it essentially amounts to observing that the time derivative of a function of time-independent quantities is zero by the chain rule. Now that we know that any DF of the integrals of motion gives a steady state solution, and that using the epicyclic approximation gives us three known integrals of motion, we can ask ourselves what kinds of DFs describe the NFW haloes and exponential discs that are easily obtained from Jeans modelling.
 
 We talk about the case of an ergodic halo and DF yielding an exponential disc at length here. For the remainder of the thesis, we primarily generate our initial conditions in this way. For any ergodic DF, a chosen density profile may be inverted by the Eddington inversion formula \citep{BT},
 \begin{equation}
@@ -276,7 +276,7 @@ For the tilde functions, we choose them to yield the closest thing to an exponen
 \begin{equation}
 \rho_d(R,z) = \frac{M_d}{8 \pi R_d^2 z_d} e^{-R/R_d} \text{erfc }\left(\frac{R - R_{out}}{\sqrt{2} \delta R_{out}}\right) \exp \left[ -0.8676 \frac{\Psi_z(R,z)}{\Psi_z(R,z_d)}\right]
 \end{equation}
-Here, $M_d$ is a parameter that is approximately equal to the mass of the disk, $R_{out}$ is a truncation radius, $\delta R_{out}$ is a parameter determining the sharpness of the truncation, and $\Psi_z$ is the negative vertical potential, $\Phi(R,0) - \Phi(R,z)$. The motivation behind the last term in the product is to yield a dropoff of vertical density close to $\text{sech}^2(z/z_d)$.
+Here, $M_d$ is a parameter that is approximately equal to the mass of the disc, $R_{out}$ is a truncation radius, $\delta R_{out}$ is a parameter determining the sharpness of the truncation, and $\Psi_z$ is the negative vertical potential, $\Phi(R,0) - \Phi(R,z)$. The motivation behind the last term in the product is to yield a dropoff of vertical density close to $\text{sech}^2(z/z_d)$.
 
 Similar to the  Jeans models, we actualize these systems by sampling their combined spatial densities. At every sampled point, we draw a velocity from the DF that is constructed in the combined potential. This does not require us to, for example, use a Gaussian distribution for the velocity dispersions as in Jeans models. This kind of model is as accurate as the assumption that $E_z$ is an integral of motion is (as accurate as the epicycle approximation is). A more detailed discussion about how self-consistent systems are realized from DFs can be found in \citet{kd95galactics}, and this work forms the basis for the \textsc{GalactICS} code used in this thesis.
 
@@ -290,7 +290,7 @@ With this in mind, we introduce the actions \citep{BT},
 \end{equation}
 where $\textbf{J}$ are the actions, and $\textbf{p}$ and $\textbf{q}$ are canonical coordinates. The closed path over which this integral is evaluated yields a unique set of actions. If the system is axisymmetric and the path we have chosen is a circle of radius $R$, it is straightforward to see that the radial component of the action is just $L_z = R v_c$, which depends on the potential. 
 
-Turning the definition of the actions into a transformation from a physically motivated conjugate coordinate system is difficult in general. Closed form solutions for axisymmetric systems exist if the potential if of the St\"ackel form\footnote{For more detail, see Chapter~3.5.3 of \citet{BT}.}, but in general, these transformations do not exist. A commonly used technique is to locally approximate the potential as being of the St\"ackel form \citet{binney_2012}. In practice, one is reduced to approximating the potential instead of the third integral of motion as in the case of \textsc{GalactICS}. For nearly planar disc systems, the differences are insignificant, but become more relevant as one wants to initialize a thicker disc \citep{vasiliev_2018,bauer2018b}.
+Turning the definition of the actions into a transformation from a physically motivated conjugate coordinate system is difficult in general. Closed form solutions for axisymmetric systems exist if the potential is of the St\"ackel from\footnote{For more detail, see Chapter~3.5.3 of \citet{BT}.}, but in general, these transformations do not exist. A commonly used technique is to locally approximate the potential as being of the St\"ackel form \citet{binney_2012}. In practice, one is reduced to approximating the potential instead of the third integral of motion as in the case of \textsc{GalactICS}. For nearly planar disc systems, the differences are insignificant, but become more relevant as one wants to initialize a thicker disc \citep{vasiliev_2018,bauer2018b}.
 
 
 \section{Cosmology's Implications for Simulations} \label{sec:cosmology}
@@ -333,11 +333,11 @@ This effect was first described by \citet{hubble_1929}, and explains why distant
 % Comoving coordinates and redshift
 
 
-Following up on this concept, we introduce the notion of \textit{redshift}. The term derives from the fact that as objects become more distant, we expect the hubble flow to cause the emitters to move away from the observer. Photons emitted by a stationary object with a wavelength, $\lambda$, are observed with wavelength $a(t_{emit}) \lambda$, and we define the redshift, $z$,
+Following up on this concept, we introduce the notion of \textit{redshift}. The term derives from the fact that as objects become more distant, we expect the Hubble flow to cause the emitters to move away from the observer. Photons emitted by a stationary object with a wavelength, $\lambda$, are observed with wavelength $a(t_{emit}) \lambda$, and we define the redshift, $z$,
 \begin{equation}
 1 + z = \frac{1}{a}
 \end{equation}
-in analogy to this phenomenon. This is a descending unit of time that is often used interchangeably with the scale factor, $a$.
+in analogy to this phenomenon. This is a decreasing unit of time that is often used interchangeably with the scale factor, $a$.
 \subsection{FRW Cosmology: Cosmological ICs}
 
 Of course, the Universe is not actually homogeneous on small scales. As we suggested in Chapter~\ref{ch:introduction}, small scale fluctuations are present in the early Universe which collapse to form galaxies. Initially, these fluctuations evolve independently of each other in the so-called \textit{linear regime}. Initial conditions for $\Lambda$CDM simulations rely on this fact to generate the initial perturbations for the simulation.

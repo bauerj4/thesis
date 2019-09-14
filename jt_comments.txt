@@ -1,0 +1,184 @@
+Nature or Nurture? Collisionless Evolution of Galactic Disc-Halo Systems, by Jacob Stephen Bauer
+Detailed Notes 
+
+==============================================================================
+
+Corrections/typos: (these generally require correction)
+
+p5: something we first learned from from observations of Type 1a supernova
+-> something we first learned from observations of Type 1a supernovae
+
+p7: baryon acoustic oscillations (BOA), 
+-> baryon acoustic oscillations (BAO),
+
+p14: orbits exactly Sanders and Binney (2013) -> orbits exactly (Sanders and Binney 2013) 
+
+p14: observed as waves-like -> observed as wave-like 
+
+Ch 2:
+
+style: Higher choices of ε reduce -> Larger choices of ε reduce 
+
+[would be nice to explain FFT, particle mesh, etc. in a bit more detail]
+
+"and solving Eq. (2.8) to estimate f (r, v, t)" -> and solving Eqs. (2.8 & 2.9) to estimate f (r, v, t) 
+[or I'd see if you could number equations 2.8-2.9 together]
+
+"proceeded this work in establishing a common density profile"
+-> followed this work, establishing a common density profile
+
+if the potential if of the
+-> if the potential is of the
+
+Sta ̈ckel form Binney (2012).
+-> Sta ̈ckel form (Binney 2012).
+
+ the hubble flow 
+->  the Hubble flow 
+
+This is a descending unit of time
+-> This is a decreasing unit of time
+
+[clustering section is interesting, but note that it doesn't match the historical/conventional uses in field: FOF and SOD have been the main techniques up until recently]
+
+Ch 3:
+
+is order of panels labelled incorrectly in fig 3.5?
+
+p102: especially in the inner part, the the FO halo.
+-> especially in the inner part, then the FO halo.
+
+p 107:
+to have implemented the full dynamical equations have done here
+-> to have implemented the full dynamical equations [as we] have done here
+
+Fig 3.8: green almost indistinguishable from teal - choose blue or something else instead
+
+Unfortunate, and conceded, but I don't have the source for this figure anymore. JSB
+
+Ch 4:
+
+p 147: essentially gives the inverse patter speed or pattern period.
+-> essentially gives the inverse pattern speed or pattern period.
+
+[Figure placement annoying]
+
+[might give descriptive names to simulations?]
+
+Ch 5:
+
+axis labels on some plots illegibly small, e.g. Fig 5.7
+
+could horizontal axis in 5.9 be in z or Gyr?
+
+p 197: we show only the the -> we show only the
+
+might want to quantify buckling and/or indicate it on Fig 5.9 directly
+
+is the acronym KUD defined somewhere? couldn't find a definition
+
+title runs into page numbering
+
+==============================================================================
+
+Comments: (anything in square brackets is a comment and does not require correction.)  
+
+Introduction:
+
+[p5? Note that the smallest scales probed directly by the CMB are larger than galaxy scales, so we don't actually have direct evidence for the shape and amplitude of the power spectrum on galaxy scales from the CMB alone - some other theory (e.g. collisionless dark matter) must be assumed.]
+
+[p5 "something we first learned from observations of Type 1a supernova" note that this was not the first evidence for dark energy; it's probably more accurate to say it was the last/conclusive evidence before dark energy become part of the current paradigm.] 
+
+p10 "Furthermore, the dark matter should have a density distribution somewhat resembling a squashed football, a spheroid flattened on two axes." Note this is only true on average; simulated halos have a range of shapes, so we can't assume that, e.g. the halo of the Milky Way, is not spherical or oblate.
+
+[p6 "Hot dark matter is comprised of matter moving at or near the speed of light (e.g. neutrinos), and warm dark matter is somewhere in between cold and hot dark matter." The statement about the speed of hot or warm dark matter needs to be made at a specific epoch (when galaxy scale perturbations enter the horizon). At early times, all dark matter candidates were relativistic.]
+
+---------------
+
+Chapter 2:
+
+overall, very well done!
+
+---------------
+
+Chapter 3:
+
+[It would be really helpful, in explaining the motion of the disk, to draw the Euler angles and/or motions on a figure.]
+
+["We identify a Milky Way-like halo in the present-day snapshot, that is, a ∼ 1012 M⊙ halo which has experienced no major mergers since z = 1 and which has no haloes with 2h−1 Mpc more than half the mass of the MW-analogue."]
+does this really match the MW?
+
+["growth period lasts from 2.2 Gyr to 5.9 Gyr after the Big Bang" How does this compare to the SF history  of the MW specifically? do we know?]
+
+[If I understand mass insertion scheme correctly, is relaxation a concern?]
+
+[Note the hiccup in the rotation curve in the LD panel of F3.5 - what causes this?]
+
+[Is x-pattern seen observationally - and if so, could you cite an example? what is its origin?]
+
+[3.8: If the disk and/or bar lose angular momentum, what happens to the halo angular momentum; what is role of bar in the transfer?]
+
+["One possible explanation is that dynamical friction from the disc drags dark matter subhaloes toward the centre of the halo where they are tidally disrupted." If you have centre-of-mass coordinates and velocities for subhalos, couldn't you easily test this?]
+
+[Overall would be interesting to get into the specific mechanism for substructure disruption (shocking, df, etc.) and how it is affected by disk density, surface density, and/or the existence of a bar.]
+
+---------------
+
+Chapter 4:
+
+[Isn't there a global Toomre parameter?, that controls stability to bar formation? I thought I came across that somewhere...]
+
+[In figure 4.3/4.4, what is overall dimensionality of the underlying space? Could you try predict bar strength or length as a function of the 4+ underlying variables?]
+
+[Also do you mention where MW is on fig 4.3?]
+
+[Why is bar length within co-rotation radius? It makes sense, but a simple explanation would be nice.]
+
+[Explain, also quantify dynamical friction off bar?]
+
+[Could bar strength be related to local thickness, Toomre parameter, rather than global values?]
+
+[Overall, how would you follow this up and/or apply this cosmologically?]
+
+[In the defence, you had a very good overview of the purpose and results of this chapter; maybe you could articulate that more clearly in the introduction or conclusion.]
+
+---------------
+
+Chapter 5:
+
+[To clarify your definition of high-latitude stars, could you not also plot a histogram of scale height? log number versus log height would illustrate your point about having particles in excess of those expected from the main disk component.]
+
+[Why is flapping so long-lived? An explanation would be good.]
+
+[I don't understand the "first peri." fit in Figure 5.3.]
+
+["Other sources of vertical heating include interactions with massive satellites and the cosmological environment" there are others, e.g. interactions with GMCs or spiral arms]
+
+In figure 5.11, clarify - are we really seeing bending, and not just tilting? Are these figures in the plane of the disk, or in a fixed plane?
+
+[I couldn't really parse Equ. 5.7 - maybe explain it in words?]
+
+---------------
+
+Chapter 6:
+
+[See questions below.]
+
+==============================================================================
+
+Open Questions: (to think about; some of these might also be addressed further in the introduction or conclusion)
+
+1) Why the title: "Nature or Nurture? Collisionless Evolution of Galactic Disc-Halo Systems"? 
+
+2) A number of elements are missing currently that affect the realism of the dynamics: in particular, gas cooling/motions through the bar, gradual star formation, feedback from stars or an AGN acting on gas, GMCs and star-GMC interactions, and the presence of a bulge. You discuss some of these a bit, but not all of them, and could say a bit more.
+
+3) What can you say about the specific history of the Milky Way? Can you say anything with certainty? 
+If not, what is missing to reach this goal (e.g. what about some of the missing physics of the previous question)?
+
+4) This thesis presents important new techniques in simulating galaxy formation and evolution, and overall I think it's very high quality work. The main thing missing from the discussion/conclusion is a sense of what the "killer app" is for these techniques. E.g. you say in chapter 4: "In principle, theories of galaxy formation should yield predictions for the fractional distribution of bars in terms of their strength, length, and pattern speed." So can you do this by now? If not, what is the road map to reach this goal. If we could do this, why would it be interesting or important?
+
+To think of it another way, if you had the resources to mount a large (billion Euro) *observational* campaign, what would you have the observers measure, and why?
+
+You might also lay out more clearly what simulations you plan for the future. I was a bit worried in Chps. 4/5 that you were often implicitly fitting a curve (e.g. how bar strength depends on disk scale height) using only three data points, the three simulations you had run. At least for the most significant trends you identify, it would be good to explore a single dimension in parameter space more exhaustively, running 5-6 simulations to check the dependence inferred was consistent and smooth.
+
+Some other ideas also occurred to me, e.g. how about a "grand challenge", comparing your modelling of a specific case to a self-consistent simulation? Or what about modifying your disk insertion technique so that the disk orientation and structure reflected the original angular momentum distribution of material in the halo (as in the analytic models of Mo & White, etc.). Anyway these are just examples, but you could make a list of simulations you plan to run and state this clearly in one place in the conclusions.

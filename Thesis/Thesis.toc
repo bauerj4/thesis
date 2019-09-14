@@ -1,140 +1,141 @@
-\contentsline {chapter}{Abstract}{ii}{Doc-Start}
-\contentsline {chapter}{Statement of Originality}{iv}{chapter*.1}
-\contentsline {chapter}{Acknowledgments}{vi}{chapter*.2}
-\contentsline {chapter}{Contents}{viii}{chapter*.3}
-\contentsline {chapter}{List of Tables}{xii}{chapter*.3}
-\contentsline {chapter}{List of Figures}{xiv}{chapter*.3}
+\contentsline {chapter}{Abstract}{ii}{Doc-Start}% 
+\contentsline {chapter}{Statement of Originality}{iv}{chapter*.1}% 
+\contentsline {chapter}{Acknowledgments}{vi}{chapter*.2}% 
+\contentsline {chapter}{Contents}{viii}{chapter*.3}% 
+\contentsline {chapter}{List of Tables}{xii}{chapter*.3}% 
+\contentsline {chapter}{List of Figures}{xiv}{chapter*.3}% 
 \gdef \the@ipfilectr {@-1}
-\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Perturbations to People}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}Understanding $\Lambda $CDM with Galaxy Simulations}{9}{section.1.2}
-\contentsline {section}{\numberline {1.3}Dynamical Processes in a Chaotic Milky Way}{12}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Stellar Streams from Mergers}{13}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Response of the Galactic Disk to the Cosmological Environment}{14}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Disk Insertion Techniques for Cosmology}{17}{section.1.4}
-\contentsline {section}{\numberline {1.5}Organization and Findings of this Thesis}{19}{section.1.5}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Perturbations to People}{4}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Understanding $\Lambda $CDM with Galaxy Simulations}{9}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Dynamical Processes in a Chaotic Milky Way}{12}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}Distribution of Mass in the Milky Way}{13}{subsection.1.3.1}% 
+\contentsline {subsection}{\numberline {1.3.2}Stellar Streams from Mergers}{13}{subsection.1.3.2}% 
+\contentsline {subsection}{\numberline {1.3.3}Response of the Galactic Disc to the Cosmological Environment}{15}{subsection.1.3.3}% 
+\contentsline {section}{\numberline {1.4}Disc Insertion Techniques for Cosmology}{18}{section.1.4}% 
+\contentsline {section}{\numberline {1.5}Organization and Findings of this Thesis}{19}{section.1.5}% 
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-2}
-\contentsline {chapter}{\numberline {2}A Dynamical Recipe for Cosmological Disks}{31}{chapter.2}
-\contentsline {section}{\numberline {2.1}Physical Motivation of Modelling}{32}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Thermodynamics of Self-Gravitating Systems}{32}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}The Collisionless Boltzmann Equation}{34}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Monte Carlo Solution of the Collisionless Boltzmann Equation}{36}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Time Integration in N-Body Simulations}{37}{subsection.2.1.4}
-\contentsline {subsection}{\numberline {2.1.5}Efficient Force Calculation}{40}{subsection.2.1.5}
-\contentsline {subsection}{\numberline {2.1.6}Complications on Distributed Systems}{43}{subsection.2.1.6}
-\contentsline {section}{\numberline {2.2}Phase Space and Initial Conditions}{45}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Modelling Approaches}{46}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}DF-based Models}{52}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Action-Angle Variables and the Strong Jeans Theorem}{55}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Cosmology's Implications for Simulations}{56}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}FRW Cosmology: Large Scale Properties}{56}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}FRW Cosmology: Cosmological ICs}{59}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Numerical Methods: Time Integration}{60}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Numerical Methods: Gravity Calculation}{62}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Identifying Substructure in Simulations}{63}{subsection.2.3.5}
+\contentsline {chapter}{\numberline {2}A Dynamical Recipe for Cosmological Discs}{32}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Physical Motivation of Modelling}{33}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Thermodynamics of Self-Gravitating Systems}{33}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}The Collisionless Boltzmann Equation}{35}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.3}Monte Carlo Solution of the Collisionless Boltzmann Equation}{37}{subsection.2.1.3}% 
+\contentsline {subsection}{\numberline {2.1.4}Time Integration in N-Body Simulations}{38}{subsection.2.1.4}% 
+\contentsline {subsection}{\numberline {2.1.5}Efficient Force Calculation}{41}{subsection.2.1.5}% 
+\contentsline {subsection}{\numberline {2.1.6}Complications on Distributed Systems}{44}{subsection.2.1.6}% 
+\contentsline {section}{\numberline {2.2}Phase Space and Initial Conditions}{46}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Modelling Approaches}{47}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}DF-based Models}{53}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}Action-Angle Variables and the Strong Jeans Theorem}{56}{subsection.2.2.3}% 
+\contentsline {section}{\numberline {2.3}Cosmology's Implications for Simulations}{57}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}FRW Cosmology: Large Scale Properties}{57}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}FRW Cosmology: Cosmological ICs}{60}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Numerical Methods: Time Integration}{61}{subsection.2.3.3}% 
+\contentsline {subsection}{\numberline {2.3.4}Numerical Methods: Gravity Calculation}{63}{subsection.2.3.4}% 
+\contentsline {subsection}{\numberline {2.3.5}Identifying Substructure in Simulations}{64}{subsection.2.3.5}% 
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-3}
-\contentsline {chapter}{\numberline {3}A Method for Studying Discs in Cosmological Haloes}{72}{chapter.3}
-\contentsline {section}{\numberline {3.1}Abstract}{73}{section.3.1}
-\contentsline {section}{\numberline {3.2}Introduction}{73}{section.3.2}
-\contentsline {section}{\numberline {3.3}Inserting a Stellar Disc into a Cosmological Halo}{79}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Overview of Simulation Set}{79}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Summary of Live Disc Insertion Scheme}{82}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Halo Potential}{83}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Disc DFs}{84}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Rigid Disc Dynamics}{85}{subsection.3.3.5}
-\contentsline {subsection}{\numberline {3.3.6}Test-bed Simulation of an Isolated Galaxy}{87}{subsection.3.3.6}
-\contentsline {section}{\numberline {3.4}Cosmological Simulations}{91}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Bar Formation}{94}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Kicked-up Stars and Disc Heating}{97}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Halo Substructure in the Presence of a Disc}{99}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Global Properties of the Halo}{99}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Subhalo Populations}{102}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Case Study: A Sagittarius-like Dwarf}{106}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Conclusions}{107}{section.3.6}
+\contentsline {chapter}{\numberline {3}A Method for Studying Discs in Cosmological Haloes}{73}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Abstract}{74}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Introduction}{74}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Inserting a Stellar Disc into a Cosmological Halo}{80}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Overview of Simulation Set}{80}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Summary of Live Disc Insertion Scheme}{83}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.3}Halo Potential}{84}{subsection.3.3.3}% 
+\contentsline {subsection}{\numberline {3.3.4}Disc DFs}{85}{subsection.3.3.4}% 
+\contentsline {subsection}{\numberline {3.3.5}Rigid Disc Dynamics}{86}{subsection.3.3.5}% 
+\contentsline {subsection}{\numberline {3.3.6}Test-bed Simulation of an Isolated Galaxy}{88}{subsection.3.3.6}% 
+\contentsline {section}{\numberline {3.4}Cosmological Simulations}{92}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Bar Formation}{95}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Kicked-up Stars and Disc Heating}{98}{subsection.3.4.2}% 
+\contentsline {section}{\numberline {3.5}Halo Substructure in the Presence of a Disc}{100}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Global Properties of the Halo}{100}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Subhalo Populations}{103}{subsection.3.5.2}% 
+\contentsline {subsection}{\numberline {3.5.3}Case Study: A Sagittarius-like Dwarf}{107}{subsection.3.5.3}% 
+\contentsline {section}{\numberline {3.6}Conclusions}{108}{section.3.6}% 
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-4}
-\contentsline {chapter}{\numberline {4}Cosmological Bar Formation: Nature vs Nurture}{118}{chapter.4}
-\contentsline {section}{\numberline {4.1}Abstract}{119}{section.4.1}
-\contentsline {section}{\numberline {4.2}Introduction}{119}{section.4.2}
-\contentsline {section}{\numberline {4.3}Theoretical Considerations}{126}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}$Q$ and $X$}{129}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Vertical Structure of Stellar Discs}{137}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Effect of Gravitational Softening}{139}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Models and Simulations}{141}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Initial Conditions for Isolated Galaxy Simulations}{141}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Description of Simulations}{142}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Comparison with Previous Work}{143}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Isolated Galaxy Simulations}{145}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Morphology of Bar Forming Galaxies}{145}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Bar Strength Parameter $A_2$}{145}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Vertical Structure and Velocity Dispersion}{148}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Simulations Where Buckling is Suppressed}{151}{subsection.4.5.4}
-\contentsline {section}{\numberline {4.6}Cosmological Simulations}{152}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Simulation Setup; Inserting Discs into Cosmological Haloes}{153}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Results}{156}{subsection.4.6.2}
-\contentsline {section}{\numberline {4.7}Conclusions}{159}{section.4.7}
+\contentsline {chapter}{\numberline {4}Cosmological Bar Formation: Nature vs Nurture}{119}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Abstract}{120}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Introduction}{120}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Theoretical Considerations}{127}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}$Q$ and $X$}{130}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Vertical Structure of Stellar Discs}{138}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Effect of Gravitational Softening}{140}{subsection.4.3.3}% 
+\contentsline {section}{\numberline {4.4}Models and Simulations}{142}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}Initial Conditions for Isolated Galaxy Simulations}{142}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}Description of Simulations}{143}{subsection.4.4.2}% 
+\contentsline {subsection}{\numberline {4.4.3}Comparison with Previous Work}{144}{subsection.4.4.3}% 
+\contentsline {section}{\numberline {4.5}Isolated Galaxy Simulations}{146}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.5.1}Morphology of Bar Forming Galaxies}{146}{subsection.4.5.1}% 
+\contentsline {subsection}{\numberline {4.5.2}Bar Strength Parameter $A_2$}{146}{subsection.4.5.2}% 
+\contentsline {subsection}{\numberline {4.5.3}Vertical Structure and Velocity Dispersion}{149}{subsection.4.5.3}% 
+\contentsline {subsection}{\numberline {4.5.4}Simulations Where Buckling is Suppressed}{152}{subsection.4.5.4}% 
+\contentsline {section}{\numberline {4.6}Cosmological Simulations}{153}{section.4.6}% 
+\contentsline {subsection}{\numberline {4.6.1}Simulation Setup; Inserting Discs into Cosmological Haloes}{154}{subsection.4.6.1}% 
+\contentsline {subsection}{\numberline {4.6.2}Results}{157}{subsection.4.6.2}% 
+\contentsline {section}{\numberline {4.7}Conclusions}{160}{section.4.7}% 
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-5}
-\contentsline {chapter}{\numberline {5}Forming Vertical Structure in $\Lambda $CDM Discs}{173}{chapter.5}
-\contentsline {section}{\numberline {5.1}Abstract}{174}{section.5.1}
-\contentsline {section}{\numberline {5.2}Introduction}{174}{section.5.2}
-\contentsline {section}{\numberline {5.3}Overview}{180}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Quantifying Structure in Discs}{180}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Toy Model: Acceleration Along the Symmetry Axis}{181}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Toy Model: Massive Subhalo Interaction}{183}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Description of Experiments}{186}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Disc Insertion Technique}{189}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Numerical Experiments}{190}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Halo Environments}{191}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Structure and Evolution of Simulation Models}{193}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Bar Formation}{193}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Disc Heating}{198}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}Bending in Cosmological Discs}{199}{subsection.5.5.3}
-\contentsline {section}{\numberline {5.6}KUD Dynamics}{203}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Definition and Calculation from Simulations}{203}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}KUD Star Dynamics}{206}{subsection.5.6.2}
-\contentsline {section}{\numberline {5.7}What Causes the Milky Way's Vertical Structure?}{212}{section.5.7}
-\contentsline {subsection}{\numberline {5.7.1}Torque Signature from Halo Environments}{212}{subsection.5.7.1}
-\contentsline {subsection}{\numberline {5.7.2}Time Evolution in Characteristic Scenarios}{213}{subsection.5.7.2}
-\contentsline {section}{\numberline {5.8}Discussion}{216}{section.5.8}
-\contentsline {subsection}{\numberline {5.8.1}Disc Flapping}{216}{subsection.5.8.1}
-\contentsline {subsection}{\numberline {5.8.2}$m=1$ Bending}{217}{subsection.5.8.2}
-\contentsline {subsection}{\numberline {5.8.3}KUD Stars and Feathers}{218}{subsection.5.8.3}
-\contentsline {section}{\numberline {5.9}Conclusions}{220}{section.5.9}
+\contentsline {chapter}{\numberline {5}Forming Vertical Structure in $\Lambda $CDM Discs}{174}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Abstract}{175}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Introduction}{175}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Overview}{181}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Quantifying Structure in Discs}{181}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}Toy Model: Acceleration Along the Symmetry Axis}{182}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {5.3.3}Toy Model: Massive Subhalo Interaction}{184}{subsection.5.3.3}% 
+\contentsline {section}{\numberline {5.4}Description of Experiments}{187}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Disc Insertion Technique}{190}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}Numerical Experiments}{191}{subsection.5.4.2}% 
+\contentsline {subsection}{\numberline {5.4.3}Halo Environments}{192}{subsection.5.4.3}% 
+\contentsline {section}{\numberline {5.5}Structure and Evolution of Simulation Models}{194}{section.5.5}% 
+\contentsline {subsection}{\numberline {5.5.1}Bar Formation}{194}{subsection.5.5.1}% 
+\contentsline {subsection}{\numberline {5.5.2}Disc Heating}{199}{subsection.5.5.2}% 
+\contentsline {subsection}{\numberline {5.5.3}Bending in Cosmological Discs}{200}{subsection.5.5.3}% 
+\contentsline {section}{\numberline {5.6}KUD Dynamics}{204}{section.5.6}% 
+\contentsline {subsection}{\numberline {5.6.1}Definition and Calculation from Simulations}{204}{subsection.5.6.1}% 
+\contentsline {subsection}{\numberline {5.6.2}KUD Star Dynamics}{207}{subsection.5.6.2}% 
+\contentsline {section}{\numberline {5.7}What Causes the Milky Way's Vertical Structure?}{213}{section.5.7}% 
+\contentsline {subsection}{\numberline {5.7.1}Torque Signature from Halo Environments}{213}{subsection.5.7.1}% 
+\contentsline {subsection}{\numberline {5.7.2}Time Evolution in Characteristic Scenarios}{214}{subsection.5.7.2}% 
+\contentsline {section}{\numberline {5.8}Discussion}{217}{section.5.8}% 
+\contentsline {subsection}{\numberline {5.8.1}Disc Flapping}{217}{subsection.5.8.1}% 
+\contentsline {subsection}{\numberline {5.8.2}$m=1$ Bending}{218}{subsection.5.8.2}% 
+\contentsline {subsection}{\numberline {5.8.3}KUD Stars and Feathers}{219}{subsection.5.8.3}% 
+\contentsline {section}{\numberline {5.9}Conclusions}{221}{section.5.9}% 
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-6}
-\contentsline {chapter}{\numberline {6}Summary and Conclusions}{234}{chapter.6}
-\contentsline {section}{\numberline {6.1}Disk-Halo Interactions}{235}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Summary}{235}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Insertion Scheme and Future Work}{236}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Bar Formation}{237}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Summary}{237}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Further Exploration}{239}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Vertical Structure}{239}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Summary}{239}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}More Accurate Milky Way Comparisons}{240}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}Closing Remarks}{241}{section.6.4}
+\contentsline {chapter}{\numberline {6}Summary and Conclusions}{235}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Disc-Halo Interactions}{236}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}Summary}{236}{subsection.6.1.1}% 
+\contentsline {subsection}{\numberline {6.1.2}Insertion Scheme and Future Work}{237}{subsection.6.1.2}% 
+\contentsline {section}{\numberline {6.2}Bar Formation}{238}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}Summary}{238}{subsection.6.2.1}% 
+\contentsline {subsection}{\numberline {6.2.2}Further Exploration}{240}{subsection.6.2.2}% 
+\contentsline {section}{\numberline {6.3}Vertical Structure}{240}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}Summary}{240}{subsection.6.3.1}% 
+\contentsline {subsection}{\numberline {6.3.2}More Accurate Milky Way Comparisons}{241}{subsection.6.3.2}% 
+\contentsline {section}{\numberline {6.4}Closing Remarks}{242}{section.6.4}% 
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-7}
-\contentsline {chapter}{\numberline {A}Implementing Disc Insertion Schemes in \textsc {Gadget-3}}{243}{appendix.A}
-\contentsline {section}{\numberline {A.1}Representing a Rigid Disk}{244}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Rigid Disk Initial Conditions}{245}{subsection.A.1.1}
-\contentsline {section}{\numberline {A.2}Integrating the Rigid Body Equations}{246}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Initial Parameters and Timestep Selection}{246}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Integration}{246}{subsection.A.2.2}
-\contentsline {section}{\numberline {A.3}Live Disk Setup and Initial Conditions}{247}{section.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Creating Live Initial Conditions}{247}{subsection.A.3.1}
-\contentsline {subsection}{\numberline {A.3.2}Code Setup}{248}{subsection.A.3.2}
-\contentsline {section}{\numberline {A.4}Known Issues and Pet Peeves}{248}{section.A.4}
-\contentsline {subsection}{\numberline {A.4.1}Choosing a Timestep and Integration Scheme}{249}{subsection.A.4.1}
-\contentsline {subsection}{\numberline {A.4.2}Damping}{250}{subsection.A.4.2}
-\contentsline {subsection}{\numberline {A.4.3}Those Compile-Time Options}{250}{subsection.A.4.3}
-\contentsline {subsection}{\numberline {A.4.4}Watch out for Single-Precision Floats}{251}{subsection.A.4.4}
-\contentsline {chapter}{\numberline {B}Referenced Code: kicks.c}{252}{appendix.B}
-\contentsline {chapter}{\numberline {C}Referenced Code: predict.c}{254}{appendix.C}
-\contentsline {chapter}{\numberline {D}Referenced Code: extract\_halo\_ascii.py}{256}{appendix.D}
-\contentsline {chapter}{\numberline {E}Referenced Code: merge\_ics.cpp}{260}{appendix.E}
-\contentsline {chapter}{\numberline {F}Referenced Code: timestep.c}{287}{appendix.F}
+\contentsline {chapter}{\numberline {A}Implementing Disc Insertion Schemes in \textsc {Gadget-3}}{244}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}Representing a Rigid Disk}{245}{section.A.1}% 
+\contentsline {subsection}{\numberline {A.1.1}Rigid Disk Initial Conditions}{246}{subsection.A.1.1}% 
+\contentsline {section}{\numberline {A.2}Integrating the Rigid Body Equations}{247}{section.A.2}% 
+\contentsline {subsection}{\numberline {A.2.1}Initial Parameters and Timestep Selection}{247}{subsection.A.2.1}% 
+\contentsline {subsection}{\numberline {A.2.2}Integration}{247}{subsection.A.2.2}% 
+\contentsline {section}{\numberline {A.3}Live Disk Setup and Initial Conditions}{248}{section.A.3}% 
+\contentsline {subsection}{\numberline {A.3.1}Creating Live Initial Conditions}{248}{subsection.A.3.1}% 
+\contentsline {subsection}{\numberline {A.3.2}Code Setup}{249}{subsection.A.3.2}% 
+\contentsline {section}{\numberline {A.4}Known Issues and Pet Peeves}{249}{section.A.4}% 
+\contentsline {subsection}{\numberline {A.4.1}Choosing a Timestep and Integration Scheme}{250}{subsection.A.4.1}% 
+\contentsline {subsection}{\numberline {A.4.2}Damping}{251}{subsection.A.4.2}% 
+\contentsline {subsection}{\numberline {A.4.3}Those Compile-Time Options}{251}{subsection.A.4.3}% 
+\contentsline {subsection}{\numberline {A.4.4}Watch out for Single-Precision Floats}{252}{subsection.A.4.4}% 
+\contentsline {chapter}{\numberline {B}Referenced Code: kicks.c}{253}{appendix.B}% 
+\contentsline {chapter}{\numberline {C}Referenced Code: predict.c}{255}{appendix.C}% 
+\contentsline {chapter}{\numberline {D}Referenced Code: extract\_halo\_ascii.py}{257}{appendix.D}% 
+\contentsline {chapter}{\numberline {E}Referenced Code: merge\_ics.cpp}{261}{appendix.E}% 
+\contentsline {chapter}{\numberline {F}Referenced Code: timestep.c}{288}{appendix.F}% 
 \gdef \the@ipfilectr {}

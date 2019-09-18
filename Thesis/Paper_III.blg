@@ -5,45 +5,45 @@ The style file: apalike.bst
 Database file #1: bibliography_paper_iii.bib
 Warning--can't use both author and editor fields in Sellwood2013
 Warning--empty publisher in Sellwood2013
-You've used 77 entries,
+You've used 80 entries,
             1935 wiz_defined-function locations,
-            890 strings with 18855 characters,
-and the built_in function-call counts, 37554 in all, are:
-= -- 3458
-> -- 2264
-< -- 28
-+ -- 817
-- -- 815
-* -- 3474
-:= -- 6656
-add.period$ -- 230
-call.type$ -- 77
-change.case$ -- 790
-chr.to.int$ -- 75
-cite$ -- 79
-duplicate$ -- 1158
-empty$ -- 2211
-format.name$ -- 924
-if$ -- 7210
+            905 strings with 19345 characters,
+and the built_in function-call counts, 38746 in all, are:
+= -- 3571
+> -- 2318
+< -- 29
++ -- 835
+- -- 833
+* -- 3584
+:= -- 6868
+add.period$ -- 239
+call.type$ -- 80
+change.case$ -- 814
+chr.to.int$ -- 78
+cite$ -- 82
+duplicate$ -- 1200
+empty$ -- 2293
+format.name$ -- 947
+if$ -- 7441
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 77
-newline$ -- 387
-num.names$ -- 233
-pop$ -- 636
+missing$ -- 80
+newline$ -- 402
+num.names$ -- 242
+pop$ -- 653
 preamble$ -- 1
-purify$ -- 791
+purify$ -- 815
 quote$ -- 0
-skip$ -- 898
+skip$ -- 929
 stack$ -- 0
-substring$ -- 2410
-swap$ -- 157
+substring$ -- 2488
+swap$ -- 160
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 460
+type$ -- 478
 warning$ -- 2
-while$ -- 230
+while$ -- 239
 width$ -- 0
-write$ -- 999
+write$ -- 1038
 (There were 2 warnings)

@@ -72,56 +72,51 @@
 \BOOKMARK [0][-]{chapter.5}{Forming Vertical Structure in CDM Discs}{}% 72
 \BOOKMARK [1][-]{section.5.1}{Abstract}{chapter.5}% 73
 \BOOKMARK [1][-]{section.5.2}{Introduction}{chapter.5}% 74
-\BOOKMARK [1][-]{section.5.3}{Overview}{chapter.5}% 75
-\BOOKMARK [2][-]{subsection.5.3.1}{Quantifying Structure in Discs}{section.5.3}% 76
-\BOOKMARK [2][-]{subsection.5.3.2}{Toy Model: Acceleration Along the Symmetry Axis}{section.5.3}% 77
-\BOOKMARK [2][-]{subsection.5.3.3}{Toy Model: Massive Subhalo Interaction}{section.5.3}% 78
-\BOOKMARK [1][-]{section.5.4}{Description of Experiments}{chapter.5}% 79
-\BOOKMARK [2][-]{subsection.5.4.1}{Disc Insertion Technique}{section.5.4}% 80
-\BOOKMARK [2][-]{subsection.5.4.2}{Numerical Experiments}{section.5.4}% 81
-\BOOKMARK [2][-]{subsection.5.4.3}{Halo Environments}{section.5.4}% 82
-\BOOKMARK [1][-]{section.5.5}{Structure and Evolution of Simulation Models}{chapter.5}% 83
-\BOOKMARK [2][-]{subsection.5.5.1}{Bar Formation}{section.5.5}% 84
-\BOOKMARK [2][-]{subsection.5.5.2}{Disc Heating}{section.5.5}% 85
-\BOOKMARK [2][-]{subsection.5.5.3}{Bending in Cosmological Discs}{section.5.5}% 86
-\BOOKMARK [1][-]{section.5.6}{KUD Dynamics}{chapter.5}% 87
-\BOOKMARK [2][-]{subsection.5.6.1}{Definition and Calculation from Simulations}{section.5.6}% 88
-\BOOKMARK [2][-]{subsection.5.6.2}{KUD Star Dynamics}{section.5.6}% 89
-\BOOKMARK [1][-]{section.5.7}{What Causes the Milky Way's Vertical Structure?}{chapter.5}% 90
-\BOOKMARK [2][-]{subsection.5.7.1}{Torque Signature from Halo Environments}{section.5.7}% 91
-\BOOKMARK [2][-]{subsection.5.7.2}{Time Evolution in Characteristic Scenarios}{section.5.7}% 92
-\BOOKMARK [1][-]{section.5.8}{Discussion}{chapter.5}% 93
-\BOOKMARK [2][-]{subsection.5.8.1}{Disc Flapping}{section.5.8}% 94
-\BOOKMARK [2][-]{subsection.5.8.2}{m=1 Bending}{section.5.8}% 95
-\BOOKMARK [2][-]{subsection.5.8.3}{KUD Stars and Feathers}{section.5.8}% 96
-\BOOKMARK [1][-]{section.5.9}{Conclusions}{chapter.5}% 97
-\BOOKMARK [0][-]{chapter.6}{Summary and Conclusions}{}% 98
-\BOOKMARK [1][-]{section.6.1}{Disc-Halo Interactions}{chapter.6}% 99
-\BOOKMARK [2][-]{subsection.6.1.1}{Summary}{section.6.1}% 100
-\BOOKMARK [2][-]{subsection.6.1.2}{Insertion Scheme and Future Work}{section.6.1}% 101
-\BOOKMARK [1][-]{section.6.2}{Bar Formation}{chapter.6}% 102
-\BOOKMARK [2][-]{subsection.6.2.1}{Summary}{section.6.2}% 103
-\BOOKMARK [2][-]{subsection.6.2.2}{Further Exploration}{section.6.2}% 104
-\BOOKMARK [1][-]{section.6.3}{Vertical Structure}{chapter.6}% 105
-\BOOKMARK [2][-]{subsection.6.3.1}{Summary}{section.6.3}% 106
-\BOOKMARK [2][-]{subsection.6.3.2}{More Accurate Milky Way Comparisons}{section.6.3}% 107
-\BOOKMARK [1][-]{section.6.4}{Closing Remarks}{chapter.6}% 108
-\BOOKMARK [0][-]{appendix.A}{Implementing Disc Insertion Schemes in Gadget-3}{}% 109
-\BOOKMARK [1][-]{section.A.1}{Representing a Rigid Disk}{appendix.A}% 110
-\BOOKMARK [2][-]{subsection.A.1.1}{Rigid Disk Initial Conditions}{section.A.1}% 111
-\BOOKMARK [1][-]{section.A.2}{Integrating the Rigid Body Equations}{appendix.A}% 112
-\BOOKMARK [2][-]{subsection.A.2.1}{Initial Parameters and Timestep Selection}{section.A.2}% 113
-\BOOKMARK [2][-]{subsection.A.2.2}{Integration}{section.A.2}% 114
-\BOOKMARK [1][-]{section.A.3}{Live Disk Setup and Initial Conditions}{appendix.A}% 115
-\BOOKMARK [2][-]{subsection.A.3.1}{Creating Live Initial Conditions}{section.A.3}% 116
-\BOOKMARK [2][-]{subsection.A.3.2}{Code Setup}{section.A.3}% 117
-\BOOKMARK [1][-]{section.A.4}{Known Issues and Pet Peeves}{appendix.A}% 118
-\BOOKMARK [2][-]{subsection.A.4.1}{Choosing a Timestep and Integration Scheme}{section.A.4}% 119
-\BOOKMARK [2][-]{subsection.A.4.2}{Damping}{section.A.4}% 120
-\BOOKMARK [2][-]{subsection.A.4.3}{Those Compile-Time Options}{section.A.4}% 121
-\BOOKMARK [2][-]{subsection.A.4.4}{Watch out for Single-Precision Floats}{section.A.4}% 122
-\BOOKMARK [0][-]{appendix.B}{Referenced Code: kicks.c}{}% 123
-\BOOKMARK [0][-]{appendix.C}{Referenced Code: predict.c}{}% 124
-\BOOKMARK [0][-]{appendix.D}{Referenced Code: extract\137halo\137ascii.py}{}% 125
-\BOOKMARK [0][-]{appendix.E}{Referenced Code: merge\137ics.cpp}{}% 126
-\BOOKMARK [0][-]{appendix.F}{Referenced Code: timestep.c}{}% 127
+\BOOKMARK [1][-]{section.5.3}{Single satellite simulations}{chapter.5}% 75
+\BOOKMARK [2][-]{subsection.5.3.1}{Axisymmetric subhalo encounter}{section.5.3}% 76
+\BOOKMARK [2][-]{subsection.5.3.2}{Off-axis subhalo encounter}{section.5.3}% 77
+\BOOKMARK [1][-]{section.5.4}{Simulations}{chapter.5}% 78
+\BOOKMARK [2][-]{subsection.5.4.1}{Disc Insertion Technique}{section.5.4}% 79
+\BOOKMARK [2][-]{subsection.5.4.2}{Numerical Experiments}{section.5.4}% 80
+\BOOKMARK [2][-]{subsection.5.4.3}{Halo Environments}{section.5.4}% 81
+\BOOKMARK [1][-]{section.5.5}{Structure and Evolution of Simulation Models}{chapter.5}% 82
+\BOOKMARK [2][-]{subsection.5.5.1}{Bar Formation}{section.5.5}% 83
+\BOOKMARK [2][-]{subsection.5.5.2}{Disc Heating}{section.5.5}% 84
+\BOOKMARK [2][-]{subsection.5.5.3}{Bending waves in Cosmological Discs}{section.5.5}% 85
+\BOOKMARK [1][-]{section.5.6}{KOD Dynamics}{chapter.5}% 86
+\BOOKMARK [2][-]{subsection.5.6.1}{Definition of a KOD star}{section.5.6}% 87
+\BOOKMARK [2][-]{subsection.5.6.2}{KOD Star Dynamics}{section.5.6}% 88
+\BOOKMARK [1][-]{section.5.7}{Discussion}{chapter.5}% 89
+\BOOKMARK [2][-]{subsection.5.7.1}{Disc Flapping}{section.5.7}% 90
+\BOOKMARK [2][-]{subsection.5.7.2}{Bending waves, KOD stars and feathers}{section.5.7}% 91
+\BOOKMARK [1][-]{section.5.8}{Conclusions}{chapter.5}% 92
+\BOOKMARK [0][-]{chapter.6}{Summary and Conclusions}{}% 93
+\BOOKMARK [1][-]{section.6.1}{Disc-Halo Interactions}{chapter.6}% 94
+\BOOKMARK [2][-]{subsection.6.1.1}{Summary}{section.6.1}% 95
+\BOOKMARK [2][-]{subsection.6.1.2}{Insertion Scheme and Future Work}{section.6.1}% 96
+\BOOKMARK [1][-]{section.6.2}{Bar Formation}{chapter.6}% 97
+\BOOKMARK [2][-]{subsection.6.2.1}{Summary}{section.6.2}% 98
+\BOOKMARK [2][-]{subsection.6.2.2}{Further Exploration}{section.6.2}% 99
+\BOOKMARK [1][-]{section.6.3}{Vertical Structure}{chapter.6}% 100
+\BOOKMARK [2][-]{subsection.6.3.1}{Summary}{section.6.3}% 101
+\BOOKMARK [2][-]{subsection.6.3.2}{More Accurate Milky Way Comparisons}{section.6.3}% 102
+\BOOKMARK [1][-]{section.6.4}{Closing Remarks}{chapter.6}% 103
+\BOOKMARK [0][-]{appendix.A}{Implementing Disc Insertion Schemes in Gadget-3}{}% 104
+\BOOKMARK [1][-]{section.A.1}{Representing a Rigid Disk}{appendix.A}% 105
+\BOOKMARK [2][-]{subsection.A.1.1}{Rigid Disk Initial Conditions}{section.A.1}% 106
+\BOOKMARK [1][-]{section.A.2}{Integrating the Rigid Body Equations}{appendix.A}% 107
+\BOOKMARK [2][-]{subsection.A.2.1}{Initial Parameters and Timestep Selection}{section.A.2}% 108
+\BOOKMARK [2][-]{subsection.A.2.2}{Integration}{section.A.2}% 109
+\BOOKMARK [1][-]{section.A.3}{Live Disk Setup and Initial Conditions}{appendix.A}% 110
+\BOOKMARK [2][-]{subsection.A.3.1}{Creating Live Initial Conditions}{section.A.3}% 111
+\BOOKMARK [2][-]{subsection.A.3.2}{Code Setup}{section.A.3}% 112
+\BOOKMARK [1][-]{section.A.4}{Known Issues and Pet Peeves}{appendix.A}% 113
+\BOOKMARK [2][-]{subsection.A.4.1}{Choosing a Timestep and Integration Scheme}{section.A.4}% 114
+\BOOKMARK [2][-]{subsection.A.4.2}{Damping}{section.A.4}% 115
+\BOOKMARK [2][-]{subsection.A.4.3}{Those Compile-Time Options}{section.A.4}% 116
+\BOOKMARK [2][-]{subsection.A.4.4}{Watch out for Single-Precision Floats}{section.A.4}% 117
+\BOOKMARK [0][-]{appendix.B}{Referenced Code: kicks.c}{}% 118
+\BOOKMARK [0][-]{appendix.C}{Referenced Code: predict.c}{}% 119
+\BOOKMARK [0][-]{appendix.D}{Referenced Code: extract\137halo\137ascii.py}{}% 120
+\BOOKMARK [0][-]{appendix.E}{Referenced Code: merge\137ics.cpp}{}% 121
+\BOOKMARK [0][-]{appendix.F}{Referenced Code: timestep.c}{}% 122

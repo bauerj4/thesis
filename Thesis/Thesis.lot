@@ -14,8 +14,8 @@
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-5}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Table of simulations run in the main experiment. $M_h$ is the virial mass of the host halo, $R_h$ is the NFW scale length of the host halo, $c$ is the NFW concentration parameter of the host halo, $a_l$ is the live disc insertion scale factor, $\delta \Theta _{h,20}$ is the halo misalignment angle for the 20 kpc shell, $N_d$ is the number of disc particles, $Q$ is the Toomre stability parameter of the disc at initialization, and $f_{kud}$ is the fraction of disc mass that gets classified as KUD stars measured at present day with $\eta =8$.\relax }}{193}{table.caption.50}% 
-\contentsline {table}{\numberline {5.2}{\ignorespaces Table of the five most massive substructures at $a_l$ in all of the simulations detailed in Table \ref {tab:sims}. The virial mass, $M_s$, and NFW scale radius, $R_s$, are given.\relax }}{195}{table.caption.51}% 
+\contentsline {table}{\numberline {5.1}{\ignorespaces Table of simulations run in the main experiment. $M_h$ is the virial mass of the host halo, $R_h$ is the NFW scale length of the host halo, $c$ is the NFW concentration parameter of the host halo, $a_l$ is the live disc insertion scale factor, $\delta \Theta _{h,20}$ is the halo misalignment angle for the 20 kpc shell, $N_d$ is the number of disc particles, $Q$ is the Toomre stability parameter of the disc at initialization, and $f_{kud}$ is the fraction of disc mass that gets classified as kicked-out-disk (KOD) stars measured at present day with $\eta =8$.\relax }}{193}{table.caption.51}% 
+\contentsline {table}{\numberline {5.2}{\ignorespaces Table of the five most massive substructures at $a_l$ in all of the simulations detailed in Table \ref {tab:sims_iii}. The virial mass, $M_s$, and NFW scale radius, $R_s$, are given.\relax }}{194}{table.caption.52}% 
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-6}
 \addvspace {10\p@ }

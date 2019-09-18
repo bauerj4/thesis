@@ -149,6 +149,12 @@
 \newblock {Detecting dark matter substructures around the Milky Way with Gaia}.
 \newblock {\em \mnras}, 446:1000--1012.
 
+\bibitem[{Font} et~al., 2001]{font_2001}
+{Font}, A.~S., {Navarro}, J.~F., {Stadel}, J., and {Quinn}, T. (2001).
+\newblock {Halo Substructure and Disk Heating in a {\ensuremath{\Lambda}} Cold
+  Dark Matter Universe}.
+\newblock {\em \apjl}, 563(1):L1--L4.
+
 \bibitem[{Gaia Collaboration} et~al., 2018]{gaia_collab}
 {Gaia Collaboration}, {Katz}, D., {Antoja}, T., {Romero-G{\'o}mez}, M.,
   {Drimmel}, R., {Reyl{\'e}}, C., {Seabroke}, G.~M., {Soubiran}, C.,
@@ -298,6 +304,11 @@
 {Navarro}, J.~F., {Frenk}, C.~S., and {White}, S.~D.~M. (1994).
 \newblock {Accretion of Satellite Galaxies and the Density of the Universe}.
 \newblock {\em \mnras}, 267:L1.
+
+\bibitem[{Navarro} et~al., 1997]{navarro_1997}
+{Navarro}, J.~F., {Frenk}, C.~S., and {White}, S. D.~M. (1997).
+\newblock {A Universal Density Profile from Hierarchical Clustering}.
+\newblock {\em \apj}, 490(2):493--508.
 
 \bibitem[{Newberg} et~al., 2002]{newberg_2002}
 {Newberg}, H.~J., {Yanny}, B., {Rockosi}, C., {Grebel}, E.~K., {Rix}, H.-W.,
@@ -459,6 +470,12 @@
   {Sch{\"o}nrich}, R., and {Yanny}, B. (2015).
 \newblock {Rings and Radial Waves in the Disk of the Milky Way}.
 \newblock {\em \apj}, 801:105.
+
+\bibitem[{Yanny} and {Gardner}, 2013]{yanny_gardner_2013}
+{Yanny}, B. and {Gardner}, S. (2013).
+\newblock {The Stellar Number Density Distribution in the Local Solar
+  Neighborhood is North-South Asymmetric}.
+\newblock {\em \apj}, 777:91.
 
 \bibitem[{Yanny} et~al., 2003]{yanny_2003}
 {Yanny}, B., {Newberg}, H.~J., {Grebel}, E.~K., {Kent}, S., {Odenkirchen}, M.,

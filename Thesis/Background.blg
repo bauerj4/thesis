@@ -16,45 +16,45 @@ Warning--empty publisher in BM
 Warning--empty publisher in dodelson
 Warning--empty publisher in kolb_turner
 Warning--empty publisher in numerical_recipes_fortran
-You've used 40 entries,
+You've used 38 entries,
             1935 wiz_defined-function locations,
-            705 strings with 9729 characters,
-and the built_in function-call counts, 15179 in all, are:
-= -- 1464
-> -- 593
-< -- 31
-+ -- 203
-- -- 196
-* -- 1216
-:= -- 2661
-add.period$ -- 116
-call.type$ -- 40
-change.case$ -- 292
-chr.to.int$ -- 39
-cite$ -- 44
-duplicate$ -- 608
-empty$ -- 1077
-format.name$ -- 258
-if$ -- 2999
+            696 strings with 9151 characters,
+and the built_in function-call counts, 13940 in all, are:
+= -- 1362
+> -- 473
+< -- 30
++ -- 157
+- -- 150
+* -- 1088
+:= -- 2427
+add.period$ -- 111
+call.type$ -- 38
+change.case$ -- 259
+chr.to.int$ -- 37
+cite$ -- 42
+duplicate$ -- 584
+empty$ -- 1033
+format.name$ -- 210
+if$ -- 2780
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 43
-newline$ -- 198
-num.names$ -- 120
-pop$ -- 257
+missing$ -- 42
+newline$ -- 189
+num.names$ -- 114
+pop$ -- 228
 preamble$ -- 1
-purify$ -- 298
+purify$ -- 265
 quote$ -- 0
-skip$ -- 474
+skip$ -- 455
 stack$ -- 0
-substring$ -- 1020
-swap$ -- 84
+substring$ -- 975
+swap$ -- 83
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 228
+type$ -- 216
 warning$ -- 4
-while$ -- 110
+while$ -- 105
 width$ -- 0
-write$ -- 500
+write$ -- 477
 (There were 2 error messages)
